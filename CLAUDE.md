@@ -1,0 +1,205 @@
+# AM Copilot — Project Brain
+
+> Auto-loaded every Claude Code session. Read this before touching any file.
+
+---
+
+## What this system is
+
+AM Copilot is an **AI intelligence layer** that sits on top of CTM (CallTrackingMetrics).
+It scores admissions intake calls for a behavioral-health treatment center, explains those
+scores with evidence, and surfaces coaching opportunities for managers.
+
+**CTM is the system of record. AM Copilot is the intelligence layer.**
+
+- Webhooks in from CTM
+- REST API out to the dashboard
+- Derived insights stored only (~10 MB/agency/year)
+- CTM executes all operational actions
+
+AM Copilot does NOT replace CTM. It does NOT store recordings. It does NOT store full transcripts.
+
+---
+
+## Phase A scope — the only scope that exists right now
+
+Phase A proves one question: **can AI score admissions calls reliably enough to create
+operational trust?**
+
+- 17 working days
+- Synthetic data only — no real patient data, no PHI, no BAA required
+- 30 synthetic calls across 5 scenario types
+- Success criterion: ≥80% overall agreement, ≥70% per dimension with client blind grading
+- Day 17 deliverable: live dashboard the client can log into
+
+Do not build anything outside Phase A scope. Every deferred item is documented in
+`docs/PRD.md` under "Out of scope."
+
+---
+
+## Stack
+
+### Backend
+| Layer | Choice |
+|---|---|
+| Language | Python 3.12 |
+| API framework | FastAPI |
+| ORM | SQLAlchemy + Alembic (migrations) |
+| Validation | Pydantic v2 |
+| AWS SDK | boto3 |
+| Testing | Pytest |
+
+### Frontend
+| Layer | Choice |
+|---|---|
+| Build tool | Vite |
+| Framework | React 18 |
+| Language | TypeScript |
+| Styling | Tailwind CSS 4 |
+| Charts | Recharts |
+
+### Infrastructure (AWS CDK — TypeScript)
+| Service | Purpose |
+|---|---|
+| ECS Fargate | Backend containers |
+| API Gateway | HTTP entrypoint |
+| SQS | Evaluation job queue |
+| RDS PostgreSQL 16 | Derived data store |
+| S3 | Synthetic dataset + artifacts |
+| Amazon Bedrock | Claude Sonnet 4.5 scoring |
+| Cognito | Auth |
+| KMS | Encryption at rest |
+| Secrets Manager | All credentials |
+| CloudWatch | Logs + metrics |
+| CloudTrail | Audit trail |
+| IAM + Identity Center | Least-privilege roles |
+| Route53 + CloudFront | DNS + CDN for frontend |
+
+Region: **us-east-1**
+
+---
+
+## Folder structure
+
+```
+am-copilot/
+├── CLAUDE.md                      ← you are here
+├── CLAUDE.local.md                ← personal overrides, gitignored
+├── .claudeignore
+├── .mcp.json
+├── .claude/
+│   ├── settings.json
+│   ├── skills/                    ← auto-invoked by Claude Code
+│   │   ├── scoring-engine/SKILL.md
+│   │   ├── evidence-engine/SKILL.md
+│   │   ├── synthetic-data/SKILL.md
+│   │   └── rubric/SKILL.md
+│   ├── agents/
+│   │   ├── evaluation-worker.md
+│   │   └── compliance-checker.md
+│   └── agent-memory/
+├── docs/                          ← all pre-dev documents
+│   ├── BRD.md
+│   ├── PRD.md
+│   ├── TSD.md
+│   ├── rubric-spec.md
+│   ├── synthetic-data-spec.md
+│   ├── data-architecture.md
+│   ├── prompt-library.md
+│   ├── security-spec.md
+│   ├── ui-ux-spec.md
+│   ├── testing-plan.md
+│   └── d11-facilitation-guide.md
+├── services/                      ← Python / FastAPI backends
+│   ├── api-gateway/
+│   ├── ctm-integration/
+│   ├── scoring-engine/
+│   ├── compliance-engine/
+│   ├── evidence-engine/
+│   ├── evaluation-worker/
+│   └── notification-service/
+├── apps/                          ← Vite + React frontends
+│   ├── dashboard/
+│   ├── review-console/
+│   └── admin-console/
+├── packages/                      ← shared libraries
+│   ├── rubric-engine/
+│   ├── prompt-library/
+│   ├── shared-types/
+│   └── synthetic-data/
+├── infra/                         ← AWS CDK (TypeScript)
+├── data/
+│   ├── synthetic/                 ← 30 generated calls + gold labels
+│   └── rubric/rubric-v1.yaml
+└── tests/
+    ├── scoring/
+    ├── compliance/
+    └── gold-standard/
+```
+
+---
+
+## Non-negotiable rules
+
+1. **Never store full transcripts.** Store scores, evidence anchors, rubric metadata, evaluation lineage only.
+2. **Never hardcode credentials.** All secrets live in AWS Secrets Manager. Local dev uses `.env` (gitignored).
+3. **Always version prompts.** Every prompt has a `prompt_version` field. Increment on any change.
+4. **Always version the rubric.** `rubric-v1.yaml` → `rubric-v2.yaml`. Never mutate in place.
+5. **Synthetic data only in Phase A.** No real CTM production credentials. Sandbox sub-account only.
+6. **N/A is not zero.** Dimensions scored N/A are excluded from the weighted average entirely.
+7. **Compliance engine is deterministic first.** Rules and regex detect violations. LLM provides contextual reasoning, not sole authority.
+
+---
+
+## Naming conventions
+
+- Python files: `snake_case.py`
+- TypeScript files: `camelCase.ts` / `PascalCase.tsx` for components
+- Database tables: `snake_case`
+- Environment variables: `SCREAMING_SNAKE_CASE`
+- Prompt versions: `prompt_v1`, `prompt_v2`
+- Rubric versions: `rubric-v1.yaml`, `rubric-v2.yaml`
+- Git branches: `feature/short-description`, `fix/short-description`
+- Commits: `type(scope): description` — e.g. `feat(scoring): add N/A weight exclusion`
+
+---
+
+## 17-day build timeline
+
+| Day | Focus |
+|---|---|
+| D1 | AWS account + baseline infra. **Request Bedrock model access immediately — takes hours to days.** |
+| D2 | Rubric session + label schema locked |
+| D3 | Synthetic transcripts batch 1 (excellent + family-caller, 12 calls) |
+| D4 | Synthetic dataset complete (all 5 scenarios, 30 calls) + S3 populated |
+| D5 | CTM ingestion + webhook plumbing live |
+| D6 | Scoring engine on Bedrock — first scored call end-to-end |
+| D7 | **Buffer 1** |
+| D8 | Internal QA — automated Pytest against gold-standard labels |
+| D9 | Dashboard build part 1 |
+| D10 | Dashboard build part 2 + polish |
+| D11 | **Client blind grading session** — see `docs/d11-facilitation-guide.md` |
+| D12 | Rubric refinement on disagreements → push rubric-v2 |
+| D13 | Rescore + verify success bar (≥80% / ≥70%) |
+| D14 | **Buffer 2** |
+| D15 | Phase B proposal draft |
+| D16 | Readout prep |
+| D17 | **Joint readout + Phase B pitch** |
+
+---
+
+## Key documents (read before working on a subsystem)
+
+| Document | Read before working on... |
+|---|---|
+| `docs/BRD.md` | Anything — context for every decision |
+| `docs/rubric-spec.md` | Scoring engine, compliance engine, prompts |
+| `docs/synthetic-data-spec.md` | Synthetic data generator |
+| `docs/TSD.md` | Any backend service |
+| `docs/data-architecture.md` | Database schema, S3 structure |
+| `docs/prompt-library.md` | Bedrock calls, evaluation logic |
+| `docs/PRD.md` | Dashboard, review console, API surface |
+| `docs/ui-ux-spec.md` | Any frontend work |
+| `docs/testing-plan.md` | D8 QA suite, gold-standard assertions |
+| `docs/d11-facilitation-guide.md` | D11 client grading session |
+| `docs/security-spec.md` | IAM, KMS, secrets, CI/CD |
