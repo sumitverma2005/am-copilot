@@ -1,0 +1,187 @@
+version: rubric-v1
+description: AM Copilot admissions call scoring rubric — Phase A
+last_updated: "2026-05"
+status: draft  # pending client sign-off on compliance_override rule
+
+scoring_scale:
+  min: 0
+  max: 5
+  labels:
+    5: Exemplary
+    4: Strong
+    3: Acceptable
+    2: Needs improvement
+    1: Poor
+    0: Unacceptable
+  na_label: "N/A"
+  na_rule: Excluded from weighted average entirely. N/A is NOT zero.
+
+overall_score_formula: |
+  For each applicable (non-N/A) dimension:
+    weighted_score = raw_score * weight
+  overall = (sum of weighted_scores) / (sum of weights for applicable dimensions) * 20
+  Result is 0–100, rounded to nearest integer.
+
+compliance_override:
+  pending_client_signoff: true
+  rule: >
+    If dimension compliance_language receives raw_score = 0, the overall call score
+    is overridden to 0 regardless of all other dimension scores.
+
+dimensions:
+
+  - id: empathy_rapport
+    name: "Empathy & rapport"
+    weight: 1.5
+    na_allowed: false
+    description: >
+      Did the agent acknowledge the caller's emotional state and build trust
+      in the first 60 seconds?
+    score_for:
+      - Agent slowed down and listened
+      - Matched the caller's emotional register
+      - Did not sound scripted or transactional
+      - Used the caller's name
+      - Acknowledged the difficulty of the situation before moving to information gathering
+    score_against:
+      - Jumping straight to intake questions without acknowledgement
+      - Flat or robotic tone
+      - Talking over the caller's emotional disclosures
+
+  - id: insurance_verification
+    name: "Insurance verification"
+    weight: 1.0
+    na_allowed: true
+    na_condition: >
+      Caller explicitly stated self-pay and agent confirmed and pivoted correctly.
+      Score the pivot under objection_handling instead.
+    description: >
+      Did the agent collect and verify the right coverage details, in the right
+      order, without losing the caller?
+    score_for:
+      - Carrier, plan type, member ID, and group number captured
+      - Verification framed as a step toward help, not gatekeeping
+      - Pivot to alternatives (self-pay, financing, sliding scale) if coverage was a problem
+      - Did not overwhelm caller with insurance jargon
+    score_against:
+      - Missing key fields (member ID, group number)
+      - Making coverage sound like a barrier
+      - No alternative offered when coverage was insufficient
+
+  - id: clinical_screening
+    name: "Clinical screening"
+    weight: 1.0
+    na_allowed: true
+    na_condition: >
+      Very short calls that were redirected before screening could begin.
+    description: >
+      Did the agent ask the right diagnostic-adjacent questions to understand
+      what the caller needs — without overstepping into clinical territory?
+    score_for:
+      - Substance use history and type captured
+      - Severity indicators surfaced (frequency, last use, withdrawal symptoms)
+      - Prior treatment history asked
+      - Co-occurring mental health concerns noted if volunteered
+      - Agent stayed clearly in intake role — did not diagnose or clinically assess
+    score_against:
+      - Missing substance use history entirely
+      - Crossing into clinical territory (e.g. "that sounds like you have a dependency")
+      - Asking leading or diagnostic questions (e.g. "do you think you're an addict?")
+
+  - id: urgency_triage
+    name: "Urgency triage"
+    weight: 1.0
+    na_allowed: true
+    na_condition: >
+      Caller explicitly stated they were researching for a future need and
+      there were no urgency signals.
+    description: >
+      Did the agent correctly assess whether this is a same-day, this-week,
+      or future need — and act on it?
+    score_for:
+      - Urgency signals caught (withdrawal, suicidal ideation, recent overdose, unsafe living situation)
+      - Appropriate escalation when urgency was high
+      - Correct de-escalation when urgency was low — no manufactured urgency
+      - Crisis protocol activated when suicidal ideation or overdose mentioned
+    score_against:
+      - Missing clear urgency signals in the transcript
+      - Treating a crisis caller like a routine inquiry
+      - Manufacturing urgency to pressure a non-urgent caller
+
+  - id: family_caller_handling
+    name: "Family caller handling"
+    weight: 1.0
+    na_allowed: true
+    na_condition: Caller is the patient themselves (confirmed in transcript).
+    description: >
+      When the caller is a family member, did the agent navigate consent,
+      information boundaries, and the family member's own distress correctly?
+    score_for:
+      - HIPAA and consent framing handled without being legalistic or cold
+      - Right information about the patient collected without speaking for the patient
+      - Family member's own emotional state acknowledged
+      - Agent explained what the family member can and cannot do
+    score_against:
+      - Collecting patient information without consent framing
+      - Ignoring the family member's distress
+      - Giving clinical information about the patient without appropriate framing
+
+  - id: objection_handling
+    name: "Objection handling"
+    weight: 1.0
+    na_allowed: true
+    na_condition: >
+      Calls where no objections were raised and the caller was fully
+      cooperative throughout.
+    description: >
+      When cost, fear, family pressure, or ambivalence came up, did the agent
+      address it constructively?
+    score_for:
+      - Acknowledged the objection before responding (did not immediately counter)
+      - Offered concrete alternatives where relevant (financing, family support, peer stories)
+      - Avoided defensive, dismissive, or salesy language
+      - Did not push past a stated "no" inappropriately
+    score_against:
+      - Jumping to counter-arguments before acknowledging the concern
+      - Repeating the same response when the caller pushed back
+      - High-pressure tactics
+      - Giving up entirely on a wavering caller who still wanted help
+
+  - id: next_step_clarity
+    name: "Next-step clarity"
+    weight: 1.0
+    na_allowed: true
+    na_condition: >
+      Calls that ended because the caller was not eligible or declined to proceed.
+    description: >
+      Did the caller leave the call knowing exactly what happens next, by when,
+      and who owns it?
+    score_for:
+      - Specific next step set (admissions appointment, callback, document submission)
+      - Timing stated clearly
+      - Ownership clear
+      - Follow-up commitments captured in the system (agent confirmed verbally)
+    score_against:
+      - Vague close ("we'll be in touch")
+      - No next step set before ending the call
+      - Timing unclear or missing
+      - Caller had to ask what happens next
+
+  - id: compliance_language
+    name: "Compliance language"
+    weight: 1.5
+    na_allowed: false
+    compliance_override_trigger: true  # score of 0 triggers overall override (pending sign-off)
+    description: >
+      Did the agent stay on the right side of what they are licensed to say?
+    score_for:
+      - No diagnostic language used
+      - No outcome guarantees
+      - Standard intake language used for sensitive topics
+      - Appropriate referral language when clinical questions arose
+    score_against:
+      - Diagnostic claims about the caller or patient
+      - Treatment outcome guarantees
+      - Promising specific clinical outcomes
+      - Statements that could constitute unauthorised practice of medicine
+    prohibited_phrases_detected_by: compliance_engine  # deterministic pre-pass, not LLM
