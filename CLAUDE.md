@@ -188,6 +188,35 @@ am-copilot/
 
 ---
 
+## Infra setup notes
+
+These steps must be completed once per AWS environment before CDK stacks can be deployed.
+They are not part of the normal daily build — they are environment prerequisites.
+
+### CDK bootstrap IAM requirement (completed D3)
+
+The `am-copilot-dev` IAM user requires a custom inline policy to run `cdk bootstrap` and
+`cdk deploy`. **Do not use `AdministratorAccess`** — follow least-privilege per
+`docs/security-spec.md`.
+
+Policy name: `AMCopilot-CDK-Bootstrap-Policy`
+Required actions (scoped to this account/region):
+- CloudFormation: `CreateStack`, `DescribeStacks`, `DeleteStack`, `UpdateStack`, `GetTemplate`, `CreateChangeSet`, `ExecuteChangeSet`, `DescribeChangeSet`, `DeleteChangeSet`
+- S3: `CreateBucket`, `PutBucketPolicy`, `PutBucketVersioning`, `PutBucketPublicAccessBlock`, `PutEncryptionConfiguration`, `GetBucketLocation`, `PutObject`, `GetObject`, `DeleteObject`, `ListBucket`
+- ECR: `CreateRepository`, `DescribeRepositories`, `PutLifecyclePolicy`
+- SSM: `PutParameter`, `GetParameter`, `DeleteParameter`
+- IAM: `CreateRole`, `DeleteRole`, `AttachRolePolicy`, `DetachRolePolicy`, `PutRolePolicy`, `DeleteRolePolicy`, `GetRole`, `PassRole`
+
+If the CDKToolkit stack gets stuck in `ROLLBACK_FAILED`: delete it via the CloudFormation
+console (root/admin credentials), then re-run `cdk bootstrap`.
+
+Bootstrap command:
+```bash
+cd infra && cdk bootstrap aws://{ACCOUNT_ID}/us-east-1 --profile am-copilot-dev
+```
+
+---
+
 ## Open questions
 
 | Question | Owner | Must resolve by |
