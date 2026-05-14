@@ -215,6 +215,20 @@ Bootstrap command:
 cd infra && cdk bootstrap aws://{ACCOUNT_ID}/us-east-1 --profile am-copilot-dev
 ```
 
+### Bedrock quota provisioning (new AWS accounts)
+
+A fresh AWS account may have **all Bedrock inference quotas provisioned at 0** due to an
+AWS new-account provisioning bug. This is NOT a code issue — the pipeline is correct.
+
+Symptoms: `ValidationException: The provided model identifier is invalid` when calling
+`invoke_model`, even with a valid model ID and correct cross-region inference profile.
+
+Resolution: File an AWS Support case requesting quota increase for:
+- `us-east-1` → Amazon Bedrock → Anthropic Claude Sonnet inference throughput
+- Check Service Quotas console: all applied account-level values may show 0
+
+Do not modify scoring logic to work around this. The fix is entirely on the AWS side.
+
 ---
 
 ## Open questions
@@ -233,6 +247,20 @@ by `channel` number (`2=agent`, `1=caller`), not the `speaker` string.
 **One Phase B verification still open:** Confirm `channel→role` mapping holds
 on real treatment-center data. Mapping is isolated in `CHANNEL_TO_ROLE`
 constant in `normalizer.py` for easy update. Do not block Phase A on this.
+
+---
+
+## Phase B — must-do before production
+
+These items are explicitly deferred from Phase A. None of them block the D11 client
+grading session. All must be resolved before any non-dev deployment or real patient data.
+
+| # | Item | Location | Action required |
+|---|---|---|---|
+| 1 | **Bearer token verification** | `services/api-gateway/api_gateway/auth.py` · `require_auth()` | Currently accepts any non-empty Bearer token when bypass is off. Replace stub with real Cognito JWT verification (python-jose + JWKS endpoint). |
+| 2 | **CTM channel→role mapping** | `services/ctm-integration/ctm_integration/constants.py` · `CHANNEL_TO_ROLE` | Confirm `{2: "agent", 1: "caller"}` mapping holds on real treatment-center CTM data. Mapping is isolated in one constant — update if wrong. |
+| 3 | **CTM webhook HMAC-SHA256 signature** | `services/ctm-integration/ctm_integration/webhook.py` | Webhook signature verification against CTM's `X-CTM-Signature` header is not implemented. Verify the exact signing scheme from CTM docs, then add HMAC-SHA256 verification before processing any webhook payload. |
+| 4 | **Bedrock quota provisioning** | AWS Service Quotas console | A fresh AWS account may have all Bedrock inference quotas at 0. File AWS Support case before any production scoring run. See "Infra setup notes → Bedrock quota provisioning" above. |
 
 ---
 
