@@ -1,0 +1,197 @@
+{
+  "call_id": "syn_002",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 144,
+  "scenario_type": "excellent",
+  "metadata": {
+    "duration_seconds": 272,
+    "caller_type": "patient",
+    "campaign_source": "organic_search",
+    "tracking_number": "+15100858570",
+    "agent_id": "AGT-559",
+    "agent_name": "Shirley Bowen"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Thank you for calling Sunrise Recovery Center. This is Shirley, how can I help you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 4,
+      "text": "Um, hi. I'm Shane. I... I almost didn't call. I've been trying to get the nerve up for weeks."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 14,
+      "text": "I'm really glad you did, Shane. It takes a lot to make this call and I want you to know there's no pressure here. Take your time. What's going on?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 26,
+      "text": "I've been using meth on and off for about three years. It's been more on than off lately. I'm not sleeping. I'm losing weight. My friends have noticed."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 40,
+      "text": "Thank you for trusting me with that. Three years is a long time to carry this, and the fact that you reached out today \u2014 that matters. Shane, I want to make sure I understand what you're going through. Are you using every day at this point?"
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 58,
+      "text": "Most days. Sometimes I go two or three days without and then I crash hard."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 66,
+      "text": "Okay. And when you crash \u2014 are you getting any sleep during those periods, or is it pretty rough?"
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 74,
+      "text": "Pretty rough. I sleep a lot but it's not good sleep."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 82,
+      "text": "That's a really common pattern with stimulant use. Our clinical team will want to do a proper assessment, but what you're describing \u2014 the daily use, the crash cycles, the weight loss \u2014 those are things they'll be looking at carefully. Have you ever tried to stop or get treatment before?"
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 100,
+      "text": "No. This is the first time I've told anyone outside of my close friends."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 108,
+      "text": "Then this is a really significant step. I want to honour that. Shane, are you in a safe place right now? Any immediate concerns \u2014 medical, housing, safety?"
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 118,
+      "text": "I'm okay. I have an apartment. It's just \u2014 it's getting bad enough that I know I need to do something."
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 128,
+      "text": "That self-awareness is important. Let me ask \u2014 are you thinking about this as something you want to address in the next few days, or is this more of an exploratory call right now?"
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 140,
+      "text": "I want to actually do it. I've been thinking about it for too long already."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 148,
+      "text": "Good. Let's make that happen. Do you have insurance coverage right now?"
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 154,
+      "text": "Yes, through work. I have BluePeak Health."
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 160,
+      "text": "Great. Do you have your card available with the member ID and group number?"
+    },
+    {
+      "turn": 18,
+      "speaker": "caller",
+      "timestamp_seconds": 166,
+      "text": "Yeah. Member ID is BP70987905, group number GRP-185469."
+    },
+    {
+      "turn": 19,
+      "speaker": "agent",
+      "timestamp_seconds": 178,
+      "text": "Thank you. BluePeak Health, BP70987905, group GRP-185469. Our team will verify your benefits today. Based on your coverage and what you've shared, they'll be able to tell you what residential or outpatient options look like. Is there anything you're worried about in terms of taking this step?"
+    },
+    {
+      "turn": 20,
+      "speaker": "caller",
+      "timestamp_seconds": 196,
+      "text": "I'm scared of what people will think. My job, my family."
+    },
+    {
+      "turn": 21,
+      "speaker": "agent",
+      "timestamp_seconds": 204,
+      "text": "That fear is completely valid. A lot of people share it. What I can tell you is that confidentiality is something we take very seriously \u2014 what happens here stays here. And the people who love you, Shane? Most of them will be relieved, not judgmental. Our counsellors can also help you think through how to have those conversations when you're ready."
+    },
+    {
+      "turn": 22,
+      "speaker": "caller",
+      "timestamp_seconds": 226,
+      "text": "That helps. Thank you."
+    },
+    {
+      "turn": 23,
+      "speaker": "agent",
+      "timestamp_seconds": 230,
+      "text": "Of course. Here's what we'll do next: I'm going to send you a short intake form and a confirmation email right now. Our benefits team will call you within ninety minutes with the verification results. You'll have a clear picture of your options by end of business today. Does that work?"
+    },
+    {
+      "turn": 24,
+      "speaker": "caller",
+      "timestamp_seconds": 248,
+      "text": "Yes, that's good."
+    },
+    {
+      "turn": 25,
+      "speaker": "agent",
+      "timestamp_seconds": 252,
+      "text": "Perfect. I'll get that email out to you in the next five minutes. And Shane \u2014 you made the right call today. We'll take it from here."
+    },
+    {
+      "turn": 26,
+      "speaker": "caller",
+      "timestamp_seconds": 262,
+      "text": "Thank you so much."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_002",
+    "scenario_type": "excellent",
+    "expected_scores": {
+      "empathy_rapport": 5,
+      "insurance_verification": 5,
+      "clinical_screening": 5,
+      "urgency_triage": 3,
+      "family_caller_handling": null,
+      "objection_handling": null,
+      "next_step_clarity": 5,
+      "compliance_language": 5
+    },
+    "expected_overall": 94,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "nervous",
+      "first-time-seeking-help",
+      "stimulant-use"
+    ],
+    "coaching_notes": "Perfect empathy and rapport. Agent never pushed, gave space, and addressed confidentiality concern organically. Urgency triage scored 3 (acceptable) \u2014 caller is motivated but no same-day urgency, correctly handled."
+  }
+}

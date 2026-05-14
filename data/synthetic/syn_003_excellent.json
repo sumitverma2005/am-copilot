@@ -1,0 +1,186 @@
+{
+  "call_id": "syn_003",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 145,
+  "scenario_type": "excellent",
+  "metadata": {
+    "duration_seconds": 274,
+    "caller_type": "patient",
+    "campaign_source": "referral",
+    "tracking_number": "+13895625389",
+    "agent_id": "AGT-991",
+    "agent_name": "Rhonda Smith"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Thank you for calling Sunrise Recovery Center, this is Rhonda."
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 4,
+      "text": "Hi, I'm Monica. I'm calling about getting into a program. I've been dealing with opioid use \u2014 mostly prescription pills, but it's gotten out of hand."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 14,
+      "text": "Thank you for reaching out, Monica. That takes courage and I'm glad you called. Tell me \u2014 how long has this been going on?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 22,
+      "text": "About eighteen months. It started after a back surgery. I was taking the pills for the pain and then I couldn't stop."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 32,
+      "text": "That's a very common path and it doesn't make it your fault. You got trapped by something that started as medical treatment. Monica, are you still taking them daily?"
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 44,
+      "text": "Yes. Every day. I've tried to cut down but I get sick when I do."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 52,
+      "text": "When you say sick \u2014 are you talking about withdrawal symptoms? Sweating, muscle aches, nausea?"
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 58,
+      "text": "All of that, yes. It's pretty bad."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 66,
+      "text": "Okay. That's really important information. Opioid withdrawal can be medically serious and our clinical team will want to assess whether medically-supervised detox is the right first step before any IOP or residential program. Have you had any prior treatment for this?"
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 82,
+      "text": "No. I've been trying to handle it on my own."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 88,
+      "text": "I understand. And coming in now, before it gets worse, is the right move. Do you have health insurance coverage we could check?"
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 96,
+      "text": "That's actually why I'm calling now \u2014 I lost my insurance when I left my job last month. I'm self-pay."
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 104,
+      "text": "Got it, thank you for telling me. Self-pay is something we work with regularly and I don't want cost to be what stands between you and getting help. Let me walk you through what that looks like. We have a sliding-scale fee structure based on income, and we also work with a financing partner \u2014 CareCredit \u2014 that offers low-interest payment plans. Some people are also surprised to find they qualify for state-funded programs. Can I ask roughly what your situation looks like financially, so I can point you to the right option?"
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 134,
+      "text": "I have some savings. I can probably cover some of it. But I'm worried about the full cost."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 144,
+      "text": "That's completely fair. Here's what I'd suggest: let me connect you with our financial counsellor who can walk through the actual numbers with you \u2014 the sliding scale, the financing, and the state program eligibility. You'll have a clear picture of what you'd actually owe before you commit to anything. Does that work?"
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 162,
+      "text": "Yes, that would be helpful."
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 166,
+      "text": "Good. In the meantime, let me ask a few more questions so we have the clinical picture ready when you talk to the financial team. Monica, you mentioned withdrawal symptoms when you try to cut down \u2014 how recently did you last try to stop?"
+    },
+    {
+      "turn": 18,
+      "speaker": "caller",
+      "timestamp_seconds": 180,
+      "text": "About two weeks ago. I made it about a day and a half before I had to take something."
+    },
+    {
+      "turn": 19,
+      "speaker": "agent",
+      "timestamp_seconds": 190,
+      "text": "That tells me the physical dependence is significant. Our clinical team will likely recommend starting with MAT \u2014 medication-assisted treatment \u2014 which uses medications like buprenorphine to manage withdrawal safely. That's something the assessment will determine. Are there any other health concerns, mental health or otherwise, that we should know about?"
+    },
+    {
+      "turn": 20,
+      "speaker": "caller",
+      "timestamp_seconds": 210,
+      "text": "I've been pretty depressed. I don't know if that's the opioids or just my situation."
+    },
+    {
+      "turn": 21,
+      "speaker": "agent",
+      "timestamp_seconds": 222,
+      "text": "It's likely both, and we treat them together \u2014 that's what dual diagnosis care looks like. Our team is experienced with co-occurring depression and substance use. Here's the plan: I'm going to flag you for a call from our financial counsellor within the hour, and I'll also get our clinical intake team ready with the information you've shared today. Can you take a call in the next sixty minutes?"
+    },
+    {
+      "turn": 22,
+      "speaker": "caller",
+      "timestamp_seconds": 246,
+      "text": "Yes, I'm free."
+    },
+    {
+      "turn": 23,
+      "speaker": "agent",
+      "timestamp_seconds": 250,
+      "text": "Perfect. You'll hear from us within the hour. Monica, opioid withdrawal with the symptoms you're describing really does need professional support \u2014 you don't have to white-knuckle this. We'll get you the right help."
+    },
+    {
+      "turn": 24,
+      "speaker": "caller",
+      "timestamp_seconds": 264,
+      "text": "Thank you. That means a lot."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_003",
+    "scenario_type": "excellent",
+    "expected_scores": {
+      "empathy_rapport": 5,
+      "insurance_verification": null,
+      "clinical_screening": 4,
+      "urgency_triage": 3,
+      "family_caller_handling": null,
+      "objection_handling": 5,
+      "next_step_clarity": 5,
+      "compliance_language": 5
+    },
+    "expected_overall": 91,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "self-pay",
+      "opioid-use-disorder",
+      "withdrawal-symptoms",
+      "dual-diagnosis-noted"
+    ],
+    "coaching_notes": "Insurance verification correctly scored N/A \u2014 caller is self-pay and agent immediately pivoted to financing and sliding scale. Objection handling exemplary. Clinical screen strong. Urgency triage 3: withdrawal symptoms present but not acute crisis level."
+  }
+}

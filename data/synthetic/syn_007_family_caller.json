@@ -1,0 +1,174 @@
+{
+  "call_id": "syn_007",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 343,
+  "scenario_type": "family_caller",
+  "metadata": {
+    "duration_seconds": 250,
+    "caller_type": "family_member",
+    "campaign_source": "er_referral",
+    "tracking_number": "+14454527891",
+    "agent_id": "AGT-292",
+    "agent_name": "Sandra Chavez"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Thank you for calling Sunrise Recovery Center, this is Sandra."
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 4,
+      "text": "Hi. My name is Jacob Hodges. I'm calling about my husband. His name is Jamie. I'm... I'm not sure where to start."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 14,
+      "text": "Take a breath, Jacob. You're doing the right thing by calling. I can hear how hard this is. Can you tell me what's been going on?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 26,
+      "text": "He's been drinking heavily for over a year. It's gotten to the point where he can't stop. He's tried a few times. Last week he had a seizure and the doctor at the ER told us he needs to go somewhere that can handle detox."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 44,
+      "text": "I'm so sorry you and Jamie have been through that. A seizure during withdrawal is serious and I want you to know you've called the right place. We have medically supervised detox. Before I go further \u2014 is Jamie aware that you're calling today?"
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 62,
+      "text": "Yes. He said he's ready. He's the one who asked me to call because he was too scared to do it himself."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 70,
+      "text": "That's really important to know. Because Jamie is an adult, anything we do in terms of treatment will require his consent \u2014 and because he's already expressed that consent to you and wants this, that makes this call something we can definitely work with. I'll need to speak with him at some point today to confirm, but let's get started with what you can share."
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 92,
+      "text": "Of course. Whatever you need."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 96,
+      "text": "Thank you for understanding. Jacob, I want to acknowledge \u2014 this has clearly been frightening for you too. Spouses and families go through a lot when a loved one is struggling. How are you holding up?"
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 110,
+      "text": "Honestly not great. I've been holding everything together for a year and I'm exhausted."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 118,
+      "text": "That's completely understandable and valid. We actually have resources for family members as well \u2014 our family counsellor can speak with you separately if that would help. We'll come back to that. Right now let's focus on getting Jamie the right help. Can you tell me about the drinking \u2014 how much, how often?"
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 138,
+      "text": "He was drinking a fifth a day at his worst. Since the ER he's cut back but he's still drinking to avoid withdrawal."
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 152,
+      "text": "Okay. So he's currently using to manage withdrawal symptoms \u2014 that's actually a sign that he needs medically supervised detox before any residential or outpatient program. Does he have any history of prior treatment?"
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 162,
+      "text": "No. This is the first time we're looking at this."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 168,
+      "text": "Understood. And Jamie's insurance \u2014 is he covered under your plan or his own?"
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 174,
+      "text": "His own, through his employer. It's CoreFirst Insurance."
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 180,
+      "text": "Do you have his member ID and group number?"
+    },
+    {
+      "turn": 18,
+      "speaker": "caller",
+      "timestamp_seconds": 186,
+      "text": "Yes, I have his card. Member ID BP31407894, group GRP-575659."
+    },
+    {
+      "turn": 19,
+      "speaker": "agent",
+      "timestamp_seconds": 198,
+      "text": "Perfect. I have that noted. Here's what I'd like to do: I'll verify Jamie's benefits today and have someone from our admissions team call both of you \u2014 ideally with him present \u2014 within two hours. That way he can give verbal consent on the call and we can get the intake process started. Does he have a phone he can take a call on?"
+    },
+    {
+      "turn": 20,
+      "speaker": "caller",
+      "timestamp_seconds": 220,
+      "text": "Yes. We'll both be here."
+    },
+    {
+      "turn": 21,
+      "speaker": "agent",
+      "timestamp_seconds": 226,
+      "text": "Wonderful. You'll hear from us by two o'clock this afternoon. And Jacob \u2014 what you're doing for your husband right now is an act of love. Please don't forget to take care of yourself too."
+    },
+    {
+      "turn": 22,
+      "speaker": "caller",
+      "timestamp_seconds": 240,
+      "text": "Thank you. That really helps."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_007",
+    "scenario_type": "family_caller",
+    "expected_scores": {
+      "empathy_rapport": 5,
+      "insurance_verification": 4,
+      "clinical_screening": 3,
+      "urgency_triage": 4,
+      "family_caller_handling": 5,
+      "objection_handling": null,
+      "next_step_clarity": 5,
+      "compliance_language": 5
+    },
+    "expected_overall": 90,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "family-caller",
+      "spouse",
+      "consent-confirmed",
+      "withdrawal-risk",
+      "prior-seizure"
+    ],
+    "coaching_notes": "Exemplary family caller handling: consent addressed immediately, patient's autonomy respected, family member's distress acknowledged, family resources offered. Clinical screen limited by family-caller context (scored 3). Next step is precise with timing and format."
+  }
+}

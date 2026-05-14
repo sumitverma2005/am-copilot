@@ -1,0 +1,156 @@
+{
+  "call_id": "syn_010",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 443,
+  "scenario_type": "urgency",
+  "metadata": {
+    "duration_seconds": 190,
+    "caller_type": "patient",
+    "campaign_source": "google_paid",
+    "tracking_number": "+19072226928",
+    "agent_id": "AGT-874",
+    "agent_name": "Deborah Adams"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Thank you for calling Sunrise Recovery Center, this is Deborah."
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 4,
+      "text": "Hi, my name is Katherine. I need help. I've been trying to stop drinking and I've been shaking for two days and I threw up this morning and I'm scared."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 14,
+      "text": "Katherine, I hear you and I'm glad you called. What you're describing \u2014 the shaking, the vomiting, two days in \u2014 those are withdrawal symptoms and they can be medically serious. I want to make sure you're safe. Are you alone right now?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 30,
+      "text": "Yes. My roommate is at work."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 36,
+      "text": "Okay. Have you had any seizures before when you've tried to stop drinking, or any hallucinations \u2014 seeing or hearing things that aren't there?"
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 48,
+      "text": "No seizures. But last night I thought I heard someone in the apartment and there was nobody there."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 58,
+      "text": "Katherine, that's an early sign of alcohol withdrawal that we take very seriously. I want to be direct with you: alcohol withdrawal at this stage can escalate and it needs medical supervision. I want to get you into our detox unit today. Can you get here, or do you need us to help arrange transport?"
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 76,
+      "text": "I can drive. I think."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 82,
+      "text": "I'd actually recommend not driving given what you're describing \u2014 your coordination may be affected. Do you have someone who could bring you, or can you take a rideshare?"
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 92,
+      "text": "I can call an Uber."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 96,
+      "text": "Perfect. Here's what I need from you: call the Uber right after we hang up. Our address is 4800 North Lakeview Drive. When you arrive, tell the front desk your name and that you spoke with Deborah this morning and that this is urgent. Do you have health insurance?"
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 114,
+      "text": "Yes, Meridian Care. Member ID BP12856650, group GRP-769687."
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 126,
+      "text": "I have that. I'm putting a note in right now with your name, insurance, and that you're coming in today. Our detox team will be expecting you. Katherine, I want you to keep the Uber app open and call us back if anything gets worse before you arrive \u2014 new symptoms, chest pain, confusion. Our number is on your caller ID. Can you repeat the address back to me?"
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 150,
+      "text": "4800 North Lakeview Drive."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 154,
+      "text": "That's right. How are you feeling right now, in this moment?"
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 158,
+      "text": "Shaky. Scared. But a little relieved."
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 164,
+      "text": "Good. Relief is the right feeling. You did the right thing calling. We'll take it from here. I'll stay on the line until you've called the Uber \u2014 are you able to do that right now?"
+    },
+    {
+      "turn": 18,
+      "speaker": "caller",
+      "timestamp_seconds": 176,
+      "text": "Yes. Opening the app now."
+    },
+    {
+      "turn": 19,
+      "speaker": "agent",
+      "timestamp_seconds": 180,
+      "text": "Good. I'm right here."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_010",
+    "scenario_type": "urgency",
+    "expected_scores": {
+      "empathy_rapport": 5,
+      "insurance_verification": 4,
+      "clinical_screening": 4,
+      "urgency_triage": 5,
+      "family_caller_handling": null,
+      "objection_handling": 4,
+      "next_step_clarity": 5,
+      "compliance_language": 5
+    },
+    "expected_overall": 92,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": true,
+    "scenario_tags": [
+      "patient-caller",
+      "active-withdrawal",
+      "hallucinations",
+      "same-day-admit",
+      "crisis-protocol-activated"
+    ],
+    "coaching_notes": "Exemplary urgency triage: agent immediately identified withdrawal severity, asked the right escalation questions (seizure history, hallucinations), recommended against driving, gave a precise address with name-check-in instructions, and stayed on the line. Text-book crisis response."
+  }
+}

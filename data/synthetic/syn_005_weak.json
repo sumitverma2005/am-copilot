@@ -1,0 +1,176 @@
+{
+  "call_id": "syn_005",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 244,
+  "scenario_type": "weak",
+  "metadata": {
+    "duration_seconds": 138,
+    "caller_type": "patient",
+    "campaign_source": "referral",
+    "tracking_number": "+14486007512",
+    "agent_id": "AGT-869",
+    "agent_name": "Erin Reyes"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Thank you for calling Sunrise Recovery Center, this is Erin. What can I help you with?"
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 6,
+      "text": "Hi. I'm Sophia. I'm calling because I've been struggling with cocaine use and my family is really worried about me. I'm worried about me too."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 18,
+      "text": "I understand. How long has this been going on?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 24,
+      "text": "About two years. It's daily now."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 28,
+      "text": "Okay. We have a really great program here and I can tell you \u2014 our 30-day program gets people better. You'll come out of here a completely different person."
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 40,
+      "text": "That sounds good. That's what I need."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 44,
+      "text": "Absolutely. Do you have insurance?"
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 48,
+      "text": "Yes, CoreFirst Insurance."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 52,
+      "text": "Member ID and group number?"
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 56,
+      "text": "Member ID BP61519698, group GRP-932514."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 66,
+      "text": "Great. And have you had any previous treatment?"
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 70,
+      "text": "I did a 30-day residential about three years ago."
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 74,
+      "text": "And you're back to using \u2014 okay. Well this time will be different, I promise. Our program has an excellent success rate."
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 84,
+      "text": "I hope so. I'm ready to commit."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 88,
+      "text": "That's what we need to hear. Is there anything about cost you're worried about?"
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 94,
+      "text": "A little. I don't know what insurance covers."
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 98,
+      "text": "We'll verify your benefits and let you know. Don't worry, we'll get you taken care of."
+    },
+    {
+      "turn": 18,
+      "speaker": "caller",
+      "timestamp_seconds": 106,
+      "text": "Okay. What happens next?"
+    },
+    {
+      "turn": 19,
+      "speaker": "agent",
+      "timestamp_seconds": 110,
+      "text": "Someone from our admissions team will call you. Probably in the next day or so."
+    },
+    {
+      "turn": 20,
+      "speaker": "caller",
+      "timestamp_seconds": 118,
+      "text": "Do you have a more specific time?"
+    },
+    {
+      "turn": 21,
+      "speaker": "agent",
+      "timestamp_seconds": 122,
+      "text": "I'll put you on the list. You'll hear from us."
+    },
+    {
+      "turn": 22,
+      "speaker": "caller",
+      "timestamp_seconds": 128,
+      "text": "Okay. Thank you."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_005",
+    "scenario_type": "weak",
+    "expected_scores": {
+      "empathy_rapport": 3,
+      "insurance_verification": 3,
+      "clinical_screening": 2,
+      "urgency_triage": 2,
+      "family_caller_handling": null,
+      "objection_handling": 3,
+      "next_step_clarity": 2,
+      "compliance_language": 0
+    },
+    "expected_overall": 41,
+    "compliance_override_triggered": true,
+    "expected_flags": [
+      "OUTCOME_GUARANTEE"
+    ],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "compliance-violation",
+      "outcome-guarantee",
+      "prior-treatment",
+      "stimulant-use"
+    ],
+    "coaching_notes": "COMPLIANCE VIOLATION: 'our 30-day program gets people better' and 'You'll come out of here a completely different person' are outcome guarantees. Also: 'this time will be different, I promise' and 'excellent success rate' reinforce the violation. Clinical screen shallow \u2014 did not explore severity, withdrawal risk, or co-occurring issues. Next step vague."
+  }
+}

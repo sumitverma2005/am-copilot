@@ -1,0 +1,198 @@
+{
+  "call_id": "syn_006",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 245,
+  "scenario_type": "weak",
+  "metadata": {
+    "duration_seconds": 144,
+    "caller_type": "patient",
+    "campaign_source": "physician_referral",
+    "tracking_number": "+13939127790",
+    "agent_id": "AGT-228",
+    "agent_name": "Shannon Pacheco"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Sunrise Recovery Center, Shannon speaking."
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 4,
+      "text": "Hi, I'm David. I'm looking into treatment for alcohol. My doctor suggested I call."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 10,
+      "text": "Okay, sure. How much are you drinking?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 14,
+      "text": "A lot. Pretty much every night. A six-pack or more."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 20,
+      "text": "Every night. Okay. Do you have insurance?"
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 24,
+      "text": "Yes, Summit Select."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 28,
+      "text": "Do you have your member ID?"
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 32,
+      "text": "Yes, it's BP73195529."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 38,
+      "text": "And the group number?"
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 42,
+      "text": "I don't have that with me right now."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 46,
+      "text": "That's okay. We'll try to look it up. Anything else about your situation I should know?"
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 54,
+      "text": "I mean, it's been going on for a few years. I tried to cut back on my own but it didn't really work."
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 64,
+      "text": "Got it. Any prior treatment programs?"
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 68,
+      "text": "No, nothing formal."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 72,
+      "text": "Okay. And are you looking to come in soon or still deciding?"
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 78,
+      "text": "I think I want to do it but I'm nervous about it. I have kids, so I'm wondering how that works."
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 88,
+      "text": "We can work around schedules. Our outpatient programs allow people to be home in the evenings."
+    },
+    {
+      "turn": 18,
+      "speaker": "caller",
+      "timestamp_seconds": 96,
+      "text": "That's good to know. I'm worried about the cost too."
+    },
+    {
+      "turn": 19,
+      "speaker": "agent",
+      "timestamp_seconds": 102,
+      "text": "Your insurance should cover most of it. We'll verify."
+    },
+    {
+      "turn": 20,
+      "speaker": "caller",
+      "timestamp_seconds": 108,
+      "text": "Okay. So what do I do now?"
+    },
+    {
+      "turn": 21,
+      "speaker": "agent",
+      "timestamp_seconds": 114,
+      "text": "We'll have someone call you to set something up."
+    },
+    {
+      "turn": 22,
+      "speaker": "caller",
+      "timestamp_seconds": 118,
+      "text": "When?"
+    },
+    {
+      "turn": 23,
+      "speaker": "agent",
+      "timestamp_seconds": 122,
+      "text": "Within the next day or two."
+    },
+    {
+      "turn": 24,
+      "speaker": "caller",
+      "timestamp_seconds": 126,
+      "text": "Okay. Is there anything I need to have ready?"
+    },
+    {
+      "turn": 25,
+      "speaker": "agent",
+      "timestamp_seconds": 130,
+      "text": "Just your insurance card."
+    },
+    {
+      "turn": 26,
+      "speaker": "caller",
+      "timestamp_seconds": 134,
+      "text": "Alright. Thanks."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_006",
+    "scenario_type": "weak",
+    "expected_scores": {
+      "empathy_rapport": 2,
+      "insurance_verification": 2,
+      "clinical_screening": 2,
+      "urgency_triage": 3,
+      "family_caller_handling": null,
+      "objection_handling": 2,
+      "next_step_clarity": 3,
+      "compliance_language": 4
+    },
+    "expected_overall": 52,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "borderline",
+      "coaching-gaps",
+      "no-violation",
+      "parent-concern"
+    ],
+    "coaching_notes": "BORDERLINE: Urgency triage and next-step clarity are borderline 2-3 \u2014 graders may disagree. No compliance violation. Major coaching gaps: no warm empathy opening, clinical screen minimal (missed withdrawal history, severity, duration), group number not escalated as important, objection about kids handled with a single sentence and dropped, cost concern dismissed with 'should cover most of it'. Next step is vague but timing is given."
+  }
+}

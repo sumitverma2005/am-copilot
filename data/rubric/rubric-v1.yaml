@@ -4,17 +4,27 @@ last_updated: "2026-05"
 status: draft  # pending client sign-off on compliance_override rule
 
 scoring_scale:
-  min: 0
-  max: 5
-  labels:
-    5: Exemplary
-    4: Strong
-    3: Acceptable
-    2: Needs improvement
-    1: Poor
-    0: Unacceptable
+  levels:
+    - score: 5
+      label: Exemplary
+      anchor: "A call you would use in agent training. Nothing to improve."
+    - score: 4
+      label: Strong
+      anchor: "Solid work. One small coaching note at most."
+    - score: 3
+      label: Acceptable
+      anchor: "Got the job done. Nothing wrong, nothing notable."
+    - score: 2
+      label: "Needs improvement"
+      anchor: "Identifiable gaps a coaching session would address."
+    - score: 1
+      label: Poor
+      anchor: "Significant problems on this dimension."
+    - score: 0
+      label: Unacceptable
+      anchor: "Actively wrong, or a required step skipped entirely."
   na_label: "N/A"
-  na_rule: Excluded from weighted average entirely. N/A is NOT zero.
+  na_rule: "Excluded from weighted average entirely. N/A is NOT zero."
 
 overall_score_formula: |
   For each applicable (non-N/A) dimension:

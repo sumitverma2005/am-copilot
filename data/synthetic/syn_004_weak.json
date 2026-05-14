@@ -1,0 +1,188 @@
+{
+  "call_id": "syn_004",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 243,
+  "scenario_type": "weak",
+  "metadata": {
+    "duration_seconds": 116,
+    "caller_type": "patient",
+    "campaign_source": "google_paid",
+    "tracking_number": "+18230982193",
+    "agent_id": "AGT-638",
+    "agent_name": "Roger Hayes"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Sunrise Recovery Center, this is Roger."
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 4,
+      "text": "Hi, yeah, I'm calling because... I think I have a problem with drinking. My name is Tiffany."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 10,
+      "text": "Okay. How long has this been going on?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 14,
+      "text": "Probably four or five years. But it's gotten worse in the last year."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 20,
+      "text": "How much are you drinking a day?"
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 24,
+      "text": "Maybe a bottle of wine at night, sometimes more."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 30,
+      "text": "And are you drinking in the morning?"
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 34,
+      "text": "Not usually. Occasionally on weekends."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 40,
+      "text": "Okay. Based on what you're telling me, it sounds like you have a dependency problem that's going to need professional treatment."
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 48,
+      "text": "Yeah, I figured as much."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 52,
+      "text": "Do you have insurance?"
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 56,
+      "text": "Yes. Summit Select."
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 60,
+      "text": "Member ID?"
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 64,
+      "text": "BP66962391."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 68,
+      "text": "Group number?"
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 72,
+      "text": "GRP-155058."
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 76,
+      "text": "Okay. We'll verify that. Any prior treatment?"
+    },
+    {
+      "turn": 18,
+      "speaker": "caller",
+      "timestamp_seconds": 80,
+      "text": "No."
+    },
+    {
+      "turn": 19,
+      "speaker": "agent",
+      "timestamp_seconds": 84,
+      "text": "Okay. Someone will call you back about availability."
+    },
+    {
+      "turn": 20,
+      "speaker": "caller",
+      "timestamp_seconds": 88,
+      "text": "Do you know when?"
+    },
+    {
+      "turn": 21,
+      "speaker": "agent",
+      "timestamp_seconds": 92,
+      "text": "Probably today or tomorrow."
+    },
+    {
+      "turn": 22,
+      "speaker": "caller",
+      "timestamp_seconds": 96,
+      "text": "Okay. Should I do anything in the meantime?"
+    },
+    {
+      "turn": 23,
+      "speaker": "agent",
+      "timestamp_seconds": 100,
+      "text": "Just wait for our call. We'll figure out the details then."
+    },
+    {
+      "turn": 24,
+      "speaker": "caller",
+      "timestamp_seconds": 106,
+      "text": "Alright. Thank you."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_004",
+    "scenario_type": "weak",
+    "expected_scores": {
+      "empathy_rapport": 2,
+      "insurance_verification": 3,
+      "clinical_screening": 2,
+      "urgency_triage": 2,
+      "family_caller_handling": null,
+      "objection_handling": null,
+      "next_step_clarity": 2,
+      "compliance_language": 0
+    },
+    "expected_overall": 34,
+    "compliance_override_triggered": true,
+    "expected_flags": [
+      "DIAG_CLAIM"
+    ],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "compliance-violation",
+      "diagnostic-claim",
+      "poor-empathy",
+      "vague-next-step"
+    ],
+    "coaching_notes": "COMPLIANCE VIOLATION: 'it sounds like you have a dependency problem' is a diagnostic claim. Agent stayed in intake role on language but crossed the line with this statement. Beyond compliance: flat tone throughout, no empathy opening, clinical screen incomplete (missed severity, withdrawal, prior treatment), next step is vague ('today or tomorrow'). Major coaching opportunity."
+  }
+}

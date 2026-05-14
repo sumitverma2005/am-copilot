@@ -1,0 +1,161 @@
+{
+  "call_id": "syn_011",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 444,
+  "scenario_type": "urgency",
+  "metadata": {
+    "duration_seconds": 124,
+    "caller_type": "patient",
+    "campaign_source": "organic_search",
+    "tracking_number": "+14080643381",
+    "agent_id": "AGT-416",
+    "agent_name": "Todd Hensley"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Thank you for calling Sunrise Recovery Center, this is Todd."
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 4,
+      "text": "Hi, my name is Kyle. I've been struggling with alcohol and I think I need help."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 10,
+      "text": "Of course. How long has this been going on?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 14,
+      "text": "Years. But it's been really bad lately. I don't know, I just... I don't really see the point in a lot of things anymore."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 24,
+      "text": "How much are you drinking?"
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 28,
+      "text": "A lot. Almost a bottle of vodka a day."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 34,
+      "text": "Every day?"
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 38,
+      "text": "Pretty much."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 42,
+      "text": "Okay. And are you looking to come in soon?"
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 48,
+      "text": "I guess. I'm not really sure what I'm looking for. I just feel like nothing's going to get better anyway."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 56,
+      "text": "I understand. Do you have insurance?"
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 62,
+      "text": "Yes, Summit Select. ID is BP11776709, group GRP-424152."
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 74,
+      "text": "Okay. Any prior treatment?"
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 80,
+      "text": "No."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 84,
+      "text": "And what's your availability like? Could you come in this week?"
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 90,
+      "text": "I don't know. Maybe. I just don't have a lot of energy for anything lately."
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 98,
+      "text": "We can schedule a time that works for you. Let me get someone from admissions to call you back about next steps."
+    },
+    {
+      "turn": 18,
+      "speaker": "caller",
+      "timestamp_seconds": 106,
+      "text": "Okay."
+    },
+    {
+      "turn": 19,
+      "speaker": "agent",
+      "timestamp_seconds": 110,
+      "text": "We'll be in touch. Thanks for calling."
+    },
+    {
+      "turn": 20,
+      "speaker": "caller",
+      "timestamp_seconds": 114,
+      "text": "Okay. Bye."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_011",
+    "scenario_type": "urgency",
+    "expected_scores": {
+      "empathy_rapport": 2,
+      "insurance_verification": 3,
+      "clinical_screening": 2,
+      "urgency_triage": 0,
+      "family_caller_handling": null,
+      "objection_handling": null,
+      "next_step_clarity": 2,
+      "compliance_language": 4
+    },
+    "expected_overall": 46,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": true,
+    "scenario_tags": [
+      "patient-caller",
+      "missed-urgency",
+      "passive-si",
+      "critical-coaching-opportunity"
+    ],
+    "coaching_notes": "CRITICAL MISSED URGENCY: Caller stated 'I don't really see the point in a lot of things anymore' and 'nothing's going to get better anyway' and 'don't have a lot of energy for anything' \u2014 passive suicidal ideation signals that required crisis protocol. Agent moved to insurance without pause. Urgency triage = 0 (unacceptable). This call requires immediate coaching review and should not happen again. Clinical screen also inadequate."
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "call_id": "syn_009",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 345,
+  "scenario_type": "family_caller",
+  "metadata": {
+    "duration_seconds": 130,
+    "caller_type": "family_member",
+    "campaign_source": "google_paid",
+    "tracking_number": "+16293033872",
+    "agent_id": "AGT-889",
+    "agent_name": "Yvonne Garcia"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Sunrise Recovery Center."
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 4,
+      "text": "Hi, I need help. My brother \u2014 his name is Marcus \u2014 he's in really bad shape. He told me last night he wants to get help and I'm calling on his behalf. My name is Kelli."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 14,
+      "text": "What's wrong with him?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 18,
+      "text": "He's been on meth for two years. Last night he had a breakdown. He's never opened up like this before and I'm afraid if I don't act now he'll change his mind."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 28,
+      "text": "Okay. What's his date of birth?"
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 32,
+      "text": "March 14th, 1993."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 36,
+      "text": "And his insurance?"
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 40,
+      "text": "It's Summit Select. Member ID BP10774917, group GRP-272579."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 52,
+      "text": "Has he used anything today?"
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 56,
+      "text": "I don't know. Probably."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 60,
+      "text": "Does he have any mental health issues?"
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 64,
+      "text": "He's been depressed for a long time. That's part of why he started using, I think."
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 70,
+      "text": "Any medical conditions?"
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 74,
+      "text": "Not that I know of."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 78,
+      "text": "Okay. We'll need him to call us or come in."
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 82,
+      "text": "He's not going to do that on his own. Can you help me figure out how to get him there? He's willing right now \u2014 tonight."
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 90,
+      "text": "We can't admit someone without them presenting themselves. He needs to call."
+    },
+    {
+      "turn": 18,
+      "speaker": "caller",
+      "timestamp_seconds": 96,
+      "text": "I understand that. But is there anything I can do? Any guidance on how to talk to him?"
+    },
+    {
+      "turn": 19,
+      "speaker": "agent",
+      "timestamp_seconds": 102,
+      "text": "Just bring him in or have him call."
+    },
+    {
+      "turn": 20,
+      "speaker": "caller",
+      "timestamp_seconds": 108,
+      "text": "Is there a crisis line or an interventionist you work with?"
+    },
+    {
+      "turn": 21,
+      "speaker": "agent",
+      "timestamp_seconds": 114,
+      "text": "We don't have that here. He can call when he's ready."
+    },
+    {
+      "turn": 22,
+      "speaker": "caller",
+      "timestamp_seconds": 120,
+      "text": "Okay. Thank you."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_009",
+    "scenario_type": "family_caller",
+    "expected_scores": {
+      "empathy_rapport": 2,
+      "insurance_verification": 3,
+      "clinical_screening": 2,
+      "urgency_triage": 2,
+      "family_caller_handling": 1,
+      "objection_handling": 2,
+      "next_step_clarity": 2,
+      "compliance_language": 4
+    },
+    "expected_overall": 47,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "family-caller",
+      "sibling",
+      "no-consent-framing",
+      "urgent-window",
+      "dual-diagnosis-noted"
+    ],
+    "coaching_notes": "Poor family caller handling: agent collected patient's DOB and insurance without any consent framing. Sibling's distress ('I'm afraid', urgent window) entirely ignored. No warmth or acknowledgement throughout. Did not offer crisis resources or intervention referral when directly asked \u2014 that's a missed escalation opportunity. Should have offered to speak with patient directly."
+  }
+}

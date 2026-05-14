@@ -188,6 +188,14 @@ am-copilot/
 
 ---
 
+## Open questions
+
+| Question | Owner | Must resolve by |
+|---|---|---|
+| What does CTM `GET /api/v1/calls/{id}` actually return for the transcript field? Turn-by-turn diarized, raw text blob, or mixed? The normalizer design depends on this. See `services/ctm-integration/README.md` for the three scenarios. | Dev | D5 — before writing `normalizer.py` |
+
+---
+
 ## Key documents (read before working on a subsystem)
 
 | Document | Read before working on... |

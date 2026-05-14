@@ -1,0 +1,203 @@
+{
+  "call_id": "syn_001",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 143,
+  "scenario_type": "excellent",
+  "metadata": {
+    "duration_seconds": 290,
+    "caller_type": "patient",
+    "campaign_source": "google_paid",
+    "tracking_number": "+12608413037",
+    "agent_id": "AGT-288",
+    "agent_name": "Brandon Perez"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Thank you for calling Sunrise Recovery Center, this is Brandon. How can I help you today?"
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 4,
+      "text": "Hi... my name is Rebecca. I've been struggling with alcohol for a couple of years now and I think \u2014 I think I finally need to get some real help."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 14,
+      "text": "Thank you so much for reaching out, Rebecca. I can hear that took a lot of courage. You don't have to figure this out alone \u2014 that's exactly why we're here. Can you tell me a little about what's been going on?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 28,
+      "text": "It's been getting worse. I'm drinking every day, sometimes starting in the morning. My wife is scared and honestly so am I."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 42,
+      "text": "I really appreciate you sharing that with me. What you're describing \u2014 recognising the pattern and being scared \u2014 that actually tells me a lot about how serious you are about getting better. That's a strength, Rebecca. Let me ask \u2014 are you having any physical symptoms right now? Shaking, sweating, anything like that?"
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 62,
+      "text": "Not right now. I had my last drink a few hours ago."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 70,
+      "text": "Okay, good to know. So no immediate withdrawal symptoms at this moment. And is this something you're looking to address soon, or are you in a place where today or this week feels more urgent?"
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 82,
+      "text": "I'd like to start as soon as possible. My wife and I talked last night and we agreed I need to do this now."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 92,
+      "text": "I'm glad you have that support at home \u2014 that makes a real difference. Let me get a few more details so we can figure out the right level of care for you. How long has the daily drinking been going on?"
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 104,
+      "text": "About two years, maybe a bit more. It got a lot worse after I lost my job eighteen months ago."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 114,
+      "text": "I understand. And have you ever been through any treatment before \u2014 detox, rehab, outpatient, anything like that?"
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 122,
+      "text": "I did an IOP program about four years ago. It helped for a while but I eventually went back."
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 132,
+      "text": "That's really useful context. Prior treatment history helps our clinical team put together the right plan. Now let me ask about insurance \u2014 do you have coverage right now?"
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 142,
+      "text": "Yes, through my wife's employer. It's BluePeak Health."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 148,
+      "text": "Great. Do you happen to have the insurance card handy? I'll need the member ID and group number."
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 154,
+      "text": "Sure, hold on. Member ID is BP12132605 and the group number is GRP-337060."
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 168,
+      "text": "Perfect, thank you. So BluePeak Health, member ID BP12132605, group GRP-337060. Let me note that down. Our admissions coordinator will verify your benefits \u2014 typically we can get that back to you within a couple of hours. Have you or your wife had any questions about cost or what coverage looks like?"
+    },
+    {
+      "turn": 18,
+      "speaker": "caller",
+      "timestamp_seconds": 188,
+      "text": "A little. We weren't sure what insurance would cover."
+    },
+    {
+      "turn": 19,
+      "speaker": "agent",
+      "timestamp_seconds": 196,
+      "text": "Totally understandable. Once we verify, we'll walk you through exactly what your plan covers and what, if anything, would be your responsibility. We never want cost to be the thing that gets in the way. There are also financing options if needed, but let's see what the verification shows first."
+    },
+    {
+      "turn": 20,
+      "speaker": "caller",
+      "timestamp_seconds": 214,
+      "text": "That's reassuring. Thank you."
+    },
+    {
+      "turn": 21,
+      "speaker": "agent",
+      "timestamp_seconds": 218,
+      "text": "Of course. Rebecca, based on what you've shared \u2014 two-year history, daily use, prior IOP \u2014 our clinical team will likely want to do a full assessment to determine whether detox is the right starting point or whether an IOP or PHP level of care fits best. Does that make sense?"
+    },
+    {
+      "turn": 22,
+      "speaker": "caller",
+      "timestamp_seconds": 238,
+      "text": "Yes, that makes sense. I just want to do this right this time."
+    },
+    {
+      "turn": 23,
+      "speaker": "agent",
+      "timestamp_seconds": 244,
+      "text": "And you will. Here's what happens next: I'm going to send you a confirmation email right now with our address, what to expect, and a short intake form. Our benefits coordinator will call you within two hours with your insurance verification results. Can you take a call this afternoon?"
+    },
+    {
+      "turn": 24,
+      "speaker": "caller",
+      "timestamp_seconds": 262,
+      "text": "Yes, absolutely."
+    },
+    {
+      "turn": 25,
+      "speaker": "agent",
+      "timestamp_seconds": 266,
+      "text": "Perfect. You'll hear from us by three o'clock today. And Rebecca \u2014 reaching out today was the right call. We'll take it from here."
+    },
+    {
+      "turn": 26,
+      "speaker": "caller",
+      "timestamp_seconds": 276,
+      "text": "Thank you. I really appreciate it."
+    },
+    {
+      "turn": 27,
+      "speaker": "agent",
+      "timestamp_seconds": 280,
+      "text": "Of course. Take care, and we'll talk soon."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_001",
+    "scenario_type": "excellent",
+    "expected_scores": {
+      "empathy_rapport": 5,
+      "insurance_verification": 4,
+      "clinical_screening": 4,
+      "urgency_triage": 4,
+      "family_caller_handling": null,
+      "objection_handling": 4,
+      "next_step_clarity": 5,
+      "compliance_language": 5
+    },
+    "expected_overall": 90,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "cooperative",
+      "insurance-confirmed",
+      "prior-iop"
+    ],
+    "coaching_notes": "Exemplary across all scored dimensions. Agent used caller's name consistently, completed full clinical screen, and gave a precise next-step with timing. Minor: could have explicitly named the IOP/PHP distinction when describing level-of-care options."
+  }
+}

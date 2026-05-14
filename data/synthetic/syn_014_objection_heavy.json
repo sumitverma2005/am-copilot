@@ -1,0 +1,198 @@
+{
+  "call_id": "syn_014",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 544,
+  "scenario_type": "objection_heavy",
+  "metadata": {
+    "duration_seconds": 170,
+    "caller_type": "patient",
+    "campaign_source": "organic_search",
+    "tracking_number": "+18921930010",
+    "agent_id": "AGT-781",
+    "agent_name": "Kyle Hoffman"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Sunrise Recovery Center, this is Kyle."
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 4,
+      "text": "Hi, I'm Elizabeth. I'm thinking about getting help for drinking. I have some questions."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 12,
+      "text": "Sure, go ahead."
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 16,
+      "text": "First \u2014 how much does it cost? I'm worried about affording it."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 22,
+      "text": "That depends on your insurance. Do you have coverage?"
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 28,
+      "text": "Yes, Summit Select. But I'm not sure what it covers."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 36,
+      "text": "We'll verify your benefits. Member ID and group number?"
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 42,
+      "text": "Member ID BP24300648, group GRP-424453."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 52,
+      "text": "Okay. We'll look into that. Anything else?"
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 58,
+      "text": "I'm also just \u2014 I'm scared about what treatment is like. I've heard it's really hard."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 66,
+      "text": "It's a process. It's not easy. But people get through it."
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 74,
+      "text": "Right, but I have a job. I can't just take time off."
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 80,
+      "text": "We have outpatient options."
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 86,
+      "text": "Okay. I'm still not sure I can afford it though even with insurance."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 92,
+      "text": "Like I said, we'll verify your benefits and let you know what you'd owe."
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 98,
+      "text": "I know, but what if it's still too much? I'm on a tight budget."
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 106,
+      "text": "We do have some financial assistance available. But let's see what the insurance says first."
+    },
+    {
+      "turn": 18,
+      "speaker": "caller",
+      "timestamp_seconds": 114,
+      "text": "Okay. I guess that makes sense. I'm just nervous about the whole thing."
+    },
+    {
+      "turn": 19,
+      "speaker": "agent",
+      "timestamp_seconds": 120,
+      "text": "That's understandable. Most people are nervous."
+    },
+    {
+      "turn": 20,
+      "speaker": "caller",
+      "timestamp_seconds": 126,
+      "text": "What happens if I do this and it doesn't stick?"
+    },
+    {
+      "turn": 21,
+      "speaker": "agent",
+      "timestamp_seconds": 132,
+      "text": "We'd work with you on next steps. Treatment outcomes vary."
+    },
+    {
+      "turn": 22,
+      "speaker": "caller",
+      "timestamp_seconds": 140,
+      "text": "Okay. So what do I do now?"
+    },
+    {
+      "turn": 23,
+      "speaker": "agent",
+      "timestamp_seconds": 144,
+      "text": "Someone will call you about your benefits and scheduling."
+    },
+    {
+      "turn": 24,
+      "speaker": "caller",
+      "timestamp_seconds": 150,
+      "text": "When?"
+    },
+    {
+      "turn": 25,
+      "speaker": "agent",
+      "timestamp_seconds": 154,
+      "text": "Within the next business day or so."
+    },
+    {
+      "turn": 26,
+      "speaker": "caller",
+      "timestamp_seconds": 160,
+      "text": "Alright. Thank you."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_014",
+    "scenario_type": "objection_heavy",
+    "expected_scores": {
+      "empathy_rapport": 2,
+      "insurance_verification": 3,
+      "clinical_screening": 2,
+      "urgency_triage": 3,
+      "family_caller_handling": null,
+      "objection_handling": 2,
+      "next_step_clarity": 2,
+      "compliance_language": 5
+    },
+    "expected_overall": 56,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "cost-objection",
+      "fear-objection",
+      "borderline",
+      "repeated-response"
+    ],
+    "coaching_notes": "BORDERLINE: objection_handling is borderline 2-3 \u2014 caller raised cost concern three times and got the same answer each time ('we'll verify benefits'), with no acknowledgement of the financial anxiety. Fear objection ('it's really hard') received a dismissive one-liner. Next step is borderline 2-3 \u2014 timing given as 'next business day or so' which is vague. Empathy was absent throughout. Major coaching opportunity on objection acknowledgement before responding."
+  }
+}

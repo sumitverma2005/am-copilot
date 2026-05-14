@@ -1,0 +1,392 @@
+{
+  "syn_001": {
+    "call_id": "syn_001",
+    "scenario_type": "excellent",
+    "expected_scores": {
+      "empathy_rapport": 5,
+      "insurance_verification": 4,
+      "clinical_screening": 4,
+      "urgency_triage": 4,
+      "family_caller_handling": null,
+      "objection_handling": 4,
+      "next_step_clarity": 5,
+      "compliance_language": 5
+    },
+    "expected_overall": 90,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "cooperative",
+      "insurance-confirmed",
+      "prior-iop"
+    ],
+    "coaching_notes": "Exemplary across all scored dimensions. Agent used caller's name consistently, completed full clinical screen, and gave a precise next-step with timing. Minor: could have explicitly named the IOP/PHP distinction when describing level-of-care options."
+  },
+  "syn_002": {
+    "call_id": "syn_002",
+    "scenario_type": "excellent",
+    "expected_scores": {
+      "empathy_rapport": 5,
+      "insurance_verification": 5,
+      "clinical_screening": 5,
+      "urgency_triage": 3,
+      "family_caller_handling": null,
+      "objection_handling": null,
+      "next_step_clarity": 5,
+      "compliance_language": 5
+    },
+    "expected_overall": 94,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "nervous",
+      "first-time-seeking-help",
+      "stimulant-use"
+    ],
+    "coaching_notes": "Perfect empathy and rapport. Agent never pushed, gave space, and addressed confidentiality concern organically. Urgency triage scored 3 (acceptable) \u2014 caller is motivated but no same-day urgency, correctly handled."
+  },
+  "syn_003": {
+    "call_id": "syn_003",
+    "scenario_type": "excellent",
+    "expected_scores": {
+      "empathy_rapport": 5,
+      "insurance_verification": null,
+      "clinical_screening": 4,
+      "urgency_triage": 3,
+      "family_caller_handling": null,
+      "objection_handling": 5,
+      "next_step_clarity": 5,
+      "compliance_language": 5
+    },
+    "expected_overall": 91,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "self-pay",
+      "opioid-use-disorder",
+      "withdrawal-symptoms",
+      "dual-diagnosis-noted"
+    ],
+    "coaching_notes": "Insurance verification correctly scored N/A \u2014 caller is self-pay and agent immediately pivoted to financing and sliding scale. Objection handling exemplary. Clinical screen strong. Urgency triage 3: withdrawal symptoms present but not acute crisis level."
+  },
+  "syn_004": {
+    "call_id": "syn_004",
+    "scenario_type": "weak",
+    "expected_scores": {
+      "empathy_rapport": 2,
+      "insurance_verification": 3,
+      "clinical_screening": 2,
+      "urgency_triage": 2,
+      "family_caller_handling": null,
+      "objection_handling": null,
+      "next_step_clarity": 2,
+      "compliance_language": 0
+    },
+    "expected_overall": 34,
+    "compliance_override_triggered": true,
+    "expected_flags": [
+      "DIAG_CLAIM"
+    ],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "compliance-violation",
+      "diagnostic-claim",
+      "poor-empathy",
+      "vague-next-step"
+    ],
+    "coaching_notes": "COMPLIANCE VIOLATION: 'it sounds like you have a dependency problem' is a diagnostic claim. Agent stayed in intake role on language but crossed the line with this statement. Beyond compliance: flat tone throughout, no empathy opening, clinical screen incomplete (missed severity, withdrawal, prior treatment), next step is vague ('today or tomorrow'). Major coaching opportunity."
+  },
+  "syn_005": {
+    "call_id": "syn_005",
+    "scenario_type": "weak",
+    "expected_scores": {
+      "empathy_rapport": 3,
+      "insurance_verification": 3,
+      "clinical_screening": 2,
+      "urgency_triage": 2,
+      "family_caller_handling": null,
+      "objection_handling": 3,
+      "next_step_clarity": 2,
+      "compliance_language": 0
+    },
+    "expected_overall": 41,
+    "compliance_override_triggered": true,
+    "expected_flags": [
+      "OUTCOME_GUARANTEE"
+    ],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "compliance-violation",
+      "outcome-guarantee",
+      "prior-treatment",
+      "stimulant-use"
+    ],
+    "coaching_notes": "COMPLIANCE VIOLATION: 'our 30-day program gets people better' and 'You'll come out of here a completely different person' are outcome guarantees. Also: 'this time will be different, I promise' and 'excellent success rate' reinforce the violation. Clinical screen shallow \u2014 did not explore severity, withdrawal risk, or co-occurring issues. Next step vague."
+  },
+  "syn_006": {
+    "call_id": "syn_006",
+    "scenario_type": "weak",
+    "expected_scores": {
+      "empathy_rapport": 2,
+      "insurance_verification": 2,
+      "clinical_screening": 2,
+      "urgency_triage": 3,
+      "family_caller_handling": null,
+      "objection_handling": 2,
+      "next_step_clarity": 3,
+      "compliance_language": 4
+    },
+    "expected_overall": 52,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "borderline",
+      "coaching-gaps",
+      "no-violation",
+      "parent-concern"
+    ],
+    "coaching_notes": "BORDERLINE: Urgency triage and next-step clarity are borderline 2-3 \u2014 graders may disagree. No compliance violation. Major coaching gaps: no warm empathy opening, clinical screen minimal (missed withdrawal history, severity, duration), group number not escalated as important, objection about kids handled with a single sentence and dropped, cost concern dismissed with 'should cover most of it'. Next step is vague but timing is given."
+  },
+  "syn_007": {
+    "call_id": "syn_007",
+    "scenario_type": "family_caller",
+    "expected_scores": {
+      "empathy_rapport": 5,
+      "insurance_verification": 4,
+      "clinical_screening": 3,
+      "urgency_triage": 4,
+      "family_caller_handling": 5,
+      "objection_handling": null,
+      "next_step_clarity": 5,
+      "compliance_language": 5
+    },
+    "expected_overall": 90,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "family-caller",
+      "spouse",
+      "consent-confirmed",
+      "withdrawal-risk",
+      "prior-seizure"
+    ],
+    "coaching_notes": "Exemplary family caller handling: consent addressed immediately, patient's autonomy respected, family member's distress acknowledged, family resources offered. Clinical screen limited by family-caller context (scored 3). Next step is precise with timing and format."
+  },
+  "syn_008": {
+    "call_id": "syn_008",
+    "scenario_type": "family_caller",
+    "expected_scores": {
+      "empathy_rapport": 3,
+      "insurance_verification": 2,
+      "clinical_screening": 3,
+      "urgency_triage": 3,
+      "family_caller_handling": 2,
+      "objection_handling": 3,
+      "next_step_clarity": 3,
+      "compliance_language": 5
+    },
+    "expected_overall": 62,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "family-caller",
+      "parent",
+      "patient-unaware",
+      "opioid-use-disorder",
+      "borderline"
+    ],
+    "coaching_notes": "BORDERLINE: family_caller_handling and insurance_verification are borderline 2-3. Consent framing was technically correct (agent noted patient needs to call) but cold \u2014 no warmth around why consent matters. Family member's fear ('I'm really scared') received a single dismissive sentence. Did not offer family counsellor resources. Insurance handling: missing group number not pursued. Objection handling borderline \u2014 'not really' to the family preparation question was unhelpful."
+  },
+  "syn_009": {
+    "call_id": "syn_009",
+    "scenario_type": "family_caller",
+    "expected_scores": {
+      "empathy_rapport": 2,
+      "insurance_verification": 3,
+      "clinical_screening": 2,
+      "urgency_triage": 2,
+      "family_caller_handling": 1,
+      "objection_handling": 2,
+      "next_step_clarity": 2,
+      "compliance_language": 4
+    },
+    "expected_overall": 47,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "family-caller",
+      "sibling",
+      "no-consent-framing",
+      "urgent-window",
+      "dual-diagnosis-noted"
+    ],
+    "coaching_notes": "Poor family caller handling: agent collected patient's DOB and insurance without any consent framing. Sibling's distress ('I'm afraid', urgent window) entirely ignored. No warmth or acknowledgement throughout. Did not offer crisis resources or intervention referral when directly asked \u2014 that's a missed escalation opportunity. Should have offered to speak with patient directly."
+  },
+  "syn_010": {
+    "call_id": "syn_010",
+    "scenario_type": "urgency",
+    "expected_scores": {
+      "empathy_rapport": 5,
+      "insurance_verification": 4,
+      "clinical_screening": 4,
+      "urgency_triage": 5,
+      "family_caller_handling": null,
+      "objection_handling": 4,
+      "next_step_clarity": 5,
+      "compliance_language": 5
+    },
+    "expected_overall": 92,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": true,
+    "scenario_tags": [
+      "patient-caller",
+      "active-withdrawal",
+      "hallucinations",
+      "same-day-admit",
+      "crisis-protocol-activated"
+    ],
+    "coaching_notes": "Exemplary urgency triage: agent immediately identified withdrawal severity, asked the right escalation questions (seizure history, hallucinations), recommended against driving, gave a precise address with name-check-in instructions, and stayed on the line. Text-book crisis response."
+  },
+  "syn_011": {
+    "call_id": "syn_011",
+    "scenario_type": "urgency",
+    "expected_scores": {
+      "empathy_rapport": 2,
+      "insurance_verification": 3,
+      "clinical_screening": 2,
+      "urgency_triage": 0,
+      "family_caller_handling": null,
+      "objection_handling": null,
+      "next_step_clarity": 2,
+      "compliance_language": 4
+    },
+    "expected_overall": 46,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": true,
+    "scenario_tags": [
+      "patient-caller",
+      "missed-urgency",
+      "passive-si",
+      "critical-coaching-opportunity"
+    ],
+    "coaching_notes": "CRITICAL MISSED URGENCY: Caller stated 'I don't really see the point in a lot of things anymore' and 'nothing's going to get better anyway' and 'don't have a lot of energy for anything' \u2014 passive suicidal ideation signals that required crisis protocol. Agent moved to insurance without pause. Urgency triage = 0 (unacceptable). This call requires immediate coaching review and should not happen again. Clinical screen also inadequate."
+  },
+  "syn_012": {
+    "call_id": "syn_012",
+    "scenario_type": "urgency",
+    "expected_scores": {
+      "empathy_rapport": 4,
+      "insurance_verification": 4,
+      "clinical_screening": 4,
+      "urgency_triage": null,
+      "family_caller_handling": null,
+      "objection_handling": 3,
+      "next_step_clarity": 4,
+      "compliance_language": 5
+    },
+    "expected_overall": 81,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "third-party-inquiry",
+      "no-urgency",
+      "urgency-triage-na",
+      "professional-track-mentioned"
+    ],
+    "coaching_notes": "Urgency triage correctly scored N/A \u2014 caller explicitly researching for future, no urgency signals present. Agent correctly identified this and responded proportionally. Strong knowledge of program levels (IOP/PHP). Objection handling scored 3 \u2014 answered the insurance question but didn't proactively address the 'will they be open to it' question the caller hinted at."
+  },
+  "syn_013": {
+    "call_id": "syn_013",
+    "scenario_type": "objection_heavy",
+    "expected_scores": {
+      "empathy_rapport": 5,
+      "insurance_verification": 4,
+      "clinical_screening": 3,
+      "urgency_triage": 3,
+      "family_caller_handling": null,
+      "objection_handling": 5,
+      "next_step_clarity": 5,
+      "compliance_language": 5
+    },
+    "expected_overall": 88,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "cost-objection",
+      "readiness-objection",
+      "parental-motivation",
+      "iop-appropriate"
+    ],
+    "coaching_notes": "Exemplary objection handling: acknowledged readiness objection before responding, asked a powerful open question ('what made today the day'), addressed cost concretely without dismissing it, gave an honest answer to the 'what if it doesn't work' question. Clinical screen was lighter (scored 3) \u2014 agent focused on motivational work, which was appropriate, but severity and withdrawal risk could have been explored."
+  },
+  "syn_014": {
+    "call_id": "syn_014",
+    "scenario_type": "objection_heavy",
+    "expected_scores": {
+      "empathy_rapport": 2,
+      "insurance_verification": 3,
+      "clinical_screening": 2,
+      "urgency_triage": 3,
+      "family_caller_handling": null,
+      "objection_handling": 2,
+      "next_step_clarity": 2,
+      "compliance_language": 5
+    },
+    "expected_overall": 56,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "cost-objection",
+      "fear-objection",
+      "borderline",
+      "repeated-response"
+    ],
+    "coaching_notes": "BORDERLINE: objection_handling is borderline 2-3 \u2014 caller raised cost concern three times and got the same answer each time ('we'll verify benefits'), with no acknowledgement of the financial anxiety. Fear objection ('it's really hard') received a dismissive one-liner. Next step is borderline 2-3 \u2014 timing given as 'next business day or so' which is vague. Empathy was absent throughout. Major coaching opportunity on objection acknowledgement before responding."
+  },
+  "syn_015": {
+    "call_id": "syn_015",
+    "scenario_type": "objection_heavy",
+    "expected_scores": {
+      "empathy_rapport": 4,
+      "insurance_verification": 3,
+      "clinical_screening": 3,
+      "urgency_triage": 3,
+      "family_caller_handling": null,
+      "objection_handling": 4,
+      "next_step_clarity": 2,
+      "compliance_language": 5
+    },
+    "expected_overall": 71,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "confidentiality-objection",
+      "stimulant-use",
+      "vague-close",
+      "iop-appropriate"
+    ],
+    "coaching_notes": "Confidentiality objection handled with knowledge and warmth \u2014 best moment of the call. Clinical screen adequate. Next step is the failure point: 'we'll be in touch soon' and 'keep an eye on your phone' are not acceptable close language. No timing, no ownership, caller had to ask twice. Dim 7 = 2. Strong start, weak finish."
+  }
+}

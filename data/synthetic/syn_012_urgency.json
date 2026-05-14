@@ -1,0 +1,149 @@
+{
+  "call_id": "syn_012",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 445,
+  "scenario_type": "urgency",
+  "metadata": {
+    "duration_seconds": 180,
+    "caller_type": "third_party_inquiry",
+    "campaign_source": "organic_search",
+    "tracking_number": "+17982508186",
+    "agent_id": "AGT-664",
+    "agent_name": "Philip Montes"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Thank you for calling Sunrise Recovery Center, this is Philip. How can I help you?"
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 4,
+      "text": "Hi, I'm Andrea. I'm actually calling to do some research. I have a colleague who I think is struggling with alcohol and I want to understand what options are out there before I talk to them. I'm not sure if they'd be open to treatment."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 16,
+      "text": "That's a thoughtful thing to do, Andrea. I'm happy to walk you through what we offer. Just so I understand the situation \u2014 you're gathering information on behalf of someone else, not for yourself?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 30,
+      "text": "That's right. They don't know I'm calling."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 36,
+      "text": "Understood. A few things to know: ultimately your colleague would need to reach out themselves or come in, since any treatment is voluntary. But knowing your options helps you have a better conversation with them. What do you already know about what's going on with them?"
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 48,
+      "text": "They drink every day. I've noticed them coming back from lunch with alcohol on their breath, and they've mentioned not sleeping well."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 60,
+      "text": "That does sound like a pattern worth addressing sooner rather than later, though it sounds like there's no immediate crisis situation right now \u2014 more of a concerning escalation over time."
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 72,
+      "text": "Right, nothing acute. I just want to be prepared."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 78,
+      "text": "That makes sense. Let me tell you what we offer: we have outpatient programs \u2014 IOP, which is three evenings a week \u2014 and PHP, which is more intensive, five days a week. For someone who is employed and functional, IOP is often the starting point. We also have a professional track that's confidential and designed for people who are concerned about workplace implications."
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 104,
+      "text": "That's really helpful. What about insurance \u2014 would theirs likely cover this?"
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 112,
+      "text": "Most major insurance plans cover substance use treatment. If your colleague reaches out, we can verify their specific benefits in about an hour. We never want cost to be a barrier."
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 122,
+      "text": "That's good to know. Is there any literature or anything I could share with them?"
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 128,
+      "text": "Absolutely. I can email you our general program overview \u2014 it's designed for exactly this kind of conversation. What's your email address?"
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 136,
+      "text": "It's the one I called from, actually."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 142,
+      "text": "I'll pull that from the caller ID and send it within the hour. And if you'd like to talk through how to approach that conversation with your colleague, our family and support line is open \u2014 no charge, just guidance. Would that be helpful?"
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 154,
+      "text": "Yes, actually. That would be helpful."
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 160,
+      "text": "I'll include that number in the email as well. You're being a good friend, {c}. Let me know if anything changes or if they're ready to reach out directly."
+    },
+    {
+      "turn": 18,
+      "speaker": "caller",
+      "timestamp_seconds": 170,
+      "text": "Thank you so much."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_012",
+    "scenario_type": "urgency",
+    "expected_scores": {
+      "empathy_rapport": 4,
+      "insurance_verification": 4,
+      "clinical_screening": 4,
+      "urgency_triage": null,
+      "family_caller_handling": null,
+      "objection_handling": 3,
+      "next_step_clarity": 4,
+      "compliance_language": 5
+    },
+    "expected_overall": 81,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "third-party-inquiry",
+      "no-urgency",
+      "urgency-triage-na",
+      "professional-track-mentioned"
+    ],
+    "coaching_notes": "Urgency triage correctly scored N/A \u2014 caller explicitly researching for future, no urgency signals present. Agent correctly identified this and responded proportionally. Strong knowledge of program levels (IOP/PHP). Objection handling scored 3 \u2014 answered the insurance question but didn't proactively address the 'will they be open to it' question the caller hinted at."
+  }
+}

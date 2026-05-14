@@ -1,0 +1,162 @@
+{
+  "call_id": "syn_013",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 543,
+  "scenario_type": "objection_heavy",
+  "metadata": {
+    "duration_seconds": 244,
+    "caller_type": "patient",
+    "campaign_source": "google_paid",
+    "tracking_number": "+19647451609",
+    "agent_id": "AGT-963",
+    "agent_name": "Shelby Davis"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Thank you for calling Sunrise Recovery Center, this is Shelby. How are you doing today?"
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 6,
+      "text": "Hi. I'm Megan. Honestly not great. I've been thinking about calling for a while but kept talking myself out of it."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 16,
+      "text": "I'm really glad you didn't talk yourself out of it today, Megan. What's going on?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 24,
+      "text": "I've been drinking pretty heavily for about three years. I know I need to stop. I just keep finding reasons not to deal with it."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 34,
+      "text": "I hear that. Sometimes the hardest part is making that first call, and you've already done it. What kind of reasons have been coming up for you?"
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 46,
+      "text": "Money, mostly. I don't know if I can afford this. And honestly I'm not sure I'm ready. What if I go and it doesn't work?"
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 58,
+      "text": "Those are really honest things to say and I want to take them seriously. Let's start with the readiness piece, because I think it matters most. The fact that you've been thinking about this for a while and you still picked up the phone \u2014 that actually tells me something. Can I ask: what made today the day you finally called?"
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 80,
+      "text": "My daughter said something to me last night. She's eight. She said she was scared of me when I drink. I didn't sleep after that."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 94,
+      "text": "Thank you for sharing that. That's a profound moment \u2014 and you're taking it seriously, which is what matters. Megan, 'ready' doesn't always mean feeling confident. Sometimes it means being willing to try even when you're scared. And you're clearly willing. Now let's talk about cost, because I don't want that to be the thing that stops you."
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 116,
+      "text": "I have insurance but I don't know what it covers."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 122,
+      "text": "That's the right first step. Do you have your insurance card? I can note your information and have our benefits team give you an exact answer within two hours \u2014 before you commit to anything."
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 130,
+      "text": "Sure. I have Meridian Care. Member ID BP22149395, group GRP-588547."
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 144,
+      "text": "Perfect. I've noted that. Now \u2014 most plans cover substance use treatment at a significant level, often 80 to 100 percent once your deductible is met. But if there is a gap, we also have a sliding-scale fee and financing through CareCredit. The point is: we have never turned someone away because of cost alone. That's not who we are."
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 168,
+      "text": "Okay. That helps to hear."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 174,
+      "text": "And the 'what if it doesn't work' question \u2014 I want to answer that honestly. No one can promise you it will. What I can promise is that not trying guarantees the outcome you're trying to avoid. Treatment gives you a real chance, and we'll work with you to find the right level of care \u2014 whether that's outpatient so you can be home with your daughter, or something more intensive."
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 198,
+      "text": "The outpatient piece matters. I can't be away from her."
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 204,
+      "text": "Then we build around that. Our IOP program is three evenings a week. You'd be home every night. Let me have our admissions coordinator call you this afternoon with your benefits information and walk you through that schedule. Can you take a call between two and four?"
+    },
+    {
+      "turn": 18,
+      "speaker": "caller",
+      "timestamp_seconds": 220,
+      "text": "Yes. I can do that."
+    },
+    {
+      "turn": 19,
+      "speaker": "agent",
+      "timestamp_seconds": 224,
+      "text": "You'll hear from us by four o'clock. And Megan \u2014 what you said about your daughter? Hold onto that. That's your reason."
+    },
+    {
+      "turn": 20,
+      "speaker": "caller",
+      "timestamp_seconds": 234,
+      "text": "Thank you. I needed to hear all of this."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_013",
+    "scenario_type": "objection_heavy",
+    "expected_scores": {
+      "empathy_rapport": 5,
+      "insurance_verification": 4,
+      "clinical_screening": 3,
+      "urgency_triage": 3,
+      "family_caller_handling": null,
+      "objection_handling": 5,
+      "next_step_clarity": 5,
+      "compliance_language": 5
+    },
+    "expected_overall": 88,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "cost-objection",
+      "readiness-objection",
+      "parental-motivation",
+      "iop-appropriate"
+    ],
+    "coaching_notes": "Exemplary objection handling: acknowledged readiness objection before responding, asked a powerful open question ('what made today the day'), addressed cost concretely without dismissing it, gave an honest answer to the 'what if it doesn't work' question. Clinical screen was lighter (scored 3) \u2014 agent focused on motivational work, which was appropriate, but severity and withdrawal risk could have been explored."
+  }
+}

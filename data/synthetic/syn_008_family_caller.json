@@ -1,0 +1,198 @@
+{
+  "call_id": "syn_008",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 344,
+  "scenario_type": "family_caller",
+  "metadata": {
+    "duration_seconds": 190,
+    "caller_type": "family_member",
+    "campaign_source": "organic_search",
+    "tracking_number": "+19216150635",
+    "agent_id": "AGT-485",
+    "agent_name": "Pamela Whitehead"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Sunrise Recovery Center, this is Pamela."
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 4,
+      "text": "Hi, I'm Nicholas. I'm calling about my son. His name is Alex. He's 24. He's been using heroin."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 12,
+      "text": "Okay. Does your son know you're calling?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 18,
+      "text": "No. He's at work. I wanted to find out about options before I talk to him tonight."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 26,
+      "text": "I see. Well, since he's an adult, we'd need to talk to him directly before we can move forward with anything."
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 36,
+      "text": "Of course. I just \u2014 I need to know what to tell him. What to say."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 42,
+      "text": "Right. So what's been going on with him?"
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 48,
+      "text": "He started using about two years ago. It's been heroin. He's been doing well at his job but I can see it's getting worse. He's losing weight. He fell asleep at dinner last week."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 60,
+      "text": "Does he have any health insurance through his job?"
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 66,
+      "text": "Yes, through work. It's CoreFirst Insurance. I have his information here \u2014 member ID is BP23737271."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 74,
+      "text": "Okay. Do you have a group number?"
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 80,
+      "text": "I don't think I have that."
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 84,
+      "text": "That's okay, we can try to pull it up. Is he using every day?"
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 90,
+      "text": "I believe so. He won't talk to me about it directly but the signs are there."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 98,
+      "text": "Has he ever tried to stop or get treatment?"
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 104,
+      "text": "Not that I know of."
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 108,
+      "text": "Okay. So what would you like to happen?"
+    },
+    {
+      "turn": 18,
+      "speaker": "caller",
+      "timestamp_seconds": 114,
+      "text": "I want to know how to get him into your program. What do I say to him? He gets defensive when I bring it up."
+    },
+    {
+      "turn": 19,
+      "speaker": "agent",
+      "timestamp_seconds": 124,
+      "text": "You can let him know that you've done the research and there's a place that can help. He'll need to call himself or come in for an assessment. We can't hold a spot without him being involved."
+    },
+    {
+      "turn": 20,
+      "speaker": "caller",
+      "timestamp_seconds": 138,
+      "text": "I understand that. But is there anything you can do to help me prepare for that conversation?"
+    },
+    {
+      "turn": 21,
+      "speaker": "agent",
+      "timestamp_seconds": 144,
+      "text": "Not really \u2014 that's going to depend on him. But if he's willing to call, we can get things moving quickly."
+    },
+    {
+      "turn": 22,
+      "speaker": "caller",
+      "timestamp_seconds": 152,
+      "text": "Okay. And what about MAT? I've heard that helps with opioids."
+    },
+    {
+      "turn": 23,
+      "speaker": "agent",
+      "timestamp_seconds": 160,
+      "text": "Yes, we offer medication-assisted treatment. Our clinical team will assess whether that's right for him."
+    },
+    {
+      "turn": 24,
+      "speaker": "caller",
+      "timestamp_seconds": 168,
+      "text": "That's good. I'm just really scared for him."
+    },
+    {
+      "turn": 25,
+      "speaker": "agent",
+      "timestamp_seconds": 174,
+      "text": "That's understandable. Have him give us a call when he's ready."
+    },
+    {
+      "turn": 26,
+      "speaker": "caller",
+      "timestamp_seconds": 180,
+      "text": "Alright. Thank you."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_008",
+    "scenario_type": "family_caller",
+    "expected_scores": {
+      "empathy_rapport": 3,
+      "insurance_verification": 2,
+      "clinical_screening": 3,
+      "urgency_triage": 3,
+      "family_caller_handling": 2,
+      "objection_handling": 3,
+      "next_step_clarity": 3,
+      "compliance_language": 5
+    },
+    "expected_overall": 62,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "family-caller",
+      "parent",
+      "patient-unaware",
+      "opioid-use-disorder",
+      "borderline"
+    ],
+    "coaching_notes": "BORDERLINE: family_caller_handling and insurance_verification are borderline 2-3. Consent framing was technically correct (agent noted patient needs to call) but cold \u2014 no warmth around why consent matters. Family member's fear ('I'm really scared') received a single dismissive sentence. Did not offer family counsellor resources. Insurance handling: missing group number not pursued. Objection handling borderline \u2014 'not really' to the family preparation question was unhelpful."
+  }
+}
