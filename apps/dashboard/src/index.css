@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/* ── Design system tokens — verbatim from ui-ux-spec.md ─────────────────── */
+:root {
+  /* Brand */
+  --navy-900: #0A1F3D;
+  --navy-800: #12315C;
+  --navy-700: #1C4775;
+  --navy-600: #065A82;
+  --teal-500: #1C7293;
+  --amber:    #F5A623;
+  --amber-soft: #FFF4DD;
+
+  /* Text */
+  --ink:    #0F172A;
+  --text:   #1E293B;
+  --muted:  #64748B;
+  --faint:  #94A3B8;
+
+  /* Surface */
+  --border:         #E2E8F0;
+  --border-strong:  #CBD5E1;
+  --surface:        #F8FAFC;
+  --surface-2:      #F1F5F9;
+  --white:          #FFFFFF;
+
+  /* Semantic */
+  --green:      #10B981;
+  --green-soft: #D1FAE5;
+  --red:        #DC2626;
+  --red-soft:   #FEE2E2;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(15,23,42,0.04), 0 1px 3px rgba(15,23,42,0.06);
+  --shadow-md: 0 4px 6px -1px rgba(15,23,42,0.06), 0 10px 20px -6px rgba(15,23,42,0.08);
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+}
+
+/* ── Base ────────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: var(--text);
+  background: var(--surface);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root { min-height: 100vh; }
+
+.mono { font-family: 'IBM Plex Mono', monospace; }
