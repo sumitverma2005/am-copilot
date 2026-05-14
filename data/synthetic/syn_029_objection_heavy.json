@@ -1,0 +1,133 @@
+{
+  "call_id": "syn_029",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 547,
+  "scenario_type": "objection_heavy",
+  "metadata": {
+    "duration_seconds": 186,
+    "caller_type": "patient",
+    "campaign_source": "organic_search",
+    "tracking_number": "+15352408189",
+    "agent_id": "AGT-146",
+    "agent_name": "Leonard Freeman"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Thank you for calling Sunrise Recovery Center, this is Leonard. How can I help you today?"
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 6,
+      "text": "Hi, I'm Brandon. I've been struggling with benzodiazepines \u2014 Xanax, mostly \u2014 for about two years. I want to get help but I'm scared about what people will think. I'm a teacher."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 20,
+      "text": "Thank you for calling, Brandon. That took courage. The fear about what people will think \u2014 especially in a profession like teaching where your reputation matters \u2014 is something a lot of people face. I want to walk you through the privacy picture, because it's actually more protective than most people realise."
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 38,
+      "text": "Please. That would help."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 42,
+      "text": "Your treatment is completely confidential under HIPAA \u2014 your employer, your school district, anyone you haven't specifically authorised cannot access your records. Your insurance company processes the claim but does not share diagnosis information with your employer. If you need time off for treatment, FMLA protects your job and HR is only told that you're on approved medical leave \u2014 not why. Does that help?"
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 66,
+      "text": "Yes. A lot. I didn't know about FMLA."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 72,
+      "text": "Most people don't. And for teachers specifically \u2014 there are programs designed around schedules, including summer intensive options and evening outpatient. Benzo dependence is also something our medical team has a lot of experience with because it does require a supervised taper. Have you been taking them as prescribed, or are you taking more than prescribed?"
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 94,
+      "text": "Both at this point. Started prescribed, now I'm taking more than I should."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 104,
+      "text": "I understand. That's a really common progression. The supervised taper is important because stopping benzodiazepines abruptly can be medically dangerous \u2014 I want to flag that for our clinical team. Brandon, do you have health insurance?"
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 118,
+      "text": "Yes, through the school district. It's BluePeak Health. Member ID BP46039549, group GRP-429686."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 132,
+      "text": "Thank you. District plans often have good mental health and substance use coverage. I'll have our benefits team verify. They'll be discreet \u2014 any calls will show up as Sunrise Recovery Center on caller ID, not as a specific clinic type, if that matters to you."
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 148,
+      "text": "It does. Thank you for thinking of that."
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 154,
+      "text": "Of course. Here's what happens next: benefits verification within ninety minutes, followed by a call from our intake team who will talk through level of care and scheduling with your work calendar in mind. They'll call from our main line \u2014 just Sunrise Recovery Center. Does two o'clock work for you?"
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 172,
+      "text": "Yes. That works."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 176,
+      "text": "Perfect. Brandon \u2014 teachers reach out for help less often than they should because of exactly the fear you named. I'm glad you called."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_029",
+    "scenario_type": "objection_heavy",
+    "expected_scores": {
+      "empathy_rapport": 5,
+      "insurance_verification": 4,
+      "clinical_screening": 4,
+      "urgency_triage": 3,
+      "family_caller_handling": null,
+      "objection_handling": 5,
+      "next_step_clarity": 4,
+      "compliance_language": 5
+    },
+    "expected_overall": 88,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "stigma-objection",
+      "teacher",
+      "benzo-dependence",
+      "hipaa-fmla-knowledge",
+      "caller-id-consideration"
+    ],
+    "coaching_notes": "Excellent stigma objection handling \u2014 agent proactively offered the FMLA/HIPAA detail without being asked, and thought to mention the caller ID display (shows treatment center name, not clinic type). Clinical screen correctly flagged benzo taper risk, which is medically important. The summer program / teacher schedule detail showed genuine attentiveness to the caller's situation. Near-flawless call."
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "call_id": "syn_027",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 448,
+  "scenario_type": "urgency",
+  "metadata": {
+    "duration_seconds": 146,
+    "caller_type": "patient",
+    "campaign_source": "organic_search",
+    "tracking_number": "+12676643865",
+    "agent_id": "AGT-387",
+    "agent_name": "Kelly Smith"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Thank you for calling Sunrise Recovery Center, this is Kelly."
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 4,
+      "text": "Hi, I'm Juan. I'm calling to find out about your programs. I've been thinking about cutting back on drinking for a while and maybe getting some support. I'm not in crisis or anything, just looking at my options."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 16,
+      "text": "That's good that you're thinking about it. You know, alcohol use tends to get worse over time if you don't address it. Are you drinking every day?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 26,
+      "text": "Most days. A glass or two of wine at dinner."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 32,
+      "text": "That's more than it sounds like. Nightly drinking is a pattern that typically escalates. A lot of people who think they have it under control end up in serious trouble."
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 44,
+      "text": "I mean, I know I should cut back. That's why I'm calling. But I don't feel like I have a major problem."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 52,
+      "text": "The thing is, people rarely recognise how serious it is until it's gotten really bad. The fact that you're calling is a sign it's already more serious than you think."
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 62,
+      "text": "I'm not sure I agree with that. I just want some information."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 68,
+      "text": "I understand. But I'd hate for you to wait until something happens \u2014 a DUI, a health scare \u2014 before you take action. A lot of our patients say they wish they'd come in sooner."
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 80,
+      "text": "Okay, I hear you. What do you have for people who are still working and don't want to do inpatient?"
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 88,
+      "text": "We have IOP \u2014 evenings, three times a week. Very manageable."
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 96,
+      "text": "That could work. What does it cost?"
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 100,
+      "text": "Depends on your insurance. Do you have coverage?"
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 106,
+      "text": "Yes. Meridian Care. Member ID BP25834677, group GRP-408293."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 118,
+      "text": "Okay. I'd really encourage you to move on this \u2014 the sooner the better with alcohol."
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 126,
+      "text": "Can someone call me with more details?"
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 130,
+      "text": "Absolutely. You'll hear from us soon."
+    },
+    {
+      "turn": 18,
+      "speaker": "caller",
+      "timestamp_seconds": 136,
+      "text": "Okay. Thank you."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_027",
+    "scenario_type": "urgency",
+    "expected_scores": {
+      "empathy_rapport": 2,
+      "insurance_verification": 3,
+      "clinical_screening": 2,
+      "urgency_triage": 1,
+      "family_caller_handling": null,
+      "objection_handling": 2,
+      "next_step_clarity": 2,
+      "compliance_language": 4
+    },
+    "expected_overall": 48,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "manufactured-urgency",
+      "low-risk-caller",
+      "pressure-tactics"
+    ],
+    "coaching_notes": "Urgency triage = 1 (poor): caller explicitly stated they are not in crisis and are calling for information. Agent repeatedly implied the situation was more serious than it is ('rarely recognise how serious it is', 'wish they'd come in sooner', 'a DUI, a health scare') \u2014 this is manufactured urgency. No signals of acute crisis were present. Agent should have accepted the caller's self-assessment and provided information without pressure. Empathy was absent \u2014 agent treated this as a closing opportunity, not a support call."
+  }
+}

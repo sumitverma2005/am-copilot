@@ -10,6 +10,6 @@ from synthetic_data.generator import generate_all
 OUTPUT_DIR = Path(__file__).parents[2] / "data" / "synthetic"
 
 if __name__ == "__main__":
-    print(f"Generating 15 synthetic calls → {OUTPUT_DIR}")
+    print(f"Generating 30 synthetic calls → {OUTPUT_DIR}")
     generate_all(OUTPUT_DIR)
     print("Done.")

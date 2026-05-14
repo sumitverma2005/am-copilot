@@ -1186,6 +1186,1013 @@ def _syn_015(ctx: dict) -> dict:
 
 
 # ══════════════════════════════════════════════════════════════════════════════
+# SCENARIO: EXCELLENT — BATCH 2 (syn_016–018)
+# ══════════════════════════════════════════════════════════════════════════════
+
+def _syn_016(ctx: dict) -> dict:
+    """Excellent: prior residential treatment + relapse. Agent covers full clinical history."""
+    a, c = ctx["agent_first"], ctx["caller_first"]
+    carrier, mid, grp = ctx["carrier"], ctx["member_id"], ctx["group_number"]
+
+    transcript = _turns([
+        ("agent", 0, f"Thank you for calling {TREATMENT_CENTER}, this is {a}."),
+        ("caller", 4, f"Hi, I'm {c}. I'm calling because I've relapsed. I did a 30-day residential about two years ago and I was clean for fourteen months. I started drinking again four months ago and it's gotten bad fast."),
+        ("agent", 18, f"{c}, thank you for being so upfront about your history. Fourteen months of sobriety after residential — that's real work. And the fact that you're calling now, rather than waiting for things to get worse, tells me you haven't forgotten what it felt like to be on the other side of this. What's been going on in the last four months?"),
+        ("caller", 38, "Stressful job change. And a breakup. I know those are excuses, but that's when it started."),
+        ("agent", 48, "They're not excuses — they're context, and our clinical team needs that context to design the right plan for you. You've done residential before, so you know the drill. Can I ask: how much are you drinking now versus before you got into treatment the first time?"),
+        ("caller", 64, "About the same. Daily, a bottle of wine to a bottle and a half."),
+        ("agent", 74, "And are you having any withdrawal symptoms when you try to go a day without?"),
+        ("caller", 80, "Some. Anxiety, trouble sleeping. Nothing as bad as last time, but it's there."),
+        ("agent", 90, f"Good to know. That history matters — your body remembers. I want to flag that for our clinical team. {c}, given that you've been through residential, what's your thinking on level of care this time? Some people want to try IOP first, others know they need the structure of residential again."),
+        ("caller", 108, "Honestly I think I need residential. I don't trust myself in an outpatient setting right now."),
+        ("agent", 116, "That kind of self-awareness is valuable and I'll make sure it goes into your intake notes. Our clinical team will assess that formally, but your own read matters. Let me get your insurance information so we can check what your plan covers for a residential admission."),
+        ("caller", 128, f"Sure. It's {carrier}, member ID {mid}, group {grp}."),
+        ("agent", 140, f"Got it. And from your first treatment — do you remember if there were any complications with coverage, or did it go smoothly?"),
+        ("caller", 150, "It went fine. Same carrier, different plan."),
+        ("agent", 156, "Good. That continuity actually helps. I'm noting your prior treatment facility, your length of sobriety, and the relapse timeline. Our intake team will have all of this before they call you. Here's what happens next: benefits verification will be back to you within ninety minutes, and our admissions coordinator will call immediately after with availability for an assessment. Can you take a call this afternoon?"),
+        ("caller", 178, "Yes. I'm free after noon."),
+        ("agent", 184, f"Perfect — you'll hear from us between one and two o'clock. {c}, relapse is not failure. It's information. You know how to do this."),
+        ("caller", 194, "Thank you. I needed to hear that."),
+    ])
+
+    scores = {
+        "empathy_rapport": 4,
+        "insurance_verification": 4,
+        "clinical_screening": 5,
+        "urgency_triage": 3,
+        "family_caller_handling": None,
+        "objection_handling": 4,
+        "next_step_clarity": 4,
+        "compliance_language": 5,
+    }
+
+    return {
+        "call_id": "syn_016",
+        "generated_at": GENERATED_AT,
+        "seed": ctx["seed"],
+        "scenario_type": "excellent",
+        "metadata": {
+            "duration_seconds": 204,
+            "caller_type": "patient",
+            "campaign_source": "referral",
+            "tracking_number": ctx["tracking_number"],
+            "agent_id": ctx["agent_id"],
+            "agent_name": f"{ctx['agent_first']} {ctx['agent_last']}",
+        },
+        "transcript": transcript,
+        "gold_labels": {
+            "call_id": "syn_016",
+            "scenario_type": "excellent",
+            "expected_scores": scores,
+            "expected_overall": _calc_overall(scores),
+            "compliance_override_triggered": False,
+            "expected_flags": [],
+            "escalation_required": False,
+            "scenario_tags": ["patient-caller", "relapse", "prior-residential", "self-aware", "residential-indicated"],
+            "coaching_notes": "Strong handling of relapse caller — empathy was warm but appropriately matter-of-fact (not over-pitying), clinical history covered thoroughly including prior treatment complications. Agent explicitly asked caller's own level-of-care preference, which is excellent practice. Minor: empathy opening was good but could have slowed down slightly before moving to clinical questions.",
+        },
+    }
+
+
+def _syn_017(ctx: dict) -> dict:
+    """Excellent: caller minimising use; agent draws out severity without confrontation."""
+    a, c = ctx["agent_first"], ctx["caller_first"]
+    carrier, mid, grp = ctx["carrier"], ctx["member_id"], ctx["group_number"]
+
+    transcript = _turns([
+        ("agent", 0, f"Thank you for calling {TREATMENT_CENTER}, this is {a}. How can I help?"),
+        ("caller", 4, f"Hi, I'm {c}. I'm just... calling to find out what you guys do. I don't know if I really need treatment or whatever. My sister kind of pushed me to call."),
+        ("agent", 16, f"I'm glad your sister encouraged you to reach out, and I'm glad you followed through. There's no pressure here — I'm just going to ask a few questions and we can figure out together whether what you're dealing with is something we can help with. What's been going on?"),
+        ("caller", 32, "I drink, but it's not like I'm an alcoholic or anything. I just drink after work to unwind. Everyone does that."),
+        ("agent", 44, f"I hear you. Can I ask — how many drinks is 'unwinding' for you on a typical evening?"),
+        ("caller", 52, "I don't know. Three or four, maybe."),
+        ("agent", 58, "And are there nights when it's more than that?"),
+        ("caller", 64, "Sometimes. If it was a really bad day, maybe six or seven."),
+        ("agent", 72, "And how often are the really bad days?"),
+        ("caller", 78, "More than they used to be. Maybe three or four times a week now."),
+        ("agent", 86, f"Okay. So on those nights — after six or seven drinks — how do you feel the next morning?"),
+        ("caller", 94, "Rough. I've been calling in late to work a few times."),
+        ("agent", 100, f"Has that happened more in the last few months than it used to?"),
+        ("caller", 106, "Yeah. My sister noticed that too. She said I've changed."),
+        ("agent", 114, f"I appreciate you sharing that. {c}, I want to reflect something back to you — not to label it, just so you can hear it. What you're describing — four to seven drinks most evenings, increasingly difficult mornings, calling in late, your sister noticing a change — those are patterns that tend to escalate without support. You don't have to call it anything. But the question isn't whether it's 'bad enough.' The question is whether it's getting in the way of the life you want."),
+        ("caller", 144, "When you put it like that... yeah, it is."),
+        ("agent", 150, "Then you called the right place. Let me ask a few more questions. Do you have insurance?"),
+        ("caller", 156, f"Yes. {carrier}. Member ID is {mid}, group {grp}."),
+        ("agent", 168, "Thank you. And have you ever tried to cut back on your own?"),
+        ("caller", 174, "A few times. I go a week and then something comes up."),
+        ("agent", 182, "That pattern — trying and returning — is really common and it's one of the things treatment specifically addresses. Here's what I'd like to do: I'll have our benefits team verify your coverage and an admissions coordinator call you back within two hours. They'll talk through your options — which based on what you've described would likely start with our outpatient track. Would that work for you?"),
+        ("caller", 204, "Yeah. Okay. That sounds okay."),
+        ("agent", 210, f"Good. You'll hear from us by noon. And {c} — calling was the right thing to do."),
+    ])
+
+    scores = {
+        "empathy_rapport": 4,
+        "insurance_verification": 4,
+        "clinical_screening": 5,
+        "urgency_triage": 3,
+        "family_caller_handling": None,
+        "objection_handling": 5,
+        "next_step_clarity": 4,
+        "compliance_language": 5,
+    }
+
+    return {
+        "call_id": "syn_017",
+        "generated_at": GENERATED_AT,
+        "seed": ctx["seed"],
+        "scenario_type": "excellent",
+        "metadata": {
+            "duration_seconds": 220,
+            "caller_type": "patient",
+            "campaign_source": "family_referral",
+            "tracking_number": ctx["tracking_number"],
+            "agent_id": ctx["agent_id"],
+            "agent_name": f"{ctx['agent_first']} {ctx['agent_last']}",
+        },
+        "transcript": transcript,
+        "gold_labels": {
+            "call_id": "syn_017",
+            "scenario_type": "excellent",
+            "expected_scores": scores,
+            "expected_overall": _calc_overall(scores),
+            "compliance_override_triggered": False,
+            "expected_flags": [],
+            "escalation_required": False,
+            "scenario_tags": ["patient-caller", "minimising-use", "ambivalent", "family-referred", "motivational-interviewing"],
+            "coaching_notes": "Exemplary motivational approach — agent used Socratic questioning to let the caller arrive at their own concern rather than confronting the minimisation directly. The reflection ('the question is whether it's getting in the way of the life you want') is textbook MI and avoids labelling. Clinical screen strong: drew out frequency, morning consequences, and prior quit attempts. Objection handling 5: handled 'I don't really need this' without pushback.",
+        },
+    }
+
+
+def _syn_018(ctx: dict) -> dict:
+    """Excellent: highly distressed caller; agent sustains exceptional empathy throughout."""
+    a, c = ctx["agent_first"], ctx["caller_first"]
+    carrier, mid, grp = ctx["carrier"], ctx["member_id"], ctx["group_number"]
+
+    transcript = _turns([
+        ("agent", 0, f"Thank you for calling {TREATMENT_CENTER}, this is {a}."),
+        ("caller", 4, f"I... sorry. I'm {c}. I don't even know why I called. I've been sitting here for an hour trying to call and I keep hanging up."),
+        ("agent", 16, f"And you called. That's what matters. {c}, I'm here and I have time. There's nothing else I need to be doing right now. What's going on?"),
+        ("caller", 30, "I've been using heroin for three years. My family doesn't know. I've been hiding it. I'm scared I'm going to die."),
+        ("agent", 44, f"Thank you for trusting me with that. I can hear how much fear is in what you just said — and that fear makes complete sense. Three years is a long time to carry this alone. You're not alone right now. Can you tell me — are you safe at this moment? Are you using right now?"),
+        ("caller", 62, "No. I used this morning but not right now. I'm at home."),
+        ("agent", 70, f"Okay. Good. {c}, I want you to know that what you just told me — that you're scared you're going to die — that tells me you want to live. That's something we can work with. How are you feeling physically right now?"),
+        ("caller", 86, "Anxious. A little sweaty. I've been using every day so I'm starting to feel it."),
+        ("agent", 96, "When you say feeling it — are you getting early withdrawal symptoms? Muscle aches, nausea, restlessness?"),
+        ("caller", 106, "Yeah. All of that. It comes on fast with heroin."),
+        ("agent", 114, f"It does. And that's important information — opioid withdrawal can escalate and it's much safer managed medically. I want to get you in today if we can. Is that something you want?"),
+        ("caller", 128, "Yes. But I'm scared. What if my family finds out?"),
+        ("agent", 136, f"Your treatment is confidential. We don't contact family without your permission — ever. Whatever you decide about telling them is your choice, on your timeline. Right now, the only thing that matters is getting you safe. Do you have insurance?"),
+        ("caller", 150, f"Yes. {carrier}. I have my card. Member ID {mid}, group {grp}."),
+        ("agent", 164, f"Thank you. I'm noting that now. {c}, here's what I want to do: I'm going to put a priority flag on your intake and connect you with our detox admissions team right now — not in two hours, right now. They'll tell you exactly what the admissions process looks like today. Are you able to stay on the line for a moment while I get them?"),
+        ("caller", 184, "Yes. Please."),
+        ("agent", 188, f"I'm right here. You made the hardest call already."),
+    ])
+
+    scores = {
+        "empathy_rapport": 5,
+        "insurance_verification": 4,
+        "clinical_screening": 4,
+        "urgency_triage": 5,
+        "family_caller_handling": None,
+        "objection_handling": 5,
+        "next_step_clarity": 5,
+        "compliance_language": 5,
+    }
+
+    return {
+        "call_id": "syn_018",
+        "generated_at": GENERATED_AT,
+        "seed": ctx["seed"],
+        "scenario_type": "excellent",
+        "metadata": {
+            "duration_seconds": 198,
+            "caller_type": "patient",
+            "campaign_source": "organic_search",
+            "tracking_number": ctx["tracking_number"],
+            "agent_id": ctx["agent_id"],
+            "agent_name": f"{ctx['agent_first']} {ctx['agent_last']}",
+        },
+        "transcript": transcript,
+        "gold_labels": {
+            "call_id": "syn_018",
+            "scenario_type": "excellent",
+            "expected_scores": scores,
+            "expected_overall": _calc_overall(scores),
+            "compliance_override_triggered": False,
+            "expected_flags": [],
+            "escalation_required": True,
+            "scenario_tags": ["patient-caller", "high-distress", "opioid-use-disorder", "early-withdrawal", "hidden-use", "same-day-admit"],
+            "coaching_notes": "Outstanding. Empathy was patient and unhurried despite the caller's distress — agent gave space without rushing to information. Correctly identified urgency (daily use + early withdrawal symptoms = medical risk) and escalated to real-time admissions handoff rather than a callback. Confidentiality objection handled in one sentence without derailing the momentum. Benchmark-quality call.",
+        },
+    }
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# SCENARIO: WEAK — BATCH 2 (syn_019–021)
+# ══════════════════════════════════════════════════════════════════════════════
+
+def _syn_019(ctx: dict) -> dict:
+    """Weak: CLINICAL_SCOPE violation. Agent tells caller what level of care they need."""
+    a, c = ctx["agent_first"], ctx["caller_first"]
+    carrier, mid, grp = ctx["carrier"], ctx["member_id"], ctx["group_number"]
+
+    transcript = _turns([
+        ("agent", 0, f"{TREATMENT_CENTER}, {a} speaking."),
+        ("caller", 4, f"Hi, I'm {c}. I'm looking at treatment options for alcohol. I've been drinking pretty heavily."),
+        ("agent", 10, "How long?"),
+        ("caller", 14, "About two years. It's every day."),
+        ("agent", 18, "How much a day?"),
+        ("caller", 22, "Half a bottle of vodka, sometimes more."),
+        ("agent", 28, "Any withdrawal when you try to stop?"),
+        ("caller", 32, "Some shaking. Nothing too bad."),
+        ("agent", 36, "Have you looked into what kind of program you want?"),
+        ("caller", 42, "I was thinking outpatient. I have a job and I can't just disappear."),
+        ("agent", 48, "Based on what you're describing — daily drinking, half a bottle of vodka, withdrawal symptoms — I think you need residential, not outpatient. Outpatient isn't going to be enough for where you are."),
+        ("caller", 62, "Oh. I didn't think it was that bad."),
+        ("agent", 68, "It is. You should really consider the 30-day program. That's the right fit for your situation."),
+        ("caller", 76, "I'd have to figure out my job. That's a big deal."),
+        ("agent", 82, "FMLA can cover that. Do you have insurance?"),
+        ("caller", 88, f"Yes. {carrier}. ID {mid}, group {grp}."),
+        ("agent", 100, "Okay. We'll verify. Someone will be in touch."),
+        ("caller", 106, "Do you know when?"),
+        ("agent", 110, "Probably today."),
+        ("caller", 114, "Okay. Thank you."),
+    ])
+
+    scores = {
+        "empathy_rapport": 2,
+        "insurance_verification": 3,
+        "clinical_screening": 3,
+        "urgency_triage": 2,
+        "family_caller_handling": None,
+        "objection_handling": 2,
+        "next_step_clarity": 2,
+        "compliance_language": 0,
+    }
+
+    return {
+        "call_id": "syn_019",
+        "generated_at": GENERATED_AT,
+        "seed": ctx["seed"],
+        "scenario_type": "weak",
+        "metadata": {
+            "duration_seconds": 124,
+            "caller_type": "patient",
+            "campaign_source": "google_paid",
+            "tracking_number": ctx["tracking_number"],
+            "agent_id": ctx["agent_id"],
+            "agent_name": f"{ctx['agent_first']} {ctx['agent_last']}",
+        },
+        "transcript": transcript,
+        "gold_labels": {
+            "call_id": "syn_019",
+            "scenario_type": "weak",
+            "expected_scores": scores,
+            "expected_overall": _calc_overall(scores),
+            "compliance_override_triggered": True,
+            "expected_flags": ["CLINICAL_SCOPE"],
+            "escalation_required": False,
+            "scenario_tags": ["patient-caller", "compliance-violation", "clinical-scope", "level-of-care-overreach"],
+            "coaching_notes": "COMPLIANCE VIOLATION: 'I think you need residential, not outpatient' and 'Outpatient isn't going to be enough for where you are' are scope-of-practice violations — level-of-care determination requires clinical assessment, not intake staff judgment. Also: 'That's the right fit for your situation' is a clinical prescription. Agent should say 'our clinical team will assess the right level of care.' Beyond compliance: no empathy, objection to job impact dismissed with FMLA mention only, next step vague.",
+        },
+    }
+
+
+def _syn_020(ctx: dict) -> dict:
+    """Weak: DIAG_CLAIM v2 + generally poor. Agent diagnoses and dismisses. Dim 8 = 0."""
+    a, c = ctx["agent_first"], ctx["caller_first"]
+    carrier, mid = ctx["carrier"], ctx["member_id"]
+
+    transcript = _turns([
+        ("agent", 0, f"{TREATMENT_CENTER}."),
+        ("caller", 4, f"Yeah, hi. I'm {c}. I think I might have a problem with pills. Painkillers."),
+        ("agent", 10, "How long?"),
+        ("caller", 14, "Maybe a year. Started after a surgery."),
+        ("agent", 18, "What you're describing sounds like addiction. You're going to need treatment."),
+        ("caller", 26, "I mean... I don't know if it's that serious."),
+        ("agent", 30, "It is. Daily use of opioids after a year is addiction. Are you still getting them from a prescription or buying them?"),
+        ("caller", 40, "A mix. My prescription ran out so I've been getting them other ways."),
+        ("agent", 48, "That's a classic pattern. You have a serious dependency. Do you have insurance?"),
+        ("caller", 56, f"Yes, {carrier}. ID is {mid}."),
+        ("agent", 62, "Group number?"),
+        ("caller", 66, "I don't have it with me."),
+        ("agent", 70, "We'll try without it. Someone will call you."),
+        ("caller", 76, "When?"),
+        ("agent", 80, "Soon."),
+        ("caller", 84, "Okay. Is there anything I should know before then?"),
+        ("agent", 88, "Just be ready to discuss your history. Bye."),
+    ])
+
+    scores = {
+        "empathy_rapport": 1,
+        "insurance_verification": 2,
+        "clinical_screening": 2,
+        "urgency_triage": 1,
+        "family_caller_handling": None,
+        "objection_handling": 1,
+        "next_step_clarity": 1,
+        "compliance_language": 0,
+    }
+
+    return {
+        "call_id": "syn_020",
+        "generated_at": GENERATED_AT,
+        "seed": ctx["seed"],
+        "scenario_type": "weak",
+        "metadata": {
+            "duration_seconds": 98,
+            "caller_type": "patient",
+            "campaign_source": "google_paid",
+            "tracking_number": ctx["tracking_number"],
+            "agent_id": ctx["agent_id"],
+            "agent_name": f"{ctx['agent_first']} {ctx['agent_last']}",
+        },
+        "transcript": transcript,
+        "gold_labels": {
+            "call_id": "syn_020",
+            "scenario_type": "weak",
+            "expected_scores": scores,
+            "expected_overall": _calc_overall(scores),
+            "compliance_override_triggered": True,
+            "expected_flags": ["DIAG_CLAIM"],
+            "escalation_required": False,
+            "scenario_tags": ["patient-caller", "compliance-violation", "diagnostic-claim", "dismissive-tone", "worst-case"],
+            "coaching_notes": "COMPLIANCE VIOLATION: 'What you're describing sounds like addiction' and 'You have a serious dependency' are diagnostic claims — intake staff cannot diagnose. Multiple violations in short span. Beyond compliance: zero empathy, dismissive throughout, insurance screen incomplete (group number abandoned), clinical screen stopped after confirmation of use pattern, next step ('soon', 'bye') is the worst in the dataset. This call is a comprehensive failure across all dimensions.",
+        },
+    }
+
+
+def _syn_021(ctx: dict) -> dict:
+    """Weak: borderline — multiple gaps, no violation. Insurance and clinical screen both 2-3. BORDERLINE #4."""
+    a, c = ctx["agent_first"], ctx["caller_first"]
+    carrier, mid, grp = ctx["carrier"], ctx["member_id"], ctx["group_number"]
+
+    transcript = _turns([
+        ("agent", 0, f"Thank you for calling {TREATMENT_CENTER}, I'm {a}."),
+        ("caller", 6, f"Hi. My name is {c}. My doctor told me I should look into treatment for my drinking. I've been cutting back but it's hard."),
+        ("agent", 16, "How long have you been drinking heavily?"),
+        ("caller", 22, "A few years. It got worse after COVID."),
+        ("agent", 28, "Are you drinking every day?"),
+        ("caller", 32, "Most days. Not always a lot, but something."),
+        ("agent", 38, "Do you have insurance?"),
+        ("caller", 42, f"Yes, {carrier}. Member ID {mid}, group {grp}."),
+        ("agent", 54, "Great. Do you have any idea what kind of program you're looking for?"),
+        ("caller", 60, "Something that works around my schedule. I have two kids."),
+        ("agent", 66, "We have outpatient options that are evenings only."),
+        ("caller", 72, "That would work. How long does it usually last?"),
+        ("agent", 78, "Depends on your assessment. Typically eight to twelve weeks for IOP."),
+        ("caller", 86, "Okay. My doctor mentioned something about medication. Is that something you do?"),
+        ("agent", 92, "Yes, we offer MAT. The clinical team would assess that."),
+        ("caller", 100, "Good to know. What happens next?"),
+        ("agent", 104, "Someone will call you to set up an intake appointment."),
+        ("caller", 110, "Do you have a rough timeframe?"),
+        ("agent", 114, "Within the next day or two."),
+        ("caller", 120, "Okay. Thank you."),
+    ])
+
+    scores = {
+        "empathy_rapport": 2,
+        "insurance_verification": 3,
+        "clinical_screening": 3,
+        "urgency_triage": 2,
+        "family_caller_handling": None,
+        "objection_handling": None,
+        "next_step_clarity": 2,
+        "compliance_language": 4,
+    }
+
+    return {
+        "call_id": "syn_021",
+        "generated_at": GENERATED_AT,
+        "seed": ctx["seed"],
+        "scenario_type": "weak",
+        "metadata": {
+            "duration_seconds": 130,
+            "caller_type": "patient",
+            "campaign_source": "physician_referral",
+            "tracking_number": ctx["tracking_number"],
+            "agent_id": ctx["agent_id"],
+            "agent_name": f"{ctx['agent_first']} {ctx['agent_last']}",
+        },
+        "transcript": transcript,
+        "gold_labels": {
+            "call_id": "syn_021",
+            "scenario_type": "weak",
+            "expected_scores": scores,
+            "expected_overall": _calc_overall(scores),
+            "compliance_override_triggered": False,
+            "expected_flags": [],
+            "escalation_required": False,
+            "scenario_tags": ["patient-caller", "borderline", "physician-referred", "parent-concern", "adequate-but-flat"],
+            "coaching_notes": "BORDERLINE: clinical_screening is borderline 2-3 — agent captured frequency and history, but missed severity (withdrawal, consequences, prior attempts) and the MAT question came from the caller, not the agent. Insurance borderline 2-3 — fields captured but no framing as 'step toward help.' No empathy opening; call was transactional throughout. Next step timing of 'a day or two' is borderline acceptable vs. not.",
+        },
+    }
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# SCENARIO: FAMILY_CALLER — BATCH 2 (syn_022–024)
+# ══════════════════════════════════════════════════════════════════════════════
+
+def _syn_022(ctx: dict) -> dict:
+    """Family caller: employer calling on behalf of employee. Unusual consent, handled correctly."""
+    a = ctx["agent_first"]
+    caller_first, caller_last = ctx["caller_first"], ctx["caller_last"]
+    patient_first = "Devon"
+    carrier, mid, grp = ctx["carrier"], ctx["member_id"], ctx["group_number"]
+
+    transcript = _turns([
+        ("agent", 0, f"Thank you for calling {TREATMENT_CENTER}, this is {a}."),
+        ("caller", 4, f"Hello, my name is {caller_first} {caller_last}. I'm an HR manager at a company and I'm calling about one of our employees — with their knowledge and support. His name is {patient_first}. He spoke to me this morning and asked me to help him find treatment. He's struggling with alcohol."),
+        ("agent", 18, f"Thank you for calling, {caller_first}, and thank you for supporting {patient_first} in this way. Before we go further, I want to make sure I understand the consent situation correctly. Has {patient_first} given you explicit permission to speak on his behalf and to share his information with us today?"),
+        ("caller", 36, "Yes. He was with me this morning. He's actually in the next office right now. He's willing to talk to you directly if needed."),
+        ("agent", 44, f"That's actually very helpful. Given that {patient_first} is available, it would be best if we could have him join the call for a few minutes — even briefly — so he can give verbal consent and I can ask him a couple of quick questions. Would that be possible?"),
+        ("caller", 58, "Yes, absolutely. One moment."),
+        ("agent", 62, "Of course, take your time."),
+        ("caller", 72, f"Hi, this is {patient_first}."),
+        ("agent", 76, f"Hi {patient_first}, thank you for coming on the line. I just want to confirm — you're aware that your HR colleague {caller_first} reached out to us on your behalf today, and you're okay with us having this conversation and sharing information about your situation?"),
+        ("caller", 92, "Yes, I am. I asked them to help me."),
+        ("agent", 98, f"Thank you, {patient_first}. I appreciate you saying that. I have a few questions for you directly. How long have you been struggling with alcohol?"),
+        ("caller", 108, "A couple of years. It's gotten bad in the last six months."),
+        ("agent", 116, "Are you experiencing any withdrawal symptoms when you go a day without drinking?"),
+        ("caller", 122, "Some anxiety and trouble sleeping. Nothing severe."),
+        ("agent", 128, f"Okay. {patient_first}, do you have health insurance through your employer here?"),
+        ("caller", 134, f"Yes. It's {carrier}. My HR should have all the details."),
+        ("agent", 140, f"{caller_first}, do you have {patient_first}'s insurance information available?"),
+        ("caller", 148, f"Yes. Member ID {mid}, group {grp}."),
+        ("agent", 158, f"Perfect. {patient_first}, here's what happens next: our benefits team will verify your coverage and an admissions coordinator will call you — on your direct line, not through HR unless you prefer otherwise — within two hours. Which number would you like them to use?"),
+        ("caller", 174, "My cell. I'll give it to you."),
+        ("agent", 180, f"Please go ahead. And {patient_first} — you have good people around you. That matters."),
+    ])
+
+    scores = {
+        "empathy_rapport": 5,
+        "insurance_verification": 4,
+        "clinical_screening": 3,
+        "urgency_triage": 3,
+        "family_caller_handling": 5,
+        "objection_handling": None,
+        "next_step_clarity": 4,
+        "compliance_language": 5,
+    }
+
+    return {
+        "call_id": "syn_022",
+        "generated_at": GENERATED_AT,
+        "seed": ctx["seed"],
+        "scenario_type": "family_caller",
+        "metadata": {
+            "duration_seconds": 190,
+            "caller_type": "employer_representative",
+            "campaign_source": "eap_referral",
+            "tracking_number": ctx["tracking_number"],
+            "agent_id": ctx["agent_id"],
+            "agent_name": f"{ctx['agent_first']} {ctx['agent_last']}",
+        },
+        "transcript": transcript,
+        "gold_labels": {
+            "call_id": "syn_022",
+            "scenario_type": "family_caller",
+            "expected_scores": scores,
+            "expected_overall": _calc_overall(scores),
+            "compliance_override_triggered": False,
+            "expected_flags": [],
+            "escalation_required": False,
+            "scenario_tags": ["employer-caller", "patient-adjacent", "eap-pathway", "consent-confirmed-live", "unusual-consent-edge-case"],
+            "coaching_notes": "Excellent handling of an unusual consent scenario — agent immediately asked for explicit patient consent, then asked if the patient could come on the line directly (best practice), and correctly directed the callback to the patient's personal number rather than HR. Family_caller_handling scored 5 for navigating the employer/patient/consent triangle correctly. Clinical screen limited because the handoff from HR to patient was brief.",
+        },
+    }
+
+
+def _syn_023(ctx: dict) -> dict:
+    """Family caller: BORDERLINE. Adult child for parent. Consent adequate, family distress ignored. BORDERLINE #5."""
+    a = ctx["agent_first"]
+    caller_first = ctx["caller_first"]
+    patient_first = "Robert"
+    carrier, mid, grp = ctx["carrier"], ctx["member_id"], ctx["group_number"]
+
+    transcript = _turns([
+        ("agent", 0, f"{TREATMENT_CENTER}, this is {a}."),
+        ("caller", 4, f"Hi. My name is {caller_first}. I'm calling about my dad. His name is {patient_first}. He's 64 and he's been drinking heavily since my mom passed away last year."),
+        ("agent", 16, "I'm sorry to hear that. Does your father know you're calling?"),
+        ("caller", 22, "Yes. I talked to him this morning. He said he'd think about it but he said I could call to find out what's involved."),
+        ("agent", 30, "Okay. I want to be upfront — since your father is an adult, any treatment would require his direct consent. But I'm happy to give you information you can share with him. How much is he drinking?"),
+        ("caller", 44, "A lot. A bottle of wine at dinner, then usually whiskey after. Every night."),
+        ("agent", 52, "Has he had any falls or health issues related to it?"),
+        ("caller", 58, "He fell twice last month. The second time he needed stitches."),
+        ("agent", 66, "That's concerning from a medical standpoint. Has he ever tried to stop or cut down?"),
+        ("caller", 72, "He tried after the first fall but it only lasted a few days."),
+        ("agent", 78, "Does he have insurance?"),
+        ("caller", 84, f"Yes, through his retirement plan. It's {carrier}. I have his ID — it's {mid}, group {grp}."),
+        ("agent", 96, "Thank you. Given his age and the fall history, medical assessment is particularly important for him. Has he agreed to at least speak to someone here?"),
+        ("caller", 108, "Not yet. I'm hoping to convince him this week."),
+        ("agent", 116, "When he's ready, he can call directly or you can bring him in. We'd be glad to do a brief phone consultation with him if that feels more approachable."),
+        ("caller", 126, "That might work. I'll try that approach."),
+        ("agent", 130, "Good. Is there anything else you'd like to know?"),
+        ("caller", 136, "Not right now. I'm just worried about him. It's been a really hard year for our whole family."),
+        ("agent", 144, "That's understandable. Have him give us a call when he's ready."),
+        ("caller", 150, "Okay. Thank you."),
+    ])
+
+    scores = {
+        "empathy_rapport": 3,
+        "insurance_verification": 3,
+        "clinical_screening": 3,
+        "urgency_triage": 3,
+        "family_caller_handling": 3,
+        "objection_handling": None,
+        "next_step_clarity": 3,
+        "compliance_language": 5,
+    }
+
+    return {
+        "call_id": "syn_023",
+        "generated_at": GENERATED_AT,
+        "seed": ctx["seed"],
+        "scenario_type": "family_caller",
+        "metadata": {
+            "duration_seconds": 160,
+            "caller_type": "family_member",
+            "campaign_source": "organic_search",
+            "tracking_number": ctx["tracking_number"],
+            "agent_id": ctx["agent_id"],
+            "agent_name": f"{ctx['agent_first']} {ctx['agent_last']}",
+        },
+        "transcript": transcript,
+        "gold_labels": {
+            "call_id": "syn_023",
+            "scenario_type": "family_caller",
+            "expected_scores": scores,
+            "expected_overall": _calc_overall(scores),
+            "compliance_override_triggered": False,
+            "expected_flags": [],
+            "escalation_required": False,
+            "scenario_tags": ["family-caller", "adult-child", "elderly-patient", "fall-history", "borderline"],
+            "coaching_notes": "BORDERLINE: family_caller_handling is borderline 2-3 — consent was acknowledged but framing was procedural rather than warm; when caller said 'it's been a really hard year for our whole family' the agent gave a two-word non-response ('that's understandable') and moved on. The offer of a phone consultation with the patient was good practice. All dimensions are borderline 3 — reasonable graders may score 2 or 3 across the board. Clinical flag: fall history mentioned, agent noted it but didn't flag as urgent.",
+        },
+    }
+
+
+def _syn_024(ctx: dict) -> dict:
+    """Family caller: friend calling, not family. Agent navigates trickier consent correctly."""
+    a = ctx["agent_first"]
+    caller_first = ctx["caller_first"]
+    patient_first = "Simone"
+    carrier, mid, grp = ctx["carrier"], ctx["member_id"], ctx["group_number"]
+
+    transcript = _turns([
+        ("agent", 0, f"Thank you for calling {TREATMENT_CENTER}, this is {a}. How can I help?"),
+        ("caller", 4, f"Hi, I'm {caller_first}. I'm calling about my friend. Her name is {patient_first}. She asked me to call for her because she was too nervous to do it herself."),
+        ("agent", 14, f"I'm glad she has someone like you to help her take this step. Before I go further — just so you both understand — I can share general information with you, but because {patient_first} isn't a family member, I'd want to involve her directly before we discuss her specific situation in any detail. Is she with you right now or available to speak?"),
+        ("caller", 34, "She's right here. She can hear you — I have you on speaker."),
+        ("agent", 40, f"{patient_first}, can you hear me okay? I just want to make sure you're comfortable with your friend being part of this call."),
+        ("caller", 50, f"Yes. I'm here. I asked {caller_first} to help me. I'm just really scared."),
+        ("agent", 58, f"That's completely okay, {patient_first}. You don't have to do any of the talking if you don't want to. I'm glad you're on the line. Can you tell me, in your own words, what's been going on?"),
+        ("caller", 72, f"I've been using cocaine for about eighteen months. It's gotten out of control. I spend money I don't have. I've been lying to my family."),
+        ("agent", 88, f"Thank you for telling me that. Eighteen months and the pattern you're describing — the financial consequences, the hiding — those are signs that this has moved beyond something you can manage on your own, and reaching out today is exactly the right move. {patient_first}, are you also drinking or using anything else alongside the cocaine?"),
+        ("caller", 108, "Sometimes I drink. To come down."),
+        ("agent", 116, "Okay. And have you tried to stop on your own?"),
+        ("caller", 122, "A few times. I can't get past a week."),
+        ("agent", 128, f"That's a really common pattern with stimulant use and it doesn't mean you lack willpower — it means your brain has adapted and needs support to reset. Do you have health insurance, {patient_first}?"),
+        ("caller", 142, f"Yes. {carrier}. I have my card. Member ID {mid}, group {grp}."),
+        ("agent", 154, f"Thank you. Here's the plan: I'll verify your benefits and have our admissions team call you — {patient_first}, on your number directly, unless you'd prefer {caller_first} to be included in that call too."),
+        ("caller", 170, "I'd like her on the call."),
+        ("agent", 174, f"Then I'll note that. You'll hear from us within ninety minutes. {patient_first} — having a friend willing to make this call with you is not a small thing. Hold onto that."),
+        ("caller", 186, "Thank you."),
+    ])
+
+    scores = {
+        "empathy_rapport": 5,
+        "insurance_verification": 4,
+        "clinical_screening": 4,
+        "urgency_triage": 3,
+        "family_caller_handling": 5,
+        "objection_handling": None,
+        "next_step_clarity": 4,
+        "compliance_language": 5,
+    }
+
+    return {
+        "call_id": "syn_024",
+        "generated_at": GENERATED_AT,
+        "seed": ctx["seed"],
+        "scenario_type": "family_caller",
+        "metadata": {
+            "duration_seconds": 196,
+            "caller_type": "friend",
+            "campaign_source": "organic_search",
+            "tracking_number": ctx["tracking_number"],
+            "agent_id": ctx["agent_id"],
+            "agent_name": f"{ctx['agent_first']} {ctx['agent_last']}",
+        },
+        "transcript": transcript,
+        "gold_labels": {
+            "call_id": "syn_024",
+            "scenario_type": "family_caller",
+            "expected_scores": scores,
+            "expected_overall": _calc_overall(scores),
+            "compliance_override_triggered": False,
+            "expected_flags": [],
+            "escalation_required": False,
+            "scenario_tags": ["friend-caller", "patient-on-call", "stimulant-use", "consent-navigated-correctly"],
+            "coaching_notes": "Strong handling of the friend-caller edge case — agent immediately established consent by addressing the patient directly, confirmed she was comfortable with the arrangement, and then pivoted naturally to the patient for the clinical questions. Next step correctly offered patient the choice of including friend in follow-up call. Family_caller_handling scored 5 because the non-family consent situation was navigated without making it feel legalistic.",
+        },
+    }
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# SCENARIO: URGENCY — BATCH 2 (syn_025–027)
+# ══════════════════════════════════════════════════════════════════════════════
+
+def _syn_025(ctx: dict) -> dict:
+    """Urgency: recent overdose last night. Agent activates crisis protocol immediately."""
+    a, c = ctx["agent_first"], ctx["caller_first"]
+    carrier, mid, grp = ctx["carrier"], ctx["member_id"], ctx["group_number"]
+
+    transcript = _turns([
+        ("agent", 0, f"Thank you for calling {TREATMENT_CENTER}, this is {a}."),
+        ("caller", 4, f"Hi. My name is {c}. I overdosed last night. My roommate found me and used naloxone. I'm alive and I need help."),
+        ("agent", 14, f"{c}, I am so glad you called and I am so glad your roommate was there. That was a life-saving moment and you survived it. How are you feeling physically right now?"),
+        ("caller", 26, "Weak. Sick. I have a headache. But I'm okay enough to talk."),
+        ("agent", 34, f"Good. You're okay. First — have you been seen by a doctor since last night? Did you go to the ER?"),
+        ("caller", 44, "No. My roommate wanted me to but I refused. I was scared."),
+        ("agent", 52, f"I understand. I'm going to be honest with you: after an opioid overdose, medical evaluation is important — not just for the overdose itself, but because your body has been through significant stress. I want to get you both medically evaluated and into our detox program today. Not tomorrow — today. Can I ask: are you using heroin, fentanyl, or prescription opioids?"),
+        ("caller", 74, "Fentanyl. I've been using for about eight months."),
+        ("agent", 82, f"Eight months of fentanyl use and an overdose last night — this is a genuine medical emergency, {c}, and you're doing exactly the right thing by calling. Here is what I want to do: I'd like to arrange for you to be seen at our medical facility this morning. Our intake team can coordinate transport from where you are. Where are you located?"),
+        ("caller", 96, "I'm at my apartment. Downtown."),
+        ("agent", 102, "Okay. Do you have insurance with you?"),
+        ("caller", 108, f"Yes. {carrier}. My card is here. Member ID {mid}, group {grp}."),
+        ("agent", 120, f"I have that. {c}, I'm escalating you to our medical intake coordinator right now — they handle same-day admissions for exactly this kind of situation. I need you to stay on the line. Does your roommate know you're calling us?"),
+        ("caller", 136, "Yes. They're here."),
+        ("agent", 140, "Good. Tell them to stay with you until our coordinator calls back — which will be in under ten minutes. Do not drive. Do not be alone. Can you do that?"),
+        ("caller", 152, "Yes."),
+        ("agent", 156, f"Good. You called at exactly the right moment, {c}. I'm getting help to you right now."),
+    ])
+
+    scores = {
+        "empathy_rapport": 5,
+        "insurance_verification": 4,
+        "clinical_screening": 5,
+        "urgency_triage": 5,
+        "family_caller_handling": None,
+        "objection_handling": None,
+        "next_step_clarity": 5,
+        "compliance_language": 5,
+    }
+
+    return {
+        "call_id": "syn_025",
+        "generated_at": GENERATED_AT,
+        "seed": ctx["seed"],
+        "scenario_type": "urgency",
+        "metadata": {
+            "duration_seconds": 166,
+            "caller_type": "patient",
+            "campaign_source": "direct",
+            "tracking_number": ctx["tracking_number"],
+            "agent_id": ctx["agent_id"],
+            "agent_name": f"{ctx['agent_first']} {ctx['agent_last']}",
+        },
+        "transcript": transcript,
+        "gold_labels": {
+            "call_id": "syn_025",
+            "scenario_type": "urgency",
+            "expected_scores": scores,
+            "expected_overall": _calc_overall(scores),
+            "compliance_override_triggered": False,
+            "expected_flags": [],
+            "escalation_required": True,
+            "scenario_tags": ["patient-caller", "post-overdose", "fentanyl", "crisis-protocol-activated", "same-day-admit", "naloxone-reversal"],
+            "coaching_notes": "Benchmark post-overdose call. Agent correctly identified this as a medical emergency, asked about ER evaluation, named the specific substance (fentanyl), and escalated to same-day medical intake rather than a standard callback. Instructions to stay with roommate and not drive are correct safety protocol. One of the strongest urgency triage demonstrations in the dataset.",
+        },
+    }
+
+
+def _syn_026(ctx: dict) -> dict:
+    """Urgency: passive SI signal. Agent partially responds but doesn't fully activate crisis protocol. BORDERLINE #6."""
+    a, c = ctx["agent_first"], ctx["caller_first"]
+    carrier, mid, grp = ctx["carrier"], ctx["member_id"], ctx["group_number"]
+
+    transcript = _turns([
+        ("agent", 0, f"Thank you for calling {TREATMENT_CENTER}, this is {a}."),
+        ("caller", 4, f"Hi, I'm {c}. I'm calling because I've been drinking every day for a long time and I think I need to stop. I've been having some dark thoughts lately and I just... I need something to change."),
+        ("agent", 18, f"I hear you, {c}. Can you tell me more about the dark thoughts you mentioned? I want to make sure I understand what you mean."),
+        ("caller", 30, "I've been thinking that everyone would be better off without me. But I don't have a plan or anything. It's more like a background feeling."),
+        ("agent", 44, f"Thank you for being honest about that. I want to acknowledge that what you just described is something we take seriously. Those kinds of thoughts — even as a background feeling — are a sign that you need support beyond just the drinking. Have you told anyone else about these thoughts?"),
+        ("caller", 58, "No. You're the first."),
+        ("agent", 64, f"I'm glad you told me. {c}, I'm going to note this for our clinical team — it's important context and they will want to address it as part of your care. Now let me ask about the drinking so we have the full picture. How long and how much?"),
+        ("caller", 78, "About four years. A six-pack or more every night."),
+        ("agent", 86, "Any withdrawal symptoms when you go without?"),
+        ("caller", 92, "Yes. Shaking, trouble sleeping."),
+        ("agent", 98, "Okay. And insurance?"),
+        ("caller", 102, f"Yes. {carrier}. Member ID {mid}, group {grp}."),
+        ("agent", 114, "Thank you. I'm going to set this up as a priority intake given everything you've shared. Someone will call you within a few hours."),
+        ("caller", 124, "Okay."),
+        ("agent", 128, "In the meantime — if those dark thoughts get stronger or more specific, please call 988, which is the mental health crisis line. They're available 24/7."),
+        ("caller", 138, "Okay. I will."),
+        ("agent", 142, "Good. We'll be in touch soon."),
+    ])
+
+    scores = {
+        "empathy_rapport": 3,
+        "insurance_verification": 3,
+        "clinical_screening": 3,
+        "urgency_triage": 2,
+        "family_caller_handling": None,
+        "objection_handling": None,
+        "next_step_clarity": 3,
+        "compliance_language": 5,
+    }
+
+    return {
+        "call_id": "syn_026",
+        "generated_at": GENERATED_AT,
+        "seed": ctx["seed"],
+        "scenario_type": "urgency",
+        "metadata": {
+            "duration_seconds": 152,
+            "caller_type": "patient",
+            "campaign_source": "google_paid",
+            "tracking_number": ctx["tracking_number"],
+            "agent_id": ctx["agent_id"],
+            "agent_name": f"{ctx['agent_first']} {ctx['agent_last']}",
+        },
+        "transcript": transcript,
+        "gold_labels": {
+            "call_id": "syn_026",
+            "scenario_type": "urgency",
+            "expected_scores": scores,
+            "expected_overall": _calc_overall(scores),
+            "compliance_override_triggered": False,
+            "expected_flags": [],
+            "escalation_required": True,
+            "scenario_tags": ["patient-caller", "passive-si", "partial-crisis-response", "borderline", "dual-concern"],
+            "coaching_notes": "BORDERLINE: urgency_triage is borderline 1-2 — agent asked a follow-up question about the SI ('can you tell me more') which is good, and gave 988 as a resource at the end, but did not activate the full crisis protocol (no warm transfer attempt, no direct offer to stay on the line, moved back to routine intake after noting it). The 'few hours' callback timeline is inappropriate given the active SI disclosure — this should have been escalated to immediate contact. Reasonable graders may score 1, 2, or 3 on urgency_triage.",
+        },
+    }
+
+
+def _syn_027(ctx: dict) -> dict:
+    """Urgency: non-urgent caller; agent manufactures urgency inappropriately. Dim 4 = 1."""
+    a, c = ctx["agent_first"], ctx["caller_first"]
+    carrier, mid, grp = ctx["carrier"], ctx["member_id"], ctx["group_number"]
+
+    transcript = _turns([
+        ("agent", 0, f"Thank you for calling {TREATMENT_CENTER}, this is {a}."),
+        ("caller", 4, f"Hi, I'm {c}. I'm calling to find out about your programs. I've been thinking about cutting back on drinking for a while and maybe getting some support. I'm not in crisis or anything, just looking at my options."),
+        ("agent", 16, "That's good that you're thinking about it. You know, alcohol use tends to get worse over time if you don't address it. Are you drinking every day?"),
+        ("caller", 26, "Most days. A glass or two of wine at dinner."),
+        ("agent", 32, "That's more than it sounds like. Nightly drinking is a pattern that typically escalates. A lot of people who think they have it under control end up in serious trouble."),
+        ("caller", 44, "I mean, I know I should cut back. That's why I'm calling. But I don't feel like I have a major problem."),
+        ("agent", 52, "The thing is, people rarely recognise how serious it is until it's gotten really bad. The fact that you're calling is a sign it's already more serious than you think."),
+        ("caller", 62, "I'm not sure I agree with that. I just want some information."),
+        ("agent", 68, "I understand. But I'd hate for you to wait until something happens — a DUI, a health scare — before you take action. A lot of our patients say they wish they'd come in sooner."),
+        ("caller", 80, "Okay, I hear you. What do you have for people who are still working and don't want to do inpatient?"),
+        ("agent", 88, "We have IOP — evenings, three times a week. Very manageable."),
+        ("caller", 96, "That could work. What does it cost?"),
+        ("agent", 100, "Depends on your insurance. Do you have coverage?"),
+        ("caller", 106, f"Yes. {carrier}. Member ID {mid}, group {grp}."),
+        ("agent", 118, "Okay. I'd really encourage you to move on this — the sooner the better with alcohol."),
+        ("caller", 126, "Can someone call me with more details?"),
+        ("agent", 130, "Absolutely. You'll hear from us soon."),
+        ("caller", 136, "Okay. Thank you."),
+    ])
+
+    scores = {
+        "empathy_rapport": 2,
+        "insurance_verification": 3,
+        "clinical_screening": 2,
+        "urgency_triage": 1,
+        "family_caller_handling": None,
+        "objection_handling": 2,
+        "next_step_clarity": 2,
+        "compliance_language": 4,
+    }
+
+    return {
+        "call_id": "syn_027",
+        "generated_at": GENERATED_AT,
+        "seed": ctx["seed"],
+        "scenario_type": "urgency",
+        "metadata": {
+            "duration_seconds": 146,
+            "caller_type": "patient",
+            "campaign_source": "organic_search",
+            "tracking_number": ctx["tracking_number"],
+            "agent_id": ctx["agent_id"],
+            "agent_name": f"{ctx['agent_first']} {ctx['agent_last']}",
+        },
+        "transcript": transcript,
+        "gold_labels": {
+            "call_id": "syn_027",
+            "scenario_type": "urgency",
+            "expected_scores": scores,
+            "expected_overall": _calc_overall(scores),
+            "compliance_override_triggered": False,
+            "expected_flags": [],
+            "escalation_required": False,
+            "scenario_tags": ["patient-caller", "manufactured-urgency", "low-risk-caller", "pressure-tactics"],
+            "coaching_notes": "Urgency triage = 1 (poor): caller explicitly stated they are not in crisis and are calling for information. Agent repeatedly implied the situation was more serious than it is ('rarely recognise how serious it is', 'wish they'd come in sooner', 'a DUI, a health scare') — this is manufactured urgency. No signals of acute crisis were present. Agent should have accepted the caller's self-assessment and provided information without pressure. Empathy was absent — agent treated this as a closing opportunity, not a support call.",
+        },
+    }
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# SCENARIO: OBJECTION_HEAVY — BATCH 2 (syn_028–030)
+# ══════════════════════════════════════════════════════════════════════════════
+
+def _syn_028(ctx: dict) -> dict:
+    """Objection heavy: prior treatment failure objection. Agent handles ambivalence with MI technique."""
+    a, c = ctx["agent_first"], ctx["caller_first"]
+    carrier, mid, grp = ctx["carrier"], ctx["member_id"], ctx["group_number"]
+
+    transcript = _turns([
+        ("agent", 0, f"Thank you for calling {TREATMENT_CENTER}, this is {a}."),
+        ("caller", 4, f"Hi, I'm {c}. I've been sober for six months and I've started drinking again. I went to rehab two years ago and it obviously didn't work."),
+        ("agent", 16, f"Thank you for telling me that, {c}. Six months of sobriety is real — that's not nothing. Relapse doesn't erase that. Can I ask: when you say rehab 'didn't work,' what does that mean to you? What were you hoping would happen that didn't?"),
+        ("caller", 30, "I thought I'd be fixed. I went in, did the 30 days, came out, and eventually ended up back where I started."),
+        ("agent", 44, f"That's a really honest answer. The thing I want to offer you — not as reassurance, but as a different frame — is that 30-day residential works for some people and doesn't for others, and that's about fit, not failure. There's research showing that people who relapse after treatment and re-enter treatment have better long-term outcomes than those who never return. You coming back is actually part of the process, not outside of it."),
+        ("caller", 68, "I didn't know that."),
+        ("agent", 74, f"Most people don't. So the question isn't whether treatment can work for you — it's whether this time we design it differently. What did the last program not give you that you think you needed?"),
+        ("caller", 88, "Aftercare. I left and there was nothing. No follow-up, no support group, nothing."),
+        ("agent", 96, f"That's one of the most common reasons people relapse — and it's something we specifically address. Our aftercare planning starts on day one, not day thirty. I want to make a note of that for our clinical team right now. {c}, do you have insurance?"),
+        ("caller", 110, f"Yes. {carrier}. Member ID {mid}, group {grp}."),
+        ("agent", 122, "Thank you. I'm going to verify your benefits and flag the aftercare concern for your intake coordinator. They'll walk you through how our continuing care program works. Can they reach you this afternoon?"),
+        ("caller", 136, "Yes. After two."),
+        ("agent", 140, f"You'll hear from us before three. {c} — coming back after a relapse is one of the hardest things to do. The fact that you made this call tells me something important about you."),
+        ("caller", 152, "Thank you. I hope it's different this time."),
+        ("agent", 156, "We'll make sure the plan is."),
+    ])
+
+    scores = {
+        "empathy_rapport": 4,
+        "insurance_verification": 4,
+        "clinical_screening": 3,
+        "urgency_triage": 3,
+        "family_caller_handling": None,
+        "objection_handling": 5,
+        "next_step_clarity": 4,
+        "compliance_language": 5,
+    }
+
+    return {
+        "call_id": "syn_028",
+        "generated_at": GENERATED_AT,
+        "seed": ctx["seed"],
+        "scenario_type": "objection_heavy",
+        "metadata": {
+            "duration_seconds": 166,
+            "caller_type": "patient",
+            "campaign_source": "referral",
+            "tracking_number": ctx["tracking_number"],
+            "agent_id": ctx["agent_id"],
+            "agent_name": f"{ctx['agent_first']} {ctx['agent_last']}",
+        },
+        "transcript": transcript,
+        "gold_labels": {
+            "call_id": "syn_028",
+            "scenario_type": "objection_heavy",
+            "expected_scores": scores,
+            "expected_overall": _calc_overall(scores),
+            "compliance_override_triggered": False,
+            "expected_flags": [],
+            "escalation_required": False,
+            "scenario_tags": ["patient-caller", "relapse", "prior-treatment-failure-objection", "aftercare-concern", "mi-technique"],
+            "coaching_notes": "Strong objection handling — agent reframed relapse as part of process with genuine evidence, then asked a powerful open question about what was missing (not 'what went wrong'). Correctly identified aftercare as the gap and promised to flag it for intake. The research framing was accurate and non-patronising. Clinical screen was lighter than ideal — only the relapse/drinking history was covered.",
+        },
+    }
+
+
+def _syn_029(ctx: dict) -> dict:
+    """Objection heavy: stigma and 'what will people think' — handled with warmth and accuracy."""
+    a, c = ctx["agent_first"], ctx["caller_first"]
+    carrier, mid, grp = ctx["carrier"], ctx["member_id"], ctx["group_number"]
+
+    transcript = _turns([
+        ("agent", 0, f"Thank you for calling {TREATMENT_CENTER}, this is {a}. How can I help you today?"),
+        ("caller", 6, f"Hi, I'm {c}. I've been struggling with benzodiazepines — Xanax, mostly — for about two years. I want to get help but I'm scared about what people will think. I'm a teacher."),
+        ("agent", 20, f"Thank you for calling, {c}. That took courage. The fear about what people will think — especially in a profession like teaching where your reputation matters — is something a lot of people face. I want to walk you through the privacy picture, because it's actually more protective than most people realise."),
+        ("caller", 38, "Please. That would help."),
+        ("agent", 42, f"Your treatment is completely confidential under HIPAA — your employer, your school district, anyone you haven't specifically authorised cannot access your records. Your insurance company processes the claim but does not share diagnosis information with your employer. If you need time off for treatment, FMLA protects your job and HR is only told that you're on approved medical leave — not why. Does that help?"),
+        ("caller", 66, "Yes. A lot. I didn't know about FMLA."),
+        ("agent", 72, f"Most people don't. And for teachers specifically — there are programs designed around schedules, including summer intensive options and evening outpatient. Benzo dependence is also something our medical team has a lot of experience with because it does require a supervised taper. Have you been taking them as prescribed, or are you taking more than prescribed?"),
+        ("caller", 94, "Both at this point. Started prescribed, now I'm taking more than I should."),
+        ("agent", 104, f"I understand. That's a really common progression. The supervised taper is important because stopping benzodiazepines abruptly can be medically dangerous — I want to flag that for our clinical team. {c}, do you have health insurance?"),
+        ("caller", 118, f"Yes, through the school district. It's {carrier}. Member ID {mid}, group {grp}."),
+        ("agent", 132, f"Thank you. District plans often have good mental health and substance use coverage. I'll have our benefits team verify. They'll be discreet — any calls will show up as {TREATMENT_CENTER} on caller ID, not as a specific clinic type, if that matters to you."),
+        ("caller", 148, "It does. Thank you for thinking of that."),
+        ("agent", 154, f"Of course. Here's what happens next: benefits verification within ninety minutes, followed by a call from our intake team who will talk through level of care and scheduling with your work calendar in mind. They'll call from our main line — just {TREATMENT_CENTER}. Does two o'clock work for you?"),
+        ("caller", 172, "Yes. That works."),
+        ("agent", 176, f"Perfect. {c} — teachers reach out for help less often than they should because of exactly the fear you named. I'm glad you called."),
+    ])
+
+    scores = {
+        "empathy_rapport": 5,
+        "insurance_verification": 4,
+        "clinical_screening": 4,
+        "urgency_triage": 3,
+        "family_caller_handling": None,
+        "objection_handling": 5,
+        "next_step_clarity": 4,
+        "compliance_language": 5,
+    }
+
+    return {
+        "call_id": "syn_029",
+        "generated_at": GENERATED_AT,
+        "seed": ctx["seed"],
+        "scenario_type": "objection_heavy",
+        "metadata": {
+            "duration_seconds": 186,
+            "caller_type": "patient",
+            "campaign_source": "organic_search",
+            "tracking_number": ctx["tracking_number"],
+            "agent_id": ctx["agent_id"],
+            "agent_name": f"{ctx['agent_first']} {ctx['agent_last']}",
+        },
+        "transcript": transcript,
+        "gold_labels": {
+            "call_id": "syn_029",
+            "scenario_type": "objection_heavy",
+            "expected_scores": scores,
+            "expected_overall": _calc_overall(scores),
+            "compliance_override_triggered": False,
+            "expected_flags": [],
+            "escalation_required": False,
+            "scenario_tags": ["patient-caller", "stigma-objection", "teacher", "benzo-dependence", "hipaa-fmla-knowledge", "caller-id-consideration"],
+            "coaching_notes": "Excellent stigma objection handling — agent proactively offered the FMLA/HIPAA detail without being asked, and thought to mention the caller ID display (shows treatment center name, not clinic type). Clinical screen correctly flagged benzo taper risk, which is medically important. The summer program / teacher schedule detail showed genuine attentiveness to the caller's situation. Near-flawless call.",
+        },
+    }
+
+
+def _syn_030(ctx: dict) -> dict:
+    """Objection heavy: cost is genuine barrier. Agent creative with options; close is vague."""
+    a, c = ctx["agent_first"], ctx["caller_first"]
+    carrier, mid, grp = ctx["carrier"], ctx["member_id"], ctx["group_number"]
+
+    transcript = _turns([
+        ("agent", 0, f"Thank you for calling {TREATMENT_CENTER}, this is {a}."),
+        ("caller", 4, f"Hi, I'm {c}. I want to get help for meth use but I'm really worried about cost. I looked at your website and I couldn't find pricing and it's making me anxious."),
+        ("agent", 16, f"That's a completely valid concern and I'm glad you called to ask rather than just not calling. Cost transparency is something we should be better at. Let me walk you through the real picture. Do you have insurance?"),
+        ("caller", 28, f"Yes, {carrier}. But I have a high deductible. Member ID {mid}, group {grp}."),
+        ("agent", 42, "High deductible plans are common, and it can mean you owe more out of pocket before coverage kicks in. Let me be honest about that rather than oversell it. How high is your deductible?"),
+        ("caller", 52, "Four thousand dollars. I've met about half of it this year."),
+        ("agent", 60, f"Okay, so you have about two thousand left. Depending on our contracted rate with {carrier}, you might owe that two thousand before insurance takes over. But there are options. We have a sliding scale based on income for people in your situation, and we work with CareCredit — 0% for twelve months if approved. We've also had patients successfully apply for state substance use treatment funds that can cover the gap entirely. It depends on your income and state of residence."),
+        ("caller", 88, "I didn't know any of those options existed."),
+        ("agent", 94, f"Most people don't. Our financial counsellor can run through all three with you in about fifteen minutes and give you actual numbers. That call is free and there's no obligation. Would that be helpful?"),
+        ("caller", 106, "Yes, very much."),
+        ("agent", 110, "Good. Let me tell you a little about what you'd be getting in terms of the clinical side, so the financial conversation is grounded. What substance are you looking to address?"),
+        ("caller", 120, "Meth. About eighteen months. Daily now."),
+        ("agent", 128, "And are you experiencing any withdrawal or health issues when you try to stop?"),
+        ("caller", 134, "Mostly exhaustion and depression. Nothing physical like alcohol."),
+        ("agent", 142, "That's consistent with stimulant withdrawal — it's real even if it's not physically dangerous the way opioid or alcohol withdrawal can be. Our clinical team will assess level of care, but for daily meth use at eighteen months, IOP is often the starting point. Now — someone from our financial team will follow up with you."),
+        ("caller", 162, "When?"),
+        ("agent", 166, "We'll be in touch."),
+        ("caller", 170, "Today?"),
+        ("agent", 174, "Yes, today. Keep your phone handy."),
+        ("caller", 180, "Okay. Thank you."),
+    ])
+
+    scores = {
+        "empathy_rapport": 4,
+        "insurance_verification": 4,
+        "clinical_screening": 3,
+        "urgency_triage": 3,
+        "family_caller_handling": None,
+        "objection_handling": 4,
+        "next_step_clarity": 2,
+        "compliance_language": 5,
+    }
+
+    return {
+        "call_id": "syn_030",
+        "generated_at": GENERATED_AT,
+        "seed": ctx["seed"],
+        "scenario_type": "objection_heavy",
+        "metadata": {
+            "duration_seconds": 190,
+            "caller_type": "patient",
+            "campaign_source": "website",
+            "tracking_number": ctx["tracking_number"],
+            "agent_id": ctx["agent_id"],
+            "agent_name": f"{ctx['agent_first']} {ctx['agent_last']}",
+        },
+        "transcript": transcript,
+        "gold_labels": {
+            "call_id": "syn_030",
+            "scenario_type": "objection_heavy",
+            "expected_scores": scores,
+            "expected_overall": _calc_overall(scores),
+            "compliance_override_triggered": False,
+            "expected_flags": [],
+            "escalation_required": False,
+            "scenario_tags": ["patient-caller", "cost-barrier", "high-deductible", "financial-options-offered", "vague-close"],
+            "coaching_notes": "Cost objection handled well — agent was honest about the deductible reality rather than minimising it, offered three concrete alternatives (sliding scale, CareCredit, state funds), and offered a free 15-minute financial counsellor call. Clinical screen adequate. The failure is the close: caller had to ask 'today?' twice before getting a concrete answer, and 'keep your phone handy' is not a specific next step. Dim 7 = 2. Strong middle, weak ending.",
+        },
+    }
+
+
+# ══════════════════════════════════════════════════════════════════════════════
 # CALL REGISTRY
 # ══════════════════════════════════════════════════════════════════════════════
 
@@ -1205,14 +2212,30 @@ _CALL_BUILDERS = [
     ("syn_013", "objection_heavy", 1, _syn_013),
     ("syn_014", "objection_heavy", 2, _syn_014),
     ("syn_015", "objection_heavy", 3, _syn_015),
+    ("syn_016", "excellent", 4, _syn_016),
+    ("syn_017", "excellent", 5, _syn_017),
+    ("syn_018", "excellent", 6, _syn_018),
+    ("syn_019", "weak", 4, _syn_019),
+    ("syn_020", "weak", 5, _syn_020),
+    ("syn_021", "weak", 6, _syn_021),
+    ("syn_022", "family_caller", 4, _syn_022),
+    ("syn_023", "family_caller", 5, _syn_023),
+    ("syn_024", "family_caller", 6, _syn_024),
+    ("syn_025", "urgency", 4, _syn_025),
+    ("syn_026", "urgency", 5, _syn_026),
+    ("syn_027", "urgency", 6, _syn_027),
+    ("syn_028", "objection_heavy", 4, _syn_028),
+    ("syn_029", "objection_heavy", 5, _syn_029),
+    ("syn_030", "objection_heavy", 6, _syn_030),
 ]
 
 
 def generate_all(output_dir: Path) -> None:
-    """Generate all 15 synthetic calls and write them to output_dir."""
+    """Generate all 30 synthetic calls and write them to output_dir."""
     output_dir.mkdir(parents=True, exist_ok=True)
 
     gold_labels: dict = {}
+    manifest: list = []
 
     for call_id, scenario, idx, builder in _CALL_BUILDERS:
         ctx = _make_ctx(scenario, idx)
@@ -1222,11 +2245,26 @@ def generate_all(output_dir: Path) -> None:
         out_path = output_dir / filename
         with open(out_path, "w") as f:
             json.dump(call, f, indent=2)
-        print(f"  wrote {filename}  (overall={call['gold_labels']['expected_overall']})")
+        overall = call["gold_labels"]["expected_overall"]
+        print(f"  wrote {filename}  (overall={overall})")
 
         gold_labels[call_id] = call["gold_labels"]
+        manifest.append({
+            "call_id": call_id,
+            "filename": filename,
+            "scenario_type": scenario,
+            "seed": call["seed"],
+            "expected_overall": overall,
+            "compliance_violation": call["gold_labels"]["compliance_override_triggered"],
+            "escalation_required": call["gold_labels"]["escalation_required"],
+        })
 
     gold_path = output_dir / "gold-labels.json"
     with open(gold_path, "w") as f:
         json.dump(gold_labels, f, indent=2)
     print(f"  wrote gold-labels.json  ({len(gold_labels)} calls)")
+
+    manifest_path = output_dir / "manifest.json"
+    with open(manifest_path, "w") as f:
+        json.dump({"total_calls": len(manifest), "calls": manifest}, f, indent=2)
+    print(f"  wrote manifest.json  ({len(manifest)} entries)")

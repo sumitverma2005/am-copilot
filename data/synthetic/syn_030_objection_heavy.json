@@ -1,0 +1,162 @@
+{
+  "call_id": "syn_030",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 548,
+  "scenario_type": "objection_heavy",
+  "metadata": {
+    "duration_seconds": 190,
+    "caller_type": "patient",
+    "campaign_source": "website",
+    "tracking_number": "+16930710208",
+    "agent_id": "AGT-134",
+    "agent_name": "William Hernandez"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Thank you for calling Sunrise Recovery Center, this is William."
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 4,
+      "text": "Hi, I'm Stephanie. I want to get help for meth use but I'm really worried about cost. I looked at your website and I couldn't find pricing and it's making me anxious."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 16,
+      "text": "That's a completely valid concern and I'm glad you called to ask rather than just not calling. Cost transparency is something we should be better at. Let me walk you through the real picture. Do you have insurance?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 28,
+      "text": "Yes, BluePeak Health. But I have a high deductible. Member ID BP77860047, group GRP-979152."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 42,
+      "text": "High deductible plans are common, and it can mean you owe more out of pocket before coverage kicks in. Let me be honest about that rather than oversell it. How high is your deductible?"
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 52,
+      "text": "Four thousand dollars. I've met about half of it this year."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 60,
+      "text": "Okay, so you have about two thousand left. Depending on our contracted rate with BluePeak Health, you might owe that two thousand before insurance takes over. But there are options. We have a sliding scale based on income for people in your situation, and we work with CareCredit \u2014 0% for twelve months if approved. We've also had patients successfully apply for state substance use treatment funds that can cover the gap entirely. It depends on your income and state of residence."
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 88,
+      "text": "I didn't know any of those options existed."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 94,
+      "text": "Most people don't. Our financial counsellor can run through all three with you in about fifteen minutes and give you actual numbers. That call is free and there's no obligation. Would that be helpful?"
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 106,
+      "text": "Yes, very much."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 110,
+      "text": "Good. Let me tell you a little about what you'd be getting in terms of the clinical side, so the financial conversation is grounded. What substance are you looking to address?"
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 120,
+      "text": "Meth. About eighteen months. Daily now."
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 128,
+      "text": "And are you experiencing any withdrawal or health issues when you try to stop?"
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 134,
+      "text": "Mostly exhaustion and depression. Nothing physical like alcohol."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 142,
+      "text": "That's consistent with stimulant withdrawal \u2014 it's real even if it's not physically dangerous the way opioid or alcohol withdrawal can be. Our clinical team will assess level of care, but for daily meth use at eighteen months, IOP is often the starting point. Now \u2014 someone from our financial team will follow up with you."
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 162,
+      "text": "When?"
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 166,
+      "text": "We'll be in touch."
+    },
+    {
+      "turn": 18,
+      "speaker": "caller",
+      "timestamp_seconds": 170,
+      "text": "Today?"
+    },
+    {
+      "turn": 19,
+      "speaker": "agent",
+      "timestamp_seconds": 174,
+      "text": "Yes, today. Keep your phone handy."
+    },
+    {
+      "turn": 20,
+      "speaker": "caller",
+      "timestamp_seconds": 180,
+      "text": "Okay. Thank you."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_030",
+    "scenario_type": "objection_heavy",
+    "expected_scores": {
+      "empathy_rapport": 4,
+      "insurance_verification": 4,
+      "clinical_screening": 3,
+      "urgency_triage": 3,
+      "family_caller_handling": null,
+      "objection_handling": 4,
+      "next_step_clarity": 2,
+      "compliance_language": 5
+    },
+    "expected_overall": 74,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "cost-barrier",
+      "high-deductible",
+      "financial-options-offered",
+      "vague-close"
+    ],
+    "coaching_notes": "Cost objection handled well \u2014 agent was honest about the deductible reality rather than minimising it, offered three concrete alternatives (sliding scale, CareCredit, state funds), and offered a free 15-minute financial counsellor call. Clinical screen adequate. The failure is the close: caller had to ask 'today?' twice before getting a concrete answer, and 'keep your phone handy' is not a specific next step. Dim 7 = 2. Strong middle, weak ending."
+  }
+}

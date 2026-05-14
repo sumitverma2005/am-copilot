@@ -1,0 +1,162 @@
+{
+  "call_id": "syn_023",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 347,
+  "scenario_type": "family_caller",
+  "metadata": {
+    "duration_seconds": 160,
+    "caller_type": "family_member",
+    "campaign_source": "organic_search",
+    "tracking_number": "+15817166263",
+    "agent_id": "AGT-458",
+    "agent_name": "Pamela Simpson"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Sunrise Recovery Center, this is Pamela."
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 4,
+      "text": "Hi. My name is Michael. I'm calling about my dad. His name is Robert. He's 64 and he's been drinking heavily since my mom passed away last year."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 16,
+      "text": "I'm sorry to hear that. Does your father know you're calling?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 22,
+      "text": "Yes. I talked to him this morning. He said he'd think about it but he said I could call to find out what's involved."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 30,
+      "text": "Okay. I want to be upfront \u2014 since your father is an adult, any treatment would require his direct consent. But I'm happy to give you information you can share with him. How much is he drinking?"
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 44,
+      "text": "A lot. A bottle of wine at dinner, then usually whiskey after. Every night."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 52,
+      "text": "Has he had any falls or health issues related to it?"
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 58,
+      "text": "He fell twice last month. The second time he needed stitches."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 66,
+      "text": "That's concerning from a medical standpoint. Has he ever tried to stop or cut down?"
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 72,
+      "text": "He tried after the first fall but it only lasted a few days."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 78,
+      "text": "Does he have insurance?"
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 84,
+      "text": "Yes, through his retirement plan. It's NovaCare Health. I have his ID \u2014 it's BP73019691, group GRP-879983."
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 96,
+      "text": "Thank you. Given his age and the fall history, medical assessment is particularly important for him. Has he agreed to at least speak to someone here?"
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 108,
+      "text": "Not yet. I'm hoping to convince him this week."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 116,
+      "text": "When he's ready, he can call directly or you can bring him in. We'd be glad to do a brief phone consultation with him if that feels more approachable."
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 126,
+      "text": "That might work. I'll try that approach."
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 130,
+      "text": "Good. Is there anything else you'd like to know?"
+    },
+    {
+      "turn": 18,
+      "speaker": "caller",
+      "timestamp_seconds": 136,
+      "text": "Not right now. I'm just worried about him. It's been a really hard year for our whole family."
+    },
+    {
+      "turn": 19,
+      "speaker": "agent",
+      "timestamp_seconds": 144,
+      "text": "That's understandable. Have him give us a call when he's ready."
+    },
+    {
+      "turn": 20,
+      "speaker": "caller",
+      "timestamp_seconds": 150,
+      "text": "Okay. Thank you."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_023",
+    "scenario_type": "family_caller",
+    "expected_scores": {
+      "empathy_rapport": 3,
+      "insurance_verification": 3,
+      "clinical_screening": 3,
+      "urgency_triage": 3,
+      "family_caller_handling": 3,
+      "objection_handling": null,
+      "next_step_clarity": 3,
+      "compliance_language": 5
+    },
+    "expected_overall": 68,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "family-caller",
+      "adult-child",
+      "elderly-patient",
+      "fall-history",
+      "borderline"
+    ],
+    "coaching_notes": "BORDERLINE: family_caller_handling is borderline 2-3 \u2014 consent was acknowledged but framing was procedural rather than warm; when caller said 'it's been a really hard year for our whole family' the agent gave a two-word non-response ('that's understandable') and moved on. The offer of a phone consultation with the patient was good practice. All dimensions are borderline 3 \u2014 reasonable graders may score 2 or 3 across the board. Clinical flag: fall history mentioned, agent noted it but didn't flag as urgent."
+  }
+}

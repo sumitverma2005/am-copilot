@@ -1,0 +1,149 @@
+{
+  "call_id": "syn_024",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 348,
+  "scenario_type": "family_caller",
+  "metadata": {
+    "duration_seconds": 196,
+    "caller_type": "friend",
+    "campaign_source": "organic_search",
+    "tracking_number": "+13041891067",
+    "agent_id": "AGT-993",
+    "agent_name": "Isaac Sanchez"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Thank you for calling Sunrise Recovery Center, this is Isaac. How can I help?"
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 4,
+      "text": "Hi, I'm Monica. I'm calling about my friend. Her name is Simone. She asked me to call for her because she was too nervous to do it herself."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 14,
+      "text": "I'm glad she has someone like you to help her take this step. Before I go further \u2014 just so you both understand \u2014 I can share general information with you, but because Simone isn't a family member, I'd want to involve her directly before we discuss her specific situation in any detail. Is she with you right now or available to speak?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 34,
+      "text": "She's right here. She can hear you \u2014 I have you on speaker."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 40,
+      "text": "Simone, can you hear me okay? I just want to make sure you're comfortable with your friend being part of this call."
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 50,
+      "text": "Yes. I'm here. I asked Monica to help me. I'm just really scared."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 58,
+      "text": "That's completely okay, Simone. You don't have to do any of the talking if you don't want to. I'm glad you're on the line. Can you tell me, in your own words, what's been going on?"
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 72,
+      "text": "I've been using cocaine for about eighteen months. It's gotten out of control. I spend money I don't have. I've been lying to my family."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 88,
+      "text": "Thank you for telling me that. Eighteen months and the pattern you're describing \u2014 the financial consequences, the hiding \u2014 those are signs that this has moved beyond something you can manage on your own, and reaching out today is exactly the right move. Simone, are you also drinking or using anything else alongside the cocaine?"
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 108,
+      "text": "Sometimes I drink. To come down."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 116,
+      "text": "Okay. And have you tried to stop on your own?"
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 122,
+      "text": "A few times. I can't get past a week."
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 128,
+      "text": "That's a really common pattern with stimulant use and it doesn't mean you lack willpower \u2014 it means your brain has adapted and needs support to reset. Do you have health insurance, Simone?"
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 142,
+      "text": "Yes. Summit Select. I have my card. Member ID BP34584961, group GRP-321429."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 154,
+      "text": "Thank you. Here's the plan: I'll verify your benefits and have our admissions team call you \u2014 Simone, on your number directly, unless you'd prefer Monica to be included in that call too."
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 170,
+      "text": "I'd like her on the call."
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 174,
+      "text": "Then I'll note that. You'll hear from us within ninety minutes. Simone \u2014 having a friend willing to make this call with you is not a small thing. Hold onto that."
+    },
+    {
+      "turn": 18,
+      "speaker": "caller",
+      "timestamp_seconds": 186,
+      "text": "Thank you."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_024",
+    "scenario_type": "family_caller",
+    "expected_scores": {
+      "empathy_rapport": 5,
+      "insurance_verification": 4,
+      "clinical_screening": 4,
+      "urgency_triage": 3,
+      "family_caller_handling": 5,
+      "objection_handling": null,
+      "next_step_clarity": 4,
+      "compliance_language": 5
+    },
+    "expected_overall": 88,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "friend-caller",
+      "patient-on-call",
+      "stimulant-use",
+      "consent-navigated-correctly"
+    ],
+    "coaching_notes": "Strong handling of the friend-caller edge case \u2014 agent immediately established consent by addressing the patient directly, confirmed she was comfortable with the arrangement, and then pivoted naturally to the patient for the clinical questions. Next step correctly offered patient the choice of including friend in follow-up call. Family_caller_handling scored 5 because the non-family consent situation was navigated without making it feel legalistic."
+  }
+}

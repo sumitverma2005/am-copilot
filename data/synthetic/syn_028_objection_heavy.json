@@ -1,0 +1,132 @@
+{
+  "call_id": "syn_028",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 546,
+  "scenario_type": "objection_heavy",
+  "metadata": {
+    "duration_seconds": 166,
+    "caller_type": "patient",
+    "campaign_source": "referral",
+    "tracking_number": "+15838804414",
+    "agent_id": "AGT-114",
+    "agent_name": "Patricia Garner"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Thank you for calling Sunrise Recovery Center, this is Patricia."
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 4,
+      "text": "Hi, I'm Alexis. I've been sober for six months and I've started drinking again. I went to rehab two years ago and it obviously didn't work."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 16,
+      "text": "Thank you for telling me that, Alexis. Six months of sobriety is real \u2014 that's not nothing. Relapse doesn't erase that. Can I ask: when you say rehab 'didn't work,' what does that mean to you? What were you hoping would happen that didn't?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 30,
+      "text": "I thought I'd be fixed. I went in, did the 30 days, came out, and eventually ended up back where I started."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 44,
+      "text": "That's a really honest answer. The thing I want to offer you \u2014 not as reassurance, but as a different frame \u2014 is that 30-day residential works for some people and doesn't for others, and that's about fit, not failure. There's research showing that people who relapse after treatment and re-enter treatment have better long-term outcomes than those who never return. You coming back is actually part of the process, not outside of it."
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 68,
+      "text": "I didn't know that."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 74,
+      "text": "Most people don't. So the question isn't whether treatment can work for you \u2014 it's whether this time we design it differently. What did the last program not give you that you think you needed?"
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 88,
+      "text": "Aftercare. I left and there was nothing. No follow-up, no support group, nothing."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 96,
+      "text": "That's one of the most common reasons people relapse \u2014 and it's something we specifically address. Our aftercare planning starts on day one, not day thirty. I want to make a note of that for our clinical team right now. Alexis, do you have insurance?"
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 110,
+      "text": "Yes. Summit Select. Member ID BP63244887, group GRP-514222."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 122,
+      "text": "Thank you. I'm going to verify your benefits and flag the aftercare concern for your intake coordinator. They'll walk you through how our continuing care program works. Can they reach you this afternoon?"
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 136,
+      "text": "Yes. After two."
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 140,
+      "text": "You'll hear from us before three. Alexis \u2014 coming back after a relapse is one of the hardest things to do. The fact that you made this call tells me something important about you."
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 152,
+      "text": "Thank you. I hope it's different this time."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 156,
+      "text": "We'll make sure the plan is."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_028",
+    "scenario_type": "objection_heavy",
+    "expected_scores": {
+      "empathy_rapport": 4,
+      "insurance_verification": 4,
+      "clinical_screening": 3,
+      "urgency_triage": 3,
+      "family_caller_handling": null,
+      "objection_handling": 5,
+      "next_step_clarity": 4,
+      "compliance_language": 5
+    },
+    "expected_overall": 81,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "relapse",
+      "prior-treatment-failure-objection",
+      "aftercare-concern",
+      "mi-technique"
+    ],
+    "coaching_notes": "Strong objection handling \u2014 agent reframed relapse as part of process with genuine evidence, then asked a powerful open question about what was missing (not 'what went wrong'). Correctly identified aftercare as the gap and promised to flag it for intake. The research framing was accurate and non-patronising. Clinical screen was lighter than ideal \u2014 only the relapse/drinking history was covered."
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "call_id": "syn_025",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 446,
+  "scenario_type": "urgency",
+  "metadata": {
+    "duration_seconds": 166,
+    "caller_type": "patient",
+    "campaign_source": "direct",
+    "tracking_number": "+19061637277",
+    "agent_id": "AGT-906",
+    "agent_name": "Felicia Williamson"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Thank you for calling Sunrise Recovery Center, this is Felicia."
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 4,
+      "text": "Hi. My name is Kristin. I overdosed last night. My roommate found me and used naloxone. I'm alive and I need help."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 14,
+      "text": "Kristin, I am so glad you called and I am so glad your roommate was there. That was a life-saving moment and you survived it. How are you feeling physically right now?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 26,
+      "text": "Weak. Sick. I have a headache. But I'm okay enough to talk."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 34,
+      "text": "Good. You're okay. First \u2014 have you been seen by a doctor since last night? Did you go to the ER?"
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 44,
+      "text": "No. My roommate wanted me to but I refused. I was scared."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 52,
+      "text": "I understand. I'm going to be honest with you: after an opioid overdose, medical evaluation is important \u2014 not just for the overdose itself, but because your body has been through significant stress. I want to get you both medically evaluated and into our detox program today. Not tomorrow \u2014 today. Can I ask: are you using heroin, fentanyl, or prescription opioids?"
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 74,
+      "text": "Fentanyl. I've been using for about eight months."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 82,
+      "text": "Eight months of fentanyl use and an overdose last night \u2014 this is a genuine medical emergency, Kristin, and you're doing exactly the right thing by calling. Here is what I want to do: I'd like to arrange for you to be seen at our medical facility this morning. Our intake team can coordinate transport from where you are. Where are you located?"
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 96,
+      "text": "I'm at my apartment. Downtown."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 102,
+      "text": "Okay. Do you have insurance with you?"
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 108,
+      "text": "Yes. CoreFirst Insurance. My card is here. Member ID BP82630580, group GRP-815784."
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 120,
+      "text": "I have that. Kristin, I'm escalating you to our medical intake coordinator right now \u2014 they handle same-day admissions for exactly this kind of situation. I need you to stay on the line. Does your roommate know you're calling us?"
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 136,
+      "text": "Yes. They're here."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 140,
+      "text": "Good. Tell them to stay with you until our coordinator calls back \u2014 which will be in under ten minutes. Do not drive. Do not be alone. Can you do that?"
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 152,
+      "text": "Yes."
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 156,
+      "text": "Good. You called at exactly the right moment, Kristin. I'm getting help to you right now."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_025",
+    "scenario_type": "urgency",
+    "expected_scores": {
+      "empathy_rapport": 5,
+      "insurance_verification": 4,
+      "clinical_screening": 5,
+      "urgency_triage": 5,
+      "family_caller_handling": null,
+      "objection_handling": null,
+      "next_step_clarity": 5,
+      "compliance_language": 5
+    },
+    "expected_overall": 97,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": true,
+    "scenario_tags": [
+      "patient-caller",
+      "post-overdose",
+      "fentanyl",
+      "crisis-protocol-activated",
+      "same-day-admit",
+      "naloxone-reversal"
+    ],
+    "coaching_notes": "Benchmark post-overdose call. Agent correctly identified this as a medical emergency, asked about ER evaluation, named the specific substance (fentanyl), and escalated to same-day medical intake rather than a standard callback. Instructions to stay with roommate and not drive are correct safety protocol. One of the strongest urgency triage demonstrations in the dataset."
+  }
+}

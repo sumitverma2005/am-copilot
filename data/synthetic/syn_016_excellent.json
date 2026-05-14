@@ -1,0 +1,150 @@
+{
+  "call_id": "syn_016",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 146,
+  "scenario_type": "excellent",
+  "metadata": {
+    "duration_seconds": 204,
+    "caller_type": "patient",
+    "campaign_source": "referral",
+    "tracking_number": "+19613313537",
+    "agent_id": "AGT-236",
+    "agent_name": "Kendra Brown"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Thank you for calling Sunrise Recovery Center, this is Kendra."
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 4,
+      "text": "Hi, I'm Dennis. I'm calling because I've relapsed. I did a 30-day residential about two years ago and I was clean for fourteen months. I started drinking again four months ago and it's gotten bad fast."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 18,
+      "text": "Dennis, thank you for being so upfront about your history. Fourteen months of sobriety after residential \u2014 that's real work. And the fact that you're calling now, rather than waiting for things to get worse, tells me you haven't forgotten what it felt like to be on the other side of this. What's been going on in the last four months?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 38,
+      "text": "Stressful job change. And a breakup. I know those are excuses, but that's when it started."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 48,
+      "text": "They're not excuses \u2014 they're context, and our clinical team needs that context to design the right plan for you. You've done residential before, so you know the drill. Can I ask: how much are you drinking now versus before you got into treatment the first time?"
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 64,
+      "text": "About the same. Daily, a bottle of wine to a bottle and a half."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 74,
+      "text": "And are you having any withdrawal symptoms when you try to go a day without?"
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 80,
+      "text": "Some. Anxiety, trouble sleeping. Nothing as bad as last time, but it's there."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 90,
+      "text": "Good to know. That history matters \u2014 your body remembers. I want to flag that for our clinical team. Dennis, given that you've been through residential, what's your thinking on level of care this time? Some people want to try IOP first, others know they need the structure of residential again."
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 108,
+      "text": "Honestly I think I need residential. I don't trust myself in an outpatient setting right now."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 116,
+      "text": "That kind of self-awareness is valuable and I'll make sure it goes into your intake notes. Our clinical team will assess that formally, but your own read matters. Let me get your insurance information so we can check what your plan covers for a residential admission."
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 128,
+      "text": "Sure. It's Meridian Care, member ID BP93660796, group GRP-444091."
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 140,
+      "text": "Got it. And from your first treatment \u2014 do you remember if there were any complications with coverage, or did it go smoothly?"
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 150,
+      "text": "It went fine. Same carrier, different plan."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 156,
+      "text": "Good. That continuity actually helps. I'm noting your prior treatment facility, your length of sobriety, and the relapse timeline. Our intake team will have all of this before they call you. Here's what happens next: benefits verification will be back to you within ninety minutes, and our admissions coordinator will call immediately after with availability for an assessment. Can you take a call this afternoon?"
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 178,
+      "text": "Yes. I'm free after noon."
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 184,
+      "text": "Perfect \u2014 you'll hear from us between one and two o'clock. Dennis, relapse is not failure. It's information. You know how to do this."
+    },
+    {
+      "turn": 18,
+      "speaker": "caller",
+      "timestamp_seconds": 194,
+      "text": "Thank you. I needed to hear that."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_016",
+    "scenario_type": "excellent",
+    "expected_scores": {
+      "empathy_rapport": 4,
+      "insurance_verification": 4,
+      "clinical_screening": 5,
+      "urgency_triage": 3,
+      "family_caller_handling": null,
+      "objection_handling": 4,
+      "next_step_clarity": 4,
+      "compliance_language": 5
+    },
+    "expected_overall": 84,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "relapse",
+      "prior-residential",
+      "self-aware",
+      "residential-indicated"
+    ],
+    "coaching_notes": "Strong handling of relapse caller \u2014 empathy was warm but appropriately matter-of-fact (not over-pitying), clinical history covered thoroughly including prior treatment complications. Agent explicitly asked caller's own level-of-care preference, which is excellent practice. Minor: empathy opening was good but could have slowed down slightly before moving to clinical questions."
+  }
+}

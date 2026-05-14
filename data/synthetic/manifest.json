@@ -1,0 +1,275 @@
+{
+  "total_calls": 30,
+  "calls": [
+    {
+      "call_id": "syn_001",
+      "filename": "syn_001_excellent.json",
+      "scenario_type": "excellent",
+      "seed": 143,
+      "expected_overall": 90,
+      "compliance_violation": false,
+      "escalation_required": false
+    },
+    {
+      "call_id": "syn_002",
+      "filename": "syn_002_excellent.json",
+      "scenario_type": "excellent",
+      "seed": 144,
+      "expected_overall": 94,
+      "compliance_violation": false,
+      "escalation_required": false
+    },
+    {
+      "call_id": "syn_003",
+      "filename": "syn_003_excellent.json",
+      "scenario_type": "excellent",
+      "seed": 145,
+      "expected_overall": 91,
+      "compliance_violation": false,
+      "escalation_required": false
+    },
+    {
+      "call_id": "syn_004",
+      "filename": "syn_004_weak.json",
+      "scenario_type": "weak",
+      "seed": 243,
+      "expected_overall": 34,
+      "compliance_violation": true,
+      "escalation_required": false
+    },
+    {
+      "call_id": "syn_005",
+      "filename": "syn_005_weak.json",
+      "scenario_type": "weak",
+      "seed": 244,
+      "expected_overall": 41,
+      "compliance_violation": true,
+      "escalation_required": false
+    },
+    {
+      "call_id": "syn_006",
+      "filename": "syn_006_weak.json",
+      "scenario_type": "weak",
+      "seed": 245,
+      "expected_overall": 52,
+      "compliance_violation": false,
+      "escalation_required": false
+    },
+    {
+      "call_id": "syn_007",
+      "filename": "syn_007_family_caller.json",
+      "scenario_type": "family_caller",
+      "seed": 343,
+      "expected_overall": 90,
+      "compliance_violation": false,
+      "escalation_required": false
+    },
+    {
+      "call_id": "syn_008",
+      "filename": "syn_008_family_caller.json",
+      "scenario_type": "family_caller",
+      "seed": 344,
+      "expected_overall": 62,
+      "compliance_violation": false,
+      "escalation_required": false
+    },
+    {
+      "call_id": "syn_009",
+      "filename": "syn_009_family_caller.json",
+      "scenario_type": "family_caller",
+      "seed": 345,
+      "expected_overall": 47,
+      "compliance_violation": false,
+      "escalation_required": false
+    },
+    {
+      "call_id": "syn_010",
+      "filename": "syn_010_urgency.json",
+      "scenario_type": "urgency",
+      "seed": 443,
+      "expected_overall": 92,
+      "compliance_violation": false,
+      "escalation_required": true
+    },
+    {
+      "call_id": "syn_011",
+      "filename": "syn_011_urgency.json",
+      "scenario_type": "urgency",
+      "seed": 444,
+      "expected_overall": 46,
+      "compliance_violation": false,
+      "escalation_required": true
+    },
+    {
+      "call_id": "syn_012",
+      "filename": "syn_012_urgency.json",
+      "scenario_type": "urgency",
+      "seed": 445,
+      "expected_overall": 81,
+      "compliance_violation": false,
+      "escalation_required": false
+    },
+    {
+      "call_id": "syn_013",
+      "filename": "syn_013_objection_heavy.json",
+      "scenario_type": "objection_heavy",
+      "seed": 543,
+      "expected_overall": 88,
+      "compliance_violation": false,
+      "escalation_required": false
+    },
+    {
+      "call_id": "syn_014",
+      "filename": "syn_014_objection_heavy.json",
+      "scenario_type": "objection_heavy",
+      "seed": 544,
+      "expected_overall": 56,
+      "compliance_violation": false,
+      "escalation_required": false
+    },
+    {
+      "call_id": "syn_015",
+      "filename": "syn_015_objection_heavy.json",
+      "scenario_type": "objection_heavy",
+      "seed": 545,
+      "expected_overall": 71,
+      "compliance_violation": false,
+      "escalation_required": false
+    },
+    {
+      "call_id": "syn_016",
+      "filename": "syn_016_excellent.json",
+      "scenario_type": "excellent",
+      "seed": 146,
+      "expected_overall": 84,
+      "compliance_violation": false,
+      "escalation_required": false
+    },
+    {
+      "call_id": "syn_017",
+      "filename": "syn_017_excellent.json",
+      "scenario_type": "excellent",
+      "seed": 147,
+      "expected_overall": 86,
+      "compliance_violation": false,
+      "escalation_required": false
+    },
+    {
+      "call_id": "syn_018",
+      "filename": "syn_018_excellent.json",
+      "scenario_type": "excellent",
+      "seed": 148,
+      "expected_overall": 95,
+      "compliance_violation": false,
+      "escalation_required": true
+    },
+    {
+      "call_id": "syn_019",
+      "filename": "syn_019_weak.json",
+      "scenario_type": "weak",
+      "seed": 246,
+      "expected_overall": 38,
+      "compliance_violation": true,
+      "escalation_required": false
+    },
+    {
+      "call_id": "syn_020",
+      "filename": "syn_020_weak.json",
+      "scenario_type": "weak",
+      "seed": 247,
+      "expected_overall": 21,
+      "compliance_violation": true,
+      "escalation_required": false
+    },
+    {
+      "call_id": "syn_021",
+      "filename": "syn_021_weak.json",
+      "scenario_type": "weak",
+      "seed": 248,
+      "expected_overall": 54,
+      "compliance_violation": false,
+      "escalation_required": false
+    },
+    {
+      "call_id": "syn_022",
+      "filename": "syn_022_family_caller.json",
+      "scenario_type": "family_caller",
+      "seed": 346,
+      "expected_overall": 85,
+      "compliance_violation": false,
+      "escalation_required": false
+    },
+    {
+      "call_id": "syn_023",
+      "filename": "syn_023_family_caller.json",
+      "scenario_type": "family_caller",
+      "seed": 347,
+      "expected_overall": 68,
+      "compliance_violation": false,
+      "escalation_required": false
+    },
+    {
+      "call_id": "syn_024",
+      "filename": "syn_024_family_caller.json",
+      "scenario_type": "family_caller",
+      "seed": 348,
+      "expected_overall": 88,
+      "compliance_violation": false,
+      "escalation_required": false
+    },
+    {
+      "call_id": "syn_025",
+      "filename": "syn_025_urgency.json",
+      "scenario_type": "urgency",
+      "seed": 446,
+      "expected_overall": 97,
+      "compliance_violation": false,
+      "escalation_required": true
+    },
+    {
+      "call_id": "syn_026",
+      "filename": "syn_026_urgency.json",
+      "scenario_type": "urgency",
+      "seed": 447,
+      "expected_overall": 66,
+      "compliance_violation": false,
+      "escalation_required": true
+    },
+    {
+      "call_id": "syn_027",
+      "filename": "syn_027_urgency.json",
+      "scenario_type": "urgency",
+      "seed": 448,
+      "expected_overall": 48,
+      "compliance_violation": false,
+      "escalation_required": false
+    },
+    {
+      "call_id": "syn_028",
+      "filename": "syn_028_objection_heavy.json",
+      "scenario_type": "objection_heavy",
+      "seed": 546,
+      "expected_overall": 81,
+      "compliance_violation": false,
+      "escalation_required": false
+    },
+    {
+      "call_id": "syn_029",
+      "filename": "syn_029_objection_heavy.json",
+      "scenario_type": "objection_heavy",
+      "seed": 547,
+      "expected_overall": 88,
+      "compliance_violation": false,
+      "escalation_required": false
+    },
+    {
+      "call_id": "syn_030",
+      "filename": "syn_030_objection_heavy.json",
+      "scenario_type": "objection_heavy",
+      "seed": 548,
+      "expected_overall": 74,
+      "compliance_violation": false,
+      "escalation_required": false
+    }
+  ]
+}

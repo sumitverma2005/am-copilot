@@ -1,0 +1,180 @@
+{
+  "call_id": "syn_017",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 147,
+  "scenario_type": "excellent",
+  "metadata": {
+    "duration_seconds": 220,
+    "caller_type": "patient",
+    "campaign_source": "family_referral",
+    "tracking_number": "+14635905658",
+    "agent_id": "AGT-719",
+    "agent_name": "Shirley Gonzales"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Thank you for calling Sunrise Recovery Center, this is Shirley. How can I help?"
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 4,
+      "text": "Hi, I'm Catherine. I'm just... calling to find out what you guys do. I don't know if I really need treatment or whatever. My sister kind of pushed me to call."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 16,
+      "text": "I'm glad your sister encouraged you to reach out, and I'm glad you followed through. There's no pressure here \u2014 I'm just going to ask a few questions and we can figure out together whether what you're dealing with is something we can help with. What's been going on?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 32,
+      "text": "I drink, but it's not like I'm an alcoholic or anything. I just drink after work to unwind. Everyone does that."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 44,
+      "text": "I hear you. Can I ask \u2014 how many drinks is 'unwinding' for you on a typical evening?"
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 52,
+      "text": "I don't know. Three or four, maybe."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 58,
+      "text": "And are there nights when it's more than that?"
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 64,
+      "text": "Sometimes. If it was a really bad day, maybe six or seven."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 72,
+      "text": "And how often are the really bad days?"
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 78,
+      "text": "More than they used to be. Maybe three or four times a week now."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 86,
+      "text": "Okay. So on those nights \u2014 after six or seven drinks \u2014 how do you feel the next morning?"
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 94,
+      "text": "Rough. I've been calling in late to work a few times."
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 100,
+      "text": "Has that happened more in the last few months than it used to?"
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 106,
+      "text": "Yeah. My sister noticed that too. She said I've changed."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 114,
+      "text": "I appreciate you sharing that. Catherine, I want to reflect something back to you \u2014 not to label it, just so you can hear it. What you're describing \u2014 four to seven drinks most evenings, increasingly difficult mornings, calling in late, your sister noticing a change \u2014 those are patterns that tend to escalate without support. You don't have to call it anything. But the question isn't whether it's 'bad enough.' The question is whether it's getting in the way of the life you want."
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 144,
+      "text": "When you put it like that... yeah, it is."
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 150,
+      "text": "Then you called the right place. Let me ask a few more questions. Do you have insurance?"
+    },
+    {
+      "turn": 18,
+      "speaker": "caller",
+      "timestamp_seconds": 156,
+      "text": "Yes. Meridian Care. Member ID is BP62919803, group GRP-560846."
+    },
+    {
+      "turn": 19,
+      "speaker": "agent",
+      "timestamp_seconds": 168,
+      "text": "Thank you. And have you ever tried to cut back on your own?"
+    },
+    {
+      "turn": 20,
+      "speaker": "caller",
+      "timestamp_seconds": 174,
+      "text": "A few times. I go a week and then something comes up."
+    },
+    {
+      "turn": 21,
+      "speaker": "agent",
+      "timestamp_seconds": 182,
+      "text": "That pattern \u2014 trying and returning \u2014 is really common and it's one of the things treatment specifically addresses. Here's what I'd like to do: I'll have our benefits team verify your coverage and an admissions coordinator call you back within two hours. They'll talk through your options \u2014 which based on what you've described would likely start with our outpatient track. Would that work for you?"
+    },
+    {
+      "turn": 22,
+      "speaker": "caller",
+      "timestamp_seconds": 204,
+      "text": "Yeah. Okay. That sounds okay."
+    },
+    {
+      "turn": 23,
+      "speaker": "agent",
+      "timestamp_seconds": 210,
+      "text": "Good. You'll hear from us by noon. And Catherine \u2014 calling was the right thing to do."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_017",
+    "scenario_type": "excellent",
+    "expected_scores": {
+      "empathy_rapport": 4,
+      "insurance_verification": 4,
+      "clinical_screening": 5,
+      "urgency_triage": 3,
+      "family_caller_handling": null,
+      "objection_handling": 5,
+      "next_step_clarity": 4,
+      "compliance_language": 5
+    },
+    "expected_overall": 86,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "minimising-use",
+      "ambivalent",
+      "family-referred",
+      "motivational-interviewing"
+    ],
+    "coaching_notes": "Exemplary motivational approach \u2014 agent used Socratic questioning to let the caller arrive at their own concern rather than confronting the minimisation directly. The reflection ('the question is whether it's getting in the way of the life you want') is textbook MI and avoids labelling. Clinical screen strong: drew out frequency, morning consequences, and prior quit attempts. Objection handling 5: handled 'I don't really need this' without pushback."
+  }
+}

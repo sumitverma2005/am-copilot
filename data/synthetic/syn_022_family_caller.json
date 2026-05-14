@@ -1,0 +1,168 @@
+{
+  "call_id": "syn_022",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 346,
+  "scenario_type": "family_caller",
+  "metadata": {
+    "duration_seconds": 190,
+    "caller_type": "employer_representative",
+    "campaign_source": "eap_referral",
+    "tracking_number": "+16798206566",
+    "agent_id": "AGT-673",
+    "agent_name": "Shelia Wilson"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Thank you for calling Sunrise Recovery Center, this is Shelia."
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 4,
+      "text": "Hello, my name is Ann Franklin. I'm an HR manager at a company and I'm calling about one of our employees \u2014 with their knowledge and support. His name is Devon. He spoke to me this morning and asked me to help him find treatment. He's struggling with alcohol."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 18,
+      "text": "Thank you for calling, Ann, and thank you for supporting Devon in this way. Before we go further, I want to make sure I understand the consent situation correctly. Has Devon given you explicit permission to speak on his behalf and to share his information with us today?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 36,
+      "text": "Yes. He was with me this morning. He's actually in the next office right now. He's willing to talk to you directly if needed."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 44,
+      "text": "That's actually very helpful. Given that Devon is available, it would be best if we could have him join the call for a few minutes \u2014 even briefly \u2014 so he can give verbal consent and I can ask him a couple of quick questions. Would that be possible?"
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 58,
+      "text": "Yes, absolutely. One moment."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 62,
+      "text": "Of course, take your time."
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 72,
+      "text": "Hi, this is Devon."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 76,
+      "text": "Hi Devon, thank you for coming on the line. I just want to confirm \u2014 you're aware that your HR colleague Ann reached out to us on your behalf today, and you're okay with us having this conversation and sharing information about your situation?"
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 92,
+      "text": "Yes, I am. I asked them to help me."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 98,
+      "text": "Thank you, Devon. I appreciate you saying that. I have a few questions for you directly. How long have you been struggling with alcohol?"
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 108,
+      "text": "A couple of years. It's gotten bad in the last six months."
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 116,
+      "text": "Are you experiencing any withdrawal symptoms when you go a day without drinking?"
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 122,
+      "text": "Some anxiety and trouble sleeping. Nothing severe."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 128,
+      "text": "Okay. Devon, do you have health insurance through your employer here?"
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 134,
+      "text": "Yes. It's Meridian Care. My HR should have all the details."
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 140,
+      "text": "Ann, do you have Devon's insurance information available?"
+    },
+    {
+      "turn": 18,
+      "speaker": "caller",
+      "timestamp_seconds": 148,
+      "text": "Yes. Member ID BP91590194, group GRP-643998."
+    },
+    {
+      "turn": 19,
+      "speaker": "agent",
+      "timestamp_seconds": 158,
+      "text": "Perfect. Devon, here's what happens next: our benefits team will verify your coverage and an admissions coordinator will call you \u2014 on your direct line, not through HR unless you prefer otherwise \u2014 within two hours. Which number would you like them to use?"
+    },
+    {
+      "turn": 20,
+      "speaker": "caller",
+      "timestamp_seconds": 174,
+      "text": "My cell. I'll give it to you."
+    },
+    {
+      "turn": 21,
+      "speaker": "agent",
+      "timestamp_seconds": 180,
+      "text": "Please go ahead. And Devon \u2014 you have good people around you. That matters."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_022",
+    "scenario_type": "family_caller",
+    "expected_scores": {
+      "empathy_rapport": 5,
+      "insurance_verification": 4,
+      "clinical_screening": 3,
+      "urgency_triage": 3,
+      "family_caller_handling": 5,
+      "objection_handling": null,
+      "next_step_clarity": 4,
+      "compliance_language": 5
+    },
+    "expected_overall": 85,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "employer-caller",
+      "patient-adjacent",
+      "eap-pathway",
+      "consent-confirmed-live",
+      "unusual-consent-edge-case"
+    ],
+    "coaching_notes": "Excellent handling of an unusual consent scenario \u2014 agent immediately asked for explicit patient consent, then asked if the patient could come on the line directly (best practice), and correctly directed the callback to the patient's personal number rather than HR. Family_caller_handling scored 5 for navigating the employer/patient/consent triangle correctly. Clinical screen limited because the handoff from HR to patient was brief."
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "call_id": "syn_018",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 148,
+  "scenario_type": "excellent",
+  "metadata": {
+    "duration_seconds": 198,
+    "caller_type": "patient",
+    "campaign_source": "organic_search",
+    "tracking_number": "+13220231181",
+    "agent_id": "AGT-513",
+    "agent_name": "Tara Williams"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Thank you for calling Sunrise Recovery Center, this is Tara."
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 4,
+      "text": "I... sorry. I'm Richard. I don't even know why I called. I've been sitting here for an hour trying to call and I keep hanging up."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 16,
+      "text": "And you called. That's what matters. Richard, I'm here and I have time. There's nothing else I need to be doing right now. What's going on?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 30,
+      "text": "I've been using heroin for three years. My family doesn't know. I've been hiding it. I'm scared I'm going to die."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 44,
+      "text": "Thank you for trusting me with that. I can hear how much fear is in what you just said \u2014 and that fear makes complete sense. Three years is a long time to carry this alone. You're not alone right now. Can you tell me \u2014 are you safe at this moment? Are you using right now?"
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 62,
+      "text": "No. I used this morning but not right now. I'm at home."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 70,
+      "text": "Okay. Good. Richard, I want you to know that what you just told me \u2014 that you're scared you're going to die \u2014 that tells me you want to live. That's something we can work with. How are you feeling physically right now?"
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 86,
+      "text": "Anxious. A little sweaty. I've been using every day so I'm starting to feel it."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 96,
+      "text": "When you say feeling it \u2014 are you getting early withdrawal symptoms? Muscle aches, nausea, restlessness?"
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 106,
+      "text": "Yeah. All of that. It comes on fast with heroin."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 114,
+      "text": "It does. And that's important information \u2014 opioid withdrawal can escalate and it's much safer managed medically. I want to get you in today if we can. Is that something you want?"
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 128,
+      "text": "Yes. But I'm scared. What if my family finds out?"
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 136,
+      "text": "Your treatment is confidential. We don't contact family without your permission \u2014 ever. Whatever you decide about telling them is your choice, on your timeline. Right now, the only thing that matters is getting you safe. Do you have insurance?"
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 150,
+      "text": "Yes. BluePeak Health. I have my card. Member ID BP64476119, group GRP-466670."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 164,
+      "text": "Thank you. I'm noting that now. Richard, here's what I want to do: I'm going to put a priority flag on your intake and connect you with our detox admissions team right now \u2014 not in two hours, right now. They'll tell you exactly what the admissions process looks like today. Are you able to stay on the line for a moment while I get them?"
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 184,
+      "text": "Yes. Please."
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 188,
+      "text": "I'm right here. You made the hardest call already."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_018",
+    "scenario_type": "excellent",
+    "expected_scores": {
+      "empathy_rapport": 5,
+      "insurance_verification": 4,
+      "clinical_screening": 4,
+      "urgency_triage": 5,
+      "family_caller_handling": null,
+      "objection_handling": 5,
+      "next_step_clarity": 5,
+      "compliance_language": 5
+    },
+    "expected_overall": 95,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": true,
+    "scenario_tags": [
+      "patient-caller",
+      "high-distress",
+      "opioid-use-disorder",
+      "early-withdrawal",
+      "hidden-use",
+      "same-day-admit"
+    ],
+    "coaching_notes": "Outstanding. Empathy was patient and unhurried despite the caller's distress \u2014 agent gave space without rushing to information. Correctly identified urgency (daily use + early withdrawal symptoms = medical risk) and escalated to real-time admissions handoff rather than a callback. Confidentiality objection handled in one sentence without derailing the momentum. Benchmark-quality call."
+  }
+}

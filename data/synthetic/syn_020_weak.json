@@ -1,0 +1,146 @@
+{
+  "call_id": "syn_020",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 247,
+  "scenario_type": "weak",
+  "metadata": {
+    "duration_seconds": 98,
+    "caller_type": "patient",
+    "campaign_source": "google_paid",
+    "tracking_number": "+15716752613",
+    "agent_id": "AGT-569",
+    "agent_name": "Michelle Harrell"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Sunrise Recovery Center."
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 4,
+      "text": "Yeah, hi. I'm Stephen. I think I might have a problem with pills. Painkillers."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 10,
+      "text": "How long?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 14,
+      "text": "Maybe a year. Started after a surgery."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 18,
+      "text": "What you're describing sounds like addiction. You're going to need treatment."
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 26,
+      "text": "I mean... I don't know if it's that serious."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 30,
+      "text": "It is. Daily use of opioids after a year is addiction. Are you still getting them from a prescription or buying them?"
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 40,
+      "text": "A mix. My prescription ran out so I've been getting them other ways."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 48,
+      "text": "That's a classic pattern. You have a serious dependency. Do you have insurance?"
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 56,
+      "text": "Yes, Summit Select. ID is BP12837251."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 62,
+      "text": "Group number?"
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 66,
+      "text": "I don't have it with me."
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 70,
+      "text": "We'll try without it. Someone will call you."
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 76,
+      "text": "When?"
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 80,
+      "text": "Soon."
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 84,
+      "text": "Okay. Is there anything I should know before then?"
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 88,
+      "text": "Just be ready to discuss your history. Bye."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_020",
+    "scenario_type": "weak",
+    "expected_scores": {
+      "empathy_rapport": 1,
+      "insurance_verification": 2,
+      "clinical_screening": 2,
+      "urgency_triage": 1,
+      "family_caller_handling": null,
+      "objection_handling": 1,
+      "next_step_clarity": 1,
+      "compliance_language": 0
+    },
+    "expected_overall": 21,
+    "compliance_override_triggered": true,
+    "expected_flags": [
+      "DIAG_CLAIM"
+    ],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "compliance-violation",
+      "diagnostic-claim",
+      "dismissive-tone",
+      "worst-case"
+    ],
+    "coaching_notes": "COMPLIANCE VIOLATION: 'What you're describing sounds like addiction' and 'You have a serious dependency' are diagnostic claims \u2014 intake staff cannot diagnose. Multiple violations in short span. Beyond compliance: zero empathy, dismissive throughout, insurance screen incomplete (group number abandoned), clinical screen stopped after confirmation of use pattern, next step ('soon', 'bye') is the worst in the dataset. This call is a comprehensive failure across all dimensions."
+  }
+}

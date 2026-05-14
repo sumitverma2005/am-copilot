@@ -1,0 +1,163 @@
+{
+  "call_id": "syn_019",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 246,
+  "scenario_type": "weak",
+  "metadata": {
+    "duration_seconds": 124,
+    "caller_type": "patient",
+    "campaign_source": "google_paid",
+    "tracking_number": "+13531505743",
+    "agent_id": "AGT-161",
+    "agent_name": "Jennifer Jones"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Sunrise Recovery Center, Jennifer speaking."
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 4,
+      "text": "Hi, I'm Sara. I'm looking at treatment options for alcohol. I've been drinking pretty heavily."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 10,
+      "text": "How long?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 14,
+      "text": "About two years. It's every day."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 18,
+      "text": "How much a day?"
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 22,
+      "text": "Half a bottle of vodka, sometimes more."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 28,
+      "text": "Any withdrawal when you try to stop?"
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 32,
+      "text": "Some shaking. Nothing too bad."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 36,
+      "text": "Have you looked into what kind of program you want?"
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 42,
+      "text": "I was thinking outpatient. I have a job and I can't just disappear."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 48,
+      "text": "Based on what you're describing \u2014 daily drinking, half a bottle of vodka, withdrawal symptoms \u2014 I think you need residential, not outpatient. Outpatient isn't going to be enough for where you are."
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 62,
+      "text": "Oh. I didn't think it was that bad."
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 68,
+      "text": "It is. You should really consider the 30-day program. That's the right fit for your situation."
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 76,
+      "text": "I'd have to figure out my job. That's a big deal."
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 82,
+      "text": "FMLA can cover that. Do you have insurance?"
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 88,
+      "text": "Yes. NovaCare Health. ID BP62051326, group GRP-855615."
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 100,
+      "text": "Okay. We'll verify. Someone will be in touch."
+    },
+    {
+      "turn": 18,
+      "speaker": "caller",
+      "timestamp_seconds": 106,
+      "text": "Do you know when?"
+    },
+    {
+      "turn": 19,
+      "speaker": "agent",
+      "timestamp_seconds": 110,
+      "text": "Probably today."
+    },
+    {
+      "turn": 20,
+      "speaker": "caller",
+      "timestamp_seconds": 114,
+      "text": "Okay. Thank you."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_019",
+    "scenario_type": "weak",
+    "expected_scores": {
+      "empathy_rapport": 2,
+      "insurance_verification": 3,
+      "clinical_screening": 3,
+      "urgency_triage": 2,
+      "family_caller_handling": null,
+      "objection_handling": 2,
+      "next_step_clarity": 2,
+      "compliance_language": 0
+    },
+    "expected_overall": 38,
+    "compliance_override_triggered": true,
+    "expected_flags": [
+      "CLINICAL_SCOPE"
+    ],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "compliance-violation",
+      "clinical-scope",
+      "level-of-care-overreach"
+    ],
+    "coaching_notes": "COMPLIANCE VIOLATION: 'I think you need residential, not outpatient' and 'Outpatient isn't going to be enough for where you are' are scope-of-practice violations \u2014 level-of-care determination requires clinical assessment, not intake staff judgment. Also: 'That's the right fit for your situation' is a clinical prescription. Agent should say 'our clinical team will assess the right level of care.' Beyond compliance: no empathy, objection to job impact dismissed with FMLA mention only, next step vague."
+  }
+}

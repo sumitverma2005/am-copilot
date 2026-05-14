@@ -1,0 +1,162 @@
+{
+  "call_id": "syn_021",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "seed": 248,
+  "scenario_type": "weak",
+  "metadata": {
+    "duration_seconds": 130,
+    "caller_type": "patient",
+    "campaign_source": "physician_referral",
+    "tracking_number": "+17158468422",
+    "agent_id": "AGT-956",
+    "agent_name": "Lauren Love"
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "speaker": "agent",
+      "timestamp_seconds": 0,
+      "text": "Thank you for calling Sunrise Recovery Center, I'm Lauren."
+    },
+    {
+      "turn": 2,
+      "speaker": "caller",
+      "timestamp_seconds": 6,
+      "text": "Hi. My name is Mary. My doctor told me I should look into treatment for my drinking. I've been cutting back but it's hard."
+    },
+    {
+      "turn": 3,
+      "speaker": "agent",
+      "timestamp_seconds": 16,
+      "text": "How long have you been drinking heavily?"
+    },
+    {
+      "turn": 4,
+      "speaker": "caller",
+      "timestamp_seconds": 22,
+      "text": "A few years. It got worse after COVID."
+    },
+    {
+      "turn": 5,
+      "speaker": "agent",
+      "timestamp_seconds": 28,
+      "text": "Are you drinking every day?"
+    },
+    {
+      "turn": 6,
+      "speaker": "caller",
+      "timestamp_seconds": 32,
+      "text": "Most days. Not always a lot, but something."
+    },
+    {
+      "turn": 7,
+      "speaker": "agent",
+      "timestamp_seconds": 38,
+      "text": "Do you have insurance?"
+    },
+    {
+      "turn": 8,
+      "speaker": "caller",
+      "timestamp_seconds": 42,
+      "text": "Yes, CoreFirst Insurance. Member ID BP74093455, group GRP-852187."
+    },
+    {
+      "turn": 9,
+      "speaker": "agent",
+      "timestamp_seconds": 54,
+      "text": "Great. Do you have any idea what kind of program you're looking for?"
+    },
+    {
+      "turn": 10,
+      "speaker": "caller",
+      "timestamp_seconds": 60,
+      "text": "Something that works around my schedule. I have two kids."
+    },
+    {
+      "turn": 11,
+      "speaker": "agent",
+      "timestamp_seconds": 66,
+      "text": "We have outpatient options that are evenings only."
+    },
+    {
+      "turn": 12,
+      "speaker": "caller",
+      "timestamp_seconds": 72,
+      "text": "That would work. How long does it usually last?"
+    },
+    {
+      "turn": 13,
+      "speaker": "agent",
+      "timestamp_seconds": 78,
+      "text": "Depends on your assessment. Typically eight to twelve weeks for IOP."
+    },
+    {
+      "turn": 14,
+      "speaker": "caller",
+      "timestamp_seconds": 86,
+      "text": "Okay. My doctor mentioned something about medication. Is that something you do?"
+    },
+    {
+      "turn": 15,
+      "speaker": "agent",
+      "timestamp_seconds": 92,
+      "text": "Yes, we offer MAT. The clinical team would assess that."
+    },
+    {
+      "turn": 16,
+      "speaker": "caller",
+      "timestamp_seconds": 100,
+      "text": "Good to know. What happens next?"
+    },
+    {
+      "turn": 17,
+      "speaker": "agent",
+      "timestamp_seconds": 104,
+      "text": "Someone will call you to set up an intake appointment."
+    },
+    {
+      "turn": 18,
+      "speaker": "caller",
+      "timestamp_seconds": 110,
+      "text": "Do you have a rough timeframe?"
+    },
+    {
+      "turn": 19,
+      "speaker": "agent",
+      "timestamp_seconds": 114,
+      "text": "Within the next day or two."
+    },
+    {
+      "turn": 20,
+      "speaker": "caller",
+      "timestamp_seconds": 120,
+      "text": "Okay. Thank you."
+    }
+  ],
+  "gold_labels": {
+    "call_id": "syn_021",
+    "scenario_type": "weak",
+    "expected_scores": {
+      "empathy_rapport": 2,
+      "insurance_verification": 3,
+      "clinical_screening": 3,
+      "urgency_triage": 2,
+      "family_caller_handling": null,
+      "objection_handling": null,
+      "next_step_clarity": 2,
+      "compliance_language": 4
+    },
+    "expected_overall": 54,
+    "compliance_override_triggered": false,
+    "expected_flags": [],
+    "escalation_required": false,
+    "scenario_tags": [
+      "patient-caller",
+      "borderline",
+      "physician-referred",
+      "parent-concern",
+      "adequate-but-flat"
+    ],
+    "coaching_notes": "BORDERLINE: clinical_screening is borderline 2-3 \u2014 agent captured frequency and history, but missed severity (withdrawal, consequences, prior attempts) and the MAT question came from the caller, not the agent. Insurance borderline 2-3 \u2014 fields captured but no framing as 'step toward help.' No empathy opening; call was transactional throughout. Next step timing of 'a day or two' is borderline acceptable vs. not."
+  }
+}
