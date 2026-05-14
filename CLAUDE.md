@@ -221,7 +221,18 @@ cd infra && cdk bootstrap aws://{ACCOUNT_ID}/us-east-1 --profile am-copilot-dev
 
 | Question | Owner | Must resolve by |
 |---|---|---|
-| What does CTM `GET /api/v1/calls/{id}` actually return for the transcript field? Turn-by-turn diarized, raw text blob, or mixed? The normalizer design depends on this. See `services/ctm-integration/README.md` for the three scenarios. | Dev | D5 — before writing `normalizer.py` |
+| ~~What does CTM `GET /api/v1/calls/{id}` return for the transcript field?~~ **RESOLVED D3** — Two-endpoint model confirmed. See `services/ctm-integration/README.md`. | Dev | ~~D5~~ Done |
+
+### CTM two-endpoint model (resolved)
+
+CTM splits call data: metadata at `GET .../calls/{id}`, transcript at
+`GET .../calls/{id}/transcription.json`. The `outline[]` array in the
+transcription response is turn-by-turn diarized. Speaker role is determined
+by `channel` number (`2=agent`, `1=caller`), not the `speaker` string.
+
+**One Phase B verification still open:** Confirm `channel→role` mapping holds
+on real treatment-center data. Mapping is isolated in `CHANNEL_TO_ROLE`
+constant in `normalizer.py` for easy update. Do not block Phase A on this.
 
 ---
 

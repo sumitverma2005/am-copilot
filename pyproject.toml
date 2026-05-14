@@ -1,0 +1,9 @@
+[tool.pytest.ini_options]
+pythonpath = [
+  "packages/rubric-engine",
+  "packages/prompt-library",
+  "services/ctm-integration",
+  "services/scoring-engine",
+  "services/compliance-engine",
+]
+testpaths = ["packages", "services"]
