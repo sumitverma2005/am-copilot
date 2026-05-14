@@ -4,99 +4,168 @@ CTM API client, webhook normalizer, and transcript fetcher.
 
 ---
 
-## D5 prerequisite — verify CTM transcript response shape
+## Confirmed CTM data model (resolved D3)
 
-**Before writing `normalizer.py` on Day 5, confirm which of the three scenarios below
-applies to CTM's `GET /api/v1/calls/{id}` response. The normalizer design is different
-for each.**
-
-### What to do on D5
-
-Run this against the CTM sandbox before writing any normalizer code:
-
-```bash
-curl -H "Authorization: Bearer $CTM_API_KEY" \
-  "https://api.calltrackingmetrics.com/api/v1/calls/{any_recent_call_id}" \
-  | jq '.transcript // .transcription // .text // "no transcript field found"'
-```
+CTM splits call data across **two endpoints**. The Day 2 open question is closed.
 
 ---
 
-### Scenario A — Turn-by-turn diarized (best case)
+### Endpoint 1 — Call metadata
 
-CTM returns structured speaker turns with labels and timestamps:
+```
+GET /api/v1/accounts/{account_id}/calls/{id}
+```
+
+Returns metadata only. **No transcript.** Confirmed fields:
+
+| Field | Notes |
+|---|---|
+| `id`, `sid`, `account_id` | Identifiers |
+| `duration`, `talk_time`, `ring_time`, `hold_time` | Timing (seconds) |
+| `direction` | `"inbound"` or `"outbound"` |
+| `caller_number`, `tracking_number`, `contact_number` | Phone numbers |
+| `called_at`, `unix_time` | Call timestamp |
+| `dial_status`, `call_status`, `status` | Status fields |
+| `source` | CTM tracking source |
+| `agent` | `{name, email, id}` object |
+| `agent_id` | Agent identifier |
+| `notes`, `tag_list` | Freeform metadata |
+| `audio` | Recording URL — **NEVER fetch or store this** |
+| `legs[]` | Call leg details |
+
+---
+
+### Endpoint 2 — Transcript
+
+```
+GET /api/v1/accounts/{account_id}/calls/{id}/transcription.json
+```
+
+Returns the transcript in three forms. Confirmed real response shape:
 
 ```json
 {
-  "transcript": [
-    { "speaker": "agent", "start_time": 0.0, "end_time": 4.2, "text": "Thank you for calling..." },
-    { "speaker": "caller", "start_time": 4.5, "end_time": 12.1, "text": "Hi, I'm not sure..." }
+  "callid": 12376,
+  "versions": [48309386],
+  "text": "Test User: How may I help you?\nTest Client: Thank you so much...",
+  "sentiment": 2,
+  "outline": [
+    {
+      "vendor": "g",
+      "speaker": "Test User",
+      "gender": "U",
+      "text": "How may I help you?",
+      "offset": 0,
+      "channel": 2,
+      "s": 0,
+      "e": 2.5,
+      "start_fmt": "00:00:00",
+      "end_fmt": "00:00:02.50",
+      "confidence": 0.817,
+      "words": [["How", 0.91, 0, 0.1], "..."]
+    }
   ]
 }
 ```
 
-**Normalizer work:** Straightforward field mapping. Rename `start_time` →
-`timestamp_seconds`, add sequential `turn` numbers, map speaker labels.
-`normalizer.py` stays simple (~30 lines).
-
 ---
 
-### Scenario B — Raw text blob (worst case)
+## Normalizer rules (locked)
 
-CTM returns an unsegmented string with no speaker labels or timestamps:
+### Use `outline`, not `text`
 
-```json
-{
-  "transcription": "Thank you for calling... Hi, I'm not sure..."
+The `text` field is a flat blob. The `outline` array is turn-by-turn diarized.
+The normalizer reads `outline[]` exclusively.
+
+### Speaker mapping — use `channel`, not `speaker`
+
+The `speaker` field ("Test User", "Test Client") is generic and unreliable.
+The `channel` number is reliable:
+
+```python
+# Confirmed channel mapping for this account
+CHANNEL_TO_ROLE = {
+    2: "agent",   # answered / inbound agent side
+    1: "caller",  # caller side
 }
 ```
 
-**Normalizer work:** Requires a diarization pass before normalization. Options:
-1. AWS Transcribe with speaker identification (adds cost and latency per call)
-2. Simple heuristic segmentation by pause length (lossy, unreliable)
-3. Third-party diarization API
+**Phase B verification required:** Confirm this `channel→role` mapping holds on
+real treatment-center call data before going live. It may vary by CTM account
+configuration. This constant is intentionally isolated and easy to update.
 
-This scenario pushes the D5 timeline and must be flagged to the client immediately
-if encountered. Plan 2 additional days for diarization infrastructure.
+### Fields to DROP in the normalizer
 
----
+| Field | Reason |
+|---|---|
+| `audio` | Recording URL — never store |
+| `words` | Word-level timing — not needed for scoring |
+| `vendor` | Not needed |
+| `gender` | Not needed |
+| `text` (top-level blob) | Use `outline` instead |
 
-### Scenario C — Mixed / semi-structured (most likely)
+### Fields to KEEP
 
-CTM returns speaker-labeled text but without per-turn timestamps:
-
-```json
-{
-  "transcript": [
-    { "type": "agent", "text": "Thank you for calling..." },
-    { "type": "caller", "text": "Hi, I'm not sure..." }
-  ]
-}
-```
-
-**Normalizer work:** Moderate. Speaker labels map cleanly; timestamps must be
-estimated from cumulative word count using average speaking rate (~130 wpm).
-Evidence anchors will have approximate timestamps (±5 seconds), which is
-acceptable for Phase A scoring but should be noted in the evaluation record.
+| Field | Internal name | Notes |
+|---|---|---|
+| `outline[].channel` | mapped to `speaker` | Via `CHANNEL_TO_ROLE` |
+| `outline[].text` | `text` | Turn text |
+| `outline[].s` | `timestamp_seconds` | Start time in seconds |
+| `outline[].confidence` | `confidence` | Optional — low confidence matters for scoring quality review |
+| `sentiment` (top-level) | `ctm_sentiment` | Reference metadata only — scoring engine does NOT use this as input |
 
 ---
 
-### Why this matters for `normalizer.py`
+## Internal normalized format
 
-The scoring engine, compliance engine, and evidence engine all consume the
-**internal normalized format**:
+All downstream services (scoring engine, compliance engine, evidence engine)
+consume this format exclusively:
 
 ```python
 {
-    "turn": int,           # sequential, 1-indexed
-    "speaker": str,        # "agent" or "caller"
-    "timestamp_seconds": int,
-    "text": str
+    "call_id": str,
+    "called_at": str,              # ISO-8601
+    "duration": int,               # seconds
+    "agent_id": str,
+    "agent_name": str,
+    "ctm_sentiment": int | None,   # CTM's score, reference only
+    "transcript": [
+        {
+            "turn": int,           # sequential, 1-indexed
+            "speaker": str,        # "agent" or "caller"
+            "timestamp_seconds": float,
+            "text": str,
+            "confidence": float | None
+        }
+    ]
 }
 ```
 
-The normalizer's job is to produce this format regardless of what CTM returns.
-The synthetic transcripts (Phase A) are already in this format — so the scoring
-engine has no awareness of raw CTM format, and it must stay that way.
-
+The synthetic transcripts (Phase A) are already in this format.
+The scoring engine has no awareness of raw CTM format and must stay that way.
 If CTM's format changes post-Phase A, only `normalizer.py` needs updating.
+
+---
+
+## CTM client interface
+
+```python
+class CTMClient:
+    def get_call_metadata(self, call_id: str) -> dict: ...
+    def get_call_transcript(self, call_id: str) -> dict: ...
+```
+
+Two methods — one per endpoint. The stub client (`CTM_MODE=stub`) simulates
+both from the synthetic JSON files, splitting the bundled data to match the
+real CTM contract exactly.
+
+---
+
+## Webhook events
+
+| Event | Trigger | Action |
+|---|---|---|
+| `call_complete` | Call ends | Fetch metadata + transcript, normalize, enqueue |
+| `transcript_ready` | Transcription done async | Re-fetch transcript if not present, re-enqueue |
+
+Both events flow: fetch metadata → fetch transcript → normalize → push to SQS.
