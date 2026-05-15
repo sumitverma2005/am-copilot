@@ -1,0 +1,208 @@
+{
+  "evaluation": {
+    "call_id": "syn_019",
+    "agent_id": "AGT-161",
+    "call_timestamp": "2026-04-03T10:00:00Z",
+    "duration_seconds": 124,
+    "scenario_type": "weak",
+    "rubric_version": "rubric-v1",
+    "prompt_version": "prompt-v1",
+    "model_id": "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
+    "overall_score": 37.5,
+    "compliance_override_triggered": true,
+    "confidence_overall": 0.91,
+    "manager_summary": "Jennifer crossed a clear clinical scope boundary twice — prescribing residential treatment and ruling out outpatient are level-of-care determinations that only a clinician can make. The job concern was dismissed in one sentence. Urgency was not assessed. Next step was vague. Despite a reasonable clinical screen, the compliance violation and multiple coaching gaps make this a priority review call.",
+    "status": "scored",
+    "scored_at": "2026-04-03T10:03:08Z"
+  },
+  "dimension_scores": [
+    {
+      "dimension": "empathy_rapport",
+      "raw_score": 2,
+      "weighted_score": 3.0,
+      "weight": 1.5,
+      "confidence": 0.88,
+      "ai_rationale": "Agent opened with no acknowledgement of the caller's situation and moved immediately to duration questions. No use of caller's name (Sara), no warmth, flat clinical tone throughout. Caller's disclosure of daily heavy drinking received a data-collection response, not an empathetic one.",
+      "coaching_note": "Sara opened by saying she'd been drinking heavily — acknowledge that before asking how long. A single empathetic sentence changes the entire tone of the call.",
+      "is_na": false
+    },
+    {
+      "dimension": "insurance_verification",
+      "raw_score": 3,
+      "weighted_score": 3.0,
+      "weight": 1.0,
+      "confidence": 0.85,
+      "ai_rationale": "Caller provided all fields unprompted: carrier (NovaCare Health), member ID (BP62051326), group number (GRP-855615). Agent recorded them. No framing as a step toward care, but collection was complete. The FMLA comment at turn 15 was in response to the job concern, not insurance framing.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "clinical_screening",
+      "raw_score": 3,
+      "weighted_score": 3.0,
+      "weight": 1.0,
+      "confidence": 0.82,
+      "ai_rationale": "Agent captured substance type (alcohol), frequency (daily), duration (two years), quantity (half a bottle of vodka), and asked about withdrawal symptoms (shaking noted). This is an acceptable screen. However, no prior treatment history asked, and no co-occurring concerns explored.",
+      "coaching_note": "Good foundation — withdrawal check is important and was done. Add prior treatment history next time.",
+      "is_na": false
+    },
+    {
+      "dimension": "urgency_triage",
+      "raw_score": 2,
+      "weighted_score": 2.0,
+      "weight": 1.0,
+      "confidence": 0.83,
+      "ai_rationale": "Caller reported withdrawal symptoms (shaking) and daily half-bottle vodka use — this is a medically relevant urgency signal that warranted a follow-up: are the shakes getting worse? Any seizure history? The agent noted the withdrawal but moved immediately to a level-of-care prescription rather than assessing urgency.",
+      "coaching_note": "When a caller reports withdrawal symptoms, probe severity before moving on. Alcohol withdrawal can be medically dangerous — the clinical screen should flag this for intake.",
+      "is_na": false
+    },
+    {
+      "dimension": "family_caller_handling",
+      "raw_score": null,
+      "weighted_score": null,
+      "weight": 1.0,
+      "confidence": null,
+      "ai_rationale": "N/A — caller is the patient (Sara), not a family member.",
+      "coaching_note": null,
+      "is_na": true
+    },
+    {
+      "dimension": "objection_handling",
+      "raw_score": 2,
+      "weighted_score": 2.0,
+      "weight": 1.0,
+      "confidence": 0.86,
+      "ai_rationale": "Caller raised a significant objection: 'I have a job and I can't just disappear.' This was a real barrier deserving empathy and exploration. Agent responded with 'FMLA can cover that' — a single sentence that is legally accurate but emotionally dismissive and practically incomplete. No exploration of what the caller's job situation looks like, no alternatives offered.",
+      "coaching_note": "The job concern is one of the most common barriers and one of the most important to address well. Don't just name FMLA — ask what their situation looks like and explain how IOP specifically accommodates working adults.",
+      "is_na": false
+    },
+    {
+      "dimension": "next_step_clarity",
+      "raw_score": 2,
+      "weighted_score": 2.0,
+      "weight": 1.0,
+      "confidence": 0.90,
+      "ai_rationale": "Next step was 'someone will be in touch' with timing of 'probably today.' No name, no ownership, no confirmation of what the follow-up call covers. Caller did not push back, but the close is vague and provides nothing for the caller to act on.",
+      "coaching_note": "Replace 'someone will be in touch' with a named role, a specific time, and what they'll cover. Give Sara something to do before the call.",
+      "is_na": false
+    },
+    {
+      "dimension": "compliance_language",
+      "raw_score": 0,
+      "weighted_score": 0.0,
+      "weight": 1.5,
+      "confidence": 0.96,
+      "ai_rationale": "COMPLIANCE VIOLATION — CLINICAL_SCOPE. Turn 11: 'I think you need residential, not outpatient. Outpatient isn't going to be enough for where you are.' Turn 13: 'That's the right fit for your situation.' Level-of-care determinations (residential vs. outpatient) require a clinical assessment and cannot be made by intake staff. Correct language: 'our clinical team will assess the right level of care based on a full evaluation.'",
+      "coaching_note": "Never prescribe a level of care. You can describe what each level involves, but the decision belongs to the clinical team after assessment.",
+      "is_na": false
+    }
+  ],
+  "evidence_anchors": [
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 3,
+      "timestamp_seconds": 10,
+      "speaker": "agent",
+      "text_snippet": "How long?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 2,
+      "timestamp_seconds": 4,
+      "speaker": "caller",
+      "text_snippet": "Hi, I'm Sara. I'm looking at treatment options for alcohol. I've been drinking pretty heavily.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 7,
+      "timestamp_seconds": 28,
+      "speaker": "agent",
+      "text_snippet": "Any withdrawal when you try to stop?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 8,
+      "timestamp_seconds": 32,
+      "speaker": "caller",
+      "text_snippet": "Some shaking. Nothing too bad.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 8,
+      "timestamp_seconds": 32,
+      "speaker": "caller",
+      "text_snippet": "Some shaking. Nothing too bad.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 11,
+      "timestamp_seconds": 48,
+      "speaker": "agent",
+      "text_snippet": "I think you need residential, not outpatient. Outpatient isn't going to be enough for where you are.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 13,
+      "timestamp_seconds": 68,
+      "speaker": "agent",
+      "text_snippet": "That's the right fit for your situation.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 14,
+      "timestamp_seconds": 76,
+      "speaker": "caller",
+      "text_snippet": "I'd have to figure out my job. That's a big deal.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 15,
+      "timestamp_seconds": 82,
+      "speaker": "agent",
+      "text_snippet": "FMLA can cover that. Do you have insurance?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 17,
+      "timestamp_seconds": 100,
+      "speaker": "agent",
+      "text_snippet": "Okay. We'll verify. Someone will be in touch.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 19,
+      "timestamp_seconds": 110,
+      "speaker": "agent",
+      "text_snippet": "Probably today.",
+      "relevance_rank": 2
+    }
+  ],
+  "compliance_flags": [
+    {
+      "flag_code": "CLINICAL_SCOPE",
+      "matched_phrase": "I think you need residential, not outpatient",
+      "turn_number": 11,
+      "timestamp_seconds": 48,
+      "severity": "critical",
+      "reviewed": false
+    },
+    {
+      "flag_code": "CLINICAL_SCOPE",
+      "matched_phrase": "That's the right fit for your situation",
+      "turn_number": 13,
+      "timestamp_seconds": 68,
+      "severity": "critical",
+      "reviewed": false
+    }
+  ]
+}

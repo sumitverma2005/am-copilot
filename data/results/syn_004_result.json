@@ -1,0 +1,192 @@
+{
+  "evaluation": {
+    "call_id": "syn_004",
+    "agent_id": "AGT-638",
+    "call_timestamp": "2026-04-02T09:00:00Z",
+    "duration_seconds": 116,
+    "scenario_type": "weak",
+    "rubric_version": "rubric-v1",
+    "prompt_version": "prompt-v1",
+    "model_id": "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
+    "overall_score": 34.29,
+    "compliance_override_triggered": true,
+    "confidence_overall": 0.89,
+    "manager_summary": "Roger opened with no acknowledgement of Tiffany's situation and moved immediately to intake questions. The diagnostic claim at turn 9 — 'it sounds like you have a dependency problem' — is a compliance violation. Clinical screen was minimal, urgency was never assessed, and the next step was vague with a two-day window and no ownership. This call requires urgent coaching review.",
+    "status": "scored",
+    "scored_at": "2026-04-02T09:02:44Z"
+  },
+  "dimension_scores": [
+    {
+      "dimension": "empathy_rapport",
+      "raw_score": 2,
+      "weighted_score": 3.0,
+      "weight": 1.5,
+      "confidence": 0.91,
+      "ai_rationale": "Agent opened with 'Sunrise Recovery Center, this is Roger' and immediately asked 'How long has this been going on?' — no acknowledgement of the caller's courage in reaching out, no warmth, no use of her name. Flat transactional tone throughout the call. Caller volunteered that she thought she had a problem (a moment requiring emotional acknowledgement) and received a data-collection question.",
+      "coaching_note": "Open with acknowledgement before moving to intake questions. The caller said 'I think I have a problem' — that takes courage and deserves a response before 'how long has this been going on.'",
+      "is_na": false
+    },
+    {
+      "dimension": "insurance_verification",
+      "raw_score": 3,
+      "weighted_score": 3.0,
+      "weight": 1.0,
+      "confidence": 0.84,
+      "ai_rationale": "Agent captured carrier (Summit Select), member ID (BP66962391), and group number (GRP-155058). Fields were collected in correct order. However the questions were extremely terse ('Member ID?' 'Group number?') with no framing as a step toward care, and no mention of verification timeline or next steps around insurance.",
+      "coaching_note": "Insurance fields captured correctly but the process felt interrogative. Frame verification as a step toward help, not gatekeeping.",
+      "is_na": false
+    },
+    {
+      "dimension": "clinical_screening",
+      "raw_score": 2,
+      "weighted_score": 2.0,
+      "weight": 1.0,
+      "confidence": 0.87,
+      "ai_rationale": "Agent asked about quantity (how much per day, morning drinking) but missed severity indicators: no withdrawal symptoms question, no duration beyond 'how long has this been going on', no co-occurring concerns. Prior treatment was asked at turn 17 as an afterthought after insurance collection. No context given about why these questions matter.",
+      "coaching_note": "Clinical screen needs to cover withdrawal risk, severity, and prior treatment history — and these should come before insurance, not after.",
+      "is_na": false
+    },
+    {
+      "dimension": "urgency_triage",
+      "raw_score": 2,
+      "weighted_score": 2.0,
+      "weight": 1.0,
+      "confidence": 0.82,
+      "ai_rationale": "No urgency assessment at any point. Agent did not ask about timing, withdrawal symptoms, or whether the caller was in a safe situation. The vague 'today or tomorrow' callback window is inconsistent with any urgency protocol. A call this short with no urgency check is a gap.",
+      "coaching_note": "Even for a cooperative caller, ask about urgency and timing — it shapes the next step and ensures you don't miss a caller who needs same-day support.",
+      "is_na": false
+    },
+    {
+      "dimension": "family_caller_handling",
+      "raw_score": null,
+      "weighted_score": null,
+      "weight": 1.0,
+      "confidence": null,
+      "ai_rationale": "N/A — caller is the patient (Tiffany), not a family member.",
+      "coaching_note": null,
+      "is_na": true
+    },
+    {
+      "dimension": "objection_handling",
+      "raw_score": null,
+      "weighted_score": null,
+      "weight": 1.0,
+      "confidence": null,
+      "ai_rationale": "N/A — no objections were raised by the caller in this call.",
+      "coaching_note": null,
+      "is_na": true
+    },
+    {
+      "dimension": "next_step_clarity",
+      "raw_score": 2,
+      "weighted_score": 2.0,
+      "weight": 1.0,
+      "confidence": 0.93,
+      "ai_rationale": "Next step was 'someone will call you back about availability.' No name, no ownership, no specific timing. When caller asked 'when?' the answer was 'probably today or tomorrow' — a two-day window with no commitment. Caller asked what to do in the meantime and received 'just wait for our call.' No confirmation email, no intake form, nothing actionable.",
+      "coaching_note": "Replace 'probably today or tomorrow' with a specific commitment. Name who calls, when, and what they'll cover. Give the caller something to do — even just an email.",
+      "is_na": false
+    },
+    {
+      "dimension": "compliance_language",
+      "raw_score": 0,
+      "weighted_score": 0.0,
+      "weight": 1.5,
+      "confidence": 0.97,
+      "ai_rationale": "COMPLIANCE VIOLATION at turn 9: 'Based on what you're telling me, it sounds like you have a dependency problem that's going to need professional treatment.' This is a diagnostic claim — intake staff cannot diagnose dependency. The correct language is referral-based: 'our clinical team will assess what level of care is right for you.'",
+      "coaching_note": "Never use diagnostic language. You cannot tell a caller they 'have a dependency problem.' Refer all clinical assessment to the clinical team.",
+      "is_na": false
+    }
+  ],
+  "evidence_anchors": [
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 1,
+      "timestamp_seconds": 0,
+      "speaker": "agent",
+      "text_snippet": "Sunrise Recovery Center, this is Roger.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 3,
+      "timestamp_seconds": 10,
+      "speaker": "agent",
+      "text_snippet": "Okay. How long has this been going on?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 9,
+      "timestamp_seconds": 40,
+      "speaker": "agent",
+      "text_snippet": "Based on what you're telling me, it sounds like you have a dependency problem that's going to need professional treatment.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 13,
+      "timestamp_seconds": 60,
+      "speaker": "agent",
+      "text_snippet": "Member ID?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 17,
+      "timestamp_seconds": 76,
+      "speaker": "agent",
+      "text_snippet": "Okay. We'll verify that. Any prior treatment?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 5,
+      "timestamp_seconds": 20,
+      "speaker": "agent",
+      "text_snippet": "How much are you drinking a day?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 7,
+      "timestamp_seconds": 30,
+      "speaker": "agent",
+      "text_snippet": "And are you drinking in the morning?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 17,
+      "timestamp_seconds": 76,
+      "speaker": "agent",
+      "text_snippet": "Okay. We'll verify that. Any prior treatment?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 19,
+      "timestamp_seconds": 84,
+      "speaker": "agent",
+      "text_snippet": "Okay. Someone will call you back about availability.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 21,
+      "timestamp_seconds": 92,
+      "speaker": "agent",
+      "text_snippet": "Probably today or tomorrow.",
+      "relevance_rank": 2
+    }
+  ],
+  "compliance_flags": [
+    {
+      "flag_code": "DIAG_CLAIM",
+      "matched_phrase": "it sounds like you have a dependency problem",
+      "turn_number": 9,
+      "timestamp_seconds": 40,
+      "severity": "critical",
+      "reviewed": false
+    }
+  ]
+}

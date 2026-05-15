@@ -1,0 +1,199 @@
+{
+  "evaluation": {
+    "call_id": "syn_006",
+    "agent_id": "AGT-228",
+    "call_timestamp": "2026-04-02T14:30:00Z",
+    "duration_seconds": 144,
+    "scenario_type": "weak",
+    "rubric_version": "rubric-v1",
+    "prompt_version": "prompt-v1",
+    "model_id": "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
+    "overall_score": 52.5,
+    "compliance_override_triggered": false,
+    "confidence_overall": 0.79,
+    "manager_summary": "Shannon covered the basics but left multiple coaching gaps. The caller mentioned having kids as a concern and received a single-sentence response that was never followed up. The cost objection was dismissed rather than addressed. Clinical screen was minimal — no withdrawal history, no severity, no duration detail. Next step had vague timing. No compliance issues.",
+    "status": "scored",
+    "scored_at": "2026-04-02T14:33:21Z"
+  },
+  "dimension_scores": [
+    {
+      "dimension": "empathy_rapport",
+      "raw_score": 2,
+      "weighted_score": 3.0,
+      "weight": 1.5,
+      "confidence": 0.83,
+      "ai_rationale": "Agent opened without acknowledging the caller's referral from their doctor or the significance of taking this step. 'Okay, sure. How much are you drinking?' is a functional but cold opening. No use of caller's name, no warmth, no acknowledgement of the difficulty of the situation.",
+      "coaching_note": "David mentioned his doctor referred him — that's a meaningful detail. Acknowledge it: 'Your doctor already took the first step by pointing you here — let's make sure we take good care of you.'",
+      "is_na": false
+    },
+    {
+      "dimension": "insurance_verification",
+      "raw_score": 2,
+      "weighted_score": 2.0,
+      "weight": 1.0,
+      "confidence": 0.81,
+      "ai_rationale": "Carrier and member ID captured. Group number was not available ('I don't have that with me') and agent accepted this without any follow-up plan — no 'I'll look it up now' or 'can you check your insurance card later today.' Missing group number is a material gap for verification. Framing was purely functional.",
+      "coaching_note": "When the group number is missing, don't just say 'that's okay' — explain that you'll try to look it up and tell the caller to have it ready for the callback.",
+      "is_na": false
+    },
+    {
+      "dimension": "clinical_screening",
+      "raw_score": 2,
+      "weighted_score": 2.0,
+      "weight": 1.0,
+      "confidence": 0.78,
+      "ai_rationale": "Agent captured frequency (every night, six-pack or more) and noted prior self-attempts to cut back. However, no withdrawal symptoms question, no duration detail (caller mentioned 'a few years' but agent didn't probe), no co-occurring concerns, and no severity escalation. Screen was surface-level.",
+      "coaching_note": "Ask about withdrawal symptoms — especially for daily alcohol use. Ask how many years. Ask what happened when they tried to cut back. These details shape level-of-care recommendations.",
+      "is_na": false
+    },
+    {
+      "dimension": "urgency_triage",
+      "raw_score": 3,
+      "weighted_score": 3.0,
+      "weight": 1.0,
+      "confidence": 0.76,
+      "ai_rationale": "Agent asked about readiness at turn 15: 'And are you looking to come in soon or still deciding?' — this is basic urgency triage and is acceptable. Caller expressed readiness but also concerns (kids, cost) which agent acknowledged in order. No urgency signals were present that required escalation.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "family_caller_handling",
+      "raw_score": null,
+      "weighted_score": null,
+      "weight": 1.0,
+      "confidence": null,
+      "ai_rationale": "N/A — caller is the patient (David), not a family member.",
+      "coaching_note": null,
+      "is_na": true
+    },
+    {
+      "dimension": "objection_handling",
+      "raw_score": 2,
+      "weighted_score": 2.0,
+      "weight": 1.0,
+      "confidence": 0.80,
+      "ai_rationale": "Caller raised two concerns: having kids (scheduling concern) and cost. The kids concern received one sentence and was dropped immediately. The cost concern received 'your insurance should cover most of it. We'll verify.' — no acknowledgement of the anxiety, no alternatives offered, no honest framing of what 'most of it' means. Both objections needed more.",
+      "coaching_note": "Don't dismiss the kids concern in one sentence. Ask what their schedule looks like, then explain IOP specifically — evening availability, no overnight stay. For cost: 'should cover most of it' creates uncertainty. Tell them you'll get real numbers before they commit.",
+      "is_na": false
+    },
+    {
+      "dimension": "next_step_clarity",
+      "raw_score": 3,
+      "weighted_score": 3.0,
+      "weight": 1.0,
+      "confidence": 0.77,
+      "ai_rationale": "Agent provided a next step ('have someone call to set something up') with approximate timing ('within the next day or two') and a concrete preparation item ('just your insurance card'). This is acceptable but not strong — 'next day or two' is a wide window, and no ownership was given for who calls.",
+      "coaching_note": "Tighten the timeline and name ownership. 'Our admissions coordinator will call you by end of day tomorrow' is better than 'within the next day or two.'",
+      "is_na": false
+    },
+    {
+      "dimension": "compliance_language",
+      "raw_score": 4,
+      "weighted_score": 6.0,
+      "weight": 1.5,
+      "confidence": 0.90,
+      "ai_rationale": "No diagnostic claims, no outcome guarantees, no clinical scope violations. Agent mentioned outpatient programs as an option in response to the scheduling concern, which is appropriate at the intake level. Language was clean throughout.",
+      "coaching_note": null,
+      "is_na": false
+    }
+  ],
+  "evidence_anchors": [
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 3,
+      "timestamp_seconds": 10,
+      "speaker": "agent",
+      "text_snippet": "Okay, sure. How much are you drinking?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 2,
+      "timestamp_seconds": 4,
+      "speaker": "caller",
+      "text_snippet": "Hi, I'm David. I'm looking into treatment for alcohol. My doctor suggested I call.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 10,
+      "timestamp_seconds": 42,
+      "speaker": "caller",
+      "text_snippet": "I don't have that with me right now.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 11,
+      "timestamp_seconds": 46,
+      "speaker": "agent",
+      "text_snippet": "That's okay. We'll try to look it up. Anything else about your situation I should know?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 12,
+      "timestamp_seconds": 54,
+      "speaker": "caller",
+      "text_snippet": "It's been going on for a few years. I tried to cut back on my own but it didn't really work.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 15,
+      "timestamp_seconds": 72,
+      "speaker": "agent",
+      "text_snippet": "Okay. And are you looking to come in soon or still deciding?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 16,
+      "timestamp_seconds": 78,
+      "speaker": "caller",
+      "text_snippet": "I think I want to do it but I'm nervous about it. I have kids, so I'm wondering how that works.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 17,
+      "timestamp_seconds": 88,
+      "speaker": "agent",
+      "text_snippet": "We can work around schedules. Our outpatient programs allow people to be home in the evenings.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 19,
+      "timestamp_seconds": 102,
+      "speaker": "agent",
+      "text_snippet": "Your insurance should cover most of it. We'll verify.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 21,
+      "timestamp_seconds": 114,
+      "speaker": "agent",
+      "text_snippet": "We'll have someone call you to set something up.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 23,
+      "timestamp_seconds": 122,
+      "speaker": "agent",
+      "text_snippet": "Within the next day or two.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 17,
+      "timestamp_seconds": 88,
+      "speaker": "agent",
+      "text_snippet": "We can work around schedules. Our outpatient programs allow people to be home in the evenings.",
+      "relevance_rank": 1
+    }
+  ],
+  "compliance_flags": []
+}

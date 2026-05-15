@@ -1,0 +1,12 @@
+[
+  {
+    "call_id": "syn_001",
+    "dimension": "empathy_rapport",
+    "ai_score": 4.0,
+    "manager_score": 5.0,
+    "delta": 1.0,
+    "comment": "Stronger opening than AI rated",
+    "manager": "demo",
+    "date": "2026-05-14T18:57:01.430830+00:00"
+  }
+]

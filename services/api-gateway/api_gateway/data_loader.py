@@ -66,3 +66,52 @@ def get_evidence(call_id: str, dimension: str) -> Optional[list[dict]]:
         "anchors": anchors,
         "dim_score": dim_row,
     }
+
+
+def list_coaching_queue() -> list[dict]:
+    """All calls where overall_score < 70, sorted ascending."""
+    rows = []
+    for path in sorted(_RESULTS_DIR.glob("*_result.json")):
+        data = json.loads(path.read_text())
+        ev = data["evaluation"]
+        if ev["overall_score"] >= 70:
+            continue
+        dim_scores = data.get("dimension_scores", [])
+        applicable = [d for d in dim_scores if not d.get("is_na")]
+        worst_dim = min(applicable, key=lambda d: d["raw_score"] or 0, default=None)
+        rows.append({
+            "call_id": ev["call_id"],
+            "agent_id": ev["agent_id"],
+            "call_timestamp": ev["call_timestamp"],
+            "overall_score": ev["overall_score"],
+            "worst_dimension": worst_dim["dimension"] if worst_dim else None,
+            "worst_dimension_score": worst_dim["raw_score"] if worst_dim else None,
+            "scored_at": ev.get("scored_at"),
+        })
+    rows.sort(key=lambda r: r["overall_score"])
+    return rows
+
+
+def list_compliance_queue() -> list[dict]:
+    """One row per compliance flag, sorted by call_timestamp descending."""
+    rows = []
+    for path in sorted(_RESULTS_DIR.glob("*_result.json")):
+        data = json.loads(path.read_text())
+        ev = data["evaluation"]
+        flags = data.get("compliance_flags", [])
+        if not flags:
+            continue
+        for flag in flags:
+            rows.append({
+                "call_id": ev["call_id"],
+                "agent_id": ev["agent_id"],
+                "call_timestamp": ev["call_timestamp"],
+                "flag_code": flag["flag_code"],
+                "matched_phrase": flag["matched_phrase"],
+                "turn_number": flag["turn_number"],
+                "timestamp_seconds": flag["timestamp_seconds"],
+                "severity": flag["severity"],
+                "reviewed": flag.get("reviewed", False),
+            })
+    rows.sort(key=lambda r: r["call_timestamp"], reverse=True)
+    return rows

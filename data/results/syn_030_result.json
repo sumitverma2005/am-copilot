@@ -1,0 +1,175 @@
+{
+  "evaluation": {
+    "call_id": "syn_030",
+    "agent_id": "AGT-134",
+    "call_timestamp": "2026-04-04T11:00:00Z",
+    "duration_seconds": 190,
+    "scenario_type": "objection_heavy",
+    "rubric_version": "rubric-v1",
+    "prompt_version": "prompt-v1",
+    "model_id": "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
+    "overall_score": 73.75,
+    "compliance_override_triggered": false,
+    "confidence_overall": 0.84,
+    "manager_summary": "William handled the cost objection with unusual honesty and depth — naming the deductible reality rather than minimising it, and offering three concrete alternatives unprompted. Empathy was warm, compliance language was clean, and the financial counsellor offer was excellent. The call fails on the close: Stephanie had to ask 'today?' twice before getting a direct answer, and 'keep your phone handy' is not an acceptable next step. Strong call that ends weakly.",
+    "status": "scored",
+    "scored_at": "2026-04-04T11:04:17Z"
+  },
+  "dimension_scores": [
+    {
+      "dimension": "empathy_rapport",
+      "raw_score": 4,
+      "weighted_score": 6.0,
+      "weight": 1.5,
+      "confidence": 0.86,
+      "ai_rationale": "Agent acknowledged the caller's cost anxiety directly and validated it ('that's a completely valid concern and I'm glad you called to ask rather than just not calling'). Warm but efficient — agent didn't linger, used the opening to build trust and then moved to practical help. Did not use caller's name consistently (used once at start, not thereafter).",
+      "coaching_note": "Strong opening — the validation of the cost concern set the right tone. Keep using the caller's name throughout: it's a small thing that signals you're talking to a person, not processing an inquiry.",
+      "is_na": false
+    },
+    {
+      "dimension": "insurance_verification",
+      "raw_score": 4,
+      "weighted_score": 4.0,
+      "weight": 1.0,
+      "confidence": 0.85,
+      "ai_rationale": "Caller provided carrier (BluePeak Health), member ID (BP77860047), and group number (GRP-979152) at turn 4. Agent acknowledged the high deductible immediately and gave a realistic estimate of the out-of-pocket obligation. Verification was framed as a step toward understanding costs, not gatekeeping.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "clinical_screening",
+      "raw_score": 3,
+      "weighted_score": 3.0,
+      "weight": 1.0,
+      "confidence": 0.80,
+      "ai_rationale": "Agent captured substance type (methamphetamine), duration (18 months), frequency (daily), and withdrawal experience (exhaustion, depression, no physical danger). This is adequate. No prior treatment history asked, no co-occurring mental health concerns explored beyond the depression mention.",
+      "coaching_note": "Ask about prior treatment — even for a first-time caller, the answer 'no' is useful context for the clinical team. Also worth asking about mood or mental health alongside the stimulant use.",
+      "is_na": false
+    },
+    {
+      "dimension": "urgency_triage",
+      "raw_score": 3,
+      "weighted_score": 3.0,
+      "weight": 1.0,
+      "confidence": 0.78,
+      "ai_rationale": "No urgency signals were present — caller is researching costs and motivated but not in crisis. Agent did not assess timing explicitly but the clinical questions established that the situation was not acute. The financial counsellor offer implies a near-term path without manufactured urgency.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "family_caller_handling",
+      "raw_score": null,
+      "weighted_score": null,
+      "weight": 1.0,
+      "confidence": null,
+      "ai_rationale": "N/A — caller is the patient (Stephanie), not a family member.",
+      "coaching_note": null,
+      "is_na": true
+    },
+    {
+      "dimension": "objection_handling",
+      "raw_score": 4,
+      "weighted_score": 4.0,
+      "weight": 1.0,
+      "confidence": 0.89,
+      "ai_rationale": "Cost objection handled with genuine quality: agent was honest about the deductible impact ('let me be honest about that rather than oversell it'), offered three specific alternatives (sliding scale, CareCredit, state funds), and offered a free financial counsellor call with no obligation. This is the type of objection handling that creates trust. Not a 5 because there was no explicit acknowledgement of the caller's financial anxiety before pivoting to solutions.",
+      "coaching_note": "Add one line of acknowledgement before the alternatives: 'I hear you — the cost uncertainty is one of the biggest barriers people face.' Then go into the options. A brief moment of acknowledgement before the solutions makes the solutions land better.",
+      "is_na": false
+    },
+    {
+      "dimension": "next_step_clarity",
+      "raw_score": 2,
+      "weighted_score": 2.0,
+      "weight": 1.0,
+      "confidence": 0.92,
+      "ai_rationale": "Next step was 'someone from our financial team will follow up with you.' Caller asked 'when?' and received 'we'll be in touch.' Caller asked again ('today?') before getting confirmation. Agent's final close — 'keep your phone handy' — is not a specific commitment. The call built real trust and then squandered it on the close.",
+      "coaching_note": "This is the most important coaching note for this call: the close undid some of the excellent earlier work. Say 'our financial counsellor will call you by 3 PM today — keep your phone free around that time.' Specific time, named role, caller-friendly instruction.",
+      "is_na": false
+    },
+    {
+      "dimension": "compliance_language",
+      "raw_score": 5,
+      "weighted_score": 7.5,
+      "weight": 1.5,
+      "confidence": 0.93,
+      "ai_rationale": "Exemplary compliance language throughout. At turn 15, agent referred level-of-care to the clinical team ('Our clinical team will assess level of care') rather than prescribing it. The statement 'IOP is often the starting point' is appropriately hedged and informational. No diagnostic claims, no outcome guarantees.",
+      "coaching_note": null,
+      "is_na": false
+    }
+  ],
+  "evidence_anchors": [
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 3,
+      "timestamp_seconds": 16,
+      "speaker": "agent",
+      "text_snippet": "That's a completely valid concern and I'm glad you called to ask rather than just not calling.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 5,
+      "timestamp_seconds": 42,
+      "speaker": "agent",
+      "text_snippet": "High deductible plans are common, and it can mean you owe more out of pocket before coverage kicks in. Let me be honest about that rather than oversell it.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 13,
+      "timestamp_seconds": 128,
+      "speaker": "agent",
+      "text_snippet": "And are you experiencing any withdrawal or health issues when you try to stop?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 14,
+      "timestamp_seconds": 134,
+      "speaker": "caller",
+      "text_snippet": "Mostly exhaustion and depression. Nothing physical like alcohol.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 5,
+      "timestamp_seconds": 42,
+      "speaker": "agent",
+      "text_snippet": "Let me be honest about that rather than oversell it. How high is your deductible?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 9,
+      "timestamp_seconds": 94,
+      "speaker": "agent",
+      "text_snippet": "Our financial counsellor can run through all three with you in about fifteen minutes and give you actual numbers. That call is free and there's no obligation.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 17,
+      "timestamp_seconds": 166,
+      "speaker": "agent",
+      "text_snippet": "We'll be in touch.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 19,
+      "timestamp_seconds": 174,
+      "speaker": "agent",
+      "text_snippet": "Yes, today. Keep your phone handy.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 15,
+      "timestamp_seconds": 142,
+      "speaker": "agent",
+      "text_snippet": "Our clinical team will assess level of care, but for daily meth use at eighteen months, IOP is often the starting point.",
+      "relevance_rank": 1
+    }
+  ],
+  "compliance_flags": []
+}

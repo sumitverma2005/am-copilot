@@ -1,5 +1,5 @@
 /* Screen 2 — Call detail. spec §3.2. Includes radar chart (screen 3 spec §3.2 right col). */
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import {
   PolarAngleAxis,
@@ -14,6 +14,301 @@ import { EvidenceModal } from '../components/EvidenceModal'
 import { DimScoreBadge, ScoreBadge } from '../components/ScoreBadge'
 import type { DimensionScoreRow, ScoreResult } from '../types'
 import { DIMENSION_LABELS } from '../types'
+
+const SCORE_OPTIONS = ['N/A', '0', '1', '2', '3', '4', '5']
+
+function OverrideSection({ callId, dims }: { callId: string; dims: DimensionScoreRow[] }) {
+  const [dimension, setDimension] = useState('')
+  const [aiScore, setAiScore] = useState<string>('')
+  const [managerScore, setManagerScore] = useState<string>('')
+  const [comment, setComment] = useState('')
+  const [saving, setSaving] = useState(false)
+  const [saved, setSaved] = useState(false)
+  const [err, setErr] = useState<string | null>(null)
+
+  function parseScore(v: string): number | null {
+    if (v === 'N/A' || v === '') return null
+    return parseFloat(v)
+  }
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    if (!dimension) { setErr('Select a dimension.'); return }
+    if (!comment.trim()) { setErr('Comment is required.'); return }
+    const selectedDim = dims.find((d) => d.dimension === dimension)
+    setSaving(true)
+    setErr(null)
+    try {
+      await api.calls.override(callId, {
+        dimension,
+        ai_score: aiScore !== '' ? parseScore(aiScore) : (selectedDim?.raw_score ?? null),
+        manager_score: parseScore(managerScore),
+        comment: comment.trim(),
+      })
+      setSaved(true)
+      setDimension('')
+      setAiScore('')
+      setManagerScore('')
+      setComment('')
+      setTimeout(() => setSaved(false), 3000)
+    } catch (e: unknown) {
+      setErr(e instanceof Error ? e.message : 'Error submitting override')
+    } finally {
+      setSaving(false)
+    }
+  }
+
+  return (
+    <div
+      style={{
+        background: 'var(--white)',
+        border: '1px solid var(--border)',
+        borderRadius: 'var(--radius-md)',
+        padding: '20px',
+        marginBottom: '24px',
+      }}
+    >
+      <div
+        style={{
+          fontFamily: "'IBM Plex Mono', monospace",
+          fontSize: '10px',
+          color: 'var(--muted)',
+          textTransform: 'uppercase',
+          letterSpacing: '0.06em',
+          marginBottom: '14px',
+        }}
+      >
+        SCORE OVERRIDE — Disagreement Log
+      </div>
+
+      {saved && (
+        <div
+          style={{
+            background: 'var(--green-soft)',
+            color: '#065F46',
+            fontFamily: "'IBM Plex Sans'",
+            fontSize: '13px',
+            padding: '8px 12px',
+            borderRadius: 'var(--radius-sm)',
+            marginBottom: '12px',
+          }}
+        >
+          Override saved — visible in the Disagreement Log.
+        </div>
+      )}
+
+      <form onSubmit={handleSubmit}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '12px' }}>
+          <div>
+            <label style={labelStyle}>Dimension</label>
+            <select
+              value={dimension}
+              onChange={(e) => { setDimension(e.target.value); setErr(null) }}
+              style={selectStyle}
+            >
+              <option value="">Select…</option>
+              {dims.filter((d) => !d.is_na).map((d) => (
+                <option key={d.dimension} value={d.dimension}>
+                  {DIMENSION_LABELS[d.dimension] ?? d.dimension}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+            <div>
+              <label style={labelStyle}>AI Score</label>
+              <select value={aiScore} onChange={(e) => setAiScore(e.target.value)} style={selectStyle}>
+                <option value="">Auto</option>
+                {SCORE_OPTIONS.map((s) => <option key={s} value={s}>{s}</option>)}
+              </select>
+            </div>
+            <div>
+              <label style={labelStyle}>Manager Score</label>
+              <select
+                value={managerScore}
+                onChange={(e) => { setManagerScore(e.target.value); setErr(null) }}
+                style={selectStyle}
+              >
+                <option value="">Select…</option>
+                {SCORE_OPTIONS.map((s) => <option key={s} value={s}>{s}</option>)}
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div style={{ marginBottom: '12px' }}>
+          <label style={labelStyle}>Comment (required)</label>
+          <textarea
+            value={comment}
+            onChange={(e) => { setComment(e.target.value); setErr(null) }}
+            placeholder="Explain the reason for the override…"
+            rows={3}
+            style={{
+              ...selectStyle,
+              resize: 'vertical',
+              height: 'auto',
+              fontFamily: "'IBM Plex Sans', sans-serif",
+            }}
+          />
+        </div>
+
+        {err && (
+          <div style={{ fontFamily: "'IBM Plex Sans'", fontSize: '12px', color: 'var(--red)', marginBottom: '10px' }}>
+            {err}
+          </div>
+        )}
+
+        <button
+          type="submit"
+          disabled={saving}
+          style={{
+            fontFamily: "'IBM Plex Sans', sans-serif",
+            fontSize: '13px',
+            fontWeight: 500,
+            background: 'var(--teal-500)',
+            border: 'none',
+            borderRadius: 'var(--radius-sm)',
+            padding: '8px 18px',
+            color: 'var(--white)',
+            cursor: saving ? 'wait' : 'pointer',
+            opacity: saving ? 0.7 : 1,
+          }}
+        >
+          {saving ? 'Saving…' : 'Submit override'}
+        </button>
+      </form>
+    </div>
+  )
+}
+
+const labelStyle: React.CSSProperties = {
+  display: 'block',
+  fontFamily: "'IBM Plex Mono', monospace",
+  fontSize: '10px',
+  color: 'var(--muted)',
+  textTransform: 'uppercase',
+  letterSpacing: '0.05em',
+  marginBottom: '6px',
+}
+
+const selectStyle: React.CSSProperties = {
+  width: '100%',
+  fontFamily: "'IBM Plex Sans', sans-serif",
+  fontSize: '13px',
+  color: 'var(--ink)',
+  background: 'var(--surface)',
+  border: '1px solid var(--border-strong)',
+  borderRadius: 'var(--radius-sm)',
+  padding: '8px 10px',
+  outline: 'none',
+  boxSizing: 'border-box',
+}
+
+function CoachingNotesSection({ callId }: { callId: string }) {
+  const [text, setText] = useState('')
+  const [loaded, setLoaded] = useState(false)
+  const [saving, setSaving] = useState(false)
+  const [saved, setSaved] = useState(false)
+  const [err, setErr] = useState<string | null>(null)
+  const prevRef = useRef('')
+
+  useEffect(() => {
+    api.calls.getNote(callId).then(({ text: t }) => {
+      setText(t)
+      prevRef.current = t
+      setLoaded(true)
+    }).catch(() => setLoaded(true))
+  }, [callId])
+
+  async function handleSave() {
+    if (text === prevRef.current) return
+    setSaving(true)
+    setErr(null)
+    try {
+      await api.calls.saveNote(callId, text)
+      prevRef.current = text
+      setSaved(true)
+      setTimeout(() => setSaved(false), 2500)
+    } catch (e: unknown) {
+      setErr(e instanceof Error ? e.message : 'Error saving')
+    } finally {
+      setSaving(false)
+    }
+  }
+
+  return (
+    <div
+      style={{
+        background: 'var(--white)',
+        border: '1px solid var(--border)',
+        borderRadius: 'var(--radius-md)',
+        padding: '20px',
+        marginBottom: '24px',
+      }}
+    >
+      <div
+        style={{
+          fontFamily: "'IBM Plex Mono', monospace",
+          fontSize: '10px',
+          color: 'var(--muted)',
+          textTransform: 'uppercase',
+          letterSpacing: '0.06em',
+          marginBottom: '14px',
+        }}
+      >
+        COACHING NOTES
+      </div>
+      <textarea
+        value={loaded ? text : ''}
+        onChange={(e) => { setText(e.target.value); setSaved(false) }}
+        placeholder={loaded ? 'Add coaching notes for this call…' : 'Loading…'}
+        disabled={!loaded}
+        rows={4}
+        style={{
+          width: '100%',
+          fontFamily: "'IBM Plex Sans', sans-serif",
+          fontSize: '14px',
+          color: 'var(--ink)',
+          background: 'var(--surface)',
+          border: '1px solid var(--border-strong)',
+          borderRadius: 'var(--radius-sm)',
+          padding: '10px 12px',
+          resize: 'vertical',
+          outline: 'none',
+          boxSizing: 'border-box',
+          marginBottom: '12px',
+        }}
+      />
+      {err && (
+        <div style={{ fontFamily: "'IBM Plex Sans'", fontSize: '12px', color: 'var(--red)', marginBottom: '8px' }}>{err}</div>
+      )}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <button
+          onClick={handleSave}
+          disabled={saving || !loaded}
+          style={{
+            fontFamily: "'IBM Plex Sans', sans-serif",
+            fontSize: '13px',
+            fontWeight: 500,
+            background: 'var(--teal-500)',
+            border: 'none',
+            borderRadius: 'var(--radius-sm)',
+            padding: '8px 18px',
+            color: 'var(--white)',
+            cursor: saving ? 'wait' : 'pointer',
+            opacity: saving ? 0.7 : 1,
+          }}
+        >
+          {saving ? 'Saving…' : 'Save notes'}
+        </button>
+        {saved && (
+          <span style={{ fontFamily: "'IBM Plex Sans'", fontSize: '13px', color: '#065F46' }}>Saved ✓</span>
+        )}
+      </div>
+    </div>
+  )
+}
 
 function fmtDuration(seconds: number): string {
   const m = Math.floor(seconds / 60)
@@ -494,6 +789,12 @@ export function CallDetail() {
             DIMENSION BREAKDOWN — click any row to see evidence
           </div>
           <DimensionTable dims={dimension_scores} onDimClick={setActiveDim} />
+
+          {/* Override section — spec §3.2 */}
+          <OverrideSection callId={callId!} dims={dimension_scores} />
+
+          {/* Coaching notes section — spec §3.2 */}
+          <CoachingNotesSection callId={callId!} />
         </div>
 
         {/* Right column — radar chart */}

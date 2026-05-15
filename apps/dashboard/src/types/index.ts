@@ -75,6 +75,44 @@ export interface EvidenceResponse {
   dim_score: DimensionScoreRow | null
 }
 
+export interface CoachingQueueRow {
+  call_id: string
+  agent_id: string
+  call_timestamp: string
+  overall_score: number
+  worst_dimension: string | null
+  worst_dimension_score: number | null
+  scored_at: string | null
+  coached_at: string | null
+  coached_by: string | null
+}
+
+export interface ComplianceQueueRow {
+  call_id: string
+  agent_id: string
+  call_timestamp: string
+  flag_code: string
+  matched_phrase: string
+  turn_number: number
+  timestamp_seconds: number
+  severity: string
+  reviewed: boolean
+  reviewed_at: string | null
+  reviewed_by: string | null
+  review_comment: string | null
+}
+
+export interface DisagreementRow {
+  call_id: string
+  dimension: string
+  ai_score: number | null
+  manager_score: number | null
+  delta: number | null
+  comment: string
+  manager: string
+  date: string
+}
+
 export const DIMENSION_LABELS: Record<string, string> = {
   empathy_rapport: 'Empathy & Rapport',
   insurance_verification: 'Insurance Verification',
