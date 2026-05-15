@@ -3,7 +3,7 @@
 Steps:
   1. Load rubric
   2. Build evaluation prompt
-  3. Call Bedrock
+  3. Call LLM (Bedrock or Anthropic, selected via MODEL_PROVIDER env var)
   4. Parse EvaluationResult
   5. Apply compliance override (if compliance flags passed in)
   6. Compute weighted overall score (N/A dimensions excluded)
@@ -12,9 +12,12 @@ Steps:
 from __future__ import annotations
 
 import json
+import logging
 import os
 from datetime import datetime, timezone
 from typing import Optional
+
+_logger = logging.getLogger(__name__)
 
 from prompt_library.evaluation.prompt_v1 import (
     PROMPT_VERSION,
@@ -26,6 +29,7 @@ from rubric_engine import Rubric
 from compliance_engine.detector import ComplianceFlag
 
 from .bedrock_client import BedrockClient
+from .anthropic_client import AnthropicClient
 from .models import (
     ComplianceFlagRow,
     DimensionResult,
@@ -40,9 +44,26 @@ from .rubric_loader import load_rubric_for_scoring
 _COMPLIANCE_DIM = "compliance_language"
 
 
+def _make_llm_client() -> BedrockClient | AnthropicClient:
+    """Instantiate the LLM client selected by MODEL_PROVIDER env var.
+
+    MODEL_PROVIDER=bedrock   (default) — production path via AWS Bedrock
+    MODEL_PROVIDER=anthropic           — build-window workaround; remove pre-prod
+    """
+    provider = os.environ.get("MODEL_PROVIDER", "bedrock").lower()
+    _logger.info("Scoring engine using MODEL_PROVIDER=%s", provider)
+    if provider == "anthropic":
+        _logger.warning(
+            "MODEL_PROVIDER=anthropic — build-window workaround active; "
+            "production target is bedrock."
+        )
+        return AnthropicClient()
+    return BedrockClient()
+
+
 class ScoreArbitrator:
     def __init__(self, bedrock_client: Optional[BedrockClient] = None) -> None:
-        self._bedrock = bedrock_client or BedrockClient()
+        self._bedrock = bedrock_client or _make_llm_client()
 
     def score(
         self,
@@ -80,7 +101,7 @@ class ScoreArbitrator:
             scenario_type=None,
             rubric_version=rubric.version,
             prompt_version=PROMPT_VERSION,
-            model_id=os.environ.get("BEDROCK_MODEL_ID", ""),
+            model_id=self._bedrock.model_id,
             overall_score=overall,
             compliance_override_triggered=compliance_triggered,
             confidence_overall=eval_result.overall_confidence,

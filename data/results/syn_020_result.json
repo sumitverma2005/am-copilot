@@ -1,0 +1,296 @@
+{
+  "evaluation": {
+    "call_id": "syn_020",
+    "agent_id": "AGT-569",
+    "call_timestamp": "2026-04-01T00:00:00Z",
+    "duration_seconds": 98,
+    "scenario_type": null,
+    "rubric_version": "rubric-v1",
+    "prompt_version": "prompt-v1",
+    "model_id": "claude-sonnet-4-5-20250929",
+    "overall_score": 15.0,
+    "compliance_override_triggered": true,
+    "confidence_overall": 0.93,
+    "manager_summary": "This call demonstrates multiple critical failures in intake protocol. The agent used diagnostic language throughout ('addiction,' 'serious dependency'), which constitutes compliance violations. There was no empathy or rapport-building, minimal clinical screening (missing withdrawal symptoms, last use, prior treatment), no urgency assessment, and extremely vague next steps. The caller's ambivalence was met with dismissive contradiction rather than exploration. This call requires immediate coaching on compliance language, empathy, screening protocols, and next-step clarity.",
+    "status": "scored",
+    "scored_at": "2026-05-15T11:03:50.363099+00:00"
+  },
+  "dimension_scores": [
+    {
+      "dimension": "empathy_rapport",
+      "raw_score": 0,
+      "weighted_score": 0.0,
+      "weight": 1.5,
+      "confidence": 0.95,
+      "ai_rationale": "The agent provided no acknowledgment of the caller's emotional state or the difficulty of reaching out. The response was purely transactional with no rapport-building, no use of the caller's name despite him providing it, and no slowing down to listen before moving directly to questions.",
+      "coaching_note": "Begin intake calls by acknowledging the courage it takes to reach out and thanking the caller by name before moving into information gathering.",
+      "is_na": false
+    },
+    {
+      "dimension": "insurance_verification",
+      "raw_score": 2,
+      "weighted_score": 2.0,
+      "weight": 1.0,
+      "confidence": 0.9,
+      "ai_rationale": "The agent collected carrier and member ID but failed to secure the group number when the caller didn't have it available. The verification was framed transactionally rather than as a step toward help, and no alternative was offered for the missing information.",
+      "coaching_note": "When a caller doesn't have key insurance details, offer to help them find it or explain how to locate it, rather than simply moving on.",
+      "is_na": false
+    },
+    {
+      "dimension": "clinical_screening",
+      "raw_score": 1,
+      "weighted_score": 1.0,
+      "weight": 1.0,
+      "confidence": 0.92,
+      "ai_rationale": "While the agent captured substance type (painkillers/opioids) and duration (one year), they failed to gather critical severity indicators like frequency, last use, withdrawal symptoms, or prior treatment history. The screening was minimal and incomplete.",
+      "coaching_note": "Always ask about frequency of use, last use, withdrawal symptoms, and prior treatment attempts to understand severity and appropriate level of care.",
+      "is_na": false
+    },
+    {
+      "dimension": "urgency_triage",
+      "raw_score": 1,
+      "weighted_score": 1.0,
+      "weight": 1.0,
+      "confidence": 0.88,
+      "ai_rationale": "The agent made no attempt to assess urgency signals such as withdrawal symptoms, last use timing, safety of living situation, or suicidal ideation. No timeline for treatment was established, and the vague follow-up provided no clarity on whether this was a same-day or future need.",
+      "coaching_note": "Always assess urgency by asking about withdrawal symptoms, last use, and safety concerns to determine appropriate timing and escalation needs.",
+      "is_na": false
+    },
+    {
+      "dimension": "family_caller_handling",
+      "raw_score": null,
+      "weighted_score": null,
+      "weight": 1.0,
+      "confidence": 1.0,
+      "ai_rationale": "The caller is the patient themselves, as evidenced by their first-person statements about their own substance use.",
+      "coaching_note": null,
+      "is_na": true
+    },
+    {
+      "dimension": "objection_handling",
+      "raw_score": 1,
+      "weighted_score": 1.0,
+      "weight": 1.0,
+      "confidence": 0.93,
+      "ai_rationale": "When the caller expressed ambivalence ('I don't know if it's that serious'), the agent immediately contradicted him with a diagnostic statement rather than acknowledging his concern. The agent was dismissive rather than constructive, missing an opportunity to explore the caller's readiness and concerns.",
+      "coaching_note": "When a caller expresses doubt or ambivalence, acknowledge their feelings first before providing information, and explore their concerns rather than contradicting them directly.",
+      "is_na": false
+    },
+    {
+      "dimension": "next_step_clarity",
+      "raw_score": 1,
+      "weighted_score": 1.0,
+      "weight": 1.0,
+      "confidence": 0.95,
+      "ai_rationale": "The next step was extremely vague ('Someone will call you' / 'Soon'), with no specific timing, no clear ownership, and no details about what the caller should expect or prepare. The caller had to ask for clarification and received minimal information.",
+      "coaching_note": "Always provide specific next steps including who will call, when (day and timeframe), and what the caller should have ready for that conversation.",
+      "is_na": false
+    },
+    {
+      "dimension": "compliance_language",
+      "raw_score": 0,
+      "weighted_score": 0.0,
+      "weight": 1.5,
+      "confidence": 0.98,
+      "ai_rationale": "The agent made multiple diagnostic statements that cross into unauthorized practice, including 'sounds like addiction,' 'Daily use of opioids after a year is addiction,' 'That's a classic pattern,' and 'You have a serious dependency.' These are clinical determinations that intake staff are not qualified to make.",
+      "coaching_note": "Never use diagnostic language; instead use phrases like 'what you're describing is something we can help with' or 'this sounds like something our clinical team would want to assess.'",
+      "is_na": false
+    }
+  ],
+  "evidence_anchors": [
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 2,
+      "timestamp_seconds": 10,
+      "speaker": "agent",
+      "text_snippet": "How long?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 3,
+      "timestamp_seconds": 18,
+      "speaker": "agent",
+      "text_snippet": "What you're describing sounds like addiction. You're going to need treatment.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 5,
+      "timestamp_seconds": 30,
+      "speaker": "agent",
+      "text_snippet": "It is. Daily use of opioids after a year is addiction.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 7,
+      "timestamp_seconds": 56,
+      "speaker": "caller",
+      "text_snippet": "Yes, Summit Select. ID is BP12837251.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 8,
+      "timestamp_seconds": 62,
+      "speaker": "agent",
+      "text_snippet": "Group number?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 10,
+      "timestamp_seconds": 70,
+      "speaker": "agent",
+      "text_snippet": "We'll try without it. Someone will call you.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 2,
+      "timestamp_seconds": 10,
+      "speaker": "agent",
+      "text_snippet": "How long?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 5,
+      "timestamp_seconds": 30,
+      "speaker": "agent",
+      "text_snippet": "It is. Daily use of opioids after a year is addiction. Are you still getting them from a prescription or buying them?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 6,
+      "timestamp_seconds": 48,
+      "speaker": "agent",
+      "text_snippet": "That's a classic pattern. You have a serious dependency. Do you have insurance?",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 10,
+      "timestamp_seconds": 70,
+      "speaker": "agent",
+      "text_snippet": "We'll try without it. Someone will call you.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 11,
+      "timestamp_seconds": 76,
+      "speaker": "caller",
+      "text_snippet": "When?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 12,
+      "timestamp_seconds": 80,
+      "speaker": "agent",
+      "text_snippet": "Soon.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "family_caller_handling",
+      "turn_number": 1,
+      "timestamp_seconds": 4,
+      "speaker": "caller",
+      "text_snippet": "Yeah, hi. I'm Stephen. I think I might have a problem with pills. Painkillers.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 4,
+      "timestamp_seconds": 26,
+      "speaker": "caller",
+      "text_snippet": "I mean... I don't know if it's that serious.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 5,
+      "timestamp_seconds": 30,
+      "speaker": "agent",
+      "text_snippet": "It is. Daily use of opioids after a year is addiction.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 6,
+      "timestamp_seconds": 48,
+      "speaker": "agent",
+      "text_snippet": "That's a classic pattern. You have a serious dependency.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 10,
+      "timestamp_seconds": 70,
+      "speaker": "agent",
+      "text_snippet": "We'll try without it. Someone will call you.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 12,
+      "timestamp_seconds": 80,
+      "speaker": "agent",
+      "text_snippet": "Soon.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 14,
+      "timestamp_seconds": 88,
+      "speaker": "agent",
+      "text_snippet": "Just be ready to discuss your history. Bye.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 3,
+      "timestamp_seconds": 18,
+      "speaker": "agent",
+      "text_snippet": "What you're describing sounds like addiction. You're going to need treatment.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 5,
+      "timestamp_seconds": 30,
+      "speaker": "agent",
+      "text_snippet": "It is. Daily use of opioids after a year is addiction.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 6,
+      "timestamp_seconds": 48,
+      "speaker": "agent",
+      "text_snippet": "That's a classic pattern. You have a serious dependency.",
+      "relevance_rank": 3
+    }
+  ],
+  "compliance_flags": [
+    {
+      "flag_code": "DIAG_CLAIM",
+      "matched_phrase": "What you're describing sounds like",
+      "turn_number": 5,
+      "timestamp_seconds": 18,
+      "severity": "critical",
+      "reviewed": false
+    },
+    {
+      "flag_code": "DIAG_CLAIM",
+      "matched_phrase": "You have a serious dependency",
+      "turn_number": 9,
+      "timestamp_seconds": 48,
+      "severity": "critical",
+      "reviewed": false
+    }
+  ]
+}

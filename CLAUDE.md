@@ -229,6 +229,9 @@ Resolution: File an AWS Support case requesting quota increase for:
 
 Do not modify scoring logic to work around this. The fix is entirely on the AWS side.
 
+**Build-window workaround (D8.5):** `MODEL_PROVIDER=anthropic` is enabled in `.env` while the
+Bedrock ticket is open. Set `MODEL_PROVIDER=bedrock` once quota resolves. See Phase B item 5.
+
 ---
 
 ## Open questions
@@ -260,7 +263,8 @@ grading session. All must be resolved before any non-dev deployment or real pati
 | 1 | **Bearer token verification** | `services/api-gateway/api_gateway/auth.py` · `require_auth()` | Currently accepts any non-empty Bearer token when bypass is off. Replace stub with real Cognito JWT verification (python-jose + JWKS endpoint). |
 | 2 | **CTM channel→role mapping** | `services/ctm-integration/ctm_integration/constants.py` · `CHANNEL_TO_ROLE` | Confirm `{2: "agent", 1: "caller"}` mapping holds on real treatment-center CTM data. Mapping is isolated in one constant — update if wrong. |
 | 3 | **CTM webhook HMAC-SHA256 signature** | `services/ctm-integration/ctm_integration/webhook.py` | Webhook signature verification against CTM's `X-CTM-Signature` header is not implemented. Verify the exact signing scheme from CTM docs, then add HMAC-SHA256 verification before processing any webhook payload. |
-| 4 | **Bedrock quota provisioning** | AWS Service Quotas console | A fresh AWS account may have all Bedrock inference quotas at 0. File AWS Support case before any production scoring run. See "Infra setup notes → Bedrock quota provisioning" above. |
+| 4 | **Bedrock quota provisioning** | AWS Service Quotas console | A fresh AWS account may have all Bedrock inference quotas at 0. File AWS Support case before any production scoring run. See "Infra setup notes → Bedrock quota provisioning" above. Workaround in place: `MODEL_PROVIDER=anthropic` enabled for build-window calibration. |
+| 5 | **Remove MODEL_PROVIDER switch + AnthropicClient** | `services/scoring-engine/scoring_engine/anthropic_client.py` · `score_arbitrator._make_llm_client()` · `.env MODEL_PROVIDER` · `requirements.txt anthropic` | Build-window scaffolding only. After Bedrock quota resolves: delete `anthropic_client.py`, remove `_make_llm_client()` factory from `score_arbitrator.py`, revert `__init__` to `BedrockClient()` directly, remove `anthropic` from `requirements.txt`, remove `MODEL_PROVIDER`/`ANTHROPIC_*` from env. |
 
 ---
 

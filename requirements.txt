@@ -27,3 +27,6 @@ structlog>=24.1.0        # structured logging
 
 # ── Auth (Cognito JWT validation) ────────────────────────────────
 python-jose[cryptography]>=3.3.0
+
+# ── Anthropic direct API (build-window workaround — remove pre-prod) ─────────
+anthropic>=0.40.0

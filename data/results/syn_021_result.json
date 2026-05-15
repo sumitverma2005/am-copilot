@@ -1,0 +1,231 @@
+{
+  "evaluation": {
+    "call_id": "syn_021",
+    "agent_id": "AGT-956",
+    "call_timestamp": "2026-04-01T00:00:00Z",
+    "duration_seconds": 130,
+    "scenario_type": null,
+    "rubric_version": "rubric-v1",
+    "prompt_version": "prompt-v1",
+    "model_id": "claude-sonnet-4-5-20250929",
+    "overall_score": 54.29,
+    "compliance_override_triggered": false,
+    "confidence_overall": 0.9,
+    "manager_summary": "Lauren completed a basic intake call with Mary, a self-referred caller seeking outpatient treatment for alcohol use. While she captured essential insurance information and maintained compliance standards, the call lacked empathy and rapport-building, had incomplete clinical screening (missing withdrawal symptoms, prior treatment, last use), and needed the caller to prompt for next-step details. Coaching opportunities exist around opening with acknowledgment, comprehensive screening questions, and proactive next-step communication.",
+    "status": "scored",
+    "scored_at": "2026-05-15T11:04:20.136769+00:00"
+  },
+  "dimension_scores": [
+    {
+      "dimension": "empathy_rapport",
+      "raw_score": 1,
+      "weighted_score": 1.5,
+      "weight": 1.5,
+      "confidence": 0.95,
+      "ai_rationale": "Agent jumped directly into intake questions without any acknowledgment of the caller's emotional state or the difficulty of seeking treatment. No use of the caller's name, no matching of emotional register, and no rapport-building in the critical first 60 seconds.",
+      "coaching_note": "Start by acknowledging that calling takes courage and thank Mary for reaching out before moving to questions\u2014build trust first, gather data second.",
+      "is_na": false
+    },
+    {
+      "dimension": "insurance_verification",
+      "raw_score": 3,
+      "weighted_score": 3.0,
+      "weight": 1.0,
+      "confidence": 0.88,
+      "ai_rationale": "Agent collected carrier name, member ID, and group number successfully. However, the capture was transactional and did not frame verification as a step toward help or mention alternatives if coverage was insufficient.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "clinical_screening",
+      "raw_score": 2,
+      "weighted_score": 2.0,
+      "weight": 1.0,
+      "confidence": 0.92,
+      "ai_rationale": "Agent captured substance type (alcohol) and basic frequency (most days) but missed critical details: last use, withdrawal symptoms, prior treatment history, and did not explore co-occurring mental health. Screening was incomplete for proper level-of-care determination.",
+      "coaching_note": "Always ask about prior treatment attempts, last use, and withdrawal symptoms\u2014these determine appropriate level of care and urgency.",
+      "is_na": false
+    },
+    {
+      "dimension": "urgency_triage",
+      "raw_score": 3,
+      "weighted_score": 3.0,
+      "weight": 1.0,
+      "confidence": 0.8,
+      "ai_rationale": "No explicit urgency signals were present, and the caller indicated scheduling flexibility. Agent did not explicitly assess urgency but also did not manufacture false urgency. Appropriate for a routine inquiry.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "family_caller_handling",
+      "raw_score": null,
+      "weighted_score": null,
+      "weight": 1.0,
+      "confidence": 1.0,
+      "ai_rationale": "The caller is the patient themselves, as evidenced by first-person references throughout ('my drinking,' 'I have two kids'). This dimension is not applicable.",
+      "coaching_note": null,
+      "is_na": true
+    },
+    {
+      "dimension": "objection_handling",
+      "raw_score": null,
+      "weighted_score": null,
+      "weight": 1.0,
+      "confidence": 0.9,
+      "ai_rationale": "No objections were raised by the caller. She was cooperative throughout and asked clarifying questions but did not express concerns about cost, fear, or ambivalence that required handling.",
+      "coaching_note": null,
+      "is_na": true
+    },
+    {
+      "dimension": "next_step_clarity",
+      "raw_score": 2,
+      "weighted_score": 2.0,
+      "weight": 1.0,
+      "confidence": 0.9,
+      "ai_rationale": "Agent set a next step (intake appointment callback) and provided timing when prompted by the caller. However, ownership was unclear ('someone will call') and no confirmation of information capture or specific callback window was given proactively.",
+      "coaching_note": "Proactively state the exact timeframe and who will call\u2014don't wait for the caller to ask, and confirm their contact information on file.",
+      "is_na": false
+    },
+    {
+      "dimension": "compliance_language",
+      "raw_score": 5,
+      "weighted_score": 7.5,
+      "weight": 1.5,
+      "confidence": 0.95,
+      "ai_rationale": "Agent maintained appropriate boundaries throughout. Used intake-appropriate language, avoided diagnostic statements, made no outcome guarantees, and appropriately deferred clinical assessment ('The clinical team would assess that').",
+      "coaching_note": null,
+      "is_na": false
+    }
+  ],
+  "evidence_anchors": [
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 1,
+      "timestamp_seconds": 6,
+      "speaker": "caller",
+      "text_snippet": "My doctor told me I should look into treatment for my drinking. I've been cutting back but it's hard.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 2,
+      "timestamp_seconds": 16,
+      "speaker": "agent",
+      "text_snippet": "How long have you been drinking heavily?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 0,
+      "timestamp_seconds": 0,
+      "speaker": "agent",
+      "text_snippet": "Thank you for calling Sunrise Recovery Center, I'm Lauren.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 5,
+      "timestamp_seconds": 38,
+      "speaker": "agent",
+      "text_snippet": "Do you have insurance?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 6,
+      "timestamp_seconds": 42,
+      "speaker": "caller",
+      "text_snippet": "Yes, CoreFirst Insurance. Member ID BP74093455, group GRP-852187.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 2,
+      "timestamp_seconds": 16,
+      "speaker": "agent",
+      "text_snippet": "How long have you been drinking heavily?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 4,
+      "timestamp_seconds": 28,
+      "speaker": "agent",
+      "text_snippet": "Are you drinking every day?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 5,
+      "timestamp_seconds": 32,
+      "speaker": "caller",
+      "text_snippet": "Most days. Not always a lot, but something.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 9,
+      "timestamp_seconds": 60,
+      "speaker": "caller",
+      "text_snippet": "Something that works around my schedule. I have two kids.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 17,
+      "timestamp_seconds": 114,
+      "speaker": "agent",
+      "text_snippet": "Within the next day or two.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "family_caller_handling",
+      "turn_number": 1,
+      "timestamp_seconds": 6,
+      "speaker": "caller",
+      "text_snippet": "My doctor told me I should look into treatment for my drinking.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 15,
+      "timestamp_seconds": 104,
+      "speaker": "agent",
+      "text_snippet": "Someone will call you to set up an intake appointment.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 16,
+      "timestamp_seconds": 110,
+      "speaker": "caller",
+      "text_snippet": "Do you have a rough timeframe?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 17,
+      "timestamp_seconds": 114,
+      "speaker": "agent",
+      "text_snippet": "Within the next day or two.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 13,
+      "timestamp_seconds": 92,
+      "speaker": "agent",
+      "text_snippet": "Yes, we offer MAT. The clinical team would assess that.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 11,
+      "timestamp_seconds": 78,
+      "speaker": "agent",
+      "text_snippet": "Depends on your assessment. Typically eight to twelve weeks for IOP.",
+      "relevance_rank": 2
+    }
+  ],
+  "compliance_flags": []
+}

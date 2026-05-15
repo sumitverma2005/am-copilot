@@ -1,0 +1,247 @@
+{
+  "evaluation": {
+    "call_id": "syn_022",
+    "agent_id": "AGT-673",
+    "call_timestamp": "2026-04-01T00:00:00Z",
+    "duration_seconds": 190,
+    "scenario_type": null,
+    "rubric_version": "rubric-v1",
+    "prompt_version": "prompt-v1",
+    "model_id": "claude-sonnet-4-5-20250929",
+    "overall_score": 93.75,
+    "compliance_override_triggered": false,
+    "confidence_overall": 0.91,
+    "manager_summary": "Strong intake call handled by agent Shelia with an HR representative calling on behalf of employee Devon (with consent). Agent expertly navigated the third-party consent situation, brought Devon onto the call for direct verification, conducted brief but effective screening for alcohol use and withdrawal, captured insurance details, and set clear next steps with a two-hour callback window. Professional, compliant, and efficient throughout.",
+    "status": "scored",
+    "scored_at": "2026-05-15T11:04:51.903165+00:00"
+  },
+  "dimension_scores": [
+    {
+      "dimension": "empathy_rapport",
+      "raw_score": 4,
+      "weighted_score": 6.0,
+      "weight": 1.5,
+      "confidence": 0.88,
+      "ai_rationale": "Agent acknowledged the support Ann was providing and expressed gratitude warmly. The closing line to Devon ('you have good people around you') showed genuine warmth. However, the agent did not explicitly acknowledge Devon's emotional state or the difficulty of his situation in the opening 60 seconds with him.",
+      "coaching_note": "When Devon first joins the call, acknowledge the courage it takes to ask for help before moving to consent and screening questions.",
+      "is_na": false
+    },
+    {
+      "dimension": "insurance_verification",
+      "raw_score": 5,
+      "weighted_score": 5.0,
+      "weight": 1.0,
+      "confidence": 0.95,
+      "ai_rationale": "Agent captured carrier (Meridian Care), member ID, and group number efficiently. Verification was framed as a practical step toward next actions, not as gatekeeping. Sequence was natural and non-intrusive.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "clinical_screening",
+      "raw_score": 4,
+      "weighted_score": 4.0,
+      "weight": 1.0,
+      "confidence": 0.82,
+      "ai_rationale": "Agent asked about duration of alcohol use, withdrawal symptoms, and severity indicators in a brief, appropriate way. No prior treatment history was captured, which would have been helpful for a complete screening, but given the handoff model to the admissions coordinator, this was acceptable triage-level screening.",
+      "coaching_note": "Consider asking 'Have you tried treatment before?' as a quick add to your initial screening questions.",
+      "is_na": false
+    },
+    {
+      "dimension": "urgency_triage",
+      "raw_score": 5,
+      "weighted_score": 5.0,
+      "weight": 1.0,
+      "confidence": 0.9,
+      "ai_rationale": "Agent correctly identified this as a moderate-urgency case (not crisis, not routine). Withdrawal symptoms were mild per Devon's report, and the agent appropriately set a two-hour callback window \u2014 neither manufacturing urgency nor delaying unnecessarily.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "family_caller_handling",
+      "raw_score": 5,
+      "weighted_score": 5.0,
+      "weight": 1.0,
+      "confidence": 0.95,
+      "ai_rationale": "Agent handled third-party caller situation exemplarily: confirmed consent immediately, explained why direct patient participation was needed, facilitated that transition smoothly, and obtained verbal consent from Devon on the call. Professional and compliant without being legalistic.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "objection_handling",
+      "raw_score": null,
+      "weighted_score": null,
+      "weight": 1.0,
+      "confidence": 1.0,
+      "ai_rationale": "No objections were raised during this call. Devon and Ann were both cooperative throughout.",
+      "coaching_note": null,
+      "is_na": true
+    },
+    {
+      "dimension": "next_step_clarity",
+      "raw_score": 5,
+      "weighted_score": 5.0,
+      "weight": 1.0,
+      "confidence": 0.95,
+      "ai_rationale": "Agent provided complete next-step clarity: admissions coordinator callback, two-hour timeframe, specified it would be on Devon's direct line, and confirmed contact preference. All elements of ownership, timing, and action were explicit.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "compliance_language",
+      "raw_score": 5,
+      "weighted_score": 7.5,
+      "weight": 1.5,
+      "confidence": 0.95,
+      "ai_rationale": "Agent used appropriate intake-level language throughout. No diagnostic claims, no outcome guarantees, no clinical overreach. Stayed clearly within scope of admissions role.",
+      "coaching_note": null,
+      "is_na": false
+    }
+  ],
+  "evidence_anchors": [
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 2,
+      "timestamp_seconds": 18,
+      "speaker": "agent",
+      "text_snippet": "Thank you for calling, Ann, and thank you for supporting Devon in this way.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 10,
+      "timestamp_seconds": 180,
+      "speaker": "agent",
+      "text_snippet": "And Devon \u2014 you have good people around you. That matters.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 5,
+      "timestamp_seconds": 76,
+      "speaker": "agent",
+      "text_snippet": "Hi Devon, thank you for coming on the line.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 7,
+      "timestamp_seconds": 128,
+      "speaker": "agent",
+      "text_snippet": "Okay. Devon, do you have health insurance through your employer here?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 8,
+      "timestamp_seconds": 134,
+      "speaker": "caller",
+      "text_snippet": "Yes. It's Meridian Care. My HR should have all the details.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 8,
+      "timestamp_seconds": 148,
+      "speaker": "caller",
+      "text_snippet": "Yes. Member ID BP91590194, group GRP-643998.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 5,
+      "timestamp_seconds": 98,
+      "speaker": "agent",
+      "text_snippet": "How long have you been struggling with alcohol?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 6,
+      "timestamp_seconds": 116,
+      "speaker": "agent",
+      "text_snippet": "Are you experiencing any withdrawal symptoms when you go a day without drinking?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 6,
+      "timestamp_seconds": 108,
+      "speaker": "caller",
+      "text_snippet": "A couple of years. It's gotten bad in the last six months.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 6,
+      "timestamp_seconds": 122,
+      "speaker": "caller",
+      "text_snippet": "Some anxiety and trouble sleeping. Nothing severe.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 9,
+      "timestamp_seconds": 158,
+      "speaker": "agent",
+      "text_snippet": "our benefits team will verify your coverage and an admissions coordinator will call you \u2014 on your direct line, not through HR unless you prefer otherwise \u2014 within two hours.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "family_caller_handling",
+      "turn_number": 2,
+      "timestamp_seconds": 18,
+      "speaker": "agent",
+      "text_snippet": "Before we go further, I want to make sure I understand the consent situation correctly. Has Devon given you explicit permission to speak on his behalf and to share his information with us today?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "family_caller_handling",
+      "turn_number": 3,
+      "timestamp_seconds": 44,
+      "speaker": "agent",
+      "text_snippet": "Given that Devon is available, it would be best if we could have him join the call for a few minutes \u2014 even briefly \u2014 so he can give verbal consent and I can ask him a couple of quick questions.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "family_caller_handling",
+      "turn_number": 5,
+      "timestamp_seconds": 76,
+      "speaker": "agent",
+      "text_snippet": "I just want to confirm \u2014 you're aware that your HR colleague Ann reached out to us on your behalf today, and you're okay with us having this conversation and sharing information about your situation?",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 9,
+      "timestamp_seconds": 158,
+      "speaker": "agent",
+      "text_snippet": "our benefits team will verify your coverage and an admissions coordinator will call you \u2014 on your direct line, not through HR unless you prefer otherwise \u2014 within two hours.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 9,
+      "timestamp_seconds": 174,
+      "speaker": "agent",
+      "text_snippet": "Which number would you like them to use?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 5,
+      "timestamp_seconds": 98,
+      "speaker": "agent",
+      "text_snippet": "How long have you been struggling with alcohol?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 6,
+      "timestamp_seconds": 116,
+      "speaker": "agent",
+      "text_snippet": "Are you experiencing any withdrawal symptoms when you go a day without drinking?",
+      "relevance_rank": 2
+    }
+  ],
+  "compliance_flags": []
+}

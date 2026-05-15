@@ -72,6 +72,7 @@ NORMALIZED_CALL = {
 def _make_arbitrator(bedrock_response: str) -> ScoreArbitrator:
     mock_client = MagicMock()
     mock_client.invoke.return_value = bedrock_response
+    mock_client.model_id = "test-bedrock-model"
     return ScoreArbitrator(bedrock_client=mock_client)
 
 

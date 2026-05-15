@@ -1,0 +1,271 @@
+{
+  "evaluation": {
+    "call_id": "syn_009",
+    "agent_id": "AGT-889",
+    "call_timestamp": "2026-04-01T00:00:00Z",
+    "duration_seconds": 130,
+    "scenario_type": null,
+    "rubric_version": "rubric-v1",
+    "prompt_version": "prompt-v1",
+    "model_id": "claude-sonnet-4-5-20250929",
+    "overall_score": 36.67,
+    "compliance_override_triggered": false,
+    "confidence_overall": 0.91,
+    "manager_summary": "This call involved a distressed family member seeking urgent help for her brother who expressed willingness to enter treatment after a breakdown. The agent collected basic demographic and insurance information but failed to acknowledge the caller's emotional state, missed clear urgency signals, and provided no actionable guidance or resources when the caller expressed concern about her brother's ability to initiate contact independently. The call ended with no clear next step and the caller was left without support despite multiple requests for help navigating the situation.",
+    "status": "scored",
+    "scored_at": "2026-05-15T10:58:25.686022+00:00"
+  },
+  "dimension_scores": [
+    {
+      "dimension": "empathy_rapport",
+      "raw_score": 1,
+      "weighted_score": 1.5,
+      "weight": 1.5,
+      "confidence": 0.95,
+      "ai_rationale": "The agent provided no acknowledgment of the caller's distress or the urgency she expressed. The agent opened with a transactional question ('What's wrong with him?') and proceeded immediately to data collection without slowing down, using names, or acknowledging the difficulty of the situation.",
+      "coaching_note": "Begin by acknowledging the caller's concern and courage in reaching out, especially when calling on behalf of a family member in crisis.",
+      "is_na": false
+    },
+    {
+      "dimension": "insurance_verification",
+      "raw_score": 3,
+      "weighted_score": 3.0,
+      "weight": 1.0,
+      "confidence": 0.88,
+      "ai_rationale": "The agent collected carrier (Summit Select), member ID, and group number efficiently. However, the collection was purely transactional with no framing about next steps or what would happen with the information.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "clinical_screening",
+      "raw_score": 2,
+      "weighted_score": 2.0,
+      "weight": 1.0,
+      "confidence": 0.9,
+      "ai_rationale": "The agent asked minimal screening questions (substance type, co-occurring mental health, medical conditions) but missed critical details like frequency of use, last use, prior treatment history, and withdrawal symptoms. Questions were rushed and did not surface adequate severity indicators.",
+      "coaching_note": "Expand clinical screening to include frequency, last use, withdrawal symptoms, and treatment history to properly assess level of care needed.",
+      "is_na": false
+    },
+    {
+      "dimension": "urgency_triage",
+      "raw_score": 1,
+      "weighted_score": 1.0,
+      "weight": 1.0,
+      "confidence": 0.93,
+      "ai_rationale": "The caller explicitly stated the urgency ('I'm afraid if I don't act now he'll change his mind,' 'He's willing right now \u2014 tonight') and described a breakdown. The agent failed to acknowledge or act on these clear urgency signals, offering no escalation, same-day options, or crisis support.",
+      "coaching_note": "Recognize and respond to stated urgency signals by offering same-day assessment options, crisis resources, or interventionist support when family members express time-sensitive windows of willingness.",
+      "is_na": false
+    },
+    {
+      "dimension": "family_caller_handling",
+      "raw_score": 1,
+      "weighted_score": 1.0,
+      "weight": 1.0,
+      "confidence": 0.92,
+      "ai_rationale": "The agent failed to acknowledge the family member's distress, provided no guidance on consent or HIPAA framing, and offered no actionable support for helping the patient take the next step. The repeated instruction to 'just bring him in or have him call' ignored the caller's stated barrier and emotional state.",
+      "coaching_note": "Acknowledge the family member's concern, explain consent parameters warmly, and provide concrete guidance on how they can support their loved one in taking the next step.",
+      "is_na": false
+    },
+    {
+      "dimension": "objection_handling",
+      "raw_score": 1,
+      "weighted_score": 1.0,
+      "weight": 1.0,
+      "confidence": 0.94,
+      "ai_rationale": "When the caller raised a legitimate concern about her brother's unwillingness to call independently and asked for help navigating it, the agent gave dismissive, repetitive responses without offering alternatives, resources, or acknowledging the barrier.",
+      "coaching_note": "Acknowledge the caller's concern about patient resistance before responding, and offer concrete alternatives like script guidance, family sessions, or crisis resources.",
+      "is_na": false
+    },
+    {
+      "dimension": "next_step_clarity",
+      "raw_score": 1,
+      "weighted_score": 1.0,
+      "weight": 1.0,
+      "confidence": 0.91,
+      "ai_rationale": "No clear next step was established. The agent stated the patient needs to call but provided no specific number, timing, or support for how to facilitate that. The caller was left without actionable next steps or follow-up.",
+      "coaching_note": "Provide a clear, actionable next step with timing (e.g., 'Have Marcus call this number within the next 24 hours, and here's what to expect'), and confirm who owns the next action.",
+      "is_na": false
+    },
+    {
+      "dimension": "compliance_language",
+      "raw_score": 4,
+      "weighted_score": 6.0,
+      "weight": 1.5,
+      "confidence": 0.87,
+      "ai_rationale": "The agent avoided diagnostic language and did not make treatment guarantees. Language remained within appropriate intake boundaries throughout the call.",
+      "coaching_note": null,
+      "is_na": false
+    }
+  ],
+  "evidence_anchors": [
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 2,
+      "timestamp_seconds": 14,
+      "speaker": "agent",
+      "text_snippet": "What's wrong with him?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 3,
+      "timestamp_seconds": 18,
+      "speaker": "caller",
+      "text_snippet": "He's been on meth for two years. Last night he had a breakdown. He's never opened up like this before and I'm afraid if I don't act now he'll change his mind.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 4,
+      "timestamp_seconds": 28,
+      "speaker": "agent",
+      "text_snippet": "Okay. What's his date of birth?",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 5,
+      "timestamp_seconds": 36,
+      "speaker": "agent",
+      "text_snippet": "And his insurance?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 6,
+      "timestamp_seconds": 40,
+      "speaker": "caller",
+      "text_snippet": "It's Summit Select. Member ID BP10774917, group GRP-272579.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 7,
+      "timestamp_seconds": 52,
+      "speaker": "agent",
+      "text_snippet": "Has he used anything today?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 9,
+      "timestamp_seconds": 60,
+      "speaker": "agent",
+      "text_snippet": "Does he have any mental health issues?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 11,
+      "timestamp_seconds": 70,
+      "speaker": "agent",
+      "text_snippet": "Any medical conditions?",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 3,
+      "timestamp_seconds": 18,
+      "speaker": "caller",
+      "text_snippet": "Last night he had a breakdown. He's never opened up like this before and I'm afraid if I don't act now he'll change his mind.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 13,
+      "timestamp_seconds": 82,
+      "speaker": "caller",
+      "text_snippet": "He's not going to do that on his own. Can you help me figure out how to get him there? He's willing right now \u2014 tonight.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 14,
+      "timestamp_seconds": 90,
+      "speaker": "agent",
+      "text_snippet": "We can't admit someone without them presenting themselves. He needs to call.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "family_caller_handling",
+      "turn_number": 15,
+      "timestamp_seconds": 96,
+      "speaker": "caller",
+      "text_snippet": "I understand that. But is there anything I can do? Any guidance on how to talk to him?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "family_caller_handling",
+      "turn_number": 16,
+      "timestamp_seconds": 102,
+      "speaker": "agent",
+      "text_snippet": "Just bring him in or have him call.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "family_caller_handling",
+      "turn_number": 17,
+      "timestamp_seconds": 108,
+      "speaker": "caller",
+      "text_snippet": "Is there a crisis line or an interventionist you work with?",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 13,
+      "timestamp_seconds": 82,
+      "speaker": "caller",
+      "text_snippet": "He's not going to do that on his own. Can you help me figure out how to get him there? He's willing right now \u2014 tonight.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 16,
+      "timestamp_seconds": 102,
+      "speaker": "agent",
+      "text_snippet": "Just bring him in or have him call.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 18,
+      "timestamp_seconds": 114,
+      "speaker": "agent",
+      "text_snippet": "We don't have that here. He can call when he's ready.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 12,
+      "timestamp_seconds": 78,
+      "speaker": "agent",
+      "text_snippet": "Okay. We'll need him to call us or come in.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 18,
+      "timestamp_seconds": 114,
+      "speaker": "agent",
+      "text_snippet": "We don't have that here. He can call when he's ready.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 9,
+      "timestamp_seconds": 60,
+      "speaker": "agent",
+      "text_snippet": "Does he have any mental health issues?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 7,
+      "timestamp_seconds": 52,
+      "speaker": "agent",
+      "text_snippet": "Has he used anything today?",
+      "relevance_rank": 2
+    }
+  ],
+  "compliance_flags": []
+}

@@ -35,6 +35,10 @@ class BedrockClient:
         session = boto3.Session(profile_name=profile, region_name=region)
         self._bedrock = session.client("bedrock-runtime")
 
+    @property
+    def model_id(self) -> str:
+        return self._model_id
+
     def invoke(self, system: str, user: str) -> str:
         """Call Bedrock and return the model's text response.
 

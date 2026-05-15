@@ -1,0 +1,247 @@
+{
+  "evaluation": {
+    "call_id": "syn_016",
+    "agent_id": "AGT-236",
+    "call_timestamp": "2026-04-01T00:00:00Z",
+    "duration_seconds": 204,
+    "scenario_type": null,
+    "rubric_version": "rubric-v1",
+    "prompt_version": "prompt-v1",
+    "model_id": "claude-sonnet-4-5-20250929",
+    "overall_score": 94.29,
+    "compliance_override_triggered": false,
+    "confidence_overall": 0.92,
+    "manager_summary": "Dennis, a prior residential treatment patient with fourteen months of sobriety, called reporting a four-month relapse to daily alcohol use. Kendra built strong rapport, collected comprehensive clinical and insurance information, and scheduled same-day benefits verification and admissions callback between 1-2pm. Call handled with warmth, appropriate urgency, and excellent compliance discipline.",
+    "status": "scored",
+    "scored_at": "2026-05-15T11:02:08.913808+00:00"
+  },
+  "dimension_scores": [
+    {
+      "dimension": "empathy_rapport",
+      "raw_score": 5,
+      "weighted_score": 7.5,
+      "weight": 1.5,
+      "confidence": 0.95,
+      "ai_rationale": "Agent immediately acknowledged Dennis by name, honored his fourteen months of sobriety as 'real work,' reframed his triggers as context rather than excuses, and normalized relapse without being dismissive. The tone was warm, validating, and built trust within the first exchange.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "insurance_verification",
+      "raw_score": 4,
+      "weighted_score": 4.0,
+      "weight": 1.0,
+      "confidence": 0.88,
+      "ai_rationale": "Agent collected carrier, member ID, and group number clearly and framed verification as a step toward help. Asked contextually relevant question about prior coverage experience. Did not explicitly confirm plan type (e.g., PPO, HMO).",
+      "coaching_note": "Consider confirming plan type along with member ID and group number for complete verification.",
+      "is_na": false
+    },
+    {
+      "dimension": "clinical_screening",
+      "raw_score": 5,
+      "weighted_score": 5.0,
+      "weight": 1.0,
+      "confidence": 0.92,
+      "ai_rationale": "Agent captured substance type (alcohol), frequency (daily, bottle to bottle-and-a-half of wine), withdrawal symptoms (anxiety, insomnia), prior treatment history (30-day residential, fourteen months sobriety), and relapse timeline. Questions were appropriately scoped to intake without crossing into clinical diagnosis.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "urgency_triage",
+      "raw_score": 4,
+      "weighted_score": 4.0,
+      "weight": 1.0,
+      "confidence": 0.86,
+      "ai_rationale": "Agent appropriately assessed moderate urgency (active daily use, withdrawal symptoms, caller's self-identified need for residential). Set same-day callback (1-2pm) with benefits verification within ninety minutes. No crisis signals missed, though agent could have more explicitly confirmed caller's safety in the interim.",
+      "coaching_note": "Consider brief safety check when withdrawal symptoms are mentioned, even if mild.",
+      "is_na": false
+    },
+    {
+      "dimension": "family_caller_handling",
+      "raw_score": null,
+      "weighted_score": null,
+      "weight": 1.0,
+      "confidence": 1.0,
+      "ai_rationale": "Caller is the patient himself (Dennis calling about his own relapse). This dimension does not apply.",
+      "coaching_note": null,
+      "is_na": true
+    },
+    {
+      "dimension": "objection_handling",
+      "raw_score": null,
+      "weighted_score": null,
+      "weight": 1.0,
+      "confidence": 0.95,
+      "ai_rationale": "No objections raised. Caller was cooperative, engaged, and motivated to proceed. He even self-identified his need for residential treatment.",
+      "coaching_note": null,
+      "is_na": true
+    },
+    {
+      "dimension": "next_step_clarity",
+      "raw_score": 5,
+      "weighted_score": 5.0,
+      "weight": 1.0,
+      "confidence": 0.95,
+      "ai_rationale": "Agent provided explicit timeline (benefits verification within 90 minutes, admissions coordinator callback between 1-2pm), confirmed caller availability, and stated what information would be ready. Ownership and sequence were crystal clear.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "compliance_language",
+      "raw_score": 5,
+      "weighted_score": 7.5,
+      "weight": 1.5,
+      "confidence": 0.94,
+      "ai_rationale": "Agent stayed firmly in intake role, made no diagnostic statements, deferred clinical assessment to 'our clinical team,' used appropriate language around withdrawal flagging, and normalized relapse without making treatment outcome guarantees.",
+      "coaching_note": null,
+      "is_na": false
+    }
+  ],
+  "evidence_anchors": [
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 2,
+      "timestamp_seconds": 18,
+      "speaker": "agent",
+      "text_snippet": "Dennis, thank you for being so upfront about your history. Fourteen months of sobriety after residential \u2014 that's real work.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 3,
+      "timestamp_seconds": 48,
+      "speaker": "agent",
+      "text_snippet": "They're not excuses \u2014 they're context, and our clinical team needs that context to design the right plan for you.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 9,
+      "timestamp_seconds": 184,
+      "speaker": "agent",
+      "text_snippet": "Dennis, relapse is not failure. It's information. You know how to do this.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 6,
+      "timestamp_seconds": 116,
+      "speaker": "agent",
+      "text_snippet": "Let me get your insurance information so we can check what your plan covers for a residential admission.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 7,
+      "timestamp_seconds": 128,
+      "speaker": "caller",
+      "text_snippet": "Sure. It's Meridian Care, member ID BP93660796, group GRP-444091.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 8,
+      "timestamp_seconds": 140,
+      "speaker": "agent",
+      "text_snippet": "And from your first treatment \u2014 do you remember if there were any complications with coverage, or did it go smoothly?",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 2,
+      "timestamp_seconds": 48,
+      "speaker": "agent",
+      "text_snippet": "Can I ask: how much are you drinking now versus before you got into treatment the first time?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 3,
+      "timestamp_seconds": 74,
+      "speaker": "agent",
+      "text_snippet": "And are you having any withdrawal symptoms when you try to go a day without?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 4,
+      "timestamp_seconds": 90,
+      "speaker": "agent",
+      "text_snippet": "Good to know. That history matters \u2014 your body remembers. I want to flag that for our clinical team.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 4,
+      "timestamp_seconds": 90,
+      "speaker": "agent",
+      "text_snippet": "That history matters \u2014 your body remembers. I want to flag that for our clinical team.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 8,
+      "timestamp_seconds": 156,
+      "speaker": "agent",
+      "text_snippet": "Our intake team will have all of this before they call you. Here's what happens next: benefits verification will be back to you within ninety minutes",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 8,
+      "timestamp_seconds": 156,
+      "speaker": "agent",
+      "text_snippet": "and our admissions coordinator will call immediately after with availability for an assessment. Can you take a call this afternoon?",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 8,
+      "timestamp_seconds": 156,
+      "speaker": "agent",
+      "text_snippet": "benefits verification will be back to you within ninety minutes, and our admissions coordinator will call immediately after with availability for an assessment.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 8,
+      "timestamp_seconds": 178,
+      "speaker": "agent",
+      "text_snippet": "Can you take a call this afternoon?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 9,
+      "timestamp_seconds": 184,
+      "speaker": "agent",
+      "text_snippet": "Perfect \u2014 you'll hear from us between one and two o'clock.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 4,
+      "timestamp_seconds": 90,
+      "speaker": "agent",
+      "text_snippet": "That history matters \u2014 your body remembers. I want to flag that for our clinical team.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 5,
+      "timestamp_seconds": 116,
+      "speaker": "agent",
+      "text_snippet": "That kind of self-awareness is valuable and I'll make sure it goes into your intake notes. Our clinical team will assess that formally",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 9,
+      "timestamp_seconds": 184,
+      "speaker": "agent",
+      "text_snippet": "Dennis, relapse is not failure. It's information. You know how to do this.",
+      "relevance_rank": 3
+    }
+  ],
+  "compliance_flags": []
+}

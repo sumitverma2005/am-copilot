@@ -83,6 +83,19 @@ python -m pytest tests/ -v -m "not bedrock"
 
 ---
 
+## Switching model providers
+
+The scoring engine reads `MODEL_PROVIDER` from `.env` at startup.
+
+| Value | Effect |
+|---|---|
+| `bedrock` (default) | Uses AWS Bedrock via `BedrockClient`. Requires `BEDROCK_MODEL_ID` + AWS credentials. |
+| `anthropic` | Uses Anthropic API directly via `AnthropicClient`. Requires `ANTHROPIC_API_KEY`. |
+
+**Build-window note:** `MODEL_PROVIDER=anthropic` is active while the Bedrock quota AWS Support ticket is open. Switch back to `bedrock` once quota resolves, and remove the Anthropic scaffolding before production (see CLAUDE.md Phase B item 5).
+
+---
+
 ## Critical rules
 
 - **Never store full transcripts** — evidence anchors only (max 200 chars)

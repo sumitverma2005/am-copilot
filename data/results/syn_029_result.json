@@ -1,0 +1,263 @@
+{
+  "evaluation": {
+    "call_id": "syn_029",
+    "agent_id": "AGT-146",
+    "call_timestamp": "2026-04-01T00:00:00Z",
+    "duration_seconds": 186,
+    "scenario_type": null,
+    "rubric_version": "rubric-v1",
+    "prompt_version": "prompt-v1",
+    "model_id": "claude-sonnet-4-5-20250929",
+    "overall_score": 92.5,
+    "compliance_override_triggered": false,
+    "confidence_overall": 0.89,
+    "manager_summary": "Strong intake call with a teacher seeking help for benzodiazepine use. Leonard provided exceptional empathy and objection handling by directly addressing stigma concerns with specific privacy protections (HIPAA, FMLA, discreet caller ID). He collected insurance details, captured substance use escalation, flagged medical taper needs, and set clear next steps (benefits verification in 90 minutes, clinical intake at 2pm). Minor opportunity: could have asked about withdrawal symptoms and last use timing for better urgency assessment.",
+    "status": "scored",
+    "scored_at": "2026-05-15T11:08:47.583105+00:00"
+  },
+  "dimension_scores": [
+    {
+      "dimension": "empathy_rapport",
+      "raw_score": 5,
+      "weighted_score": 7.5,
+      "weight": 1.5,
+      "confidence": 0.95,
+      "ai_rationale": "Agent immediately acknowledged Brandon's courage, validated his specific fear about reputation as a teacher, and maintained a warm, personalized tone throughout. The agent used the caller's name multiple times and directly addressed the emotional concern before moving to logistics.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "insurance_verification",
+      "raw_score": 4,
+      "weighted_score": 4.0,
+      "weight": 1.0,
+      "confidence": 0.88,
+      "ai_rationale": "Agent collected carrier name, member ID, and group number cleanly and explained how verification would work. Minor coaching opportunity: did not explicitly mention plan type (PPO/HMO), though this may have been intentional for brevity.",
+      "coaching_note": "Consider capturing plan type if the caller knows it, as it can affect authorization requirements.",
+      "is_na": false
+    },
+    {
+      "dimension": "clinical_screening",
+      "raw_score": 4,
+      "weighted_score": 4.0,
+      "weight": 1.0,
+      "confidence": 0.82,
+      "ai_rationale": "Agent captured substance type (Xanax/benzodiazepines), duration (two years), and use pattern escalation (prescribed to more than prescribed). Appropriately flagged medical risk of abrupt cessation without diagnosing. Did not explicitly ask about last use, frequency details, or prior treatment history.",
+      "coaching_note": "Consider asking about last use timing and prior treatment attempts to better inform the clinical team's urgency and level-of-care assessment.",
+      "is_na": false
+    },
+    {
+      "dimension": "urgency_triage",
+      "raw_score": 4,
+      "weighted_score": 4.0,
+      "weight": 1.0,
+      "confidence": 0.8,
+      "ai_rationale": "Agent correctly identified the medical urgency signal (benzo use requiring supervised taper) and flagged it for the clinical team. Scheduled timely follow-up (90 minutes for benefits, 2pm for clinical intake). Did not explicitly ask about withdrawal symptoms, recent use, or immediate safety concerns.",
+      "coaching_note": "Ask about current withdrawal symptoms and last use timing to better assess same-day versus scheduled intake urgency.",
+      "is_na": false
+    },
+    {
+      "dimension": "family_caller_handling",
+      "raw_score": null,
+      "weighted_score": null,
+      "weight": 1.0,
+      "confidence": 1.0,
+      "ai_rationale": "Caller is the patient himself (Brandon), not a family member.",
+      "coaching_note": null,
+      "is_na": true
+    },
+    {
+      "dimension": "objection_handling",
+      "raw_score": 5,
+      "weighted_score": 5.0,
+      "weight": 1.0,
+      "confidence": 0.93,
+      "ai_rationale": "Agent expertly addressed Brandon's fear about stigma and professional reputation by providing specific, concrete information about HIPAA, FMLA, and discretion measures. Acknowledged the concern before providing solutions and tailored scheduling discussion to teaching profession.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "next_step_clarity",
+      "raw_score": 5,
+      "weighted_score": 5.0,
+      "weight": 1.0,
+      "confidence": 0.95,
+      "ai_rationale": "Agent clearly articulated two specific next steps (benefits verification within 90 minutes, intake call at 2pm), stated who owns each step (benefits team, intake team), and confirmed caller availability. Complete clarity on timing, ownership, and sequence.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "compliance_language",
+      "raw_score": 5,
+      "weighted_score": 7.5,
+      "weight": 1.5,
+      "confidence": 0.92,
+      "ai_rationale": "Agent consistently used appropriate intake language, avoided all diagnostic terminology (said 'benzo dependence' in context of medical supervision needs, not as diagnosis), made no outcome guarantees, and correctly deferred to 'our medical team' and 'clinical team' for assessment.",
+      "coaching_note": null,
+      "is_na": false
+    }
+  ],
+  "evidence_anchors": [
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 2,
+      "timestamp_seconds": 20,
+      "speaker": "agent",
+      "text_snippet": "Thank you for calling, Brandon. That took courage. The fear about what people will think \u2014 especially in a profession like teaching where your reputation matters \u2014 is something a lot of people face.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 7,
+      "timestamp_seconds": 154,
+      "speaker": "agent",
+      "text_snippet": "Of course. Here's what happens next: benefits verification within ninety minutes, followed by a call from our intake team who will talk through level of care and scheduling with your work calendar in ",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 9,
+      "timestamp_seconds": 176,
+      "speaker": "agent",
+      "text_snippet": "Perfect. Brandon \u2014 teachers reach out for help less often than they should because of exactly the fear you named. I'm glad you called.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 5,
+      "timestamp_seconds": 118,
+      "speaker": "caller",
+      "text_snippet": "Yes, through the school district. It's BluePeak Health. Member ID BP46039549, group GRP-429686.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 6,
+      "timestamp_seconds": 132,
+      "speaker": "agent",
+      "text_snippet": "Thank you. District plans often have good mental health and substance use coverage. I'll have our benefits team verify. They'll be discreet \u2014 any calls will show up as Sunrise Recovery Center on calle",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 7,
+      "timestamp_seconds": 154,
+      "speaker": "agent",
+      "text_snippet": "Here's what happens next: benefits verification within ninety minutes, followed by a call from our intake team",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 1,
+      "timestamp_seconds": 6,
+      "speaker": "caller",
+      "text_snippet": "Hi, I'm Brandon. I've been struggling with benzodiazepines \u2014 Xanax, mostly \u2014 for about two years.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 3,
+      "timestamp_seconds": 72,
+      "speaker": "agent",
+      "text_snippet": "Benzo dependence is also something our medical team has a lot of experience with because it does require a supervised taper. Have you been taking them as prescribed, or are you taking more than prescr",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 5,
+      "timestamp_seconds": 104,
+      "speaker": "agent",
+      "text_snippet": "I understand. That's a really common progression. The supervised taper is important because stopping benzodiazepines abruptly can be medically dangerous \u2014 I want to flag that for our clinical team.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 5,
+      "timestamp_seconds": 104,
+      "speaker": "agent",
+      "text_snippet": "The supervised taper is important because stopping benzodiazepines abruptly can be medically dangerous \u2014 I want to flag that for our clinical team.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 7,
+      "timestamp_seconds": 154,
+      "speaker": "agent",
+      "text_snippet": "Here's what happens next: benefits verification within ninety minutes, followed by a call from our intake team who will talk through level of care and scheduling",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 4,
+      "timestamp_seconds": 94,
+      "speaker": "caller",
+      "text_snippet": "Both at this point. Started prescribed, now I'm taking more than I should.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 2,
+      "timestamp_seconds": 20,
+      "speaker": "agent",
+      "text_snippet": "The fear about what people will think \u2014 especially in a profession like teaching where your reputation matters \u2014 is something a lot of people face. I want to walk you through the privacy picture.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 2,
+      "timestamp_seconds": 42,
+      "speaker": "agent",
+      "text_snippet": "Your treatment is completely confidential under HIPAA \u2014 your employer, your school district, anyone you haven't specifically authorised cannot access your records. Your insurance company processes the",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 6,
+      "timestamp_seconds": 132,
+      "speaker": "agent",
+      "text_snippet": "They'll be discreet \u2014 any calls will show up as Sunrise Recovery Center on caller ID, not as a specific clinic type, if that matters to you.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 7,
+      "timestamp_seconds": 154,
+      "speaker": "agent",
+      "text_snippet": "Here's what happens next: benefits verification within ninety minutes, followed by a call from our intake team who will talk through level of care and scheduling with your work calendar in mind. They'",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 8,
+      "timestamp_seconds": 172,
+      "speaker": "caller",
+      "text_snippet": "Yes. That works.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 3,
+      "timestamp_seconds": 72,
+      "speaker": "agent",
+      "text_snippet": "Benzo dependence is also something our medical team has a lot of experience with because it does require a supervised taper.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 5,
+      "timestamp_seconds": 104,
+      "speaker": "agent",
+      "text_snippet": "I understand. That's a really common progression. The supervised taper is important because stopping benzodiazepines abruptly can be medically dangerous \u2014 I want to flag that for our clinical team.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 7,
+      "timestamp_seconds": 154,
+      "speaker": "agent",
+      "text_snippet": "followed by a call from our intake team who will talk through level of care and scheduling with your work calendar in mind.",
+      "relevance_rank": 3
+    }
+  ],
+  "compliance_flags": []
+}

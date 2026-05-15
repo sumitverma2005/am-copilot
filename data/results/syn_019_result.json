@@ -2,28 +2,28 @@
   "evaluation": {
     "call_id": "syn_019",
     "agent_id": "AGT-161",
-    "call_timestamp": "2026-04-03T10:00:00Z",
+    "call_timestamp": "2026-04-01T00:00:00Z",
     "duration_seconds": 124,
-    "scenario_type": "weak",
+    "scenario_type": null,
     "rubric_version": "rubric-v1",
     "prompt_version": "prompt-v1",
-    "model_id": "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
-    "overall_score": 37.5,
+    "model_id": "claude-sonnet-4-5-20250929",
+    "overall_score": 33.75,
     "compliance_override_triggered": true,
     "confidence_overall": 0.91,
-    "manager_summary": "Jennifer crossed a clear clinical scope boundary twice — prescribing residential treatment and ruling out outpatient are level-of-care determinations that only a clinician can make. The job concern was dismissed in one sentence. Urgency was not assessed. Next step was vague. Despite a reasonable clinical screen, the compliance violation and multiple coaching gaps make this a priority review call.",
+    "manager_summary": "Agent completed a functional intake call collecting substance use history, insurance details, and setting a follow-up expectation. However, the call lacked warmth and rapport-building, the agent made clinical determinations about level of care rather than framing recommendations appropriately, and caller objections about job concerns were dismissed rather than explored. Multiple coaching opportunities around empathy, compliance language, and objection handling.",
     "status": "scored",
-    "scored_at": "2026-04-03T10:03:08Z"
+    "scored_at": "2026-05-15T11:11:49.820510+00:00"
   },
   "dimension_scores": [
     {
       "dimension": "empathy_rapport",
-      "raw_score": 2,
-      "weighted_score": 3.0,
+      "raw_score": 1,
+      "weighted_score": 1.5,
       "weight": 1.5,
-      "confidence": 0.88,
-      "ai_rationale": "Agent opened with no acknowledgement of the caller's situation and moved immediately to duration questions. No use of caller's name (Sara), no warmth, flat clinical tone throughout. Caller's disclosure of daily heavy drinking received a data-collection response, not an empathetic one.",
-      "coaching_note": "Sara opened by saying she'd been drinking heavily — acknowledge that before asking how long. A single empathetic sentence changes the entire tone of the call.",
+      "confidence": 0.95,
+      "ai_rationale": "Agent launched directly into rapid-fire clinical questions without any acknowledgment of the caller's difficulty or emotional state. No greeting warmth, no use of caller's name after introduction, no rapport-building in the opening 60 seconds.",
+      "coaching_note": "Open with acknowledgment of the caller's courage in reaching out before moving to intake questions, and use their name to build connection.",
       "is_na": false
     },
     {
@@ -31,8 +31,8 @@
       "raw_score": 3,
       "weighted_score": 3.0,
       "weight": 1.0,
-      "confidence": 0.85,
-      "ai_rationale": "Caller provided all fields unprompted: carrier (NovaCare Health), member ID (BP62051326), group number (GRP-855615). Agent recorded them. No framing as a step toward care, but collection was complete. The FMLA comment at turn 15 was in response to the job concern, not insurance framing.",
+      "confidence": 0.88,
+      "ai_rationale": "Agent captured carrier, member ID, and group number correctly. However, the verification was presented transactionally without framing it as a step toward help, and the timing was abrupt after dismissing the caller's job concern.",
       "coaching_note": null,
       "is_na": false
     },
@@ -41,9 +41,9 @@
       "raw_score": 3,
       "weighted_score": 3.0,
       "weight": 1.0,
-      "confidence": 0.82,
-      "ai_rationale": "Agent captured substance type (alcohol), frequency (daily), duration (two years), quantity (half a bottle of vodka), and asked about withdrawal symptoms (shaking noted). This is an acceptable screen. However, no prior treatment history asked, and no co-occurring concerns explored.",
-      "coaching_note": "Good foundation — withdrawal check is important and was done. Add prior treatment history next time.",
+      "confidence": 0.9,
+      "ai_rationale": "Agent captured substance type, frequency, quantity, and withdrawal symptoms. However, no prior treatment history was collected, and no inquiry about co-occurring mental health concerns. The screening was complete enough but not thorough.",
+      "coaching_note": null,
       "is_na": false
     },
     {
@@ -51,9 +51,9 @@
       "raw_score": 2,
       "weighted_score": 2.0,
       "weight": 1.0,
-      "confidence": 0.83,
-      "ai_rationale": "Caller reported withdrawal symptoms (shaking) and daily half-bottle vodka use — this is a medically relevant urgency signal that warranted a follow-up: are the shakes getting worse? Any seizure history? The agent noted the withdrawal but moved immediately to a level-of-care prescription rather than assessing urgency.",
-      "coaching_note": "When a caller reports withdrawal symptoms, probe severity before moving on. Alcohol withdrawal can be medically dangerous — the clinical screen should flag this for intake.",
+      "confidence": 0.87,
+      "ai_rationale": "Agent identified withdrawal symptoms (shaking) which signals medical urgency in the context of daily heavy alcohol use, but did not escalate appropriately or inquire further about severity. The recommendation for residential care was directive but not framed as a safety concern.",
+      "coaching_note": "When withdrawal symptoms are mentioned with heavy daily alcohol use, probe for severity and frame residential care as a safety recommendation, not just a clinical fit.",
       "is_na": false
     },
     {
@@ -61,8 +61,8 @@
       "raw_score": null,
       "weighted_score": null,
       "weight": 1.0,
-      "confidence": null,
-      "ai_rationale": "N/A — caller is the patient (Sara), not a family member.",
+      "confidence": 1.0,
+      "ai_rationale": "Caller is the patient themselves, confirmed by first-person language throughout the call.",
       "coaching_note": null,
       "is_na": true
     },
@@ -71,9 +71,9 @@
       "raw_score": 2,
       "weighted_score": 2.0,
       "weight": 1.0,
-      "confidence": 0.86,
-      "ai_rationale": "Caller raised a significant objection: 'I have a job and I can't just disappear.' This was a real barrier deserving empathy and exploration. Agent responded with 'FMLA can cover that' — a single sentence that is legally accurate but emotionally dismissive and practically incomplete. No exploration of what the caller's job situation looks like, no alternatives offered.",
-      "coaching_note": "The job concern is one of the most common barriers and one of the most important to address well. Don't just name FMLA — ask what their situation looks like and explain how IOP specifically accommodates working adults.",
+      "confidence": 0.92,
+      "ai_rationale": "When caller expressed concern about her job and needing outpatient care, agent dismissed the concern quickly with a one-line FMLA reference instead of acknowledging the legitimate barrier. No exploration of alternatives or empathetic engagement with the obstacle.",
+      "coaching_note": "Acknowledge job concerns as legitimate before offering solutions; explore whether the caller understands FMLA or needs more support navigating that conversation.",
       "is_na": false
     },
     {
@@ -81,9 +81,9 @@
       "raw_score": 2,
       "weighted_score": 2.0,
       "weight": 1.0,
-      "confidence": 0.90,
-      "ai_rationale": "Next step was 'someone will be in touch' with timing of 'probably today.' No name, no ownership, no confirmation of what the follow-up call covers. Caller did not push back, but the close is vague and provides nothing for the caller to act on.",
-      "coaching_note": "Replace 'someone will be in touch' with a named role, a specific time, and what they'll cover. Give Sara something to do before the call.",
+      "confidence": 0.93,
+      "ai_rationale": "Agent stated someone would be in touch but timing was vague ('probably today'), no specific appointment or callback time was set, and no ownership was assigned. Caller had to prompt for timing information.",
+      "coaching_note": "Set a specific callback time window and confirm who will call (e.g., 'Our admissions coordinator will call you between 2 and 4 PM today').",
       "is_na": false
     },
     {
@@ -91,16 +91,16 @@
       "raw_score": 0,
       "weighted_score": 0.0,
       "weight": 1.5,
-      "confidence": 0.96,
-      "ai_rationale": "COMPLIANCE VIOLATION — CLINICAL_SCOPE. Turn 11: 'I think you need residential, not outpatient. Outpatient isn't going to be enough for where you are.' Turn 13: 'That's the right fit for your situation.' Level-of-care determinations (residential vs. outpatient) require a clinical assessment and cannot be made by intake staff. Correct language: 'our clinical team will assess the right level of care based on a full evaluation.'",
-      "coaching_note": "Never prescribe a level of care. You can describe what each level involves, but the decision belongs to the clinical team after assessment.",
+      "confidence": 0.9,
+      "ai_rationale": "Agent crossed into diagnostic territory by stating 'you need residential, not outpatient' and 'Outpatient isn't going to be enough for where you are' \u2014 making a clinical determination about level of care appropriateness rather than framing as a recommendation for clinical assessment.",
+      "coaching_note": "Frame level of care recommendations as 'based on what you've shared, our clinical team would likely recommend residential' rather than making definitive statements about what the caller needs.",
       "is_na": false
     }
   ],
   "evidence_anchors": [
     {
       "dimension": "empathy_rapport",
-      "turn_number": 3,
+      "turn_number": 2,
       "timestamp_seconds": 10,
       "speaker": "agent",
       "text_snippet": "How long?",
@@ -108,55 +108,95 @@
     },
     {
       "dimension": "empathy_rapport",
-      "turn_number": 2,
-      "timestamp_seconds": 4,
-      "speaker": "caller",
-      "text_snippet": "Hi, I'm Sara. I'm looking at treatment options for alcohol. I've been drinking pretty heavily.",
+      "turn_number": 3,
+      "timestamp_seconds": 18,
+      "speaker": "agent",
+      "text_snippet": "How much a day?",
       "relevance_rank": 2
     },
     {
-      "dimension": "clinical_screening",
-      "turn_number": 7,
+      "dimension": "empathy_rapport",
+      "turn_number": 4,
       "timestamp_seconds": 28,
       "speaker": "agent",
       "text_snippet": "Any withdrawal when you try to stop?",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 7,
+      "timestamp_seconds": 88,
+      "speaker": "caller",
+      "text_snippet": "Yes. NovaCare Health. ID BP62051326, group GRP-855615.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 8,
+      "timestamp_seconds": 100,
+      "speaker": "agent",
+      "text_snippet": "Okay. We'll verify. Someone will be in touch.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 6,
+      "timestamp_seconds": 82,
+      "speaker": "agent",
+      "text_snippet": "FMLA can cover that. Do you have insurance?",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 1,
+      "timestamp_seconds": 14,
+      "speaker": "caller",
+      "text_snippet": "About two years. It's every day.",
       "relevance_rank": 1
     },
     {
       "dimension": "clinical_screening",
-      "turn_number": 8,
+      "turn_number": 2,
+      "timestamp_seconds": 22,
+      "speaker": "caller",
+      "text_snippet": "Half a bottle of vodka, sometimes more.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 3,
       "timestamp_seconds": 32,
       "speaker": "caller",
       "text_snippet": "Some shaking. Nothing too bad.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 3,
+      "timestamp_seconds": 32,
+      "speaker": "caller",
+      "text_snippet": "Some shaking. Nothing too bad.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 5,
+      "timestamp_seconds": 48,
+      "speaker": "agent",
+      "text_snippet": "Based on what you're describing \u2014 daily drinking, half a bottle of vodka, withdrawal symptoms \u2014 I think you need residential, not outpatient.",
       "relevance_rank": 2
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 8,
-      "timestamp_seconds": 32,
-      "speaker": "caller",
-      "text_snippet": "Some shaking. Nothing too bad.",
-      "relevance_rank": 1
-    },
-    {
-      "dimension": "compliance_language",
-      "turn_number": 11,
-      "timestamp_seconds": 48,
-      "speaker": "agent",
-      "text_snippet": "I think you need residential, not outpatient. Outpatient isn't going to be enough for where you are.",
-      "relevance_rank": 1
-    },
-    {
-      "dimension": "compliance_language",
-      "turn_number": 13,
+      "turn_number": 6,
       "timestamp_seconds": 68,
       "speaker": "agent",
-      "text_snippet": "That's the right fit for your situation.",
-      "relevance_rank": 2
+      "text_snippet": "It is. You should really consider the 30-day program. That's the right fit for your situation.",
+      "relevance_rank": 3
     },
     {
       "dimension": "objection_handling",
-      "turn_number": 14,
+      "turn_number": 5,
       "timestamp_seconds": 76,
       "speaker": "caller",
       "text_snippet": "I'd have to figure out my job. That's a big deal.",
@@ -164,15 +204,23 @@
     },
     {
       "dimension": "objection_handling",
-      "turn_number": 15,
+      "turn_number": 6,
       "timestamp_seconds": 82,
       "speaker": "agent",
       "text_snippet": "FMLA can cover that. Do you have insurance?",
       "relevance_rank": 2
     },
     {
+      "dimension": "objection_handling",
+      "turn_number": 5,
+      "timestamp_seconds": 62,
+      "speaker": "caller",
+      "text_snippet": "Oh. I didn't think it was that bad.",
+      "relevance_rank": 3
+    },
+    {
       "dimension": "next_step_clarity",
-      "turn_number": 17,
+      "turn_number": 8,
       "timestamp_seconds": 100,
       "speaker": "agent",
       "text_snippet": "Okay. We'll verify. Someone will be in touch.",
@@ -180,27 +228,43 @@
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 19,
+      "turn_number": 9,
+      "timestamp_seconds": 106,
+      "speaker": "caller",
+      "text_snippet": "Do you know when?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 10,
       "timestamp_seconds": 110,
       "speaker": "agent",
       "text_snippet": "Probably today.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 5,
+      "timestamp_seconds": 48,
+      "speaker": "agent",
+      "text_snippet": "I think you need residential, not outpatient. Outpatient isn't going to be enough for where you are.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 6,
+      "timestamp_seconds": 68,
+      "speaker": "agent",
+      "text_snippet": "It is. You should really consider the 30-day program. That's the right fit for your situation.",
       "relevance_rank": 2
     }
   ],
   "compliance_flags": [
     {
       "flag_code": "CLINICAL_SCOPE",
-      "matched_phrase": "I think you need residential, not outpatient",
+      "matched_phrase": "I think you need residential, not outpatient. Outpatient",
       "turn_number": 11,
       "timestamp_seconds": 48,
-      "severity": "critical",
-      "reviewed": false
-    },
-    {
-      "flag_code": "CLINICAL_SCOPE",
-      "matched_phrase": "That's the right fit for your situation",
-      "turn_number": 13,
-      "timestamp_seconds": 68,
       "severity": "critical",
       "reviewed": false
     }

@@ -1,0 +1,271 @@
+{
+  "evaluation": {
+    "call_id": "syn_010",
+    "agent_id": "AGT-874",
+    "call_timestamp": "2026-04-01T00:00:00Z",
+    "duration_seconds": 190,
+    "scenario_type": null,
+    "rubric_version": "rubric-v1",
+    "prompt_version": "prompt-v1",
+    "model_id": "claude-sonnet-4-5-20250929",
+    "overall_score": 95.0,
+    "compliance_override_triggered": false,
+    "confidence_overall": 0.93,
+    "manager_summary": "Exemplary crisis intake call. Katherine presented with active alcohol withdrawal including hallucinations; Deborah immediately recognized the medical urgency, triaged to same-day detox admission, ensured safe transport, captured insurance, and stayed on the line until the caller was arranging her Uber. Textbook urgency handling with strong empathy and compliance throughout.",
+    "status": "scored",
+    "scored_at": "2026-05-15T10:58:59.088982+00:00"
+  },
+  "dimension_scores": [
+    {
+      "dimension": "empathy_rapport",
+      "raw_score": 5,
+      "weighted_score": 7.5,
+      "weight": 1.5,
+      "confidence": 0.95,
+      "ai_rationale": "Agent immediately acknowledged Katherine's distress by name, validated her fear, and matched the urgency of the situation without being alarmist. The agent maintained a supportive, present tone throughout and checked in on her emotional state ('How are you feeling right now').",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "insurance_verification",
+      "raw_score": 4,
+      "weighted_score": 4.0,
+      "weight": 1.0,
+      "confidence": 0.88,
+      "ai_rationale": "Agent captured carrier, member ID, and group number efficiently without disrupting the urgency-focused flow. Given the crisis nature of the call, the streamlined approach was appropriate, though no explicit verification step was mentioned.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "clinical_screening",
+      "raw_score": 4,
+      "weighted_score": 4.0,
+      "weight": 1.0,
+      "confidence": 0.82,
+      "ai_rationale": "Agent effectively screened for critical withdrawal indicators (seizure history, hallucinations) and captured substance use context (alcohol, attempting to stop). However, prior treatment history and frequency/duration of drinking were not explored, though this is reasonable given the crisis nature.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "urgency_triage",
+      "raw_score": 5,
+      "weighted_score": 5.0,
+      "weight": 1.0,
+      "confidence": 0.98,
+      "ai_rationale": "Agent immediately recognized severe withdrawal symptoms (shaking, vomiting, auditory hallucinations) as medically urgent, correctly escalated to same-day admission, assessed safety (alone, driving capability), and arranged immediate transport. Crisis response was textbook.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "family_caller_handling",
+      "raw_score": null,
+      "weighted_score": null,
+      "weight": 1.0,
+      "confidence": 1.0,
+      "ai_rationale": "Caller is the patient herself (Katherine, speaking about her own symptoms). This dimension does not apply.",
+      "coaching_note": null,
+      "is_na": true
+    },
+    {
+      "dimension": "objection_handling",
+      "raw_score": 5,
+      "weighted_score": 5.0,
+      "weight": 1.0,
+      "confidence": 0.9,
+      "ai_rationale": "When Katherine said 'I think' she could drive (suggesting hesitation/objection), the agent immediately addressed the safety concern with a clear alternative (rideshare) without being dismissive. The agent acknowledged and redirected appropriately.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "next_step_clarity",
+      "raw_score": 5,
+      "weighted_score": 5.0,
+      "weight": 1.0,
+      "confidence": 0.97,
+      "ai_rationale": "Agent provided crystal-clear next steps: call Uber immediately, specific address (repeated back for confirmation), what to say at arrival, and a contingency plan if symptoms worsen. Ownership and timing were explicit (today, detox team expecting her).",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "compliance_language",
+      "raw_score": 5,
+      "weighted_score": 7.5,
+      "weight": 1.5,
+      "confidence": 0.93,
+      "ai_rationale": "Agent used appropriate intake-level language ('withdrawal symptoms,' 'medically serious,' 'needs medical supervision') without diagnosing or making treatment guarantees. Stayed clearly within scope by describing symptoms and need for medical oversight without clinical assessment.",
+      "coaching_note": null,
+      "is_na": false
+    }
+  ],
+  "evidence_anchors": [
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 2,
+      "timestamp_seconds": 14,
+      "speaker": "agent",
+      "text_snippet": "Katherine, I hear you and I'm glad you called. What you're describing \u2014 the shaking, the vomiting, two days in \u2014 those are withdrawal symptoms",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 7,
+      "timestamp_seconds": 154,
+      "speaker": "agent",
+      "text_snippet": "How are you feeling right now, in this moment?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 9,
+      "timestamp_seconds": 164,
+      "speaker": "agent",
+      "text_snippet": "Good. Relief is the right feeling. You did the right thing calling. We'll take it from here.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 5,
+      "timestamp_seconds": 96,
+      "speaker": "agent",
+      "text_snippet": "Do you have health insurance?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 6,
+      "timestamp_seconds": 114,
+      "speaker": "caller",
+      "text_snippet": "Yes, Meridian Care. Member ID BP12856650, group GRP-769687.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 7,
+      "timestamp_seconds": 126,
+      "speaker": "agent",
+      "text_snippet": "I have that. I'm putting a note in right now with your name, insurance, and that you're coming in today.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 2,
+      "timestamp_seconds": 36,
+      "speaker": "agent",
+      "text_snippet": "Have you had any seizures before when you've tried to stop drinking, or any hallucinations \u2014 seeing or hearing things that aren't there?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 3,
+      "timestamp_seconds": 48,
+      "speaker": "caller",
+      "text_snippet": "No seizures. But last night I thought I heard someone in the apartment and there was nobody there.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 2,
+      "timestamp_seconds": 14,
+      "speaker": "agent",
+      "text_snippet": "What you're describing \u2014 the shaking, the vomiting, two days in \u2014 those are withdrawal symptoms",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 4,
+      "timestamp_seconds": 58,
+      "speaker": "agent",
+      "text_snippet": "Katherine, that's an early sign of alcohol withdrawal that we take very seriously. I want to be direct with you: alcohol withdrawal at this stage can escalate",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 4,
+      "timestamp_seconds": 58,
+      "speaker": "agent",
+      "text_snippet": "it needs medical supervision. I want to get you into our detox unit today. Can you get here, or do you need us to help arrange transport?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 7,
+      "timestamp_seconds": 126,
+      "speaker": "agent",
+      "text_snippet": "call us back if anything gets worse before you arrive \u2014 new symptoms, chest pain, confusion.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 5,
+      "timestamp_seconds": 76,
+      "speaker": "caller",
+      "text_snippet": "I can drive. I think.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 5,
+      "timestamp_seconds": 82,
+      "speaker": "agent",
+      "text_snippet": "I'd actually recommend not driving given what you're describing \u2014 your coordination may be affected. Do you have someone who could bring you, or can you take a rideshare?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 6,
+      "timestamp_seconds": 92,
+      "speaker": "caller",
+      "text_snippet": "I can call an Uber.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 5,
+      "timestamp_seconds": 96,
+      "speaker": "agent",
+      "text_snippet": "Here's what I need from you: call the Uber right after we hang up. Our address is 4800 North Lakeview Drive. When you arrive, tell the front desk your name",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 7,
+      "timestamp_seconds": 126,
+      "speaker": "agent",
+      "text_snippet": "I'm putting a note in right now with your name, insurance, and that you're coming in today. Our detox team will be expecting you.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 8,
+      "timestamp_seconds": 150,
+      "speaker": "caller",
+      "text_snippet": "4800 North Lakeview Drive.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 2,
+      "timestamp_seconds": 14,
+      "speaker": "agent",
+      "text_snippet": "What you're describing \u2014 the shaking, the vomiting, two days in \u2014 those are withdrawal symptoms and they can be medically serious.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 4,
+      "timestamp_seconds": 58,
+      "speaker": "agent",
+      "text_snippet": "that's an early sign of alcohol withdrawal that we take very seriously... it needs medical supervision.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 4,
+      "timestamp_seconds": 58,
+      "speaker": "agent",
+      "text_snippet": "alcohol withdrawal at this stage can escalate",
+      "relevance_rank": 3
+    }
+  ],
+  "compliance_flags": []
+}
