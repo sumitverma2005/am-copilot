@@ -1,0 +1,57 @@
+{
+  "syn_001": {
+    "graded_at": "2026-05-16T19:58:24.592530+00:00",
+    "empathy_rapport": 4,
+    "insurance_verification": 4,
+    "clinical_screening": 5,
+    "urgency_triage": 5,
+    "family_caller_handling": 5,
+    "objection_handling": null,
+    "next_step_clarity": 5,
+    "compliance_language": 5
+  },
+  "syn_002": {
+    "graded_at": "2026-05-16T20:00:39.331067+00:00",
+    "empathy_rapport": 5,
+    "insurance_verification": 4,
+    "clinical_screening": 5,
+    "urgency_triage": 5,
+    "family_caller_handling": 3,
+    "objection_handling": null,
+    "next_step_clarity": 5,
+    "compliance_language": 5
+  },
+  "syn_028": {
+    "graded_at": "2026-05-16T20:06:20.861816+00:00",
+    "empathy_rapport": 3,
+    "insurance_verification": 3,
+    "clinical_screening": 2,
+    "urgency_triage": 4,
+    "family_caller_handling": null,
+    "objection_handling": null,
+    "next_step_clarity": 1,
+    "compliance_language": 1
+  },
+  "syn_029": {
+    "graded_at": "2026-05-16T20:08:30.909802+00:00",
+    "empathy_rapport": 3,
+    "insurance_verification": 3,
+    "clinical_screening": 2,
+    "urgency_triage": 4,
+    "family_caller_handling": null,
+    "objection_handling": null,
+    "next_step_clarity": 4,
+    "compliance_language": 1
+  },
+  "syn_030": {
+    "graded_at": "2026-05-16T20:13:17.283393+00:00",
+    "empathy_rapport": 3,
+    "insurance_verification": 2,
+    "clinical_screening": 2,
+    "urgency_triage": 4,
+    "family_caller_handling": null,
+    "objection_handling": null,
+    "next_step_clarity": 1,
+    "compliance_language": 1
+  }
+}
