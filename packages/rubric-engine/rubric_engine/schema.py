@@ -54,6 +54,7 @@ class Dimension(BaseModel):
     na_condition: Optional[str] = None
     compliance_override_trigger: bool = False
     prohibited_phrases_detected_by: Optional[str] = None
+    score_anchors: Optional[dict[int, str]] = None
 
     @field_validator("weight")
     @classmethod

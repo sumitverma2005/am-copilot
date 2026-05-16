@@ -6,6 +6,11 @@ Usage:
 
     call_id defaults to syn_001.
 
+Env vars:
+    RUBRIC_VERSION   rubric file to use, default "rubric-v1"
+                     set "rubric-v2" to score with the D9 refined rubric
+    MODEL_PROVIDER   "bedrock" (default) or "anthropic" (build-window workaround)
+
 Pipeline:
     StubCTMClient → normalize → compliance check → ScoreArbitrator → JSON result
 
@@ -43,8 +48,11 @@ RESULTS_DIR = _ROOT / "data" / "results"
 
 
 def main(call_id: str = "syn_001") -> None:
+    rubric_version = os.environ.get("RUBRIC_VERSION", "rubric-v1")
+
     print(f"\n{'='*60}")
     print(f"  AM Copilot — scoring {call_id}")
+    print(f"  RUBRIC_VERSION: {rubric_version}")
     print(f"{'='*60}\n")
 
     # ── Step 1: fetch via stub client ──────────────────────────────

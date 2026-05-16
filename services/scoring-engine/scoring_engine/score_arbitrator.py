@@ -19,11 +19,8 @@ from typing import Optional
 
 _logger = logging.getLogger(__name__)
 
-from prompt_library.evaluation.prompt_v1 import (
-    PROMPT_VERSION,
-    SYSTEM_PROMPT,
-    build_evaluation_prompt,
-)
+import importlib
+
 from rubric_engine import Rubric
 
 from compliance_engine.detector import ComplianceFlag
@@ -42,6 +39,24 @@ from .models import (
 from .rubric_loader import load_rubric_for_scoring
 
 _COMPLIANCE_DIM = "compliance_language"
+
+_PROMPT_MODULE_MAP = {
+    "rubric-v1": "prompt_library.evaluation.prompt_v1",
+    "rubric-v2": "prompt_library.evaluation.prompt_v2",
+}
+
+
+def _load_prompt(rubric_version: str):
+    """Return (PROMPT_VERSION, SYSTEM_PROMPT, build_evaluation_prompt) for the given rubric version."""
+    module_path = _PROMPT_MODULE_MAP.get(rubric_version)
+    if module_path is None:
+        _logger.warning(
+            "No prompt module mapped for rubric version %r — falling back to prompt_v1.",
+            rubric_version,
+        )
+        module_path = "prompt_library.evaluation.prompt_v1"
+    mod = importlib.import_module(module_path)
+    return mod.PROMPT_VERSION, mod.SYSTEM_PROMPT, mod.build_evaluation_prompt
 
 
 def _make_llm_client() -> BedrockClient | AnthropicClient:
@@ -81,10 +96,11 @@ class ScoreArbitrator:
         """
         compliance_flags = compliance_flags or []
         rubric = load_rubric_for_scoring()
+        prompt_version, system_prompt, build_evaluation_prompt = _load_prompt(rubric.version)
         transcript = normalized_call.get("transcript", [])
 
         user_prompt = build_evaluation_prompt(transcript, rubric)
-        raw_text = self._bedrock.invoke(SYSTEM_PROMPT, user_prompt)
+        raw_text = self._bedrock.invoke(system_prompt, user_prompt)
         eval_result = _parse_response(raw_text)
 
         dim_scores, anchor_rows = _build_dimension_rows(
@@ -100,7 +116,7 @@ class ScoreArbitrator:
             duration_seconds=normalized_call.get("duration", 0),
             scenario_type=None,
             rubric_version=rubric.version,
-            prompt_version=PROMPT_VERSION,
+            prompt_version=prompt_version,
             model_id=self._bedrock.model_id,
             overall_score=overall,
             compliance_override_triggered=compliance_triggered,
