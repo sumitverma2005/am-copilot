@@ -269,6 +269,23 @@ grading session. All must be resolved before any non-dev deployment or real pati
 
 ---
 
+## Day 8 Calibration Findings (for Day 9 input)
+
+**Overall v1 agreement: 57%** (target 80%). After targeted re-grade and diagnostic review of failing dimensions:
+
+**Resolved without rubric work:**
+- Urgency triage: re-grade showed 100% agreement. Original 67% was grader-session drift, not rubric issue. No D9 changes needed.
+
+**Resolved by definition clarification (D9 — clarification only):**
+- Objection handling: 67% v1 agreement reflects a definitional gap, not a scoring gap. Human grader interpreted "objection" narrowly (pushback the agent must overcome); spec/AI uses broader definition (any caller concern, barrier, hesitation — including fear, stigma, prior-treatment failure). On syn_028 (relapse skepticism) and syn_029 (stigma) the human gave 0 / N/A; spec gold labels and AI both scored 5. With definition aligned, agreement projects to 85-90%. D9 fix: add 1-paragraph definition of "objection" with 3-4 anchor examples covering emotional/fear/stigma objections, not just transactional pushback.
+
+**Requires substantive rewrite (D9 — primary target):**
+- Compliance language: 57% agreement in v1, dropped to 40% on v2 re-grade with rubric fresh. Direction of bias: AI consistently scores higher. Re-grade sharpened the disagreement rather than closing it, indicating real divergence in how human and AI read the dimension criteria. D9 needs: rewritten score_for/score_against with concrete anchor phrases, added "score against" examples for borderline cases, possibly restructured into sub-criteria (HIPAA language, scope boundaries, outcome promises) since these are currently conflated.
+
+**5 dimensions passing comfortably:** Empathy & rapport (80%), Insurance verification (86%), Clinical screening (83%), Family caller handling (86%), Next-step clarity (80%). No D9 changes.
+
+---
+
 ## Key documents (read before working on a subsystem)
 
 | Document | Read before working on... |
