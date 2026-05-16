@@ -2,18 +2,20 @@
 """Compare human grades to AI scores and write docs/d8-analysis.md.
 
 Usage:
-    .venv/bin/python scripts/analyze_disagreements.py
+    .venv/bin/python scripts/analyze_disagreements.py        # v1 grades → docs/d8-analysis.md
+    .venv/bin/python scripts/analyze_disagreements.py --v2   # v2 grades → docs/d8-analysis-v2.md
 
 Reads:
-    data/human_grades.json
+    data/human_grades.json  (or human_grades_v2.json with --v2)
     data/results/*_result.json
     data/rubric/rubric-v1.yaml
 
 Writes:
-    docs/d8-analysis.md
+    docs/d8-analysis.md  (or docs/d8-analysis-v2.md with --v2)
 """
 from __future__ import annotations
 
+import argparse
 import json
 from datetime import datetime, timezone
 from pathlib import Path
@@ -278,12 +280,25 @@ def generate_report(
 
 
 def main() -> None:
-    if not GRADES_PATH.exists():
-        print("No grades file found. Run grade_calls.py first.")
+    parser = argparse.ArgumentParser(description="Analyze human vs AI score agreement.")
+    parser.add_argument(
+        "--v2",
+        action="store_true",
+        help="Read human_grades_v2.json and write docs/d8-analysis-v2.md",
+    )
+    args = parser.parse_args()
+
+    grades_path = _ROOT / "data" / ("human_grades_v2.json" if args.v2 else "human_grades.json")
+    output_path = _ROOT / "docs" / ("d8-analysis-v2.md" if args.v2 else "d8-analysis.md")
+
+    if not grades_path.exists():
+        fname = grades_path.name
+        hint = "regrade_dimensions.py" if args.v2 else "grade_calls.py"
+        print(f"No grades file found ({fname}). Run {hint} first.")
         return
 
     weights, labels = load_rubric()
-    grades: dict = json.loads(GRADES_PATH.read_text())
+    grades: dict = json.loads(grades_path.read_text())
     ai_results = load_ai_results()
 
     comparable = sorted(set(grades) & set(ai_results))
@@ -346,10 +361,10 @@ def main() -> None:
         overall_agreements, overall_total,
         labels,
     )
-    OUTPUT_PATH.write_text(md)
+    output_path.write_text(md)
 
     # ── Console summary ────────────────────────────────────────────────────────
-    print(f"\nReport → {OUTPUT_PATH}")
+    print(f"\nReport → {output_path}")
     print()
     print(f"  Comparable calls : {len(comparable)}")
     if overall_total:
