@@ -5,15 +5,15 @@
     "call_timestamp": "2026-04-01T00:00:00Z",
     "duration_seconds": 244,
     "scenario_type": null,
-    "rubric_version": "rubric-v1",
-    "prompt_version": "prompt-v1",
+    "rubric_version": "rubric-v2",
+    "prompt_version": "prompt-v2",
     "model_id": "claude-sonnet-4-5-20250929",
-    "overall_score": 90.0,
+    "overall_score": 77.5,
     "compliance_override_triggered": false,
-    "confidence_overall": 0.91,
-    "manager_summary": "Shelby handled a hesitant caller (Megan) with exceptional empathy and rapport, acknowledging cost and readiness objections constructively before moving to logistics. Insurance details were captured and verification scheduled for same-day callback with clear next steps. Clinical screening was light\u2014substance type and duration captured, but frequency, last use, and withdrawal risk were not probed, which may be a gap for level-of-care planning.",
+    "confidence_overall": 0.89,
+    "manager_summary": "Shelby handled this call with exceptional empathy and objection-handling skill, building strong rapport with Megan and successfully navigating concerns about cost, readiness, and fear of failure. Insurance verification was complete and alternatives were offered proactively. Clinical screening was light (missing frequency, withdrawal, and prior treatment history), and urgency triage could have assessed withdrawal risk more explicitly given three years of heavy alcohol use. Next steps were crystal clear with specific timing and ownership.",
     "status": "scored",
-    "scored_at": "2026-05-15T11:00:33.731206+00:00"
+    "scored_at": "2026-05-17T06:42:22.693032+00:00"
   },
   "dimension_scores": [
     {
@@ -22,7 +22,7 @@
       "weighted_score": 7.5,
       "weight": 1.5,
       "confidence": 0.95,
-      "ai_rationale": "Agent immediately acknowledged Megan's emotional state, validated her difficulty in calling, and used her name within the first exchange. The tone was warm, not scripted, and matched the caller's emotional register throughout. The agent slowed down to explore Megan's hesitation meaningfully before moving to logistics.",
+      "ai_rationale": "Agent immediately acknowledged Megan's emotional state, validated her courage in calling, and built trust through reflective listening. Used her name repeatedly, matched her emotional register, and acknowledged the difficulty before moving forward.",
       "coaching_note": null,
       "is_na": false
     },
@@ -32,28 +32,28 @@
       "weighted_score": 4.0,
       "weight": 1.0,
       "confidence": 0.88,
-      "ai_rationale": "Agent captured carrier name, member ID, and group number efficiently. Verification was framed as a helpful step, and alternatives (sliding scale, CareCredit) were proactively offered. Minor detail: plan type wasn't explicitly captured, though all other essential fields were present.",
-      "coaching_note": "Consider capturing plan type (PPO/HMO) explicitly alongside carrier, member ID, and group number.",
+      "ai_rationale": "Agent captured carrier, member ID, and group number successfully and framed verification as helpful rather than gatekeeping. Offered alternatives (sliding scale, financing) proactively. One small gap: didn't capture plan type explicitly.",
+      "coaching_note": "Consider asking for plan type (PPO/HMO) explicitly alongside member ID and group number for complete capture.",
       "is_na": false
     },
     {
       "dimension": "clinical_screening",
-      "raw_score": 3,
-      "weighted_score": 3.0,
+      "raw_score": 2,
+      "weighted_score": 2.0,
       "weight": 1.0,
-      "confidence": 0.82,
-      "ai_rationale": "Substance type (alcohol) and duration (three years, 'heavily') were captured. However, the agent did not probe for frequency, last use, withdrawal risk, or prior treatment history \u2014 all standard intake screening elements. The agent stayed appropriately in intake role without diagnosing.",
-      "coaching_note": "Probe gently for frequency of use, last drink, withdrawal history, and prior treatment attempts to ensure proper level-of-care placement.",
+      "confidence": 0.9,
+      "ai_rationale": "Agent captured substance type (alcohol) and duration (three years) but missed critical screening elements: frequency, last use, withdrawal symptoms, prior treatment history, and co-occurring mental health concerns. Screening was insufficient for care planning.",
+      "coaching_note": "Build in standard screening questions: frequency/quantity, last use, withdrawal history, prior treatment attempts, and mental health concerns.",
       "is_na": false
     },
     {
       "dimension": "urgency_triage",
-      "raw_score": 4,
-      "weighted_score": 4.0,
+      "raw_score": 3,
+      "weighted_score": 3.0,
       "weight": 1.0,
-      "confidence": 0.9,
-      "ai_rationale": "Agent appropriately recognized this as a this-week rather than same-day need, scheduling a callback within hours and offering IOP as an appropriate level of care. No urgency signals (withdrawal, overdose, suicidal ideation) were present, and the agent correctly de-escalated to a structured next step without manufacturing urgency.",
-      "coaching_note": null,
+      "confidence": 0.82,
+      "ai_rationale": "Agent correctly de-escalated to non-urgent care pathway (IOP evenings) based on context. However, didn't explicitly assess withdrawal risk or safety given three years of heavy drinking, which could present medical urgency.",
+      "coaching_note": "When heavy alcohol use is disclosed, always ask about withdrawal symptoms or recent attempts to stop to rule out medical urgency.",
       "is_na": false
     },
     {
@@ -62,7 +62,7 @@
       "weighted_score": null,
       "weight": 1.0,
       "confidence": 1.0,
-      "ai_rationale": "Caller is the patient themselves. This dimension does not apply.",
+      "ai_rationale": "Caller is the patient herself (Megan), not a family member. Dimension not applicable.",
       "coaching_note": null,
       "is_na": true
     },
@@ -72,7 +72,7 @@
       "weighted_score": 5.0,
       "weight": 1.0,
       "confidence": 0.95,
-      "ai_rationale": "Agent acknowledged both cost and readiness objections before responding, avoided defensive or salesy language, and offered concrete alternatives. The reframe of readiness ('willing to try even when you're scared') and the honest response to 'what if it doesn't work' were particularly effective and grounded.",
+      "ai_rationale": "Agent expertly navigated multiple objections (cost, readiness, fear of failure) by acknowledging each before responding, reframing readiness constructively, offering concrete alternatives for cost, and addressing fear of failure honestly without overpromising. Used caller's own motivation as anchor.",
       "coaching_note": null,
       "is_na": false
     },
@@ -82,18 +82,18 @@
       "weighted_score": 5.0,
       "weight": 1.0,
       "confidence": 0.95,
-      "ai_rationale": "Agent set a specific next step (admissions coordinator callback), clear timing (by 4pm, 2-4pm window), and confirmed caller availability. The purpose of the callback (benefits review and schedule walkthrough) was explicit, and ownership was clear.",
+      "ai_rationale": "Agent set specific next step (admissions coordinator callback), clear timing (between two and four PM), and confirmed caller availability. Ownership and process were explicitly clear before ending the call.",
       "coaching_note": null,
       "is_na": false
     },
     {
       "dimension": "compliance_language",
-      "raw_score": 5,
-      "weighted_score": 7.5,
+      "raw_score": 3,
+      "weighted_score": 4.5,
       "weight": 1.5,
-      "confidence": 0.95,
-      "ai_rationale": "Agent avoided all diagnostic language, made no treatment outcome guarantees, and stayed clearly within intake role. The statement 'no one can promise you it will' is appropriately cautious and compliant. All language was consistent with standard admissions practice.",
-      "coaching_note": null,
+      "confidence": 0.85,
+      "ai_rationale": "Agent stayed mostly compliant but crossed into outcome-implication territory with 'Treatment gives you a real chance,' which while honest, implies success probability. Insurance language was appropriately hedged ('most plans...once deductible is met'). No diagnostic or clinical overreach.",
+      "coaching_note": "Avoid phrases that imply treatment success probability ('gives you a real chance'). Keep reassurance grounded in process, not outcomes.",
       "is_na": false
     }
   ],
@@ -108,15 +108,15 @@
     },
     {
       "dimension": "empathy_rapport",
-      "turn_number": 3,
+      "turn_number": 4,
       "timestamp_seconds": 34,
       "speaker": "agent",
-      "text_snippet": "I hear that. Sometimes the hardest part is making that first call, and you've already done it.",
+      "text_snippet": "I hear that. Sometimes the hardest part is making that first call, and you've already done it. What kind of reasons have been coming up for you?",
       "relevance_rank": 2
     },
     {
       "dimension": "empathy_rapport",
-      "turn_number": 5,
+      "turn_number": 8,
       "timestamp_seconds": 94,
       "speaker": "agent",
       "text_snippet": "Thank you for sharing that. That's a profound moment \u2014 and you're taking it seriously, which is what matters.",
@@ -124,7 +124,7 @@
     },
     {
       "dimension": "insurance_verification",
-      "turn_number": 7,
+      "turn_number": 11,
       "timestamp_seconds": 130,
       "speaker": "caller",
       "text_snippet": "Sure. I have Meridian Care. Member ID BP22149395, group GRP-588547.",
@@ -132,55 +132,55 @@
     },
     {
       "dimension": "insurance_verification",
-      "turn_number": 8,
-      "timestamp_seconds": 144,
+      "turn_number": 10,
+      "timestamp_seconds": 122,
       "speaker": "agent",
-      "text_snippet": "Perfect. I've noted that. Now \u2014 most plans cover substance use treatment at a significant level... we also have a sliding-scale fee and financing through CareCredit.",
+      "text_snippet": "That's the right first step. Do you have your insurance card? I can note your information and have our benefits team give you an exact answer within two hours",
       "relevance_rank": 2
     },
     {
       "dimension": "insurance_verification",
-      "turn_number": 8,
+      "turn_number": 12,
       "timestamp_seconds": 144,
       "speaker": "agent",
-      "text_snippet": "we have never turned someone away because of cost alone. That's not who we are.",
+      "text_snippet": "if there is a gap, we also have a sliding-scale fee and financing through CareCredit. The point is: we have never turned someone away because of cost alone.",
       "relevance_rank": 3
     },
     {
       "dimension": "clinical_screening",
-      "turn_number": 2,
+      "turn_number": 3,
       "timestamp_seconds": 24,
       "speaker": "caller",
-      "text_snippet": "I've been drinking pretty heavily for about three years. I know I need to stop.",
+      "text_snippet": "I've been drinking pretty heavily for about three years. I know I need to stop. I just keep finding reasons not to deal with it.",
       "relevance_rank": 1
     },
     {
       "dimension": "clinical_screening",
-      "turn_number": 3,
-      "timestamp_seconds": 34,
+      "turn_number": 14,
+      "timestamp_seconds": 174,
       "speaker": "agent",
-      "text_snippet": "I hear that. Sometimes the hardest part is making that first call, and you've already done it. What kind of reasons have been coming up for you?",
+      "text_snippet": "we'll work with you to find the right level of care \u2014 whether that's outpatient so you can be home with your daughter, or something more intensive.",
       "relevance_rank": 2
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 10,
-      "timestamp_seconds": 204,
-      "speaker": "agent",
-      "text_snippet": "Let me have our admissions coordinator call you this afternoon with your benefits information and walk you through that schedule. Can you take a call between two and four?",
+      "turn_number": 3,
+      "timestamp_seconds": 24,
+      "speaker": "caller",
+      "text_snippet": "I've been drinking pretty heavily for about three years.",
       "relevance_rank": 1
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 9,
-      "timestamp_seconds": 198,
-      "speaker": "caller",
-      "text_snippet": "The outpatient piece matters. I can't be away from her.",
+      "turn_number": 16,
+      "timestamp_seconds": 204,
+      "speaker": "agent",
+      "text_snippet": "Then we build around that. Our IOP program is three evenings a week. You'd be home every night.",
       "relevance_rank": 2
     },
     {
       "dimension": "objection_handling",
-      "turn_number": 4,
+      "turn_number": 6,
       "timestamp_seconds": 58,
       "speaker": "agent",
       "text_snippet": "Those are really honest things to say and I want to take them seriously. Let's start with the readiness piece, because I think it matters most.",
@@ -188,7 +188,7 @@
     },
     {
       "dimension": "objection_handling",
-      "turn_number": 5,
+      "turn_number": 8,
       "timestamp_seconds": 94,
       "speaker": "agent",
       "text_snippet": "'ready' doesn't always mean feeling confident. Sometimes it means being willing to try even when you're scared. And you're clearly willing.",
@@ -196,15 +196,15 @@
     },
     {
       "dimension": "objection_handling",
-      "turn_number": 9,
+      "turn_number": 14,
       "timestamp_seconds": 174,
       "speaker": "agent",
-      "text_snippet": "No one can promise you it will. What I can promise is that not trying guarantees the outcome you're trying to avoid.",
+      "text_snippet": "No one can promise you it will. What I can promise is that not trying guarantees the outcome you're trying to avoid. Treatment gives you a real chance",
       "relevance_rank": 3
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 10,
+      "turn_number": 16,
       "timestamp_seconds": 204,
       "speaker": "agent",
       "text_snippet": "Let me have our admissions coordinator call you this afternoon with your benefits information and walk you through that schedule. Can you take a call between two and four?",
@@ -212,7 +212,7 @@
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 11,
+      "turn_number": 18,
       "timestamp_seconds": 224,
       "speaker": "agent",
       "text_snippet": "You'll hear from us by four o'clock.",
@@ -220,27 +220,19 @@
     },
     {
       "dimension": "compliance_language",
-      "turn_number": 9,
+      "turn_number": 14,
       "timestamp_seconds": 174,
       "speaker": "agent",
-      "text_snippet": "No one can promise you it will. What I can promise is that not trying guarantees the outcome you're trying to avoid.",
+      "text_snippet": "No one can promise you it will. What I can promise is that not trying guarantees the outcome you're trying to avoid. Treatment gives you a real chance",
       "relevance_rank": 1
     },
     {
       "dimension": "compliance_language",
-      "turn_number": 5,
-      "timestamp_seconds": 94,
+      "turn_number": 12,
+      "timestamp_seconds": 144,
       "speaker": "agent",
-      "text_snippet": "'ready' doesn't always mean feeling confident. Sometimes it means being willing to try even when you're scared.",
+      "text_snippet": "most plans cover substance use treatment at a significant level, often 80 to 100 percent once your deductible is met.",
       "relevance_rank": 2
-    },
-    {
-      "dimension": "compliance_language",
-      "turn_number": 10,
-      "timestamp_seconds": 204,
-      "speaker": "agent",
-      "text_snippet": "we'll work with you to find the right level of care \u2014 whether that's outpatient so you can be home with your daughter, or something more intensive.",
-      "relevance_rank": 3
     }
   ],
   "compliance_flags": []

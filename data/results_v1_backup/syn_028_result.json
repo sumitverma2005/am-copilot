@@ -1,0 +1,263 @@
+{
+  "evaluation": {
+    "call_id": "syn_028",
+    "agent_id": "AGT-114",
+    "call_timestamp": "2026-04-01T00:00:00Z",
+    "duration_seconds": 166,
+    "scenario_type": null,
+    "rubric_version": "rubric-v1",
+    "prompt_version": "prompt-v1",
+    "model_id": "claude-sonnet-4-5-20250929",
+    "overall_score": 90.0,
+    "compliance_override_triggered": false,
+    "confidence_overall": 0.89,
+    "manager_summary": "Exemplary call handling by Patricia with a caller in relapse. She led with empathy, reframed the caller's belief that treatment 'didn't work' using research-backed education, and identified aftercare as the treatment gap. Insurance verified, same-day callback scheduled before 3pm, and compliance language was flawless. Minor gaps: could have captured plan type during insurance verification and probed briefly for withdrawal symptoms or current use details during screening.",
+    "status": "scored",
+    "scored_at": "2026-05-15T11:08:11.965851+00:00"
+  },
+  "dimension_scores": [
+    {
+      "dimension": "empathy_rapport",
+      "raw_score": 5,
+      "weighted_score": 7.5,
+      "weight": 1.5,
+      "confidence": 0.95,
+      "ai_rationale": "Agent immediately acknowledged the caller's courage and reframed relapse within 16 seconds, using the caller's name and matching emotional register. The acknowledgment of six months sobriety and the statement 'relapse doesn't erase that' was empathetic, non-scripted, and trust-building.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "insurance_verification",
+      "raw_score": 4,
+      "weighted_score": 4.0,
+      "weight": 1.0,
+      "confidence": 0.88,
+      "ai_rationale": "Agent collected carrier name, member ID, and group number efficiently and framed verification as part of the process toward help. Missing minor detail: plan type was not explicitly captured.",
+      "coaching_note": "Consider capturing plan type (PPO/HMO/EPO) alongside member ID and group number for complete verification.",
+      "is_na": false
+    },
+    {
+      "dimension": "clinical_screening",
+      "raw_score": 3,
+      "weighted_score": 3.0,
+      "weight": 1.0,
+      "confidence": 0.82,
+      "ai_rationale": "Agent gathered prior treatment history and aftercare gaps but did not explicitly capture substance type, frequency of current use, last use date, or withdrawal symptoms. Stayed appropriately non-diagnostic throughout.",
+      "coaching_note": "Add brief questions about current substance use details (type, frequency, last use) to inform clinical triage.",
+      "is_na": false
+    },
+    {
+      "dimension": "urgency_triage",
+      "raw_score": 4,
+      "weighted_score": 4.0,
+      "weight": 1.0,
+      "confidence": 0.8,
+      "ai_rationale": "Agent appropriately scheduled same-day callback and moved caller toward immediate next step without manufacturing urgency. Did not explicitly probe for withdrawal symptoms or immediate safety concerns, which would have strengthened triage.",
+      "coaching_note": "Consider brief check for withdrawal or immediate safety concerns when caller discloses recent relapse.",
+      "is_na": false
+    },
+    {
+      "dimension": "family_caller_handling",
+      "raw_score": null,
+      "weighted_score": null,
+      "weight": 1.0,
+      "confidence": 1.0,
+      "ai_rationale": "Caller is the patient themselves; dimension not applicable.",
+      "coaching_note": null,
+      "is_na": true
+    },
+    {
+      "dimension": "objection_handling",
+      "raw_score": 5,
+      "weighted_score": 5.0,
+      "weight": 1.0,
+      "confidence": 0.92,
+      "ai_rationale": "Agent acknowledged the caller's belief that treatment 'didn't work' before reframing it educationally and non-defensively. Offered research-backed perspective and pivoted to solution (aftercare planning) that directly addressed the caller's stated gap.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "next_step_clarity",
+      "raw_score": 5,
+      "weighted_score": 5.0,
+      "weight": 1.0,
+      "confidence": 0.95,
+      "ai_rationale": "Agent set specific next step (intake coordinator callback), timing (before 3pm), and confirmed caller availability. Ownership was clear and action was system-captured verbally.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "compliance_language",
+      "raw_score": 5,
+      "weighted_score": 7.5,
+      "weight": 1.5,
+      "confidence": 0.95,
+      "ai_rationale": "Agent avoided all diagnostic language, did not guarantee outcomes, appropriately deferred clinical details to the intake coordinator, and framed relapse educationally without overstepping into clinical territory.",
+      "coaching_note": null,
+      "is_na": false
+    }
+  ],
+  "evidence_anchors": [
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 2,
+      "timestamp_seconds": 16,
+      "speaker": "agent",
+      "text_snippet": "Thank you for telling me that, Alexis. Six months of sobriety is real \u2014 that's not nothing. Relapse doesn't erase that.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 3,
+      "timestamp_seconds": 44,
+      "speaker": "agent",
+      "text_snippet": "That's a really honest answer. The thing I want to offer you \u2014 not as reassurance, but as a different frame \u2014 is that 30-day residential works for some people and doesn't",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 7,
+      "timestamp_seconds": 140,
+      "speaker": "agent",
+      "text_snippet": "Alexis \u2014 coming back after a relapse is one of the hardest things to do. The fact that you made this call tells me something important about you.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 5,
+      "timestamp_seconds": 110,
+      "speaker": "caller",
+      "text_snippet": "Yes. Summit Select. Member ID BP63244887, group GRP-514222.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 6,
+      "timestamp_seconds": 122,
+      "speaker": "agent",
+      "text_snippet": "Thank you. I'm going to verify your benefits and flag the aftercare concern for your intake coordinator.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 1,
+      "timestamp_seconds": 4,
+      "speaker": "caller",
+      "text_snippet": "I've been sober for six months and I've started drinking again. I went to rehab two years ago and it obviously didn't work.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 4,
+      "timestamp_seconds": 88,
+      "speaker": "caller",
+      "text_snippet": "Aftercare. I left and there was nothing. No follow-up, no support group, nothing.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 3,
+      "timestamp_seconds": 74,
+      "speaker": "agent",
+      "text_snippet": "What did the last program not give you that you think you needed?",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 6,
+      "timestamp_seconds": 122,
+      "speaker": "agent",
+      "text_snippet": "Can they reach you this afternoon?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 6,
+      "timestamp_seconds": 136,
+      "speaker": "caller",
+      "text_snippet": "Yes. After two.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 7,
+      "timestamp_seconds": 140,
+      "speaker": "agent",
+      "text_snippet": "You'll hear from us before three.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 2,
+      "timestamp_seconds": 16,
+      "speaker": "agent",
+      "text_snippet": "Can I ask: when you say rehab 'didn't work,' what does that mean to you? What were you hoping would happen that didn't?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 3,
+      "timestamp_seconds": 44,
+      "speaker": "agent",
+      "text_snippet": "The thing I want to offer you \u2014 not as reassurance, but as a different frame \u2014 is that 30-day residential works for some people and doesn't for others, and that's about fit",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 5,
+      "timestamp_seconds": 96,
+      "speaker": "agent",
+      "text_snippet": "That's one of the most common reasons people relapse \u2014 and it's something we specifically address. Our aftercare planning starts on day one, not day thirty.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 6,
+      "timestamp_seconds": 122,
+      "speaker": "agent",
+      "text_snippet": "I'm going to verify your benefits and flag the aftercare concern for your intake coordinator. They'll walk you through how our continuing care program works.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 7,
+      "timestamp_seconds": 140,
+      "speaker": "agent",
+      "text_snippet": "You'll hear from us before three.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 6,
+      "timestamp_seconds": 122,
+      "speaker": "agent",
+      "text_snippet": "Can they reach you this afternoon?",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 3,
+      "timestamp_seconds": 44,
+      "speaker": "agent",
+      "text_snippet": "30-day residential works for some people and doesn't for others, and that's about fit, not failure.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 3,
+      "timestamp_seconds": 68,
+      "speaker": "agent",
+      "text_snippet": "There's research showing that people who relapse after treatment and re-enter treatment have better long-term outcomes than those who never return.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 6,
+      "timestamp_seconds": 122,
+      "speaker": "agent",
+      "text_snippet": "They'll walk you through how our continuing care program works.",
+      "relevance_rank": 3
+    }
+  ],
+  "compliance_flags": []
+}

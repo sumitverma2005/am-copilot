@@ -5,15 +5,15 @@
     "call_timestamp": "2026-04-01T00:00:00Z",
     "duration_seconds": 198,
     "scenario_type": null,
-    "rubric_version": "rubric-v1",
-    "prompt_version": "prompt-v1",
+    "rubric_version": "rubric-v2",
+    "prompt_version": "prompt-v2",
     "model_id": "claude-sonnet-4-5-20250929",
-    "overall_score": 95.0,
+    "overall_score": 91.25,
     "compliance_override_triggered": false,
-    "confidence_overall": 0.96,
-    "manager_summary": "Exemplary intake call with a caller in active heroin withdrawal expressing fear of death. Tara built immediate trust, screened efficiently for urgency signals, verified insurance, addressed confidentiality concerns, and escalated to same-day detox admission with a warm handoff. Strong clinical judgment paired with exceptional empathy throughout.",
+    "confidence_overall": 0.9,
+    "manager_summary": "Strong crisis intake call with a caller in early opioid withdrawal expressing fear of death. Tara demonstrated exemplary empathy and urgency triage, correctly prioritizing same-day detox admission with warm handoff to admissions team. Insurance captured efficiently, confidentiality objection handled well. One coaching opportunity: borderline educational-clinical language about withdrawal escalation could have been explicitly deferred to clinical team.",
     "status": "scored",
-    "scored_at": "2026-05-15T11:03:15.868360+00:00"
+    "scored_at": "2026-05-17T06:45:07.460629+00:00"
   },
   "dimension_scores": [
     {
@@ -21,8 +21,8 @@
       "raw_score": 5,
       "weighted_score": 7.5,
       "weight": 1.5,
-      "confidence": 1.0,
-      "ai_rationale": "Agent immediately slowed down, acknowledged Richard's difficulty in calling, and matched his vulnerable emotional state. She normalized his fear, used his name, and built trust in the first 30 seconds before any intake questions.",
+      "confidence": 0.95,
+      "ai_rationale": "Agent immediately slowed down, acknowledged Richard's courage in calling after hesitating, validated his fear, and created space without rushing to information gathering. Used caller's name multiple times and matched the emotional register perfectly.",
       "coaching_note": null,
       "is_na": false
     },
@@ -31,19 +31,19 @@
       "raw_score": 4,
       "weighted_score": 4.0,
       "weight": 1.0,
-      "confidence": 0.9,
-      "ai_rationale": "Agent captured carrier name, member ID, and group number efficiently. Verification was framed naturally in context of getting him help. Minor note: plan type was not explicitly captured.",
-      "coaching_note": "Consider capturing plan type (PPO/HMO) alongside member ID for complete verification.",
+      "confidence": 0.88,
+      "ai_rationale": "Agent collected carrier name, member ID, and group number efficiently. Timing was appropriate given urgency. Only minor gap: plan type (PPO, HMO, etc.) was not explicitly captured, though this may have been intentional prioritization given the crisis context.",
+      "coaching_note": "Consider capturing plan type when time allows, even in urgent situations, to streamline downstream verification.",
       "is_na": false
     },
     {
       "dimension": "clinical_screening",
-      "raw_score": 5,
-      "weighted_score": 5.0,
+      "raw_score": 4,
+      "weighted_score": 4.0,
       "weight": 1.0,
-      "confidence": 0.95,
-      "ai_rationale": "Agent captured substance type (heroin), duration (3 years), frequency (daily use), last use (this morning), and withdrawal symptoms. She stayed in intake role without diagnosing, using appropriate screening language.",
-      "coaching_note": null,
+      "confidence": 0.82,
+      "ai_rationale": "Agent captured substance type (heroin), duration (three years), frequency (daily use), last use (this morning), and withdrawal symptoms. Did not explicitly ask about prior treatment or co-occurring mental health, though urgency context may have appropriately deferred this to the detox admissions team.",
+      "coaching_note": "When time allows before escalation, briefly ask about prior treatment attempts to inform the handoff.",
       "is_na": false
     },
     {
@@ -51,8 +51,8 @@
       "raw_score": 5,
       "weighted_score": 5.0,
       "weight": 1.0,
-      "confidence": 1.0,
-      "ai_rationale": "Agent correctly identified multiple urgency signals: daily heroin use, active withdrawal symptoms, fear of death. She appropriately escalated to same-day admission and priority intake without manufactured urgency.",
+      "confidence": 0.95,
+      "ai_rationale": "Agent correctly identified multiple urgency signals: daily opioid use, withdrawal onset, fear of death, and escalating symptoms. Appropriately escalated to same-day detox admissions with a priority flag. No manufactured urgency\u2014response was proportional to actual risk.",
       "coaching_note": null,
       "is_na": false
     },
@@ -62,7 +62,7 @@
       "weighted_score": null,
       "weight": 1.0,
       "confidence": 1.0,
-      "ai_rationale": "Caller is the patient himself, not a family member.",
+      "ai_rationale": "Caller is the patient himself, confirmed early in the call.",
       "coaching_note": null,
       "is_na": true
     },
@@ -71,29 +71,29 @@
       "raw_score": 5,
       "weighted_score": 5.0,
       "weight": 1.0,
-      "confidence": 0.95,
-      "ai_rationale": "When Richard expressed fear about family finding out, agent immediately acknowledged the concern, provided clear confidentiality framing, and recentered on his safety without being dismissive or pushy.",
+      "confidence": 0.92,
+      "ai_rationale": "Caller expressed fear about family finding out. Agent immediately acknowledged the concern, provided clear confidentiality framing without being legalistic, affirmed caller's autonomy, and redirected to the immediate safety priority without dismissing the concern.",
       "coaching_note": null,
       "is_na": false
     },
     {
       "dimension": "next_step_clarity",
-      "raw_score": 4,
-      "weighted_score": 4.0,
+      "raw_score": 5,
+      "weighted_score": 5.0,
       "weight": 1.0,
-      "confidence": 0.85,
-      "ai_rationale": "Agent clearly communicated the immediate next step (connection with detox admissions team) with specific timing (right now). Ownership was clear. Minor note: exact process after transfer could have been slightly more detailed.",
-      "coaching_note": "Consider briefly previewing what the detox team will cover in the next conversation.",
+      "confidence": 0.93,
+      "ai_rationale": "Agent specified the exact next step (warm transfer to detox admissions team), timing (right now, not in two hours), and ownership (detox team will explain admissions process). Caller confirmed understanding and willingness to proceed.",
+      "coaching_note": null,
       "is_na": false
     },
     {
       "dimension": "compliance_language",
-      "raw_score": 5,
-      "weighted_score": 7.5,
+      "raw_score": 4,
+      "weighted_score": 6.0,
       "weight": 1.5,
-      "confidence": 1.0,
-      "ai_rationale": "Agent stayed entirely in intake role with no diagnostic language, no outcome guarantees, and appropriate medical framing (e.g., 'opioid withdrawal can escalate and it's much safer managed medically').",
-      "coaching_note": null,
+      "confidence": 0.87,
+      "ai_rationale": "Agent maintained strong boundaries overall. One borderline moment: 'opioid withdrawal can escalate and it's much safer managed medically' enters educational-clinical territory without immediate deferral, though it was immediately contextualized with the action step (getting patient in today). No diagnostic labeling, no outcome promises, no coverage guarantees.",
+      "coaching_note": "When providing medical safety information ('withdrawal can escalate'), consider adding 'our clinical team will assess' to explicitly defer the clinical judgment.",
       "is_na": false
     }
   ],
@@ -124,42 +124,18 @@
     },
     {
       "dimension": "insurance_verification",
-      "turn_number": 8,
-      "timestamp_seconds": 136,
-      "speaker": "agent",
-      "text_snippet": "Your treatment is confidential. We don't contact family without your permission \u2014 ever. Whatever you decide about telling them is your choice, on your timeline. Right now, the only thing that matters ",
-      "relevance_rank": 1
-    },
-    {
-      "dimension": "insurance_verification",
-      "turn_number": 9,
+      "turn_number": 6,
       "timestamp_seconds": 150,
       "speaker": "caller",
       "text_snippet": "Yes. BluePeak Health. I have my card. Member ID BP64476119, group GRP-466670.",
-      "relevance_rank": 2
-    },
-    {
-      "dimension": "insurance_verification",
-      "turn_number": 10,
-      "timestamp_seconds": 164,
-      "speaker": "agent",
-      "text_snippet": "Thank you. I'm noting that now.",
-      "relevance_rank": 3
-    },
-    {
-      "dimension": "clinical_screening",
-      "turn_number": 3,
-      "timestamp_seconds": 44,
-      "speaker": "agent",
-      "text_snippet": "Can you tell me \u2014 are you safe at this moment? Are you using right now?",
       "relevance_rank": 1
     },
     {
-      "dimension": "clinical_screening",
-      "turn_number": 5,
-      "timestamp_seconds": 96,
+      "dimension": "insurance_verification",
+      "turn_number": 7,
+      "timestamp_seconds": 164,
       "speaker": "agent",
-      "text_snippet": "When you say feeling it \u2014 are you getting early withdrawal symptoms? Muscle aches, nausea, restlessness?",
+      "text_snippet": "Thank you. I'm noting that now.",
       "relevance_rank": 2
     },
     {
@@ -168,11 +144,27 @@
       "timestamp_seconds": 30,
       "speaker": "caller",
       "text_snippet": "I've been using heroin for three years. My family doesn't know. I've been hiding it. I'm scared I'm going to die.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 3,
+      "timestamp_seconds": 96,
+      "speaker": "agent",
+      "text_snippet": "When you say feeling it \u2014 are you getting early withdrawal symptoms? Muscle aches, nausea, restlessness?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 4,
+      "timestamp_seconds": 86,
+      "speaker": "caller",
+      "text_snippet": "Anxious. A little sweaty. I've been using every day so I'm starting to feel it.",
       "relevance_rank": 3
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 6,
+      "turn_number": 4,
       "timestamp_seconds": 114,
       "speaker": "agent",
       "text_snippet": "opioid withdrawal can escalate and it's much safer managed medically. I want to get you in today if we can. Is that something you want?",
@@ -180,7 +172,7 @@
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 10,
+      "turn_number": 6,
       "timestamp_seconds": 164,
       "speaker": "agent",
       "text_snippet": "I'm going to put a priority flag on your intake and connect you with our detox admissions team right now \u2014 not in two hours, right now.",
@@ -188,15 +180,15 @@
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 5,
-      "timestamp_seconds": 86,
-      "speaker": "caller",
-      "text_snippet": "Anxious. A little sweaty. I've been using every day so I'm starting to feel it.",
+      "turn_number": 3,
+      "timestamp_seconds": 44,
+      "speaker": "agent",
+      "text_snippet": "Can you tell me \u2014 are you safe at this moment? Are you using right now?",
       "relevance_rank": 3
     },
     {
       "dimension": "objection_handling",
-      "turn_number": 7,
+      "turn_number": 5,
       "timestamp_seconds": 128,
       "speaker": "caller",
       "text_snippet": "Yes. But I'm scared. What if my family finds out?",
@@ -204,67 +196,43 @@
     },
     {
       "dimension": "objection_handling",
-      "turn_number": 8,
+      "turn_number": 5,
       "timestamp_seconds": 136,
       "speaker": "agent",
       "text_snippet": "Your treatment is confidential. We don't contact family without your permission \u2014 ever. Whatever you decide about telling them is your choice, on your timeline.",
       "relevance_rank": 2
     },
     {
-      "dimension": "objection_handling",
-      "turn_number": 8,
-      "timestamp_seconds": 136,
-      "speaker": "agent",
-      "text_snippet": "Right now, the only thing that matters is getting you safe.",
-      "relevance_rank": 3
-    },
-    {
       "dimension": "next_step_clarity",
-      "turn_number": 10,
-      "timestamp_seconds": 164,
-      "speaker": "agent",
-      "text_snippet": "I'm going to put a priority flag on your intake and connect you with our detox admissions team right now \u2014 not in two hours, right now.",
-      "relevance_rank": 1
-    },
-    {
-      "dimension": "next_step_clarity",
-      "turn_number": 10,
-      "timestamp_seconds": 164,
-      "speaker": "agent",
-      "text_snippet": "They'll tell you exactly what the admissions process looks like today. Are you able to stay on the line for a moment while I get them?",
-      "relevance_rank": 2
-    },
-    {
-      "dimension": "next_step_clarity",
-      "turn_number": 12,
-      "timestamp_seconds": 188,
-      "speaker": "agent",
-      "text_snippet": "I'm right here. You made the hardest call already.",
-      "relevance_rank": 3
-    },
-    {
-      "dimension": "compliance_language",
       "turn_number": 6,
-      "timestamp_seconds": 114,
+      "timestamp_seconds": 164,
       "speaker": "agent",
-      "text_snippet": "opioid withdrawal can escalate and it's much safer managed medically.",
+      "text_snippet": "I'm going to put a priority flag on your intake and connect you with our detox admissions team right now \u2014 not in two hours, right now. They'll tell you exactly what the admissions process looks like ",
       "relevance_rank": 1
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 7,
+      "timestamp_seconds": 184,
+      "speaker": "caller",
+      "text_snippet": "Yes. Please.",
+      "relevance_rank": 2
     },
     {
       "dimension": "compliance_language",
       "turn_number": 4,
+      "timestamp_seconds": 114,
+      "speaker": "agent",
+      "text_snippet": "opioid withdrawal can escalate and it's much safer managed medically. I want to get you in today if we can.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 3,
       "timestamp_seconds": 70,
       "speaker": "agent",
       "text_snippet": "that you're scared you're going to die \u2014 that tells me you want to live. That's something we can work with.",
       "relevance_rank": 2
-    },
-    {
-      "dimension": "compliance_language",
-      "turn_number": 5,
-      "timestamp_seconds": 96,
-      "speaker": "agent",
-      "text_snippet": "When you say feeling it \u2014 are you getting early withdrawal symptoms? Muscle aches, nausea, restlessness?",
-      "relevance_rank": 3
     }
   ],
   "compliance_flags": []

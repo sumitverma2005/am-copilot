@@ -5,15 +5,15 @@
     "call_timestamp": "2026-04-01T00:00:00Z",
     "duration_seconds": 152,
     "scenario_type": null,
-    "rubric_version": "rubric-v1",
-    "prompt_version": "prompt-v1",
+    "rubric_version": "rubric-v2",
+    "prompt_version": "prompt-v2",
     "model_id": "claude-sonnet-4-5-20250929",
-    "overall_score": 81.43,
+    "overall_score": 87.14,
     "compliance_override_triggered": false,
-    "confidence_overall": 0.88,
-    "manager_summary": "Robert called expressing daily drinking for four years with withdrawal symptoms and passive suicidal ideation. Agent appropriately triaged as urgent, captured essential insurance and screening information, provided crisis resources, and escalated to priority intake callback within hours. Strong urgency handling and compliance; could improve next-step specificity and prior treatment inquiry.",
+    "confidence_overall": 0.9,
+    "manager_summary": "Strong priority intake call with a caller reporting daily alcohol use, withdrawal symptoms, and passive suicidal ideation. Agent correctly triaged as urgent, collected key clinical and insurance information, deferred appropriately to clinical team, and provided crisis line as safety net. Next-step clarity could be improved by specifying who will call back and what that conversation will cover.",
     "status": "scored",
-    "scored_at": "2026-05-15T11:06:59.861890+00:00"
+    "scored_at": "2026-05-17T06:49:07.625293+00:00"
   },
   "dimension_scores": [
     {
@@ -22,28 +22,28 @@
       "weighted_score": 6.0,
       "weight": 1.5,
       "confidence": 0.88,
-      "ai_rationale": "Agent acknowledged the caller's emotional disclosure and responded with appropriate gravity, using the caller's name and validating his honesty. However, the acknowledgment came after immediately asking for clarification rather than first slowing down to acknowledge the difficulty of making the call.",
-      "coaching_note": "Consider opening with a brief acknowledgment of how difficult it is to make this call before moving to clarifying questions, even urgent ones.",
+      "ai_rationale": "Agent acknowledged the emotional disclosure about dark thoughts quickly and warmly, took it seriously, and thanked the caller for honesty. However, the agent did not use the caller's name after the initial introduction and moved relatively quickly into structured information gathering.",
+      "coaching_note": "Use the caller's name throughout the conversation to strengthen personal connection, especially when acknowledging difficult disclosures.",
       "is_na": false
     },
     {
       "dimension": "insurance_verification",
-      "raw_score": 4,
-      "weighted_score": 4.0,
+      "raw_score": 5,
+      "weighted_score": 5.0,
       "weight": 1.0,
-      "confidence": 0.82,
-      "ai_rationale": "Agent captured carrier name, member ID, and group number efficiently. The process was appropriately brief given the urgency context, though plan type was not explicitly confirmed.",
-      "coaching_note": "When time allows, confirm plan type (HMO/PPO) to avoid verification delays downstream.",
+      "confidence": 0.92,
+      "ai_rationale": "Agent collected carrier name, member ID, and group number efficiently. The collection was appropriately timed after clinical context was established and framed as part of the intake process without creating a gatekeeping feel.",
+      "coaching_note": null,
       "is_na": false
     },
     {
       "dimension": "clinical_screening",
-      "raw_score": 3,
-      "weighted_score": 3.0,
+      "raw_score": 4,
+      "weighted_score": 4.0,
       "weight": 1.0,
-      "confidence": 0.8,
-      "ai_rationale": "Agent captured substance type, duration, frequency, and withdrawal symptoms. However, prior treatment history was not asked, and co-occurring mental health concerns beyond the suicidal ideation were not explored.",
-      "coaching_note": "Even in urgent calls, briefly ask about prior treatment attempts\u2014it's critical clinical context.",
+      "confidence": 0.86,
+      "ai_rationale": "Agent captured substance type (alcohol), duration (four years), quantity (six-pack or more nightly), and withdrawal symptoms (shaking, trouble sleeping). Mental health concern (suicidal ideation) was noted. Slightly rushed\u2014could have asked about prior treatment history.",
+      "coaching_note": "Add a question about prior treatment attempts to complete the clinical picture for the intake team.",
       "is_na": false
     },
     {
@@ -52,7 +52,7 @@
       "weighted_score": 5.0,
       "weight": 1.0,
       "confidence": 0.95,
-      "ai_rationale": "Agent correctly identified suicidal ideation as a high-urgency signal, escalated to priority intake with a specific timeline, and provided appropriate crisis resource (988) for interim safety. No manufactured urgency; response was proportionate and clinically sound.",
+      "ai_rationale": "Agent correctly identified multiple urgency signals: suicidal ideation (even passive), withdrawal symptoms, and daily substance use. Appropriately escalated to priority intake with callback within hours and provided crisis line as safety net.",
       "coaching_note": null,
       "is_na": false
     },
@@ -62,7 +62,7 @@
       "weighted_score": null,
       "weight": 1.0,
       "confidence": 1.0,
-      "ai_rationale": "Caller is the patient themselves (Robert called about his own drinking and suicidal ideation).",
+      "ai_rationale": "Caller is the patient themselves.",
       "coaching_note": null,
       "is_na": true
     },
@@ -71,8 +71,8 @@
       "raw_score": null,
       "weighted_score": null,
       "weight": 1.0,
-      "confidence": 0.95,
-      "ai_rationale": "No objections, concerns about cost, ambivalence, or resistance were raised during this call. Caller was cooperative throughout.",
+      "confidence": 0.9,
+      "ai_rationale": "Caller expressed no resistance, hesitation, or concern about treatment, cost, scheduling, or any other barrier. Caller was cooperative throughout the call.",
       "coaching_note": null,
       "is_na": true
     },
@@ -81,9 +81,9 @@
       "raw_score": 3,
       "weighted_score": 3.0,
       "weight": 1.0,
-      "confidence": 0.85,
-      "ai_rationale": "Agent stated a priority intake callback would occur within a few hours, establishing timing and general next step. However, ownership was vague ('someone will call'), no specific time window was given, and the close was abrupt without confirming caller understanding or contact method.",
-      "coaching_note": "Specify who will call (e.g., 'our clinical intake coordinator'), confirm the best number to reach them, and ask if they have questions before ending.",
+      "confidence": 0.87,
+      "ai_rationale": "Agent stated that 'someone will call you within a few hours' and set it as priority intake, but did not specify who would call, what the call would cover, or what the caller should have ready. The timing was clear but ownership and purpose were vague.",
+      "coaching_note": "Specify who will call (e.g., 'one of our clinical intake coordinators') and what to expect in that conversation to help the caller prepare.",
       "is_na": false
     },
     {
@@ -91,8 +91,8 @@
       "raw_score": 5,
       "weighted_score": 7.5,
       "weight": 1.5,
-      "confidence": 0.92,
-      "ai_rationale": "Agent stayed clearly within intake role, made no diagnostic statements, guaranteed no outcomes, and appropriately flagged suicidal ideation for clinical team review rather than attempting to assess or diagnose. Referral to 988 was appropriate and within scope.",
+      "confidence": 0.93,
+      "ai_rationale": "Agent maintained perfect boundary discipline. Clinical concern (suicidal ideation) was acknowledged and appropriately deferred to the clinical team without characterization. No diagnostic labels, no outcome promises, no scope overreach. All reassurance was procedural and warm without being predictive.",
       "coaching_note": null,
       "is_na": false
     }
@@ -172,7 +172,7 @@
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 10,
+      "turn_number": 11,
       "timestamp_seconds": 128,
       "speaker": "agent",
       "text_snippet": "In the meantime \u2014 if those dark thoughts get stronger or more specific, please call 988, which is the mental health crisis line.",
@@ -196,7 +196,7 @@
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 11,
+      "turn_number": 12,
       "timestamp_seconds": 142,
       "speaker": "agent",
       "text_snippet": "Good. We'll be in touch soon.",
@@ -220,10 +220,10 @@
     },
     {
       "dimension": "compliance_language",
-      "turn_number": 10,
+      "turn_number": 11,
       "timestamp_seconds": 128,
       "speaker": "agent",
-      "text_snippet": "if those dark thoughts get stronger or more specific, please call 988, which is the mental health crisis line.",
+      "text_snippet": "In the meantime \u2014 if those dark thoughts get stronger or more specific, please call 988, which is the mental health crisis line.",
       "relevance_rank": 3
     }
   ],

@@ -5,15 +5,15 @@
     "call_timestamp": "2026-04-01T00:00:00Z",
     "duration_seconds": 144,
     "scenario_type": null,
-    "rubric_version": "rubric-v1",
-    "prompt_version": "prompt-v1",
+    "rubric_version": "rubric-v2",
+    "prompt_version": "prompt-v2",
     "model_id": "claude-sonnet-4-5-20250929",
-    "overall_score": 46.25,
+    "overall_score": 38.75,
     "compliance_override_triggered": false,
-    "confidence_overall": 0.9,
-    "manager_summary": "David called seeking alcohol treatment on his doctor's recommendation, reporting daily drinking for years. Agent completed basic insurance capture and minimal screening but missed critical rapport-building in the opening, did not assess withdrawal risk or urgency despite significant use history, and provided vague next steps. Caller raised concerns about family and cost that were addressed minimally without acknowledgment of the emotional weight.",
+    "confidence_overall": 0.92,
+    "manager_summary": "Shannon handled a straightforward alcohol treatment inquiry from David but missed multiple fundamentals. She jumped directly into questions without building rapport, collected incomplete insurance information, conducted minimal clinical screening (no withdrawal or severity assessment), made an unverified coverage statement, and closed with vague next steps. The call was transactional and lacked the warmth and thoroughness expected for intake.",
     "status": "scored",
-    "scored_at": "2026-05-15T11:11:16.227322+00:00"
+    "scored_at": "2026-05-17T06:53:15.841306+00:00"
   },
   "dimension_scores": [
     {
@@ -22,18 +22,18 @@
       "weighted_score": 1.5,
       "weight": 1.5,
       "confidence": 0.95,
-      "ai_rationale": "Agent jumped directly into clinical questions ('How much are you drinking?') within 10 seconds without any acknowledgement of the difficulty of the call or building rapport. No use of caller's name, no emotional acknowledgement, and a transactional tone throughout.",
-      "coaching_note": "Begin by acknowledging the courage it takes to make this call and thanking David for reaching out before moving to intake questions.",
+      "ai_rationale": "Agent launched directly into intake questions ('How much are you drinking?') within 10 seconds, with no acknowledgment of the caller's situation or emotional state. The tone was transactional throughout, with no use of the caller's name after introduction and no acknowledgment of the difficulty of seeking help.",
+      "coaching_note": "Start by acknowledging the difficulty of making this call and thanking them for reaching out before moving to intake questions. Use their name and slow down to build trust.",
       "is_na": false
     },
     {
       "dimension": "insurance_verification",
-      "raw_score": 3,
-      "weighted_score": 3.0,
+      "raw_score": 2,
+      "weighted_score": 2.0,
       "weight": 1.0,
       "confidence": 0.9,
-      "ai_rationale": "Agent captured carrier (Summit Select) and member ID but did not obtain group number. When caller didn't have it, agent said they'd 'try to look it up' but provided no alternative framing. Basic verification completed but missing key field and no discussion of verification as helping rather than gatekeeping.",
-      "coaching_note": "Always capture or schedule follow-up for the group number, and frame verification as 'helping us get you the maximum benefits' rather than a checkbox.",
+      "ai_rationale": "Agent collected carrier (Summit Select) and member ID but did not obtain the group number when caller said they didn't have it. More importantly, agent did not frame verification as helpful or pivot constructively\u2014just said 'we'll try to look it up' and moved on.",
+      "coaching_note": "Capture all required fields (carrier, plan type, member ID, group number). If caller doesn't have group number, explain why it's needed and offer to wait while they find it or get it later with clear follow-up.",
       "is_na": false
     },
     {
@@ -42,18 +42,18 @@
       "weighted_score": 2.0,
       "weight": 1.0,
       "confidence": 0.9,
-      "ai_rationale": "Agent asked about drinking amount and prior treatment but missed critical severity indicators like last use, withdrawal symptoms, or frequency beyond 'every night.' No exploration of co-occurring mental health concerns. Screening was superficial and incomplete.",
-      "coaching_note": "After establishing drinking pattern, ask about last drink, withdrawal history, and any mental health concerns to properly assess needs and urgency.",
+      "ai_rationale": "Agent asked only the most basic questions (how much, prior treatment) but failed to capture critical severity indicators like last drink, withdrawal symptoms, or frequency beyond 'every night.' No co-occurring mental health screening. The screening was superficial.",
+      "coaching_note": "Ask about last use, withdrawal symptoms, medical concerns, and whether mental health issues are present. These severity indicators are essential for proper triage and care planning.",
       "is_na": false
     },
     {
       "dimension": "urgency_triage",
-      "raw_score": 2,
-      "weighted_score": 2.0,
+      "raw_score": 3,
+      "weighted_score": 3.0,
       "weight": 1.0,
       "confidence": 0.85,
-      "ai_rationale": "Agent asked 'are you looking to come in soon or still deciding?' but did not probe for urgency signals. With daily drinking for years and failed attempts to cut back, agent should have asked about withdrawal risk and last use. No assessment of current safety or urgency level conducted.",
-      "coaching_note": "When someone reports daily drinking for years, always ask about last drink and withdrawal symptoms to assess medical urgency and appropriate level of care.",
+      "ai_rationale": "Agent asked about timing ('are you looking to come in soon or still deciding?') which is a basic urgency probe. However, no deeper exploration of urgency signals was conducted\u2014no questions about withdrawal risk, medical safety, or current state despite multi-year daily drinking pattern.",
+      "coaching_note": null,
       "is_na": false
     },
     {
@@ -62,7 +62,7 @@
       "weighted_score": null,
       "weight": 1.0,
       "confidence": 1.0,
-      "ai_rationale": "Not applicable. Caller is the patient himself (David, calling about his own alcohol use).",
+      "ai_rationale": "Caller is the patient themselves (David calling for his own treatment).",
       "coaching_note": null,
       "is_na": true
     },
@@ -71,9 +71,9 @@
       "raw_score": 2,
       "weighted_score": 2.0,
       "weight": 1.0,
-      "confidence": 0.88,
-      "ai_rationale": "Caller raised two concerns: nervousness about treatment with kids at home, and cost. Agent provided a brief solution for scheduling ('outpatient programs allow people to be home in the evenings') but did not acknowledge the emotional weight of the nervousness. Cost concern was dismissed with 'Your insurance should cover most of it' without exploring what 'most' means or offering concrete alternatives.",
-      "coaching_note": "Acknowledge the concern first ('I hear you\u2014balancing treatment and family is a real worry for parents') before offering solutions, and be specific about cost coverage and alternatives.",
+      "confidence": 0.9,
+      "ai_rationale": "Caller raised two objections: nervousness about treatment with kids at home, and cost concerns. Agent addressed the kids concern factually but without acknowledging the emotional component. For cost, agent gave unverified reassurance ('Your insurance should cover most of it') without acknowledging the concern first\u2014a compliance and engagement issue.",
+      "coaching_note": "Acknowledge the concern first ('I understand cost is important'), then explain the verification process. For emotional objections like nervousness, validate the feeling before offering solutions.",
       "is_na": false
     },
     {
@@ -81,19 +81,19 @@
       "raw_score": 2,
       "weighted_score": 2.0,
       "weight": 1.0,
-      "confidence": 0.92,
-      "ai_rationale": "Agent provided vague next steps ('someone will call you to set something up') with imprecise timing ('within the next day or two'). No specific appointment set, no name of who would call, and caller had to prompt for timing and what to have ready. Ownership and specificity were both lacking.",
-      "coaching_note": "Set a specific callback time window, identify who will call, and proactively tell the caller what to have ready rather than waiting for them to ask.",
+      "confidence": 0.95,
+      "ai_rationale": "Agent set a vague next step ('someone will call you') with unclear timing ('within the next day or two'). No specific appointment was scheduled, no ownership was assigned (who will call?), and caller had to ask multiple follow-up questions to get basic clarity.",
+      "coaching_note": "Set a specific callback time window, identify who will call, and explain what that call will accomplish. Confirm the best number to reach them.",
       "is_na": false
     },
     {
       "dimension": "compliance_language",
-      "raw_score": 4,
-      "weighted_score": 6.0,
+      "raw_score": 2,
+      "weighted_score": 3.0,
       "weight": 1.5,
-      "confidence": 0.88,
-      "ai_rationale": "Agent avoided diagnostic language and did not make treatment outcome guarantees. Language remained within appropriate intake boundaries. One minor note: 'Your insurance should cover most of it' could be interpreted as a coverage guarantee without verification complete.",
-      "coaching_note": "Frame insurance coverage as 'we'll verify what your plan covers' rather than stating what it 'should' cover before verification is complete.",
+      "confidence": 0.95,
+      "ai_rationale": "Agent made an unhedged coverage statement ('Your insurance should cover most of it') before verification was complete\u2014a scope overreach that creates expectations without verification. This is a clear compliance violation as it provides coverage assurance an intake coordinator cannot guarantee.",
+      "coaching_note": "Never make coverage statements before verification. Say 'We'll verify your benefits and let you know exactly what's covered\u2014our benefits team will call you with details.'",
       "is_na": false
     }
   ],
@@ -108,19 +108,35 @@
     },
     {
       "dimension": "empathy_rapport",
-      "turn_number": 1,
-      "timestamp_seconds": 4,
-      "speaker": "caller",
-      "text_snippet": "Hi, I'm David. I'm looking into treatment for alcohol. My doctor suggested I call.",
-      "relevance_rank": 2
-    },
-    {
-      "dimension": "empathy_rapport",
       "turn_number": 4,
       "timestamp_seconds": 20,
       "speaker": "agent",
       "text_snippet": "Every night. Okay. Do you have insurance?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 13,
+      "timestamp_seconds": 88,
+      "speaker": "agent",
+      "text_snippet": "We can work around schedules. Our outpatient programs allow people to be home in the evenings.",
       "relevance_rank": 3
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 8,
+      "timestamp_seconds": 42,
+      "speaker": "caller",
+      "text_snippet": "I don't have that with me right now.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 9,
+      "timestamp_seconds": 46,
+      "speaker": "agent",
+      "text_snippet": "That's okay. We'll try to look it up. Anything else about your situation I should know?",
+      "relevance_rank": 2
     },
     {
       "dimension": "insurance_verification",
@@ -128,22 +144,6 @@
       "timestamp_seconds": 24,
       "speaker": "caller",
       "text_snippet": "Yes, Summit Select.",
-      "relevance_rank": 1
-    },
-    {
-      "dimension": "insurance_verification",
-      "turn_number": 7,
-      "timestamp_seconds": 32,
-      "speaker": "caller",
-      "text_snippet": "Yes, it's BP73195529.",
-      "relevance_rank": 2
-    },
-    {
-      "dimension": "insurance_verification",
-      "turn_number": 9,
-      "timestamp_seconds": 42,
-      "speaker": "caller",
-      "text_snippet": "I don't have that with me right now.",
       "relevance_rank": 3
     },
     {
@@ -156,7 +156,7 @@
     },
     {
       "dimension": "clinical_screening",
-      "turn_number": 11,
+      "turn_number": 10,
       "timestamp_seconds": 64,
       "speaker": "agent",
       "text_snippet": "Got it. Any prior treatment programs?",
@@ -172,7 +172,7 @@
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 13,
+      "turn_number": 12,
       "timestamp_seconds": 72,
       "speaker": "agent",
       "text_snippet": "Okay. And are you looking to come in soon or still deciding?",
@@ -188,23 +188,15 @@
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 6,
-      "timestamp_seconds": 54,
-      "speaker": "caller",
-      "text_snippet": "I mean, it's been going on for a few years. I tried to cut back on my own but it didn't really work.",
+      "turn_number": 18,
+      "timestamp_seconds": 122,
+      "speaker": "agent",
+      "text_snippet": "Within the next day or two.",
       "relevance_rank": 3
     },
     {
-      "dimension": "family_caller_handling",
-      "turn_number": 1,
-      "timestamp_seconds": 4,
-      "speaker": "caller",
-      "text_snippet": "Hi, I'm David. I'm looking into treatment for alcohol. My doctor suggested I call.",
-      "relevance_rank": 1
-    },
-    {
       "dimension": "objection_handling",
-      "turn_number": 14,
+      "turn_number": 13,
       "timestamp_seconds": 78,
       "speaker": "caller",
       "text_snippet": "I think I want to do it but I'm nervous about it. I have kids, so I'm wondering how that works.",
@@ -212,7 +204,7 @@
     },
     {
       "dimension": "objection_handling",
-      "turn_number": 16,
+      "turn_number": 15,
       "timestamp_seconds": 96,
       "speaker": "caller",
       "text_snippet": "That's good to know. I'm worried about the cost too.",
@@ -220,7 +212,7 @@
     },
     {
       "dimension": "objection_handling",
-      "turn_number": 17,
+      "turn_number": 16,
       "timestamp_seconds": 102,
       "speaker": "agent",
       "text_snippet": "Your insurance should cover most of it. We'll verify.",
@@ -228,7 +220,7 @@
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 19,
+      "turn_number": 17,
       "timestamp_seconds": 114,
       "speaker": "agent",
       "text_snippet": "We'll have someone call you to set something up.",
@@ -236,23 +228,23 @@
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 21,
-      "timestamp_seconds": 122,
-      "speaker": "agent",
-      "text_snippet": "Within the next day or two.",
+      "turn_number": 17,
+      "timestamp_seconds": 118,
+      "speaker": "caller",
+      "text_snippet": "When?",
       "relevance_rank": 2
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 20,
-      "timestamp_seconds": 118,
-      "speaker": "caller",
-      "text_snippet": "When?",
+      "turn_number": 18,
+      "timestamp_seconds": 122,
+      "speaker": "agent",
+      "text_snippet": "Within the next day or two.",
       "relevance_rank": 3
     },
     {
       "dimension": "compliance_language",
-      "turn_number": 17,
+      "turn_number": 16,
       "timestamp_seconds": 102,
       "speaker": "agent",
       "text_snippet": "Your insurance should cover most of it. We'll verify.",
@@ -261,17 +253,17 @@
     {
       "dimension": "compliance_language",
       "turn_number": 15,
-      "timestamp_seconds": 88,
-      "speaker": "agent",
-      "text_snippet": "We can work around schedules. Our outpatient programs allow people to be home in the evenings.",
+      "timestamp_seconds": 96,
+      "speaker": "caller",
+      "text_snippet": "That's good to know. I'm worried about the cost too.",
       "relevance_rank": 2
     },
     {
       "dimension": "compliance_language",
-      "turn_number": 2,
-      "timestamp_seconds": 10,
+      "turn_number": 9,
+      "timestamp_seconds": 46,
       "speaker": "agent",
-      "text_snippet": "Okay, sure. How much are you drinking?",
+      "text_snippet": "That's okay. We'll try to look it up. Anything else about your situation I should know?",
       "relevance_rank": 3
     }
   ],

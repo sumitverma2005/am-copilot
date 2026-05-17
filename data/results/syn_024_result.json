@@ -5,15 +5,15 @@
     "call_timestamp": "2026-04-01T00:00:00Z",
     "duration_seconds": 196,
     "scenario_type": null,
-    "rubric_version": "rubric-v1",
-    "prompt_version": "prompt-v1",
+    "rubric_version": "rubric-v2",
+    "prompt_version": "prompt-v2",
     "model_id": "claude-sonnet-4-5-20250929",
-    "overall_score": 95.0,
+    "overall_score": 87.78,
     "compliance_override_triggered": false,
-    "confidence_overall": 0.93,
-    "manager_summary": "Isaac handled a friend-facilitated intake call with exceptional skill, immediately addressing consent boundaries while keeping both callers comfortable. He gathered complete clinical and insurance information, validated Simone's fear and readiness, and set a clear 90-minute callback with preferences documented. This is a training-quality call with only minor refinement opportunities around urgency assessment depth.",
+    "confidence_overall": 0.89,
+    "manager_summary": "Isaac handled a friend-assisted intake call with excellent boundary management and empathy. He confirmed consent, collected substance use history (18-month cocaine use, alcohol for comedown, prior quit attempts), insurance details (Summit Select, member ID and group captured), and set a 90-minute callback with clear next steps. One minor coaching opportunity: avoid educational-clinical language about brain adaptation; defer mechanism explanations to clinical staff.",
     "status": "scored",
-    "scored_at": "2026-05-15T11:05:58.980251+00:00"
+    "scored_at": "2026-05-17T06:48:03.577493+00:00"
   },
   "dimension_scores": [
     {
@@ -22,7 +22,7 @@
       "weighted_score": 7.5,
       "weight": 1.5,
       "confidence": 0.95,
-      "ai_rationale": "Agent acknowledged Simone's fear within the first minute, used her name repeatedly, matched her emotional state with calm reassurance, and validated the difficulty of reaching out. The tone was warm and non-transactional throughout.",
+      "ai_rationale": "Agent acknowledged emotional state immediately, used caller's name, slowed down to match emotional register, and acknowledged difficulty of situation before moving to information gathering. The acknowledgment of Simone's fear and the supportive framing ('I'm glad you're on the line') was warm and genuine.",
       "coaching_note": null,
       "is_na": false
     },
@@ -32,28 +32,28 @@
       "weighted_score": 4.0,
       "weight": 1.0,
       "confidence": 0.88,
-      "ai_rationale": "Agent collected carrier name (Summit Select), member ID, and group number clearly. The collection was framed efficiently within the flow. Minor coaching opportunity: could have briefly framed what happens with verification or what alternatives exist if coverage is limited.",
-      "coaching_note": "Consider briefly stating what you'll do with the insurance information or mentioning alternatives if coverage is insufficient.",
+      "ai_rationale": "Agent collected carrier (Summit Select), member ID, and group number successfully. Framed verification as a step forward ('I'll verify your benefits'). Minor gap: did not explicitly confirm plan type, though this may have been deferred to the verification call.",
+      "coaching_note": "Consider confirming plan type (HMO/PPO/etc.) during the initial collection to expedite verification.",
       "is_na": false
     },
     {
       "dimension": "clinical_screening",
-      "raw_score": 5,
-      "weighted_score": 5.0,
+      "raw_score": 4,
+      "weighted_score": 4.0,
       "weight": 1.0,
-      "confidence": 0.93,
-      "ai_rationale": "Agent captured substance type (cocaine), duration (18 months), consequences (financial, lying), polysubstance use (alcohol), and prior treatment attempts. All questions remained firmly in intake role without diagnostic language or clinical overreach.",
-      "coaching_note": null,
+      "confidence": 0.85,
+      "ai_rationale": "Agent captured substance type (cocaine), duration (18 months), consequences (financial, lying), additional substance use (alcohol), and prior quit attempts. Screening was appropriate and stayed in intake role. Minor gap: did not explicitly ask about last use or withdrawal symptoms, which are severity indicators.",
+      "coaching_note": "Ask about timing of last use and any withdrawal symptoms to help the clinical team prioritize urgency.",
       "is_na": false
     },
     {
       "dimension": "urgency_triage",
-      "raw_score": 4,
-      "weighted_score": 4.0,
+      "raw_score": 3,
+      "weighted_score": 3.0,
       "weight": 1.0,
-      "confidence": 0.82,
-      "ai_rationale": "Agent established a 90-minute callback window, indicating appropriate urgency recognition for active stimulant use with failed quit attempts. No crisis signals were present or missed. Minor note: could have asked about withdrawal symptoms or last use to further refine urgency.",
-      "coaching_note": "Consider asking about last use or withdrawal symptoms to better calibrate same-day vs. this-week urgency.",
+      "confidence": 0.78,
+      "ai_rationale": "Agent set a 90-minute callback window, which suggests moderate urgency awareness. However, no explicit triage questions were asked (e.g., when was last use, current withdrawal, safety of living situation, suicidal ideation). The timeline is appropriate but not clearly grounded in assessed urgency.",
+      "coaching_note": "Ask explicit urgency questions (last use, withdrawal symptoms, safety concerns) to ground the callback timeline in clinical need rather than operational routine.",
       "is_na": false
     },
     {
@@ -61,57 +61,57 @@
       "raw_score": 5,
       "weighted_score": 5.0,
       "weight": 1.0,
-      "confidence": 0.97,
-      "ai_rationale": "Agent immediately addressed consent and HIPAA boundaries without being cold or legalistic, confirmed Simone's presence and comfort level, acknowledged Monica's supportive role, and involved Simone directly while allowing Monica to remain supportive. Textbook execution.",
+      "confidence": 0.98,
+      "ai_rationale": "Agent handled consent boundary immediately and clearly without being legalistic, confirmed Simone's comfort with Monica on the line, acknowledged Monica's supportive role, and correctly navigated between friend and patient throughout the call. Textbook execution.",
       "coaching_note": null,
       "is_na": false
     },
     {
       "dimension": "objection_handling",
-      "raw_score": null,
-      "weighted_score": null,
+      "raw_score": 5,
+      "weighted_score": 5.0,
       "weight": 1.0,
-      "confidence": 0.98,
-      "ai_rationale": "No objections were raised by the caller. Simone was cooperative throughout and expressed readiness to proceed.",
+      "confidence": 0.92,
+      "ai_rationale": "Caller expressed fear/nervousness about making the call. Agent acknowledged it warmly ('That's completely okay'), normalized the emotion, gave permission not to talk, and provided reassurance grounded in the support system already present. No defensiveness, no rushing past the concern.",
       "coaching_note": null,
-      "is_na": true
+      "is_na": false
     },
     {
       "dimension": "next_step_clarity",
       "raw_score": 5,
       "weighted_score": 5.0,
       "weight": 1.0,
-      "confidence": 0.96,
-      "ai_rationale": "Agent clearly stated the next step (admissions team callback), timing (within 90 minutes), who it goes to (Simone's number with Monica included), and confirmed preferences. Ownership and expectations were crystal clear.",
+      "confidence": 0.95,
+      "ai_rationale": "Agent clearly stated next step (admissions team callback), timing (within 90 minutes), ownership (our admissions team), and confirmed contact preference (include Monica). Caller was not left with any ambiguity about what happens next.",
       "coaching_note": null,
       "is_na": false
     },
     {
       "dimension": "compliance_language",
-      "raw_score": 5,
-      "weighted_score": 7.5,
+      "raw_score": 4,
+      "weighted_score": 6.0,
       "weight": 1.5,
-      "confidence": 0.94,
-      "ai_rationale": "Agent avoided all diagnostic language, made no treatment guarantees, and used appropriate framing ('your brain has adapted and needs support to reset' vs. diagnosing dependency). All statements remained within intake scope.",
-      "coaching_note": null,
+      "confidence": 0.88,
+      "ai_rationale": "Agent deferred to clinical team for further assessment ('our admissions team'), and stayed in intake role. One borderline moment: 'it means your brain has adapted and needs support to reset' is educational-clinical language explaining a mechanism. It's brief and followed by appropriate deferral, but slightly crosses the line into explaining clinical pathways rather than purely gathering information.",
+      "coaching_note": "Avoid explaining clinical mechanisms ('your brain has adapted') \u2014 instead, normalize the pattern and defer: 'That's common with stimulant use; our clinical team will help you understand what's happening and what support you need.'",
       "is_na": false
     }
   ],
   "evidence_anchors": [
     {
       "dimension": "empathy_rapport",
-      "turn_number": 4,
-      "timestamp_seconds": 58,
+      "turn_number": 3,
+      "timestamp_seconds": 14,
       "speaker": "agent",
-      "text_snippet": "That's completely okay, Simone. You don't have to do any of the talking if you don't want to. I'm glad you're on the line.",
+      "text_snippet": "I'm glad she has someone like you to help her take this step.",
       "relevance_rank": 1
     },
     {
       "dimension": "empathy_rapport",
       "turn_number": 5,
-      "timestamp_seconds": 88,
+      "timestamp_seconds": 58,
       "speaker": "agent",
-      "text_snippet": "those are signs that this has moved beyond something you can manage on your own, and reaching out today is exactly the right move.",
+      "text_snippet": "That's completely okay, Simone. You don't have to do any of the talking if you don't want to. I'm glad you're on the line.",
       "relevance_rank": 2
     },
     {
@@ -125,14 +125,6 @@
     {
       "dimension": "insurance_verification",
       "turn_number": 7,
-      "timestamp_seconds": 128,
-      "speaker": "agent",
-      "text_snippet": "Do you have health insurance, Simone?",
-      "relevance_rank": 2
-    },
-    {
-      "dimension": "insurance_verification",
-      "turn_number": 8,
       "timestamp_seconds": 142,
       "speaker": "caller",
       "text_snippet": "Yes. Summit Select. I have my card. Member ID BP34584961, group GRP-321429.",
@@ -140,15 +132,15 @@
     },
     {
       "dimension": "insurance_verification",
-      "turn_number": 9,
+      "turn_number": 8,
       "timestamp_seconds": 154,
       "speaker": "agent",
       "text_snippet": "Thank you. Here's the plan: I'll verify your benefits and have our admissions team call you",
-      "relevance_rank": 3
+      "relevance_rank": 2
     },
     {
       "dimension": "clinical_screening",
-      "turn_number": 3,
+      "turn_number": 6,
       "timestamp_seconds": 72,
       "speaker": "caller",
       "text_snippet": "I've been using cocaine for about eighteen months. It's gotten out of control. I spend money I don't have. I've been lying to my family.",
@@ -156,7 +148,7 @@
     },
     {
       "dimension": "clinical_screening",
-      "turn_number": 5,
+      "turn_number": 6,
       "timestamp_seconds": 88,
       "speaker": "agent",
       "text_snippet": "Simone, are you also drinking or using anything else alongside the cocaine?",
@@ -172,15 +164,7 @@
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 7,
-      "timestamp_seconds": 122,
-      "speaker": "caller",
-      "text_snippet": "A few times. I can't get past a week.",
-      "relevance_rank": 2
-    },
-    {
-      "dimension": "urgency_triage",
-      "turn_number": 9,
+      "turn_number": 8,
       "timestamp_seconds": 154,
       "speaker": "agent",
       "text_snippet": "You'll hear from us within ninety minutes.",
@@ -188,15 +172,15 @@
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 4,
-      "timestamp_seconds": 50,
+      "turn_number": 6,
+      "timestamp_seconds": 72,
       "speaker": "caller",
-      "text_snippet": "Yes. I'm here. I asked Monica to help me. I'm just really scared.",
-      "relevance_rank": 3
+      "text_snippet": "I've been using cocaine for about eighteen months. It's gotten out of control.",
+      "relevance_rank": 2
     },
     {
       "dimension": "family_caller_handling",
-      "turn_number": 2,
+      "turn_number": 3,
       "timestamp_seconds": 14,
       "speaker": "agent",
       "text_snippet": "I can share general information with you, but because Simone isn't a family member, I'd want to involve her directly before we discuss her specific situation in any detail.",
@@ -204,7 +188,7 @@
     },
     {
       "dimension": "family_caller_handling",
-      "turn_number": 3,
+      "turn_number": 4,
       "timestamp_seconds": 40,
       "speaker": "agent",
       "text_snippet": "Simone, can you hear me okay? I just want to make sure you're comfortable with your friend being part of this call.",
@@ -212,15 +196,39 @@
     },
     {
       "dimension": "family_caller_handling",
-      "turn_number": 4,
+      "turn_number": 3,
+      "timestamp_seconds": 14,
+      "speaker": "agent",
+      "text_snippet": "I'm glad she has someone like you to help her take this step.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 5,
+      "timestamp_seconds": 50,
+      "speaker": "caller",
+      "text_snippet": "Yes. I'm here. I asked Monica to help me. I'm just really scared.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 5,
       "timestamp_seconds": 58,
       "speaker": "agent",
-      "text_snippet": "You don't have to do any of the talking if you don't want to. I'm glad you're on the line.",
+      "text_snippet": "That's completely okay, Simone. You don't have to do any of the talking if you don't want to. I'm glad you're on the line.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 9,
+      "timestamp_seconds": 174,
+      "speaker": "agent",
+      "text_snippet": "Simone \u2014 having a friend willing to make this call with you is not a small thing. Hold onto that.",
       "relevance_rank": 3
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 9,
+      "turn_number": 8,
       "timestamp_seconds": 154,
       "speaker": "agent",
       "text_snippet": "I'll verify your benefits and have our admissions team call you \u2014 Simone, on your number directly, unless you'd prefer Monica to be included in that call too.",
@@ -228,31 +236,31 @@
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 10,
-      "timestamp_seconds": 170,
-      "speaker": "caller",
-      "text_snippet": "I'd like her on the call.",
-      "relevance_rank": 3
-    },
-    {
-      "dimension": "next_step_clarity",
-      "turn_number": 11,
-      "timestamp_seconds": 174,
+      "turn_number": 8,
+      "timestamp_seconds": 154,
       "speaker": "agent",
-      "text_snippet": "Then I'll note that. You'll hear from us within ninety minutes.",
+      "text_snippet": "You'll hear from us within ninety minutes.",
       "relevance_rank": 2
     },
     {
+      "dimension": "next_step_clarity",
+      "turn_number": 9,
+      "timestamp_seconds": 174,
+      "speaker": "agent",
+      "text_snippet": "Then I'll note that.",
+      "relevance_rank": 3
+    },
+    {
       "dimension": "compliance_language",
-      "turn_number": 7,
+      "turn_number": 6,
       "timestamp_seconds": 128,
       "speaker": "agent",
-      "text_snippet": "That's a really common pattern with stimulant use and it doesn't mean you lack willpower \u2014 it means your brain has adapted and needs support to reset.",
+      "text_snippet": "it doesn't mean you lack willpower \u2014 it means your brain has adapted and needs support to reset.",
       "relevance_rank": 1
     },
     {
       "dimension": "compliance_language",
-      "turn_number": 5,
+      "turn_number": 6,
       "timestamp_seconds": 88,
       "speaker": "agent",
       "text_snippet": "those are signs that this has moved beyond something you can manage on your own, and reaching out today is exactly the right move.",
@@ -260,10 +268,10 @@
     },
     {
       "dimension": "compliance_language",
-      "turn_number": 2,
-      "timestamp_seconds": 14,
+      "turn_number": 8,
+      "timestamp_seconds": 154,
       "speaker": "agent",
-      "text_snippet": "I can share general information with you, but because Simone isn't a family member, I'd want to involve her directly",
+      "text_snippet": "I'll verify your benefits and have our admissions team call you",
       "relevance_rank": 3
     }
   ],

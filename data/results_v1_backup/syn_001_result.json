@@ -1,0 +1,271 @@
+{
+  "evaluation": {
+    "call_id": "syn_001",
+    "agent_id": "AGT-288",
+    "call_timestamp": "2026-04-01T00:00:00Z",
+    "duration_seconds": 290,
+    "scenario_type": null,
+    "rubric_version": "rubric-v1",
+    "prompt_version": "prompt-v1",
+    "model_id": "claude-sonnet-4-5-20250929",
+    "overall_score": 100.0,
+    "compliance_override_triggered": false,
+    "confidence_overall": 0.93,
+    "manager_summary": "Exemplary intake call with Rebecca, a caller seeking alcohol treatment. Brandon demonstrated outstanding empathy and rapport-building in the opening, collected complete clinical and insurance information efficiently, appropriately triaged urgency, and set crystal-clear next steps with specific timing. All compliance standards were met, and the caller expressed gratitude and readiness to proceed.",
+    "status": "scored",
+    "scored_at": "2026-05-15T11:09:58.161346+00:00"
+  },
+  "dimension_scores": [
+    {
+      "dimension": "empathy_rapport",
+      "raw_score": 5,
+      "weighted_score": 7.5,
+      "weight": 1.5,
+      "confidence": 0.95,
+      "ai_rationale": "Agent immediately acknowledged Rebecca's courage, used her name throughout, matched her emotional register, and validated her fear as a strength. The acknowledgment in the first 30 seconds was warm and human, not scripted.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "insurance_verification",
+      "raw_score": 5,
+      "weighted_score": 5.0,
+      "weight": 1.0,
+      "confidence": 0.92,
+      "ai_rationale": "Agent collected all required fields (carrier, member ID, group number), framed verification as a helpful step with clear timing, and proactively addressed cost concerns with mention of financing options if needed.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "clinical_screening",
+      "raw_score": 5,
+      "weighted_score": 5.0,
+      "weight": 1.0,
+      "confidence": 0.93,
+      "ai_rationale": "Agent captured substance type, frequency, duration, last use, prior treatment history, and withdrawal symptoms without crossing into diagnostic territory. Stayed clearly in intake role and gathered appropriate severity indicators.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "urgency_triage",
+      "raw_score": 5,
+      "weighted_score": 5.0,
+      "weight": 1.0,
+      "confidence": 0.9,
+      "ai_rationale": "Agent appropriately assessed urgency by asking about withdrawal symptoms and timing, correctly identified this as a this-week need (not crisis, not manufactured urgency), and responded with appropriate same-day scheduling actions.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "family_caller_handling",
+      "raw_score": null,
+      "weighted_score": null,
+      "weight": 1.0,
+      "confidence": 1.0,
+      "ai_rationale": "Caller is the patient themselves. This dimension is not applicable.",
+      "coaching_note": null,
+      "is_na": true
+    },
+    {
+      "dimension": "objection_handling",
+      "raw_score": 5,
+      "weighted_score": 5.0,
+      "weight": 1.0,
+      "confidence": 0.88,
+      "ai_rationale": "When caller expressed uncertainty about insurance coverage, agent acknowledged the concern before responding, provided concrete reassurance about the verification process, and offered financing alternatives without being pushy.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "next_step_clarity",
+      "raw_score": 5,
+      "weighted_score": 5.0,
+      "weight": 1.0,
+      "confidence": 0.94,
+      "ai_rationale": "Agent provided specific next steps (confirmation email, intake form, benefits coordinator callback), clear timing (within two hours, by 3pm today), and confirmed caller availability. Ownership and follow-up were crystal clear.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "compliance_language",
+      "raw_score": 5,
+      "weighted_score": 7.5,
+      "weight": 1.5,
+      "confidence": 0.96,
+      "ai_rationale": "Agent avoided all diagnostic language, made no outcome guarantees, appropriately deferred clinical assessment to the clinical team, and stayed clearly within intake boundaries throughout.",
+      "coaching_note": null,
+      "is_na": false
+    }
+  ],
+  "evidence_anchors": [
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 2,
+      "timestamp_seconds": 14,
+      "speaker": "agent",
+      "text_snippet": "Thank you so much for reaching out, Rebecca. I can hear that took a lot of courage. You don't have to figure this out alone \u2014 that's exactly why we're here.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 3,
+      "timestamp_seconds": 42,
+      "speaker": "agent",
+      "text_snippet": "I really appreciate you sharing that with me. What you're describing \u2014 recognising the pattern and being scared \u2014 that actually tells me a lot about how serious you are about getting better. That's a ",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 5,
+      "timestamp_seconds": 92,
+      "speaker": "agent",
+      "text_snippet": "I'm glad you have that support at home \u2014 that makes a real difference.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 8,
+      "timestamp_seconds": 148,
+      "speaker": "agent",
+      "text_snippet": "Great. Do you happen to have the insurance card handy? I'll need the member ID and group number.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 10,
+      "timestamp_seconds": 168,
+      "speaker": "agent",
+      "text_snippet": "Perfect, thank you. So BluePeak Health, member ID BP12132605, group GRP-337060. Let me note that down. Our admissions coordinator will verify your benefits \u2014 typically we can get that back to you with",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 10,
+      "timestamp_seconds": 196,
+      "speaker": "agent",
+      "text_snippet": "Once we verify, we'll walk you through exactly what your plan covers and what, if anything, would be your responsibility. We never want cost to be the thing that gets in the way. There are also financ",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 3,
+      "timestamp_seconds": 42,
+      "speaker": "agent",
+      "text_snippet": "Let me ask \u2014 are you having any physical symptoms right now? Shaking, sweating, anything like that?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 5,
+      "timestamp_seconds": 92,
+      "speaker": "agent",
+      "text_snippet": "Let me get a few more details so we can figure out the right level of care for you. How long has the daily drinking been going on?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 6,
+      "timestamp_seconds": 114,
+      "speaker": "agent",
+      "text_snippet": "I understand. And have you ever been through any treatment before \u2014 detox, rehab, outpatient, anything like that?",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 3,
+      "timestamp_seconds": 70,
+      "speaker": "agent",
+      "text_snippet": "Okay, good to know. So no immediate withdrawal symptoms at this moment. And is this something you're looking to address soon, or are you in a place where today or this week feels more urgent?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 4,
+      "timestamp_seconds": 82,
+      "speaker": "caller",
+      "text_snippet": "I'd like to start as soon as possible. My wife and I talked last night and we agreed I need to do this now.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 12,
+      "timestamp_seconds": 244,
+      "speaker": "agent",
+      "text_snippet": "Here's what happens next: I'm going to send you a confirmation email right now with our address, what to expect, and a short intake form. Our benefits coordinator will call you within two hours.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 11,
+      "timestamp_seconds": 188,
+      "speaker": "caller",
+      "text_snippet": "A little. We weren't sure what insurance would cover.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 10,
+      "timestamp_seconds": 196,
+      "speaker": "agent",
+      "text_snippet": "Totally understandable. Once we verify, we'll walk you through exactly what your plan covers and what, if anything, would be your responsibility. We never want cost to be the thing that gets in the wa",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 10,
+      "timestamp_seconds": 196,
+      "speaker": "agent",
+      "text_snippet": "There are also financing options if needed, but let's see what the verification shows first.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 12,
+      "timestamp_seconds": 244,
+      "speaker": "agent",
+      "text_snippet": "Here's what happens next: I'm going to send you a confirmation email right now with our address, what to expect, and a short intake form. Our benefits coordinator will call you within two hours.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 12,
+      "timestamp_seconds": 244,
+      "speaker": "agent",
+      "text_snippet": "Can you take a call this afternoon?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 14,
+      "timestamp_seconds": 266,
+      "speaker": "agent",
+      "text_snippet": "Perfect. You'll hear from us by three o'clock today.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 12,
+      "timestamp_seconds": 218,
+      "speaker": "agent",
+      "text_snippet": "Rebecca, based on what you've shared \u2014 two-year history, daily use, prior IOP \u2014 our clinical team will likely want to do a full assessment to determine whether detox is the right starting point or whe",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 3,
+      "timestamp_seconds": 42,
+      "speaker": "agent",
+      "text_snippet": "What you're describing \u2014 recognising the pattern and being scared \u2014 that actually tells me a lot about how serious you are about getting better. That's a strength, Rebecca.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 5,
+      "timestamp_seconds": 92,
+      "speaker": "agent",
+      "text_snippet": "Let me get a few more details so we can figure out the right level of care for you.",
+      "relevance_rank": 3
+    }
+  ],
+  "compliance_flags": []
+}

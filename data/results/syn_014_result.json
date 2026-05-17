@@ -5,15 +5,15 @@
     "call_timestamp": "2026-04-01T00:00:00Z",
     "duration_seconds": 170,
     "scenario_type": null,
-    "rubric_version": "rubric-v1",
-    "prompt_version": "prompt-v1",
+    "rubric_version": "rubric-v2",
+    "prompt_version": "prompt-v2",
     "model_id": "claude-sonnet-4-5-20250929",
-    "overall_score": 42.5,
+    "overall_score": 46.25,
     "compliance_override_triggered": false,
-    "confidence_overall": 0.89,
-    "manager_summary": "Elizabeth called seeking help for drinking but expressed multiple concerns about cost, fear of treatment, and job constraints. Kyle collected insurance information but failed to conduct any clinical screening or urgency assessment, which are critical safety steps for someone calling about alcohol use. The call lacked warmth and empathy, with minimal acknowledgment of Elizabeth's emotional state and objections being handled procedurally rather than supportively.",
+    "confidence_overall": 0.91,
+    "manager_summary": "Elizabeth called seeking help for drinking and expressed multiple concerns about cost, treatment difficulty, and job impact. Agent collected insurance information but failed to conduct clinical screening or assess urgency\u2014critical gaps for an alcohol treatment inquiry. Empathy was minimal, objection handling was repetitive, and next steps were vague. Strong compliance language was the only notable strength.",
     "status": "scored",
-    "scored_at": "2026-05-15T11:01:06.190125+00:00"
+    "scored_at": "2026-05-17T06:42:58.275879+00:00"
   },
   "dimension_scores": [
     {
@@ -22,8 +22,8 @@
       "weighted_score": 3.0,
       "weight": 1.5,
       "confidence": 0.92,
-      "ai_rationale": "The agent provided minimal acknowledgment of the caller's emotional state. While there was brief validation ('That's understandable. Most people are nervous'), this came late in the call and the opening lacked warmth or trust-building. The agent never used the caller's name despite her introducing herself immediately.",
-      "coaching_note": "In the first 60 seconds, acknowledge the courage it takes to call and use the caller's name to build rapport before moving to logistics.",
+      "ai_rationale": "Agent provided minimal emotional acknowledgment. Opening response was transactional ('Sure, go ahead'), and empathy moments were generic ('That's understandable. Most people are nervous') without personalization or building trust in the critical first 60 seconds.",
+      "coaching_note": "Open with warmth and acknowledge the difficulty of reaching out before moving to questions\u2014use the caller's name and validate emotions specifically in the first minute.",
       "is_na": false
     },
     {
@@ -31,9 +31,9 @@
       "raw_score": 3,
       "weighted_score": 3.0,
       "weight": 1.0,
-      "confidence": 0.78,
-      "ai_rationale": "The agent captured carrier name, member ID, and group number, which are the key data points. However, the process felt transactional and lacked framing as a step toward help. Plan type was not explicitly captured, though this may have been deferred to the verification team.",
-      "coaching_note": null,
+      "confidence": 0.88,
+      "ai_rationale": "Agent captured carrier (Summit Select), member ID, and group number successfully. However, verification was framed somewhat transactionally without warmth, and the process wasn't clearly explained as a step toward help.",
+      "coaching_note": "Frame insurance verification as 'helping us understand what your coverage looks like so we can help you' rather than a mechanical data collection step.",
       "is_na": false
     },
     {
@@ -42,8 +42,8 @@
       "weighted_score": 1.0,
       "weight": 1.0,
       "confidence": 0.95,
-      "ai_rationale": "No clinical screening was conducted. The agent did not ask about substance use history, frequency, last use, withdrawal symptoms, prior treatment, or co-occurring mental health concerns despite the caller explicitly stating she was seeking help for drinking.",
-      "coaching_note": "Ask about drinking history, frequency, last use, and prior treatment attempts to understand what level of care the caller needs.",
+      "ai_rationale": "Agent failed to conduct any clinical screening. No questions about substance use history, frequency, last use, withdrawal risk, prior treatment, or co-occurring conditions. Only the caller's opening statement ('drinking') was captured.",
+      "coaching_note": "Always ask about drinking patterns, frequency, last use, and prior treatment attempts\u2014this is essential to understanding what level of care the caller needs.",
       "is_na": false
     },
     {
@@ -52,8 +52,8 @@
       "weighted_score": 0.0,
       "weight": 1.0,
       "confidence": 0.93,
-      "ai_rationale": "The agent did not assess urgency at all. No questions were asked about withdrawal risk, last use, safety concerns, or timeline for needing care. For someone calling about alcohol use, assessing withdrawal risk and urgency is a required safety step that was entirely skipped.",
-      "coaching_note": "Always ask about last use, withdrawal symptoms, and timeline for treatment to assess urgency and safety risk.",
+      "ai_rationale": "Agent failed to assess urgency entirely. No questions about withdrawal risk, last drink, quantity/frequency, safety concerns, or timeline for treatment. This is a critical gap for someone seeking alcohol treatment.",
+      "coaching_note": "Always ask about last use, withdrawal history, and desired treatment timeline\u2014alcohol withdrawal can be medically dangerous and requires urgent assessment.",
       "is_na": false
     },
     {
@@ -62,7 +62,7 @@
       "weighted_score": null,
       "weight": 1.0,
       "confidence": 1.0,
-      "ai_rationale": "Not applicable. The caller is the patient themselves, seeking help for their own drinking.",
+      "ai_rationale": "Caller is the patient herself (Elizabeth calling about her own drinking).",
       "coaching_note": null,
       "is_na": true
     },
@@ -71,9 +71,9 @@
       "raw_score": 2,
       "weighted_score": 2.0,
       "weight": 1.0,
-      "confidence": 0.88,
-      "ai_rationale": "The caller raised multiple objections (cost, fear, job constraints, budget concerns, treatment efficacy) but the agent provided minimal acknowledgment and mostly offered procedural deflection. The financial assistance mention was positive but came only after repetition. The agent missed opportunities to explore the caller's fear and ambivalence meaningfully.",
-      "coaching_note": "Acknowledge the emotional content of objections before responding, and explore concerns more deeply rather than redirecting to process.",
+      "confidence": 0.9,
+      "ai_rationale": "Multiple objections raised (cost concerns, fear, job constraints, ambivalence about outcomes). Agent provided minimal acknowledgment and often repeated the same response. Cost concern was addressed twice with nearly identical answers, and emotional concerns received generic responses without exploration.",
+      "coaching_note": "Acknowledge each concern fully before responding, and avoid repeating the same answer\u2014explore the underlying worry and offer concrete reassurance or alternatives.",
       "is_na": false
     },
     {
@@ -81,18 +81,18 @@
       "raw_score": 2,
       "weighted_score": 2.0,
       "weight": 1.0,
-      "confidence": 0.9,
-      "ai_rationale": "A next step was stated (callback about benefits and scheduling) but the timing was vague ('within the next business day or so') and ownership was unclear (just 'someone'). The caller had to prompt for timing, indicating the agent didn't proactively provide clarity.",
-      "coaching_note": "Provide specific timing (e.g., 'by end of day tomorrow') and identify who will call to give the caller confidence in follow-through.",
+      "confidence": 0.89,
+      "ai_rationale": "Next step was vague ('someone will call you') without specifying who, exactly when ('within the next business day or so'), or what the call would cover beyond 'benefits and scheduling.' Caller had to ask 'when?'",
+      "coaching_note": "Be specific about next steps: who will call (name or role), exact timeframe (e.g., 'by tomorrow at 3 PM'), and what will be discussed\u2014caller should never have to ask for clarity.",
       "is_na": false
     },
     {
       "dimension": "compliance_language",
-      "raw_score": 4,
-      "weighted_score": 6.0,
+      "raw_score": 5,
+      "weighted_score": 7.5,
       "weight": 1.5,
       "confidence": 0.91,
-      "ai_rationale": "The agent avoided diagnostic language and outcome guarantees appropriately. The statement 'Treatment outcomes vary' was compliant and appropriately non-committal. No unauthorized practice or guarantees were made.",
+      "ai_rationale": "Agent maintained appropriate boundaries throughout. No diagnostic language, no outcome promises, and stayed within intake scope. Response to outcome concern was appropriately non-committal ('Treatment outcomes vary').",
       "coaching_note": null,
       "is_na": false
     }
@@ -100,7 +100,7 @@
   "evidence_anchors": [
     {
       "dimension": "empathy_rapport",
-      "turn_number": 1,
+      "turn_number": 2,
       "timestamp_seconds": 12,
       "speaker": "agent",
       "text_snippet": "Sure, go ahead.",
@@ -124,31 +124,31 @@
     },
     {
       "dimension": "insurance_verification",
-      "turn_number": 2,
-      "timestamp_seconds": 28,
-      "speaker": "caller",
-      "text_snippet": "Yes, Summit Select. But I'm not sure what it covers.",
+      "turn_number": 3,
+      "timestamp_seconds": 22,
+      "speaker": "agent",
+      "text_snippet": "That depends on your insurance. Do you have coverage?",
       "relevance_rank": 1
     },
     {
       "dimension": "insurance_verification",
-      "turn_number": 3,
-      "timestamp_seconds": 42,
-      "speaker": "caller",
-      "text_snippet": "Member ID BP24300648, group GRP-424453.",
+      "turn_number": 5,
+      "timestamp_seconds": 36,
+      "speaker": "agent",
+      "text_snippet": "We'll verify your benefits. Member ID and group number?",
       "relevance_rank": 2
     },
     {
       "dimension": "insurance_verification",
-      "turn_number": 3,
-      "timestamp_seconds": 36,
-      "speaker": "agent",
-      "text_snippet": "We'll verify your benefits. Member ID and group number?",
+      "turn_number": 6,
+      "timestamp_seconds": 42,
+      "speaker": "caller",
+      "text_snippet": "Member ID BP24300648, group GRP-424453.",
       "relevance_rank": 3
     },
     {
       "dimension": "clinical_screening",
-      "turn_number": 0,
+      "turn_number": 1,
       "timestamp_seconds": 4,
       "speaker": "caller",
       "text_snippet": "Hi, I'm Elizabeth. I'm thinking about getting help for drinking. I have some questions.",
@@ -156,7 +156,7 @@
     },
     {
       "dimension": "clinical_screening",
-      "turn_number": 3,
+      "turn_number": 7,
       "timestamp_seconds": 52,
       "speaker": "agent",
       "text_snippet": "Okay. We'll look into that. Anything else?",
@@ -164,15 +164,15 @@
     },
     {
       "dimension": "clinical_screening",
-      "turn_number": 5,
-      "timestamp_seconds": 80,
-      "speaker": "agent",
-      "text_snippet": "We have outpatient options.",
+      "turn_number": 10,
+      "timestamp_seconds": 140,
+      "speaker": "caller",
+      "text_snippet": "Okay. So what do I do now?",
       "relevance_rank": 3
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 0,
+      "turn_number": 1,
       "timestamp_seconds": 4,
       "speaker": "caller",
       "text_snippet": "Hi, I'm Elizabeth. I'm thinking about getting help for drinking. I have some questions.",
@@ -180,34 +180,50 @@
     },
     {
       "dimension": "urgency_triage",
+      "turn_number": 7,
+      "timestamp_seconds": 52,
+      "speaker": "agent",
+      "text_snippet": "Okay. We'll look into that. Anything else?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "urgency_triage",
       "turn_number": 11,
       "timestamp_seconds": 144,
       "speaker": "agent",
       "text_snippet": "Someone will call you about your benefits and scheduling.",
-      "relevance_rank": 2
+      "relevance_rank": 3
     },
     {
-      "dimension": "objection_handling",
-      "turn_number": 4,
-      "timestamp_seconds": 58,
+      "dimension": "family_caller_handling",
+      "turn_number": 1,
+      "timestamp_seconds": 4,
       "speaker": "caller",
-      "text_snippet": "I'm also just \u2014 I'm scared about what treatment is like. I've heard it's really hard.",
+      "text_snippet": "Hi, I'm Elizabeth. I'm thinking about getting help for drinking. I have some questions.",
       "relevance_rank": 1
     },
     {
       "dimension": "objection_handling",
-      "turn_number": 6,
+      "turn_number": 8,
       "timestamp_seconds": 98,
       "speaker": "caller",
       "text_snippet": "I know, but what if it's still too much? I'm on a tight budget.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 9,
+      "timestamp_seconds": 92,
+      "speaker": "agent",
+      "text_snippet": "Like I said, we'll verify your benefits and let you know what you'd owe.",
       "relevance_rank": 2
     },
     {
       "dimension": "objection_handling",
       "turn_number": 7,
-      "timestamp_seconds": 106,
+      "timestamp_seconds": 66,
       "speaker": "agent",
-      "text_snippet": "We do have some financial assistance available. But let's see what the insurance says first.",
+      "text_snippet": "It's a process. It's not easy. But people get through it.",
       "relevance_rank": 3
     },
     {
@@ -244,11 +260,19 @@
     },
     {
       "dimension": "compliance_language",
-      "turn_number": 5,
+      "turn_number": 7,
       "timestamp_seconds": 66,
       "speaker": "agent",
       "text_snippet": "It's a process. It's not easy. But people get through it.",
       "relevance_rank": 2
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 9,
+      "timestamp_seconds": 106,
+      "speaker": "agent",
+      "text_snippet": "We do have some financial assistance available. But let's see what the insurance says first.",
+      "relevance_rank": 3
     }
   ],
   "compliance_flags": []

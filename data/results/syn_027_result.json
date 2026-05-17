@@ -5,15 +5,15 @@
     "call_timestamp": "2026-04-01T00:00:00Z",
     "duration_seconds": 146,
     "scenario_type": null,
-    "rubric_version": "rubric-v1",
-    "prompt_version": "prompt-v1",
+    "rubric_version": "rubric-v2",
+    "prompt_version": "prompt-v2",
     "model_id": "claude-sonnet-4-5-20250929",
-    "overall_score": 36.25,
+    "overall_score": 30.0,
     "compliance_override_triggered": false,
-    "confidence_overall": 0.92,
-    "manager_summary": "This call involved a non-urgent caller exploring outpatient options for alcohol use. The agent used repeated fear-based messaging and pressure tactics rather than building rapport and gathering comprehensive clinical information. Critical deficits include poor empathy, incomplete screening, vague next steps, and compliance concerns around quasi-diagnostic language. The caller became resistant and the relationship was not successfully established.",
+    "confidence_overall": 0.91,
+    "manager_summary": "This call with Juan, who is exploring outpatient options for moderate alcohol use, had significant coaching opportunities. The agent failed to build rapport or acknowledge the caller's ambivalence, instead using pressure tactics and fear-based messaging that created resistance. Clinical screening was minimal, compliance boundaries were crossed with diagnostic characterizations, and the call ended with a vague follow-up commitment and no clear next steps.",
     "status": "scored",
-    "scored_at": "2026-05-15T11:07:34.564834+00:00"
+    "scored_at": "2026-05-17T06:49:47.756107+00:00"
   },
   "dimension_scores": [
     {
@@ -22,8 +22,8 @@
       "weighted_score": 1.5,
       "weight": 1.5,
       "confidence": 0.95,
-      "ai_rationale": "The agent failed to acknowledge the caller's emotional state or build rapport. Instead of meeting the caller where they were\u2014exploring options and not in crisis\u2014the agent immediately shifted to a fear-based approach without slowing down or listening to the caller's actual needs.",
-      "coaching_note": "Start by acknowledging the caller's courage in reaching out and validate their stated goals before pivoting to assessment questions.",
+      "ai_rationale": "The agent failed to acknowledge the caller's emotional state or build rapport. Instead of meeting the caller where he was ('not in crisis, just looking at options'), the agent immediately contradicted him with warnings about escalation and seriousness. No name use, no warmth, and the tone was prescriptive rather than collaborative.",
+      "coaching_note": "Start by validating that reaching out is a positive step, use the caller's name, and match their emotional register before offering education or guidance.",
       "is_na": false
     },
     {
@@ -32,18 +32,18 @@
       "weighted_score": 2.0,
       "weight": 1.0,
       "confidence": 0.88,
-      "ai_rationale": "The agent collected carrier, member ID, and group number, but did so in a rushed, transactional manner without framing it as a step toward help. The caller had to prompt the agent for cost information, and no explanation of benefits or next steps for verification was provided.",
-      "coaching_note": "Frame insurance collection as a helpful step toward determining coverage options, and explain what you'll do with the information.",
+      "ai_rationale": "The agent collected carrier name, member ID, and group number, but the process was transactional and rushed. No verification framing was provided, no discussion of what happens next with the insurance information, and no pivot to alternatives or explanation of the benefits verification process.",
+      "coaching_note": "Frame insurance collection as a helpful step toward care ('Let me get your coverage details so we can see what your options look like'), and explain what happens next with that information.",
       "is_na": false
     },
     {
       "dimension": "clinical_screening",
-      "raw_score": 2,
-      "weighted_score": 2.0,
+      "raw_score": 1,
+      "weighted_score": 1.0,
       "weight": 1.0,
       "confidence": 0.92,
-      "ai_rationale": "The agent asked minimal screening questions\u2014only frequency of drinking\u2014and captured no information about type of alcohol beyond 'wine,' last use, withdrawal risk, prior treatment, or co-occurring conditions. The screening was incomplete and insufficient to understand the caller's actual clinical picture.",
-      "coaching_note": "Use a structured screening approach covering substance history, frequency, last use, prior treatment, and any mental health concerns.",
+      "ai_rationale": "Minimal clinical screening was conducted. The agent asked if the caller drinks daily and learned about nightly wine consumption, but failed to ask about quantity beyond what the caller volunteered, duration of use, withdrawal symptoms, prior treatment history, or co-occurring mental health concerns. The screening was abandoned in favor of pressure tactics.",
+      "coaching_note": "Complete a structured screening: ask about frequency, quantity, duration, last use, withdrawal history, prior treatment, and mental health concerns before moving to program recommendations.",
       "is_na": false
     },
     {
@@ -51,9 +51,9 @@
       "raw_score": 4,
       "weighted_score": 4.0,
       "weight": 1.0,
-      "confidence": 0.9,
-      "ai_rationale": "The agent correctly identified this as a non-urgent call. The caller explicitly stated they were not in crisis and were exploring options. The agent did not manufacture false urgency, though they did use pressure tactics rather than appropriate education.",
-      "coaching_note": null,
+      "confidence": 0.85,
+      "ai_rationale": "The agent correctly identified this as a non-urgent, exploratory inquiry. The caller explicitly stated he was 'not in crisis' and looking at options, and the agent appropriately offered an outpatient program rather than pushing for immediate admission. However, the agent manufactured some urgency with warnings about DUIs and health scares that weren't warranted by the information gathered.",
+      "coaching_note": "Avoid manufacturing urgency when the caller presents as stable and exploratory\u2014match the actual clinical picture.",
       "is_na": false
     },
     {
@@ -62,7 +62,7 @@
       "weighted_score": null,
       "weight": 1.0,
       "confidence": 1.0,
-      "ai_rationale": "The caller is the patient themselves, not a family member.",
+      "ai_rationale": "Not applicable. The caller is the patient themselves.",
       "coaching_note": null,
       "is_na": true
     },
@@ -71,9 +71,9 @@
       "raw_score": 1,
       "weighted_score": 1.0,
       "weight": 1.0,
-      "confidence": 0.96,
-      "ai_rationale": "The agent handled the caller's objections very poorly. When the caller expressed disagreement and stated they just wanted information, the agent continued to push fear-based messaging rather than acknowledging the concern and meeting the caller's stated need. This created resistance rather than resolving it.",
-      "coaching_note": "Acknowledge objections before responding, validate the caller's perspective, and provide information rather than countering with fear-based arguments.",
+      "confidence": 0.93,
+      "ai_rationale": "The caller expressed clear ambivalence and resistance multiple times ('I don't feel like I have a major problem,' 'I'm not sure I agree with that'), but the agent never acknowledged these concerns before countering. Instead, the agent repeatedly pushed with fear-based messaging and dismissive framing ('people rarely recognise how serious it is'). The objections were met with pressure tactics rather than validation and exploration.",
+      "coaching_note": "When the caller expresses doubt or disagreement, acknowledge their perspective first ('I hear that you don't feel it's a major issue right now') before offering information, and avoid repeating the same pressure point.",
       "is_na": false
     },
     {
@@ -81,19 +81,19 @@
       "raw_score": 1,
       "weighted_score": 1.0,
       "weight": 1.0,
-      "confidence": 0.93,
-      "ai_rationale": "The agent provided no clarity about next steps. The close was vague ('You'll hear from us soon') with no specific timing, no ownership, and no confirmation of what will happen. The caller had to ask for follow-up, and even then received no specifics.",
-      "coaching_note": "Always close with specific next steps: who will call, by when, what information they'll provide, and what the caller should expect.",
+      "confidence": 0.94,
+      "ai_rationale": "The next step was extremely vague. The agent said 'You'll hear from us soon' with no specific timing, no clarity on what the callback would cover, and no ownership assigned. The caller had to ask for follow-up, and even then received no concrete commitment.",
+      "coaching_note": "Always provide a specific next step with timing and ownership: 'Our benefits team will verify your coverage and call you back by end of day tomorrow with your cost and program options.'",
       "is_na": false
     },
     {
       "dimension": "compliance_language",
-      "raw_score": 2,
-      "weighted_score": 3.0,
+      "raw_score": 1,
+      "weighted_score": 1.5,
       "weight": 1.5,
-      "confidence": 0.89,
-      "ai_rationale": "The agent crossed into quasi-diagnostic territory multiple times by characterizing the caller's drinking pattern as escalating, suggesting the problem is more serious than the caller recognizes, and implying clinical assessment ('people rarely recognise how serious it is'). While not explicit diagnosis, the language overstepped intake boundaries.",
-      "coaching_note": "Stay in intake role by asking questions and gathering information rather than characterizing severity or making clinical interpretations of the caller's use patterns.",
+      "confidence": 0.91,
+      "ai_rationale": "The agent violated diagnostic and scope boundaries multiple times. She characterized the caller's drinking pattern as something that 'typically escalates' and stated that 'nightly drinking is a pattern'\u2014clinical characterizations stated as fact without deferral. She also implied diagnostic assessment by saying 'it's already more serious than you think' based solely on the fact of calling. These are clear scope overreaches that an auditor would flag.",
+      "coaching_note": "Avoid diagnostic language and clinical characterizations. Say 'our clinical team will assess your situation' rather than telling callers what their pattern means or how serious it is.",
       "is_na": false
     }
   ],
@@ -109,22 +109,22 @@
     {
       "dimension": "empathy_rapport",
       "turn_number": 4,
-      "timestamp_seconds": 32,
+      "timestamp_seconds": 52,
       "speaker": "agent",
-      "text_snippet": "That's more than it sounds like. Nightly drinking is a pattern that typically escalates. A lot of people who think they have it under control end up in serious trouble.",
+      "text_snippet": "The thing is, people rarely recognise how serious it is until it's gotten really bad. The fact that you're calling is a sign it's already more serious than you think.",
       "relevance_rank": 2
     },
     {
       "dimension": "empathy_rapport",
       "turn_number": 6,
-      "timestamp_seconds": 52,
+      "timestamp_seconds": 68,
       "speaker": "agent",
-      "text_snippet": "The thing is, people rarely recognise how serious it is until it's gotten really bad. The fact that you're calling is a sign it's already more serious than you think.",
+      "text_snippet": "I'd hate for you to wait until something happens \u2014 a DUI, a health scare \u2014 before you take action.",
       "relevance_rank": 3
     },
     {
       "dimension": "insurance_verification",
-      "turn_number": 9,
+      "turn_number": 10,
       "timestamp_seconds": 100,
       "speaker": "agent",
       "text_snippet": "Depends on your insurance. Do you have coverage?",
@@ -132,7 +132,7 @@
     },
     {
       "dimension": "insurance_verification",
-      "turn_number": 10,
+      "turn_number": 11,
       "timestamp_seconds": 106,
       "speaker": "caller",
       "text_snippet": "Yes. Meridian Care. Member ID BP25834677, group GRP-408293.",
@@ -140,7 +140,7 @@
     },
     {
       "dimension": "insurance_verification",
-      "turn_number": 11,
+      "turn_number": 12,
       "timestamp_seconds": 118,
       "speaker": "agent",
       "text_snippet": "Okay. I'd really encourage you to move on this \u2014 the sooner the better with alcohol.",
@@ -163,6 +163,14 @@
       "relevance_rank": 2
     },
     {
+      "dimension": "clinical_screening",
+      "turn_number": 4,
+      "timestamp_seconds": 32,
+      "speaker": "agent",
+      "text_snippet": "That's more than it sounds like. Nightly drinking is a pattern that typically escalates.",
+      "relevance_rank": 3
+    },
+    {
       "dimension": "urgency_triage",
       "turn_number": 1,
       "timestamp_seconds": 4,
@@ -172,11 +180,19 @@
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 11,
-      "timestamp_seconds": 118,
+      "turn_number": 6,
+      "timestamp_seconds": 68,
       "speaker": "agent",
-      "text_snippet": "I'd really encourage you to move on this \u2014 the sooner the better with alcohol.",
+      "text_snippet": "I'd hate for you to wait until something happens \u2014 a DUI, a health scare \u2014 before you take action.",
       "relevance_rank": 2
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 8,
+      "timestamp_seconds": 88,
+      "speaker": "agent",
+      "text_snippet": "We have IOP \u2014 evenings, three times a week. Very manageable.",
+      "relevance_rank": 3
     },
     {
       "dimension": "objection_handling",
@@ -188,23 +204,23 @@
     },
     {
       "dimension": "objection_handling",
-      "turn_number": 6,
+      "turn_number": 4,
       "timestamp_seconds": 52,
       "speaker": "agent",
-      "text_snippet": "The thing is, people rarely recognise how serious it is until it's gotten really bad. The fact that you're calling is a sign it's already more serious than you think.",
+      "text_snippet": "The thing is, people rarely recognise how serious it is until it's gotten really bad.",
       "relevance_rank": 2
     },
     {
       "dimension": "objection_handling",
-      "turn_number": 8,
-      "timestamp_seconds": 68,
-      "speaker": "agent",
-      "text_snippet": "I'd hate for you to wait until something happens \u2014 a DUI, a health scare \u2014 before you take action. A lot of our patients say they wish they'd come in sooner.",
+      "turn_number": 7,
+      "timestamp_seconds": 62,
+      "speaker": "caller",
+      "text_snippet": "I'm not sure I agree with that. I just want some information.",
       "relevance_rank": 3
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 12,
+      "turn_number": 13,
       "timestamp_seconds": 126,
       "speaker": "caller",
       "text_snippet": "Can someone call me with more details?",
@@ -212,27 +228,19 @@
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 13,
+      "turn_number": 14,
       "timestamp_seconds": 130,
       "speaker": "agent",
       "text_snippet": "Absolutely. You'll hear from us soon.",
       "relevance_rank": 2
     },
     {
-      "dimension": "compliance_language",
-      "turn_number": 4,
-      "timestamp_seconds": 32,
+      "dimension": "next_step_clarity",
+      "turn_number": 12,
+      "timestamp_seconds": 118,
       "speaker": "agent",
-      "text_snippet": "That's more than it sounds like. Nightly drinking is a pattern that typically escalates. A lot of people who think they have it under control end up in serious trouble.",
-      "relevance_rank": 1
-    },
-    {
-      "dimension": "compliance_language",
-      "turn_number": 6,
-      "timestamp_seconds": 52,
-      "speaker": "agent",
-      "text_snippet": "The thing is, people rarely recognise how serious it is until it's gotten really bad. The fact that you're calling is a sign it's already more serious than you think.",
-      "relevance_rank": 2
+      "text_snippet": "I'd really encourage you to move on this \u2014 the sooner the better with alcohol.",
+      "relevance_rank": 3
     },
     {
       "dimension": "compliance_language",
@@ -240,6 +248,22 @@
       "timestamp_seconds": 16,
       "speaker": "agent",
       "text_snippet": "You know, alcohol use tends to get worse over time if you don't address it.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 4,
+      "timestamp_seconds": 32,
+      "speaker": "agent",
+      "text_snippet": "That's more than it sounds like. Nightly drinking is a pattern that typically escalates.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 4,
+      "timestamp_seconds": 52,
+      "speaker": "agent",
+      "text_snippet": "The fact that you're calling is a sign it's already more serious than you think.",
       "relevance_rank": 3
     }
   ],

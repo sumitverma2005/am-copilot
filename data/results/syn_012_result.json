@@ -5,15 +5,15 @@
     "call_timestamp": "2026-04-01T00:00:00Z",
     "duration_seconds": 180,
     "scenario_type": null,
-    "rubric_version": "rubric-v1",
-    "prompt_version": "prompt-v1",
+    "rubric_version": "rubric-v2",
+    "prompt_version": "prompt-v2",
     "model_id": "claude-sonnet-4-5-20250929",
-    "overall_score": 91.67,
+    "overall_score": 92.86,
     "compliance_override_triggered": false,
-    "confidence_overall": 0.92,
-    "manager_summary": "Andrea called to research treatment options for a colleague struggling with daily alcohol use. Agent Philip handled this third-party informational call expertly, setting appropriate boundaries about voluntary treatment and consent while providing helpful program information and resources. Clear next steps established: email with program overview and family support line number to be sent within the hour.",
+    "confidence_overall": 0.9,
+    "manager_summary": "Andrea called to research treatment options for a colleague who may have an alcohol use concern. Philip handled this third-party inquiry excellently, setting appropriate consent boundaries, explaining program options without overstepping clinical scope, and providing concrete next steps including educational materials and access to a family support line. Strong call with clear action items and perfect compliance discipline.",
     "status": "scored",
-    "scored_at": "2026-05-15T11:00:00.357640+00:00"
+    "scored_at": "2026-05-17T06:41:50.455671+00:00"
   },
   "dimension_scores": [
     {
@@ -22,8 +22,8 @@
       "weighted_score": 6.0,
       "weight": 1.5,
       "confidence": 0.88,
-      "ai_rationale": "Agent acknowledged Andrea's thoughtful approach warmly and used her name. The tone was professional and supportive throughout, establishing good rapport without being overly warm given the third-party nature of the call.",
-      "coaching_note": null,
+      "ai_rationale": "Agent acknowledged the thoughtfulness of Andrea's research and validated her concern within the first 30 seconds. Tone was warm and non-transactional, and the agent ended with affirming language ('You're being a good friend'). However, the agent did not use the caller's name until the very end of the call (160s), missing an early rapport-building opportunity.",
+      "coaching_note": "Use the caller's name earlier in the conversation to strengthen rapport from the outset.",
       "is_na": false
     },
     {
@@ -31,8 +31,8 @@
       "raw_score": null,
       "weighted_score": null,
       "weight": 1.0,
-      "confidence": 0.92,
-      "ai_rationale": "Insurance was briefly discussed but no actual verification occurred since this was a third-party informational call. The agent appropriately explained the process without gatekeeping and emphasized cost should not be a barrier.",
+      "confidence": 0.9,
+      "ai_rationale": "The caller asked about insurance generally ('would theirs likely cover this?'), and the agent appropriately explained that verification would occur when the colleague contacts the center directly. Since this was a third-party research call with no active patient enrollment, full verification was not applicable.",
       "coaching_note": null,
       "is_na": true
     },
@@ -41,8 +41,8 @@
       "raw_score": null,
       "weighted_score": null,
       "weight": 1.0,
-      "confidence": 0.95,
-      "ai_rationale": "This was a third-party informational call where the caller was researching options, not seeking intake for themselves. Clinical screening was appropriately not conducted as the patient was not on the call.",
+      "confidence": 0.92,
+      "ai_rationale": "This was a third-party research call, not a patient intake. The caller volunteered limited information about the colleague's drinking pattern, but the agent appropriately did not conduct clinical screening questions since the patient was not on the call and had not consented to treatment exploration.",
       "coaching_note": null,
       "is_na": true
     },
@@ -51,9 +51,9 @@
       "raw_score": 4,
       "weighted_score": 4.0,
       "weight": 1.0,
-      "confidence": 0.9,
-      "ai_rationale": "Agent correctly identified this as a non-urgent, informational call and appropriately characterized the situation as a concerning pattern without immediate crisis. Agent appropriately de-escalated urgency without manufacturing pressure.",
-      "coaching_note": null,
+      "confidence": 0.87,
+      "ai_rationale": "Agent correctly identified this as a non-urgent research inquiry ('no immediate crisis situation') and appropriately did not manufacture urgency. The assessment was accurate based on the information shared. Minor gap: the agent could have explicitly acknowledged what would constitute an urgent situation as educational context for Andrea's future monitoring.",
+      "coaching_note": "Consider briefly educating third-party callers on what urgency signals to watch for in the future.",
       "is_na": false
     },
     {
@@ -62,27 +62,27 @@
       "weighted_score": 5.0,
       "weight": 1.0,
       "confidence": 0.93,
-      "ai_rationale": "Agent expertly navigated the third-party caller situation by immediately clarifying the relationship, setting appropriate boundaries about voluntary treatment and consent, while still providing helpful information and resources. Acknowledged the caller's supportive role without overstepping.",
+      "ai_rationale": "Agent handled this third-party research call exemplarily. Immediately clarified the caller's relationship to the patient, appropriately framed consent and voluntary treatment requirements without being legalistic, acknowledged Andrea's thoughtfulness, and offered concrete support (family support line) while maintaining appropriate boundaries.",
       "coaching_note": null,
       "is_na": false
     },
     {
       "dimension": "objection_handling",
-      "raw_score": null,
-      "weighted_score": null,
+      "raw_score": 5,
+      "weighted_score": 5.0,
       "weight": 1.0,
-      "confidence": 0.9,
-      "ai_rationale": "No objections were raised during this call. The caller was cooperative and information-seeking throughout, with no concerns about cost, fear, or ambivalence expressed.",
+      "confidence": 0.89,
+      "ai_rationale": "The caller raised a transactional concern about insurance coverage. Agent addressed it constructively by acknowledging that coverage is verified upon contact and explicitly stated 'we never want cost to be a barrier,' removing the objection without being salesy or defensive.",
       "coaching_note": null,
-      "is_na": true
+      "is_na": false
     },
     {
       "dimension": "next_step_clarity",
       "raw_score": 5,
       "weighted_score": 5.0,
       "weight": 1.0,
-      "confidence": 0.95,
-      "ai_rationale": "Agent set clear, concrete next steps: email with program overview and family support line number to be sent within the hour. Ownership was clear (agent sending email), timing was specific, and the caller knew exactly what to expect.",
+      "confidence": 0.91,
+      "ai_rationale": "Agent set clear, concrete next steps: email with program overview and family support line number to be sent within the hour, with explicit invitation to use the support line for conversation guidance. Ownership and timing were both crystal clear.",
       "coaching_note": null,
       "is_na": false
     },
@@ -91,8 +91,8 @@
       "raw_score": 5,
       "weighted_score": 7.5,
       "weight": 1.5,
-      "confidence": 0.92,
-      "ai_rationale": "Agent maintained appropriate boundaries throughout, using no diagnostic language and making no treatment guarantees. Appropriately characterized observations as 'a pattern worth addressing' without diagnosing the colleague's condition.",
+      "confidence": 0.94,
+      "ai_rationale": "Agent maintained perfect compliance boundaries. No diagnostic language was used ('a pattern worth addressing' is observational, not diagnostic). Insurance coverage was appropriately hedged ('if your colleague reaches out, we can verify'). No outcome promises were made. All language stayed within intake coordinator scope.",
       "coaching_note": null,
       "is_na": false
     }
@@ -108,18 +108,18 @@
     },
     {
       "dimension": "empathy_rapport",
-      "turn_number": 8,
-      "timestamp_seconds": 160,
+      "turn_number": 4,
+      "timestamp_seconds": 36,
       "speaker": "agent",
-      "text_snippet": "You're being a good friend, {c}. Let me know if anything changes or if they're ready to reach out directly.",
+      "text_snippet": "Understood. A few things to know: ultimately your colleague would need to reach out themselves or come in, since any treatment is voluntary.",
       "relevance_rank": 2
     },
     {
       "dimension": "empathy_rapport",
-      "turn_number": 3,
-      "timestamp_seconds": 36,
+      "turn_number": 10,
+      "timestamp_seconds": 160,
       "speaker": "agent",
-      "text_snippet": "Understood. A few things to know: ultimately your colleague would need to reach out themselves or come in, since any treatment is voluntary.",
+      "text_snippet": "I'll include that number in the email as well. You're being a good friend, {c}. Let me know if anything changes or if they're ready to reach out directly.",
       "relevance_rank": 3
     },
     {
@@ -127,15 +127,15 @@
       "turn_number": 6,
       "timestamp_seconds": 112,
       "speaker": "agent",
-      "text_snippet": "Most major insurance plans cover substance use treatment. If your colleague reaches out, we can verify their specific benefits in about an hour. We never want cost to be a barrier.",
+      "text_snippet": "Most major insurance plans cover substance use treatment. If your colleague reaches out, we can verify their specific benefits in about an hour.",
       "relevance_rank": 1
     },
     {
       "dimension": "clinical_screening",
-      "turn_number": 1,
-      "timestamp_seconds": 4,
+      "turn_number": 3,
+      "timestamp_seconds": 48,
       "speaker": "caller",
-      "text_snippet": "I'm actually calling to do some research. I have a colleague who I think is struggling with alcohol and I want to understand what options are out there before I talk to them.",
+      "text_snippet": "They drink every day. I've noticed them coming back from lunch with alcohol on their breath, and they've mentioned not sleeping well.",
       "relevance_rank": 1
     },
     {
@@ -159,24 +159,40 @@
       "turn_number": 2,
       "timestamp_seconds": 16,
       "speaker": "agent",
-      "text_snippet": "Just so I understand the situation \u2014 you're gathering information on behalf of someone else, not for yourself?",
+      "text_snippet": "That's a thoughtful thing to do, Andrea. I'm happy to walk you through what we offer. Just so I understand the situation \u2014 you're gathering information on behalf of someone else, not for yourself?",
       "relevance_rank": 1
     },
     {
       "dimension": "family_caller_handling",
-      "turn_number": 3,
+      "turn_number": 4,
       "timestamp_seconds": 36,
       "speaker": "agent",
-      "text_snippet": "Understood. A few things to know: ultimately your colleague would need to reach out themselves or come in, since any treatment is voluntary. But knowing your options helps you have a better conversati",
+      "text_snippet": "Understood. A few things to know: ultimately your colleague would need to reach out themselves or come in, since any treatment is voluntary.",
       "relevance_rank": 2
     },
     {
       "dimension": "family_caller_handling",
-      "turn_number": 7,
+      "turn_number": 8,
       "timestamp_seconds": 142,
       "speaker": "agent",
-      "text_snippet": "And if you'd like to talk through how to approach that conversation with your colleague, our family and support line is open \u2014 no charge, just guidance. Would that be helpful?",
+      "text_snippet": "I'll pull that from the caller ID and send it within the hour. And if you'd like to talk through how to approach that conversation with your colleague, our family and support line is open \u2014 no charge,",
       "relevance_rank": 3
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 5,
+      "timestamp_seconds": 104,
+      "speaker": "caller",
+      "text_snippet": "That's really helpful. What about insurance \u2014 would theirs likely cover this?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 6,
+      "timestamp_seconds": 112,
+      "speaker": "agent",
+      "text_snippet": "Most major insurance plans cover substance use treatment. If your colleague reaches out, we can verify their specific benefits in about an hour. We never want cost to be a barrier.",
+      "relevance_rank": 2
     },
     {
       "dimension": "next_step_clarity",
@@ -188,7 +204,7 @@
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 7,
+      "turn_number": 8,
       "timestamp_seconds": 142,
       "speaker": "agent",
       "text_snippet": "I'll pull that from the caller ID and send it within the hour. And if you'd like to talk through how to approach that conversation with your colleague, our family and support line is open",
@@ -196,10 +212,10 @@
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 7,
-      "timestamp_seconds": 142,
+      "turn_number": 10,
+      "timestamp_seconds": 160,
       "speaker": "agent",
-      "text_snippet": "I'll include that number in the email as well.",
+      "text_snippet": "I'll include that number in the email as well. You're being a good friend, {c}. Let me know if anything changes or if they're ready to reach out directly.",
       "relevance_rank": 3
     },
     {
@@ -207,23 +223,23 @@
       "turn_number": 4,
       "timestamp_seconds": 60,
       "speaker": "agent",
-      "text_snippet": "That does sound like a pattern worth addressing sooner rather than later, though it sounds like there's no immediate crisis situation right now",
+      "text_snippet": "That does sound like a pattern worth addressing sooner rather than later, though it sounds like there's no immediate crisis situation right now \u2014 more of a concerning escalation over time.",
       "relevance_rank": 1
-    },
-    {
-      "dimension": "compliance_language",
-      "turn_number": 3,
-      "timestamp_seconds": 36,
-      "speaker": "agent",
-      "text_snippet": "ultimately your colleague would need to reach out themselves or come in, since any treatment is voluntary",
-      "relevance_rank": 2
     },
     {
       "dimension": "compliance_language",
       "turn_number": 6,
       "timestamp_seconds": 112,
       "speaker": "agent",
-      "text_snippet": "we can verify their specific benefits in about an hour. We never want cost to be a barrier.",
+      "text_snippet": "Most major insurance plans cover substance use treatment. If your colleague reaches out, we can verify their specific benefits in about an hour.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 6,
+      "timestamp_seconds": 78,
+      "speaker": "agent",
+      "text_snippet": "Let me tell you what we offer: we have outpatient programs \u2014 IOP, which is three evenings a week \u2014 and PHP, which is more intensive, five days a week.",
       "relevance_rank": 3
     }
   ],

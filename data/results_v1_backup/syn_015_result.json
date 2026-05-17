@@ -1,0 +1,247 @@
+{
+  "evaluation": {
+    "call_id": "syn_015",
+    "agent_id": "AGT-320",
+    "call_timestamp": "2026-04-01T00:00:00Z",
+    "duration_seconds": 188,
+    "scenario_type": null,
+    "rubric_version": "rubric-v1",
+    "prompt_version": "prompt-v1",
+    "model_id": "claude-sonnet-4-5-20250929",
+    "overall_score": 72.5,
+    "compliance_override_triggered": false,
+    "confidence_overall": 0.89,
+    "manager_summary": "Jason called seeking treatment for escalating cocaine use with financial strain and repeated failed quit attempts. Nina handled his employer confidentiality concern excellently with clear HIPAA explanation, collected insurance details and basic clinical information, but closed the call with no specific next step or timeline despite the caller explicitly asking 'when?'. Strong objection handling undermined by weak closing.",
+    "status": "scored",
+    "scored_at": "2026-05-15T11:01:37.211408+00:00"
+  },
+  "dimension_scores": [
+    {
+      "dimension": "empathy_rapport",
+      "raw_score": 3,
+      "weighted_score": 4.5,
+      "weight": 1.5,
+      "confidence": 0.88,
+      "ai_rationale": "Agent was polite and professional but did not deeply acknowledge the emotional weight of the situation. The response to Jason's disclosure about cocaine use was procedural rather than empathetic, and no name usage beyond the initial acknowledgment.",
+      "coaching_note": "After Jason disclosed escalating cocaine use and financial strain, pause to acknowledge the difficulty of that disclosure before moving into screening questions.",
+      "is_na": false
+    },
+    {
+      "dimension": "insurance_verification",
+      "raw_score": 4,
+      "weighted_score": 4.0,
+      "weight": 1.0,
+      "confidence": 0.9,
+      "ai_rationale": "Agent collected carrier name, member ID, and group number correctly. The reassurance about confidentiality during verification was excellent framing. Minor gap: no explicit mention of plan type captured.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "clinical_screening",
+      "raw_score": 4,
+      "weighted_score": 4.0,
+      "weight": 1.0,
+      "confidence": 0.87,
+      "ai_rationale": "Agent captured substance type (cocaine), duration (two years), escalation pattern, financial impact, concurrent alcohol use, and prior quit attempts. Did not probe for withdrawal symptoms or prior treatment history, which would have been relevant given escalation.",
+      "coaching_note": "Ask about prior treatment attempts and whether withdrawal symptoms have been experienced when stopping.",
+      "is_na": false
+    },
+    {
+      "dimension": "urgency_triage",
+      "raw_score": 3,
+      "weighted_score": 3.0,
+      "weight": 1.0,
+      "confidence": 0.82,
+      "ai_rationale": "Agent did not explicitly assess urgency or timing. Escalating cocaine use with financial strain and repeated failed quit attempts suggest at least moderate urgency, but agent did not explore last use, current use frequency, or set appropriate urgency framing for next steps.",
+      "coaching_note": "Ask about last use and current frequency to assess whether this is a same-day, this-week, or future need.",
+      "is_na": false
+    },
+    {
+      "dimension": "family_caller_handling",
+      "raw_score": null,
+      "weighted_score": null,
+      "weight": 1.0,
+      "confidence": 1.0,
+      "ai_rationale": "Caller is the patient themselves, confirmed when Jason stated 'I've been using cocaine.'",
+      "coaching_note": null,
+      "is_na": true
+    },
+    {
+      "dimension": "objection_handling",
+      "raw_score": 5,
+      "weighted_score": 5.0,
+      "weight": 1.0,
+      "confidence": 0.95,
+      "ai_rationale": "Agent handled the employer confidentiality concern exemplarily: acknowledged it as common, provided factual HIPAA explanation without jargon, and proactively offered FMLA guidance as a separate option. The response was reassuring without being dismissive.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "next_step_clarity",
+      "raw_score": 1,
+      "weighted_score": 1.0,
+      "weight": 1.0,
+      "confidence": 0.95,
+      "ai_rationale": "Agent provided no specific next step, timing, or ownership. The response 'We'll be in touch soon' and 'Keep an eye on your phone' are vague and leave Jason uncertain. When Jason explicitly asked 'When?', agent did not provide concrete timing.",
+      "coaching_note": "Always set a specific next step with timing and ownership before ending the call, especially when the caller asks directly.",
+      "is_na": false
+    },
+    {
+      "dimension": "compliance_language",
+      "raw_score": 5,
+      "weighted_score": 7.5,
+      "weight": 1.5,
+      "confidence": 0.92,
+      "ai_rationale": "Agent maintained appropriate intake language throughout, never diagnosed or made treatment guarantees. HIPAA explanation was accurate and appropriately framed. IOP mention was descriptive rather than prescriptive.",
+      "coaching_note": null,
+      "is_na": false
+    }
+  ],
+  "evidence_anchors": [
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 2,
+      "timestamp_seconds": 14,
+      "speaker": "agent",
+      "text_snippet": "Of course, Jason. What's on your mind?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 6,
+      "timestamp_seconds": 86,
+      "speaker": "agent",
+      "text_snippet": "I appreciate you sharing that. Two years of use with escalating frequency and financial impact \u2014 those are meaningful signals.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 10,
+      "timestamp_seconds": 122,
+      "speaker": "agent",
+      "text_snippet": "That cycle \u2014 the stress trigger leading back \u2014 is something our counsellors work on specifically, especially in IOP.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 11,
+      "timestamp_seconds": 132,
+      "speaker": "caller",
+      "text_snippet": "Yes. BluePeak Health. ID BP41089959, group GRP-623482.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 12,
+      "timestamp_seconds": 144,
+      "speaker": "agent",
+      "text_snippet": "Thank you. And given your confidentiality concern, I want to confirm: when we verify your benefits, that call goes through our intake team, not back to your employer's HR.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 5,
+      "timestamp_seconds": 74,
+      "speaker": "caller",
+      "text_snippet": "So \u2014 I've been using cocaine on and off for about two years. Lately more on. I'm spending money I don't have.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 6,
+      "timestamp_seconds": 86,
+      "speaker": "agent",
+      "text_snippet": "Jason, are you also drinking or using anything else alongside the cocaine?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 8,
+      "timestamp_seconds": 108,
+      "speaker": "agent",
+      "text_snippet": "Okay. And are there times you've tried to stop on your own?",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 5,
+      "timestamp_seconds": 74,
+      "speaker": "caller",
+      "text_snippet": "Lately more on. I'm spending money I don't have. My partner is frustrated.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 9,
+      "timestamp_seconds": 114,
+      "speaker": "caller",
+      "text_snippet": "I've tried. I go a few days and then something stressful happens and I'm back.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 3,
+      "timestamp_seconds": 30,
+      "speaker": "agent",
+      "text_snippet": "That's a really common concern and I want to give you an honest answer. Your insurance claim is private \u2014 your employer receives aggregate data for cost management but does not receive information abo",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 4,
+      "timestamp_seconds": 62,
+      "speaker": "agent",
+      "text_snippet": "And if you decide FMLA is something you want to explore \u2014 which some people do to protect their job during treatment \u2014 we can connect you with guidance on that.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 3,
+      "timestamp_seconds": 56,
+      "speaker": "caller",
+      "text_snippet": "Okay. That's more reassuring than I expected. Thank you.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 13,
+      "timestamp_seconds": 162,
+      "speaker": "agent",
+      "text_snippet": "We'll follow up with you about your options.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 14,
+      "timestamp_seconds": 168,
+      "speaker": "caller",
+      "text_snippet": "When?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 15,
+      "timestamp_seconds": 172,
+      "speaker": "agent",
+      "text_snippet": "We'll be in touch soon. Keep an eye on your phone.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 3,
+      "timestamp_seconds": 30,
+      "speaker": "agent",
+      "text_snippet": "Under HIPAA, your treatment records are protected.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 10,
+      "timestamp_seconds": 122,
+      "speaker": "agent",
+      "text_snippet": "That cycle \u2014 the stress trigger leading back \u2014 is something our counsellors work on specifically, especially in IOP.",
+      "relevance_rank": 2
+    }
+  ],
+  "compliance_flags": []
+}

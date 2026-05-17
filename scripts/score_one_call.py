@@ -107,7 +107,7 @@ def main(call_id: str = "syn_001") -> None:
     print(f"\n{'─'*60}")
     print(f"  OVERALL SCORE:    {result.evaluation.overall_score:.0f} / 100")
     print(f"  COMPLIANCE:       {'TRIGGERED' if result.evaluation.compliance_override_triggered else 'Clean'}")
-    print(f"  CONFIDENCE:       {result.evaluation.overall_confidence:.2f}")
+    print(f"  CONFIDENCE:       {result.evaluation.confidence_overall:.2f}")
     print(f"  RUBRIC:           {result.evaluation.rubric_version}")
     print(f"  PROMPT:           {result.evaluation.prompt_version}")
     print(f"\n  Dimension scores:")

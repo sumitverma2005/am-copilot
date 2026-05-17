@@ -1,0 +1,247 @@
+{
+  "evaluation": {
+    "call_id": "syn_025",
+    "agent_id": "AGT-906",
+    "call_timestamp": "2026-04-01T00:00:00Z",
+    "duration_seconds": 166,
+    "scenario_type": null,
+    "rubric_version": "rubric-v1",
+    "prompt_version": "prompt-v1",
+    "model_id": "claude-sonnet-4-5-20250929",
+    "overall_score": 94.29,
+    "compliance_override_triggered": false,
+    "confidence_overall": 0.93,
+    "manager_summary": "Exemplary crisis call handling. Caller disclosed overdose 24 hours prior with naloxone reversal, no medical evaluation yet. Agent immediately recognized the medical emergency, gathered essential clinical information (fentanyl use, 8 months duration) and insurance details efficiently, and escalated to medical intake coordinator for same-day admission with transport coordination. Clear safety instructions provided and appropriate sense of urgency maintained throughout without pressuring or diagnosing.",
+    "status": "scored",
+    "scored_at": "2026-05-15T11:06:27.945944+00:00"
+  },
+  "dimension_scores": [
+    {
+      "dimension": "empathy_rapport",
+      "raw_score": 5,
+      "weighted_score": 7.5,
+      "weight": 1.5,
+      "confidence": 0.95,
+      "ai_rationale": "Agent immediately acknowledged the life-threatening situation with genuine care, validated the caller's survival, and matched the emotional gravity of the moment. Used caller's name repeatedly and transitioned seamlessly from emotional acknowledgment to action.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "insurance_verification",
+      "raw_score": 4,
+      "weighted_score": 4.0,
+      "weight": 1.0,
+      "confidence": 0.88,
+      "ai_rationale": "Agent captured carrier name, member ID, and group number efficiently at the appropriate moment in the call. Verification was brief and did not distract from the urgent medical triage, though plan type was not explicitly captured.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "clinical_screening",
+      "raw_score": 4,
+      "weighted_score": 4.0,
+      "weight": 1.0,
+      "confidence": 0.82,
+      "ai_rationale": "Agent captured substance type (fentanyl) and duration of use (eight months), asked about physical condition post-overdose, and gathered medical history regarding ER visit. Prior treatment history was not explicitly asked, though context suggests this was appropriate given the crisis nature of the call.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "urgency_triage",
+      "raw_score": 5,
+      "weighted_score": 5.0,
+      "weight": 1.0,
+      "confidence": 0.98,
+      "ai_rationale": "Agent correctly identified this as a same-day medical emergency from the overdose disclosure and acted immediately with appropriate escalation. Clear crisis protocol activated with transport coordination, medical evaluation prioritized, and safety instructions (stay with roommate, do not drive) provided.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "family_caller_handling",
+      "raw_score": null,
+      "weighted_score": null,
+      "weight": 1.0,
+      "confidence": 1.0,
+      "ai_rationale": "Caller is the patient themselves, confirmed throughout the transcript.",
+      "coaching_note": null,
+      "is_na": true
+    },
+    {
+      "dimension": "objection_handling",
+      "raw_score": null,
+      "weighted_score": null,
+      "weight": 1.0,
+      "confidence": 0.95,
+      "ai_rationale": "No objections were raised by the caller. Caller was cooperative and motivated throughout the call.",
+      "coaching_note": null,
+      "is_na": true
+    },
+    {
+      "dimension": "next_step_clarity",
+      "raw_score": 5,
+      "weighted_score": 5.0,
+      "weight": 1.0,
+      "confidence": 0.95,
+      "ai_rationale": "Agent provided crystal-clear next steps: medical intake coordinator will call back in under ten minutes, transport will be coordinated, and caller will be seen same-day. Ownership and timing were explicitly stated, and safety instructions were clear.",
+      "coaching_note": null,
+      "is_na": false
+    },
+    {
+      "dimension": "compliance_language",
+      "raw_score": 5,
+      "weighted_score": 7.5,
+      "weight": 1.5,
+      "confidence": 0.92,
+      "ai_rationale": "Agent maintained appropriate intake language throughout, framed the medical emergency appropriately without diagnosing, and did not guarantee treatment outcomes. Language was clear and urgent without crossing into unauthorized clinical territory.",
+      "coaching_note": null,
+      "is_na": false
+    }
+  ],
+  "evidence_anchors": [
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 2,
+      "timestamp_seconds": 14,
+      "speaker": "agent",
+      "text_snippet": "Kristin, I am so glad you called and I am so glad your roommate was there. That was a life-saving moment and you survived it.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 4,
+      "timestamp_seconds": 34,
+      "speaker": "agent",
+      "text_snippet": "Good. You're okay.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "empathy_rapport",
+      "turn_number": 5,
+      "timestamp_seconds": 52,
+      "speaker": "agent",
+      "text_snippet": "I understand. I'm going to be honest with you: after an opioid overdose, medical evaluation is important",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 8,
+      "timestamp_seconds": 102,
+      "speaker": "agent",
+      "text_snippet": "Okay. Do you have insurance with you?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 9,
+      "timestamp_seconds": 108,
+      "speaker": "caller",
+      "text_snippet": "Yes. CoreFirst Insurance. My card is here. Member ID BP82630580, group GRP-815784.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 10,
+      "timestamp_seconds": 120,
+      "speaker": "agent",
+      "text_snippet": "I have that. Kristin, I'm escalating you to our medical intake coordinator right now",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 5,
+      "timestamp_seconds": 52,
+      "speaker": "agent",
+      "text_snippet": "Can I ask: are you using heroin, fentanyl, or prescription opioids?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 6,
+      "timestamp_seconds": 74,
+      "speaker": "caller",
+      "text_snippet": "Fentanyl. I've been using for about eight months.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 3,
+      "timestamp_seconds": 34,
+      "speaker": "agent",
+      "text_snippet": "First \u2014 have you been seen by a doctor since last night? Did you go to the ER?",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 5,
+      "timestamp_seconds": 52,
+      "speaker": "agent",
+      "text_snippet": "I want to get you both medically evaluated and into our detox program today. Not tomorrow \u2014 today.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 7,
+      "timestamp_seconds": 82,
+      "speaker": "agent",
+      "text_snippet": "Eight months of fentanyl use and an overdose last night \u2014 this is a genuine medical emergency, Kristin",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 10,
+      "timestamp_seconds": 140,
+      "speaker": "agent",
+      "text_snippet": "Good. Tell them to stay with you until our coordinator calls back \u2014 which will be in under ten minutes. Do not drive. Do not be alone.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 10,
+      "timestamp_seconds": 120,
+      "speaker": "agent",
+      "text_snippet": "I'm escalating you to our medical intake coordinator right now \u2014 they handle same-day admissions for exactly this kind of situation.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 10,
+      "timestamp_seconds": 140,
+      "speaker": "agent",
+      "text_snippet": "Tell them to stay with you until our coordinator calls back \u2014 which will be in under ten minutes.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 7,
+      "timestamp_seconds": 82,
+      "speaker": "agent",
+      "text_snippet": "I'd like to arrange for you to be seen at our medical facility this morning. Our intake team can coordinate transport from where you are.",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 5,
+      "timestamp_seconds": 52,
+      "speaker": "agent",
+      "text_snippet": "after an opioid overdose, medical evaluation is important \u2014 not just for the overdose itself, but because your body has been through significant stress",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 7,
+      "timestamp_seconds": 82,
+      "speaker": "agent",
+      "text_snippet": "this is a genuine medical emergency, Kristin, and you're doing exactly the right thing by calling",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 11,
+      "timestamp_seconds": 156,
+      "speaker": "agent",
+      "text_snippet": "You called at exactly the right moment, Kristin. I'm getting help to you right now.",
+      "relevance_rank": 3
+    }
+  ],
+  "compliance_flags": []
+}

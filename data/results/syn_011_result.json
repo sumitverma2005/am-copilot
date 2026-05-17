@@ -5,15 +5,15 @@
     "call_timestamp": "2026-04-01T00:00:00Z",
     "duration_seconds": 124,
     "scenario_type": null,
-    "rubric_version": "rubric-v1",
-    "prompt_version": "prompt-v1",
+    "rubric_version": "rubric-v2",
+    "prompt_version": "prompt-v2",
     "model_id": "claude-sonnet-4-5-20250929",
-    "overall_score": 36.25,
+    "overall_score": 42.5,
     "compliance_override_triggered": false,
     "confidence_overall": 0.94,
-    "manager_summary": "This call involved a high-risk caller with suicidal ideation and severe daily alcohol use that was completely mishandled. Agent missed all urgency signals, provided no empathy or acknowledgment of distress, failed to activate crisis protocols, and closed with a vague callback promise. This requires immediate coaching on crisis identification and empathetic engagement.",
+    "manager_summary": "Kyle called seeking help for severe alcohol use (bottle of vodka daily) and expressed clear suicidal ideation signals ('don't see the point in things anymore') that the agent completely missed and did not triage. The call was transactional with minimal empathy, no crisis protocol activation, and a vague follow-up plan. This is a critical safety miss requiring immediate coaching and potential callback to the patient.",
     "status": "scored",
-    "scored_at": "2026-05-15T10:59:30.418995+00:00"
+    "scored_at": "2026-05-17T06:41:15.053372+00:00"
   },
   "dimension_scores": [
     {
@@ -22,17 +22,17 @@
       "weighted_score": 1.5,
       "weight": 1.5,
       "confidence": 0.95,
-      "ai_rationale": "Agent provided no emotional acknowledgment despite clear distress signals. Jumped directly to intake questions without slowing down, building trust, or acknowledging the difficulty of reaching out. Tone was transactional throughout.",
-      "coaching_note": "Acknowledge the caller's courage in reaching out and emotional state before moving to questions. Use their name and validate the difficulty of the situation.",
+      "ai_rationale": "Agent missed critical emotional cues in first 60 seconds and throughout. Caller disclosed hopelessness ('I don't really see the point in a lot of things anymore') and low energy, but agent continued transactional questioning without acknowledgment or warmth.",
+      "coaching_note": "When a caller discloses hopelessness or emotional distress, pause and acknowledge it before moving to intake questions. Use their name and validate how hard it is to make this call.",
       "is_na": false
     },
     {
       "dimension": "insurance_verification",
-      "raw_score": 3,
-      "weighted_score": 3.0,
+      "raw_score": 4,
+      "weighted_score": 4.0,
       "weight": 1.0,
       "confidence": 0.88,
-      "ai_rationale": "Agent collected carrier, member ID, and group number efficiently. However, no verification framing was provided to make it feel supportive rather than procedural, and it was asked without context or transition.",
+      "ai_rationale": "Agent captured carrier, member ID, and group number efficiently. The pivot was brief but functional, though it could have been warmer given the caller's emotional state.",
       "coaching_note": null,
       "is_na": false
     },
@@ -42,8 +42,8 @@
       "weighted_score": 2.0,
       "weight": 1.0,
       "confidence": 0.9,
-      "ai_rationale": "Agent captured substance type (alcohol) and quantity (bottle of vodka daily) but failed to ask about critical details: last use, withdrawal symptoms, co-occurring mental health despite clear depression signals, or any prior treatment details beyond yes/no.",
-      "coaching_note": "Ask about last use, withdrawal symptoms, and explore mental health concerns when the caller signals depression or hopelessness.",
+      "ai_rationale": "Agent captured substance type, quantity, and frequency, but missed prior treatment history depth and failed to probe co-occurring mental health concerns despite clear depression/suicidal ideation signals. Screening was incomplete.",
+      "coaching_note": "When a caller mentions hopelessness or lack of energy, specifically ask about mental health history and current thoughts of self-harm to complete the clinical picture.",
       "is_na": false
     },
     {
@@ -52,8 +52,8 @@
       "weighted_score": 0.0,
       "weight": 1.0,
       "confidence": 0.98,
-      "ai_rationale": "Agent completely missed critical urgency signals including suicidal ideation language ('don't see the point in a lot of things anymore') and severe daily alcohol use. No crisis protocol activated, no appropriate escalation, and treated this as a routine scheduling inquiry.",
-      "coaching_note": "When caller expresses hopelessness or lack of purpose, immediately assess for suicidal ideation and activate crisis protocols. This is a same-day urgency situation.",
+      "ai_rationale": "Agent completely missed urgent suicidal ideation signals ('I don't really see the point in a lot of things anymore') and depression indicators ('I just don't have a lot of energy for anything lately'). No crisis protocol activated, no escalation, no safety assessment.",
+      "coaching_note": "Statements about lack of purpose or not seeing the point in things are suicidal ideation red flags that require immediate crisis protocol activation and direct safety assessment.",
       "is_na": false
     },
     {
@@ -62,7 +62,7 @@
       "weighted_score": null,
       "weight": 1.0,
       "confidence": 1.0,
-      "ai_rationale": "Caller is the patient themselves, confirmed by 'I've been struggling with alcohol and I think I need help.'",
+      "ai_rationale": "Caller is the patient themselves (Kyle, calling about his own alcohol use).",
       "coaching_note": null,
       "is_na": true
     },
@@ -72,8 +72,8 @@
       "weighted_score": 1.0,
       "weight": 1.0,
       "confidence": 0.92,
-      "ai_rationale": "Caller expressed ambivalence multiple times ('I'm not really sure what I'm looking for,' 'I don't have a lot of energy'). Agent never acknowledged these concerns, offered no validation or alternatives, and simply pushed forward with scheduling language.",
-      "coaching_note": "Acknowledge ambivalence and low energy as normal reactions, validate the difficulty, and explore what small step might feel manageable to the caller.",
+      "ai_rationale": "Caller expressed significant ambivalence and hopelessness ('I'm not really sure what I'm looking for. I just feel like nothing's going to get better anyway') which is emotional resistance. Agent gave flat 'I understand' without addressing the concern or building hope.",
+      "coaching_note": "When a caller expresses hopelessness about treatment, acknowledge that feeling specifically and offer reassurance grounded in process (e.g., 'It's common to feel that way, and our team specializes in helping people who feel exactly where you are right now').",
       "is_na": false
     },
     {
@@ -82,17 +82,17 @@
       "weighted_score": 1.0,
       "weight": 1.0,
       "confidence": 0.93,
-      "ai_rationale": "Agent stated someone would call back but provided no timing, no specific next step, and no ownership clarity. Caller left with 'we'll be in touch' which is vague and uncommitted.",
-      "coaching_note": "Always provide specific timing for callbacks (today, within 24 hours, etc.) and confirm what the caller should expect.",
+      "ai_rationale": "Agent promised callback from admissions but provided no timing, no specifics about what will be discussed, and no ownership clarity. Close was vague ('we'll be in touch').",
+      "coaching_note": "Always specify timing for callbacks (e.g., 'within 2 hours' or 'by end of day tomorrow') and confirm caller's best contact number and availability window.",
       "is_na": false
     },
     {
       "dimension": "compliance_language",
-      "raw_score": 4,
-      "weighted_score": 6.0,
+      "raw_score": 5,
+      "weighted_score": 7.5,
       "weight": 1.5,
-      "confidence": 0.9,
-      "ai_rationale": "Agent stayed in intake role and did not diagnose, make guarantees, or overstep clinical boundaries. Language remained appropriate throughout the screening questions.",
+      "confidence": 0.95,
+      "ai_rationale": "Agent stayed within intake coordinator scope throughout. No diagnostic labels, no outcome promises, no clinical overreach. Language was transactional but compliant.",
       "coaching_note": null,
       "is_na": false
     }
@@ -101,14 +101,14 @@
     {
       "dimension": "empathy_rapport",
       "turn_number": 2,
-      "timestamp_seconds": 10,
-      "speaker": "agent",
-      "text_snippet": "Of course. How long has this been going on?",
+      "timestamp_seconds": 4,
+      "speaker": "caller",
+      "text_snippet": "Hi, my name is Kyle. I've been struggling with alcohol and I think I need help.",
       "relevance_rank": 1
     },
     {
       "dimension": "empathy_rapport",
-      "turn_number": 3,
+      "turn_number": 4,
       "timestamp_seconds": 14,
       "speaker": "caller",
       "text_snippet": "Years. But it's been really bad lately. I don't know, I just... I don't really see the point in a lot of things anymore.",
@@ -116,7 +116,7 @@
     },
     {
       "dimension": "empathy_rapport",
-      "turn_number": 4,
+      "turn_number": 5,
       "timestamp_seconds": 24,
       "speaker": "agent",
       "text_snippet": "How much are you drinking?",
@@ -124,7 +124,7 @@
     },
     {
       "dimension": "insurance_verification",
-      "turn_number": 8,
+      "turn_number": 10,
       "timestamp_seconds": 56,
       "speaker": "agent",
       "text_snippet": "I understand. Do you have insurance?",
@@ -132,7 +132,7 @@
     },
     {
       "dimension": "insurance_verification",
-      "turn_number": 9,
+      "turn_number": 11,
       "timestamp_seconds": 62,
       "speaker": "caller",
       "text_snippet": "Yes, Summit Select. ID is BP11776709, group GRP-424152.",
@@ -140,7 +140,7 @@
     },
     {
       "dimension": "clinical_screening",
-      "turn_number": 4,
+      "turn_number": 5,
       "timestamp_seconds": 24,
       "speaker": "agent",
       "text_snippet": "How much are you drinking?",
@@ -148,7 +148,7 @@
     },
     {
       "dimension": "clinical_screening",
-      "turn_number": 5,
+      "turn_number": 6,
       "timestamp_seconds": 28,
       "speaker": "caller",
       "text_snippet": "A lot. Almost a bottle of vodka a day.",
@@ -156,7 +156,7 @@
     },
     {
       "dimension": "clinical_screening",
-      "turn_number": 10,
+      "turn_number": 12,
       "timestamp_seconds": 74,
       "speaker": "agent",
       "text_snippet": "Okay. Any prior treatment?",
@@ -164,7 +164,7 @@
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 3,
+      "turn_number": 4,
       "timestamp_seconds": 14,
       "speaker": "caller",
       "text_snippet": "I don't know, I just... I don't really see the point in a lot of things anymore.",
@@ -172,47 +172,47 @@
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 7,
-      "timestamp_seconds": 48,
-      "speaker": "caller",
-      "text_snippet": "I guess. I'm not really sure what I'm looking for. I just feel like nothing's going to get better anyway.",
-      "relevance_rank": 2
-    },
-    {
-      "dimension": "urgency_triage",
-      "turn_number": 12,
-      "timestamp_seconds": 98,
-      "speaker": "agent",
-      "text_snippet": "We can schedule a time that works for you. Let me get someone from admissions to call you back about next steps.",
-      "relevance_rank": 3
-    },
-    {
-      "dimension": "objection_handling",
-      "turn_number": 7,
-      "timestamp_seconds": 48,
-      "speaker": "caller",
-      "text_snippet": "I guess. I'm not really sure what I'm looking for. I just feel like nothing's going to get better anyway.",
-      "relevance_rank": 1
-    },
-    {
-      "dimension": "objection_handling",
-      "turn_number": 11,
+      "turn_number": 9,
       "timestamp_seconds": 90,
       "speaker": "caller",
       "text_snippet": "I don't know. Maybe. I just don't have a lot of energy for anything lately.",
       "relevance_rank": 2
     },
     {
-      "dimension": "objection_handling",
-      "turn_number": 12,
-      "timestamp_seconds": 98,
+      "dimension": "urgency_triage",
+      "turn_number": 8,
+      "timestamp_seconds": 84,
       "speaker": "agent",
-      "text_snippet": "We can schedule a time that works for you. Let me get someone from admissions to call you back about next steps.",
+      "text_snippet": "And what's your availability like? Could you come in this week?",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 9,
+      "timestamp_seconds": 48,
+      "speaker": "caller",
+      "text_snippet": "I guess. I'm not really sure what I'm looking for. I just feel like nothing's going to get better anyway.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 10,
+      "timestamp_seconds": 56,
+      "speaker": "agent",
+      "text_snippet": "I understand. Do you have insurance?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 9,
+      "timestamp_seconds": 90,
+      "speaker": "caller",
+      "text_snippet": "I don't know. Maybe. I just don't have a lot of energy for anything lately.",
       "relevance_rank": 3
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 12,
+      "turn_number": 10,
       "timestamp_seconds": 98,
       "speaker": "agent",
       "text_snippet": "We can schedule a time that works for you. Let me get someone from admissions to call you back about next steps.",
@@ -220,7 +220,7 @@
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 14,
+      "turn_number": 12,
       "timestamp_seconds": 110,
       "speaker": "agent",
       "text_snippet": "We'll be in touch. Thanks for calling.",
@@ -228,18 +228,18 @@
     },
     {
       "dimension": "compliance_language",
-      "turn_number": 2,
-      "timestamp_seconds": 10,
+      "turn_number": 5,
+      "timestamp_seconds": 24,
       "speaker": "agent",
-      "text_snippet": "Of course. How long has this been going on?",
+      "text_snippet": "How much are you drinking?",
       "relevance_rank": 1
     },
     {
       "dimension": "compliance_language",
-      "turn_number": 4,
-      "timestamp_seconds": 24,
+      "turn_number": 10,
+      "timestamp_seconds": 98,
       "speaker": "agent",
-      "text_snippet": "How much are you drinking?",
+      "text_snippet": "We can schedule a time that works for you. Let me get someone from admissions to call you back about next steps.",
       "relevance_rank": 2
     }
   ],

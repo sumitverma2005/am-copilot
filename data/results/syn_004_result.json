@@ -5,15 +5,15 @@
     "call_timestamp": "2026-04-01T00:00:00Z",
     "duration_seconds": 116,
     "scenario_type": null,
-    "rubric_version": "rubric-v1",
-    "prompt_version": "prompt-v1",
+    "rubric_version": "rubric-v2",
+    "prompt_version": "prompt-v2",
     "model_id": "claude-sonnet-4-5-20250929",
-    "overall_score": 30.0,
+    "overall_score": 32.86,
     "compliance_override_triggered": true,
-    "confidence_overall": 0.92,
-    "manager_summary": "Roger conducted a brief, highly transactional intake call with Tiffany, who self-identified a drinking problem. Critical issues include a compliance violation (diagnosing dependency), minimal empathy or rapport-building, incomplete clinical screening (no withdrawal or mental health assessment), weak urgency triage despite caller mentioning worsening symptoms, and vague next steps. Insurance information was captured but the overall call quality requires immediate coaching intervention.",
+    "confidence_overall": 0.93,
+    "manager_summary": "Agent conducted a transactional intake call with minimal empathy or rapport-building, jumping immediately to clinical questions without acknowledging the caller's emotional state. A clear compliance violation occurred when the agent diagnosed the caller with 'a dependency problem,' crossing into clinical territory. The call ended with vague next steps and no urgency assessment despite the caller's daily alcohol consumption pattern.",
     "status": "scored",
-    "scored_at": "2026-05-15T11:10:38.161288+00:00"
+    "scored_at": "2026-05-17T06:52:37.509338+00:00"
   },
   "dimension_scores": [
     {
@@ -22,18 +22,18 @@
       "weighted_score": 1.5,
       "weight": 1.5,
       "confidence": 0.95,
-      "ai_rationale": "Agent jumped immediately into clinical questioning without any acknowledgment of the caller's courage in reaching out or emotional state. No use of caller's name, no warmth, and entirely transactional tone from the start.",
-      "coaching_note": "Start calls by acknowledging the difficulty of reaching out and building brief rapport before launching into questions\u2014use the caller's name and validate their decision to seek help.",
+      "ai_rationale": "Agent jumped immediately into clinical questions without acknowledging the caller's emotional state or the difficulty of making the call. No use of the caller's name after introduction, no rapport-building, and the tone was transactional throughout.",
+      "coaching_note": "Start by acknowledging the courage it takes to call and the caller's concern before moving to questions\u2014use their name and slow down to build trust in the first 60 seconds.",
       "is_na": false
     },
     {
       "dimension": "insurance_verification",
-      "raw_score": 3,
-      "weighted_score": 3.0,
+      "raw_score": 4,
+      "weighted_score": 4.0,
       "weight": 1.0,
-      "confidence": 0.88,
-      "ai_rationale": "Agent captured carrier, member ID, and group number efficiently and stated verification would occur. However, plan type was not collected, and the verification felt transactional without framing it as a step toward help.",
-      "coaching_note": "Frame insurance verification as helping us figure out how to support them, and capture plan type (PPO/HMO/etc.) in addition to IDs.",
+      "confidence": 0.9,
+      "ai_rationale": "Agent collected carrier name, member ID, and group number in proper order without overwhelming the caller. Framing was neutral and efficient, though not explicitly positioned as a step toward help.",
+      "coaching_note": null,
       "is_na": false
     },
     {
@@ -41,9 +41,9 @@
       "raw_score": 2,
       "weighted_score": 2.0,
       "weight": 1.0,
-      "confidence": 0.9,
-      "ai_rationale": "Agent asked about drinking quantity, frequency (day vs. morning), and prior treatment, which are appropriate intake questions. However, critical screening elements were missing: last use, withdrawal symptoms, co-occurring mental health, and frequency details beyond a single question.",
-      "coaching_note": "Expand clinical screening to include withdrawal symptoms, last use timing, and any mental health concerns\u2014these are critical for appropriate level-of-care determination.",
+      "confidence": 0.88,
+      "ai_rationale": "Agent captured substance type (alcohol), frequency (bottle of wine at night), and prior treatment history (none). However, no severity indicators like withdrawal symptoms or last use were explored, and the screening was quite shallow.",
+      "coaching_note": "Ask about withdrawal symptoms, last use timing, and any physical effects when drinking stops to better assess severity and urgency.",
       "is_na": false
     },
     {
@@ -51,9 +51,9 @@
       "raw_score": 2,
       "weighted_score": 2.0,
       "weight": 1.0,
-      "confidence": 0.87,
-      "ai_rationale": "Agent collected basic use pattern but failed to probe for urgency signals like withdrawal symptoms, recent escalation triggers, safety concerns, or mental health crises. The 'gotten worse in the last year' comment was not explored at all.",
-      "coaching_note": "When a caller mentions worsening symptoms, probe for urgency indicators\u2014withdrawal risk, safety, mental health concerns\u2014to determine appropriate timeline for admission.",
+      "confidence": 0.9,
+      "ai_rationale": "Agent failed to assess urgency signals at all. No questions about withdrawal risk, safety concerns, or timeline for needing help. The vague callback timing ('today or tomorrow') shows no urgency assessment was conducted.",
+      "coaching_note": "Ask about withdrawal symptoms, when they last drank, and if they feel safe\u2014alcohol dependency can require urgent medical attention for withdrawal management.",
       "is_na": false
     },
     {
@@ -62,7 +62,7 @@
       "weighted_score": null,
       "weight": 1.0,
       "confidence": 1.0,
-      "ai_rationale": "Caller identified herself as the patient (Tiffany) and spoke in first person about her own drinking throughout the call.",
+      "ai_rationale": "Caller is the patient themselves (Tiffany calling about her own drinking problem).",
       "coaching_note": null,
       "is_na": true
     },
@@ -72,7 +72,7 @@
       "weighted_score": null,
       "weight": 1.0,
       "confidence": 0.95,
-      "ai_rationale": "No objections, concerns about cost, fear, or ambivalence were raised by the caller. She appeared cooperative and accepting throughout.",
+      "ai_rationale": "No objections, concerns, or hesitations were expressed by the caller. Caller was cooperative throughout with no resistance to treatment or questions about barriers.",
       "coaching_note": null,
       "is_na": true
     },
@@ -82,8 +82,8 @@
       "weighted_score": 2.0,
       "weight": 1.0,
       "confidence": 0.92,
-      "ai_rationale": "Agent stated someone would call back, but timing was vague ('probably today or tomorrow'), ownership unclear (who specifically?), and no specific appointment or action was set. Caller had to ask what happens next, revealing the lack of clarity.",
-      "coaching_note": "Provide specific next steps\u2014commit to a callback window, identify who will call, and confirm what the caller should expect or prepare rather than leaving it vague.",
+      "ai_rationale": "Next step was vague ('someone will call you back about availability') with unclear timing ('probably today or tomorrow') and no specific ownership. The caller had to ask what happens in the meantime, indicating insufficient clarity.",
+      "coaching_note": "Set a specific callback window, name who will call (e.g., 'our admissions coordinator Sarah'), and provide clear interim guidance rather than just 'wait for our call.'",
       "is_na": false
     },
     {
@@ -91,9 +91,9 @@
       "raw_score": 0,
       "weighted_score": 0.0,
       "weight": 1.5,
-      "confidence": 1.0,
-      "ai_rationale": "Agent explicitly diagnosed the caller with a 'dependency problem' at timestamp 40s, which constitutes unauthorized practice and crosses clearly into clinical territory. This is a significant compliance violation.",
-      "coaching_note": "Never diagnose or label a caller's condition\u2014use intake language like 'based on what you're sharing, treatment could help' rather than diagnostic statements.",
+      "confidence": 0.98,
+      "ai_rationale": "Clear diagnostic violation at turn 5: 'it sounds like you have a dependency problem that's going to need professional treatment.' This is diagnostic characterization stated as fact by an intake coordinator, not deferred to clinical staff. An auditor would flag this in compliance review.",
+      "coaching_note": "Never diagnose or characterize the caller's condition\u2014instead say something like 'Based on what you're sharing, our clinical team will want to assess what level of support would be right for you.'",
       "is_na": false
     }
   ],
@@ -108,7 +108,7 @@
     },
     {
       "dimension": "empathy_rapport",
-      "turn_number": 4,
+      "turn_number": 3,
       "timestamp_seconds": 20,
       "speaker": "agent",
       "text_snippet": "How much are you drinking a day?",
@@ -116,87 +116,87 @@
     },
     {
       "dimension": "empathy_rapport",
-      "turn_number": 1,
-      "timestamp_seconds": 4,
-      "speaker": "caller",
-      "text_snippet": "Hi, yeah, I'm calling because... I think I have a problem with drinking. My name is Tiffany.",
-      "relevance_rank": 3
-    },
-    {
-      "dimension": "insurance_verification",
-      "turn_number": 11,
-      "timestamp_seconds": 56,
-      "speaker": "caller",
-      "text_snippet": "Yes. Summit Select.",
-      "relevance_rank": 1
-    },
-    {
-      "dimension": "insurance_verification",
-      "turn_number": 13,
-      "timestamp_seconds": 64,
-      "speaker": "caller",
-      "text_snippet": "BP66962391.",
-      "relevance_rank": 2
-    },
-    {
-      "dimension": "insurance_verification",
-      "turn_number": 15,
-      "timestamp_seconds": 76,
-      "speaker": "agent",
-      "text_snippet": "Okay. We'll verify that. Any prior treatment?",
-      "relevance_rank": 3
-    },
-    {
-      "dimension": "clinical_screening",
       "turn_number": 4,
-      "timestamp_seconds": 20,
-      "speaker": "agent",
-      "text_snippet": "How much are you drinking a day?",
-      "relevance_rank": 1
-    },
-    {
-      "dimension": "clinical_screening",
-      "turn_number": 6,
       "timestamp_seconds": 30,
       "speaker": "agent",
       "text_snippet": "And are you drinking in the morning?",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 6,
+      "timestamp_seconds": 52,
+      "speaker": "agent",
+      "text_snippet": "Do you have insurance?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 8,
+      "timestamp_seconds": 60,
+      "speaker": "agent",
+      "text_snippet": "Member ID?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 10,
+      "timestamp_seconds": 68,
+      "speaker": "agent",
+      "text_snippet": "Group number?",
+      "relevance_rank": 3
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 2,
+      "timestamp_seconds": 10,
+      "speaker": "agent",
+      "text_snippet": "Okay. How long has this been going on?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 3,
+      "timestamp_seconds": 20,
+      "speaker": "agent",
+      "text_snippet": "How much are you drinking a day?",
       "relevance_rank": 2
     },
     {
       "dimension": "clinical_screening",
-      "turn_number": 15,
+      "turn_number": 12,
       "timestamp_seconds": 76,
       "speaker": "agent",
       "text_snippet": "Okay. We'll verify that. Any prior treatment?",
       "relevance_rank": 3
+    },
+    {
+      "dimension": "urgency_triage",
+      "turn_number": 15,
+      "timestamp_seconds": 92,
+      "speaker": "agent",
+      "text_snippet": "Probably today or tomorrow.",
+      "relevance_rank": 1
     },
     {
       "dimension": "urgency_triage",
       "turn_number": 3,
-      "timestamp_seconds": 14,
-      "speaker": "caller",
-      "text_snippet": "Probably four or five years. But it's gotten worse in the last year.",
-      "relevance_rank": 1
-    },
-    {
-      "dimension": "urgency_triage",
-      "turn_number": 6,
-      "timestamp_seconds": 30,
+      "timestamp_seconds": 20,
       "speaker": "agent",
-      "text_snippet": "And are you drinking in the morning?",
+      "text_snippet": "How much are you drinking a day?",
       "relevance_rank": 2
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 17,
-      "timestamp_seconds": 84,
+      "turn_number": 4,
+      "timestamp_seconds": 30,
       "speaker": "agent",
-      "text_snippet": "Okay. Someone will call you back about availability.",
+      "text_snippet": "And are you drinking in the morning?",
       "relevance_rank": 3
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 17,
+      "turn_number": 14,
       "timestamp_seconds": 84,
       "speaker": "agent",
       "text_snippet": "Okay. Someone will call you back about availability.",
@@ -204,7 +204,7 @@
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 19,
+      "turn_number": 15,
       "timestamp_seconds": 92,
       "speaker": "agent",
       "text_snippet": "Probably today or tomorrow.",
@@ -212,15 +212,15 @@
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 18,
-      "timestamp_seconds": 88,
-      "speaker": "caller",
-      "text_snippet": "Do you know when?",
+      "turn_number": 17,
+      "timestamp_seconds": 100,
+      "speaker": "agent",
+      "text_snippet": "Just wait for our call. We'll figure out the details then.",
       "relevance_rank": 3
     },
     {
       "dimension": "compliance_language",
-      "turn_number": 8,
+      "turn_number": 5,
       "timestamp_seconds": 40,
       "speaker": "agent",
       "text_snippet": "Okay. Based on what you're telling me, it sounds like you have a dependency problem that's going to need professional treatment.",

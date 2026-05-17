@@ -5,15 +5,15 @@
     "call_timestamp": "2026-04-01T00:00:00Z",
     "duration_seconds": 220,
     "scenario_type": null,
-    "rubric_version": "rubric-v1",
-    "prompt_version": "prompt-v1",
+    "rubric_version": "rubric-v2",
+    "prompt_version": "prompt-v2",
     "model_id": "claude-sonnet-4-5-20250929",
     "overall_score": 95.0,
     "compliance_override_triggered": false,
-    "confidence_overall": 0.93,
-    "manager_summary": "Catherine called with ambivalence about whether she needed help, initially minimizing her drinking pattern. Agent built excellent rapport, gathered complete clinical and insurance information, and skillfully reframed her objection around functional impact rather than labels. Caller moved from resistance to acceptance and agreed to callback within two hours for admissions coordination and outpatient track discussion.",
+    "confidence_overall": 0.92,
+    "manager_summary": "Strong intake call with an ambivalent caller expressing minimization around alcohol use. Agent built rapport effectively, conducted thorough but non-clinical screening (3-7 drinks most evenings, work impact, escalation pattern), collected complete insurance information, and used motivational reframing to address resistance without labeling. Clear next steps established with two-hour callback commitment. Excellent compliance discipline throughout.",
     "status": "scored",
-    "scored_at": "2026-05-15T11:02:40.858201+00:00"
+    "scored_at": "2026-05-17T06:44:34.712520+00:00"
   },
   "dimension_scores": [
     {
@@ -22,7 +22,7 @@
       "weighted_score": 7.5,
       "weight": 1.5,
       "confidence": 0.95,
-      "ai_rationale": "Agent acknowledged caller's ambivalence immediately, normalized uncertainty, matched emotional register, used caller's name, and explicitly removed pressure. Excellent trust-building in the critical opening moments.",
+      "ai_rationale": "Agent immediately acknowledged Catherine's courage in calling, removed pressure, and matched her tentative emotional register. Used her name, built trust before transitioning to questions, and delivered a powerful non-judgmental reframe at turn 114s that acknowledged her experience without labeling.",
       "coaching_note": null,
       "is_na": false
     },
@@ -32,8 +32,8 @@
       "weighted_score": 4.0,
       "weight": 1.0,
       "confidence": 0.88,
-      "ai_rationale": "Agent collected carrier name, member ID, and group number efficiently. Framed verification as part of the support process. Did not explicitly mention plan type, though this may have been captured in the callback process mentioned.",
-      "coaching_note": "Consider capturing plan type (PPO/HMO) during initial collection to reduce friction later.",
+      "ai_rationale": "Agent captured carrier name, member ID, and group number efficiently. Framed verification as a step toward help rather than gatekeeping. Minor note: could have confirmed plan type (PPO/HMO) for completeness.",
+      "coaching_note": "Consider confirming plan type (PPO, HMO, etc.) alongside member and group number for complete verification.",
       "is_na": false
     },
     {
@@ -42,7 +42,7 @@
       "weighted_score": 5.0,
       "weight": 1.0,
       "confidence": 0.92,
-      "ai_rationale": "Agent systematically gathered substance type, frequency, escalation pattern, functional impact, and prior treatment attempts without crossing into diagnostic territory. Excellent calibrated questioning that surfaces severity indicators naturally.",
+      "ai_rationale": "Agent systematically gathered substance use history (alcohol, frequency, quantity), severity indicators (escalation pattern, functional impact on work), and prior attempts to cut back. Stayed clearly in intake role with no diagnostic language or clinical overreach.",
       "coaching_note": null,
       "is_na": false
     },
@@ -51,9 +51,9 @@
       "raw_score": 4,
       "weighted_score": 4.0,
       "weight": 1.0,
-      "confidence": 0.9,
-      "ai_rationale": "Agent correctly identified this as a same-week but not same-day need based on functional impairment and escalation pattern. Appropriate timeframe set (callback within two hours, outpatient track suggested). No crisis indicators present or missed.",
-      "coaching_note": null,
+      "confidence": 0.85,
+      "ai_rationale": "No immediate urgency signals present (no withdrawal, suicidal ideation, or crisis indicators). Agent appropriately positioned outpatient track and set a two-hour callback window. Could have been slightly more explicit about what to do if urgency changes before callback.",
+      "coaching_note": "Consider adding a brief safety net: 'If anything changes before we call back, here's how to reach us immediately.'",
       "is_na": false
     },
     {
@@ -62,7 +62,7 @@
       "weighted_score": null,
       "weight": 1.0,
       "confidence": 1.0,
-      "ai_rationale": "Caller is the patient themselves. Dimension does not apply.",
+      "ai_rationale": "Caller is the patient herself (Catherine). Sister encouraged her to call but Catherine is inquiring about her own treatment needs.",
       "coaching_note": null,
       "is_na": true
     },
@@ -71,8 +71,8 @@
       "raw_score": 5,
       "weighted_score": 5.0,
       "weight": 1.0,
-      "confidence": 0.95,
-      "ai_rationale": "Agent acknowledged the core objection ('I'm not an alcoholic') without labeling or countering defensively, then reframed beautifully around functional impact rather than identity. Caller moved from resistance to acceptance organically.",
+      "confidence": 0.93,
+      "ai_rationale": "Caller expressed clear ambivalence ('I don't know if I really need treatment', 'it's not like I'm an alcoholic'). Agent acknowledged the resistance without labeling or pushing back, used motivational reframing ('the question isn't whether it's bad enough'), and helped Catherine arrive at her own conclusion.",
       "coaching_note": null,
       "is_na": false
     },
@@ -82,7 +82,7 @@
       "weighted_score": 5.0,
       "weight": 1.0,
       "confidence": 0.95,
-      "ai_rationale": "Agent set specific next step (callback from admissions coordinator), clear timing (within two hours, by noon), clear ownership (benefits team and admissions coordinator), and level of care suggestion (outpatient track). Caller confirmed understanding.",
+      "ai_rationale": "Agent specified exact next step (admissions coordinator callback), clear timing (within two hours, by noon), and what would be discussed (options, likely outpatient track). Ownership and timing unambiguous.",
       "coaching_note": null,
       "is_na": false
     },
@@ -91,8 +91,8 @@
       "raw_score": 5,
       "weighted_score": 7.5,
       "weight": 1.5,
-      "confidence": 0.95,
-      "ai_rationale": "Agent maintained perfect compliance boundaries: described patterns without diagnosing, normalized treatment-seeking, reframed around functional impact, and suggested level of care appropriately. No outcome guarantees, no diagnostic labels, no unauthorized clinical statements.",
+      "confidence": 0.96,
+      "ai_rationale": "Perfect boundary discipline. Agent explicitly avoided diagnostic labels ('I want to reflect something back to you \u2014 not to label it'), deferred treatment design to admissions coordinator, and made no outcome promises. Reassurance was warm but not predictive. Coverage verification appropriately positioned as pending.",
       "coaching_note": null,
       "is_na": false
     }
@@ -108,7 +108,7 @@
     },
     {
       "dimension": "empathy_rapport",
-      "turn_number": 7,
+      "turn_number": 8,
       "timestamp_seconds": 114,
       "speaker": "agent",
       "text_snippet": "I appreciate you sharing that. Catherine, I want to reflect something back to you \u2014 not to label it, just so you can hear it.",
@@ -116,19 +116,11 @@
     },
     {
       "dimension": "empathy_rapport",
-      "turn_number": 11,
+      "turn_number": 12,
       "timestamp_seconds": 210,
       "speaker": "agent",
       "text_snippet": "And Catherine \u2014 calling was the right thing to do.",
       "relevance_rank": 3
-    },
-    {
-      "dimension": "insurance_verification",
-      "turn_number": 9,
-      "timestamp_seconds": 150,
-      "speaker": "agent",
-      "text_snippet": "Let me ask a few more questions. Do you have insurance?",
-      "relevance_rank": 2
     },
     {
       "dimension": "insurance_verification",
@@ -140,26 +132,26 @@
     },
     {
       "dimension": "insurance_verification",
-      "turn_number": 10,
-      "timestamp_seconds": 168,
+      "turn_number": 11,
+      "timestamp_seconds": 182,
       "speaker": "agent",
-      "text_snippet": "Thank you. And have you ever tried to cut back on your own?",
-      "relevance_rank": 3
+      "text_snippet": "I'll have our benefits team verify your coverage",
+      "relevance_rank": 2
     },
     {
       "dimension": "clinical_screening",
       "turn_number": 3,
       "timestamp_seconds": 44,
       "speaker": "agent",
-      "text_snippet": "I hear you. Can I ask \u2014 how many drinks is 'unwinding' for you on a typical evening?",
+      "text_snippet": "Can I ask \u2014 how many drinks is 'unwinding' for you on a typical evening?",
       "relevance_rank": 1
     },
     {
       "dimension": "clinical_screening",
-      "turn_number": 5,
-      "timestamp_seconds": 72,
+      "turn_number": 6,
+      "timestamp_seconds": 86,
       "speaker": "agent",
-      "text_snippet": "And how often are the really bad days?",
+      "text_snippet": "So on those nights \u2014 after six or seven drinks \u2014 how do you feel the next morning?",
       "relevance_rank": 2
     },
     {
@@ -172,83 +164,91 @@
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 7,
-      "timestamp_seconds": 94,
-      "speaker": "caller",
-      "text_snippet": "Rough. I've been calling in late to work a few times.",
-      "relevance_rank": 2
+      "turn_number": 11,
+      "timestamp_seconds": 182,
+      "speaker": "agent",
+      "text_snippet": "which based on what you've described would likely start with our outpatient track",
+      "relevance_rank": 1
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 10,
+      "turn_number": 11,
       "timestamp_seconds": 182,
       "speaker": "agent",
-      "text_snippet": "I'll have our benefits team verify your coverage and an admissions coordinator call you back within two hours. They'll talk through your options \u2014 which based on what you've described would likely sta",
-      "relevance_rank": 1
+      "text_snippet": "an admissions coordinator call you back within two hours",
+      "relevance_rank": 2
     },
     {
       "dimension": "objection_handling",
       "turn_number": 2,
-      "timestamp_seconds": 32,
-      "speaker": "caller",
-      "text_snippet": "I drink, but it's not like I'm an alcoholic or anything. I just drink after work to unwind. Everyone does that.",
-      "relevance_rank": 2
-    },
-    {
-      "dimension": "objection_handling",
-      "turn_number": 7,
-      "timestamp_seconds": 114,
+      "timestamp_seconds": 16,
       "speaker": "agent",
-      "text_snippet": "What you're describing \u2014 four to seven drinks most evenings, increasingly difficult mornings, calling in late, your sister noticing a change \u2014 those are patterns that tend to escalate without support.",
+      "text_snippet": "There's no pressure here \u2014 I'm just going to ask a few questions and we can figure out together whether what you're dealing with is something we can help with.",
       "relevance_rank": 1
     },
     {
       "dimension": "objection_handling",
       "turn_number": 8,
-      "timestamp_seconds": 144,
-      "speaker": "caller",
-      "text_snippet": "When you put it like that... yeah, it is.",
+      "timestamp_seconds": 114,
+      "speaker": "agent",
+      "text_snippet": "You don't have to call it anything. But the question isn't whether it's 'bad enough.' The question is whether it's getting in the way of the life you want.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 11,
+      "timestamp_seconds": 182,
+      "speaker": "agent",
+      "text_snippet": "That pattern \u2014 trying and returning \u2014 is really common and it's one of the things treatment specifically addresses.",
       "relevance_rank": 3
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 10,
+      "turn_number": 11,
       "timestamp_seconds": 182,
       "speaker": "agent",
-      "text_snippet": "I'll have our benefits team verify your coverage and an admissions coordinator call you back within two hours. They'll talk through your options \u2014 which based on what you've described would likely sta",
+      "text_snippet": "I'll have our benefits team verify your coverage and an admissions coordinator call you back within two hours.",
       "relevance_rank": 1
     },
     {
       "dimension": "next_step_clarity",
       "turn_number": 11,
       "timestamp_seconds": 204,
-      "speaker": "caller",
-      "text_snippet": "Yeah. Okay. That sounds okay.",
+      "speaker": "agent",
+      "text_snippet": "They'll talk through your options \u2014 which based on what you've described would likely start with our outpatient track.",
       "relevance_rank": 2
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 11,
+      "turn_number": 12,
       "timestamp_seconds": 210,
       "speaker": "agent",
-      "text_snippet": "Good. You'll hear from us by noon.",
+      "text_snippet": "You'll hear from us by noon.",
       "relevance_rank": 3
     },
     {
       "dimension": "compliance_language",
-      "turn_number": 7,
+      "turn_number": 8,
       "timestamp_seconds": 114,
       "speaker": "agent",
-      "text_snippet": "I want to reflect something back to you \u2014 not to label it, just so you can hear it. What you're describing \u2014 four to seven drinks most evenings, increasingly difficult mornings, calling in late, your ",
+      "text_snippet": "I want to reflect something back to you \u2014 not to label it, just so you can hear it.",
       "relevance_rank": 1
     },
     {
       "dimension": "compliance_language",
-      "turn_number": 10,
-      "timestamp_seconds": 174,
+      "turn_number": 11,
+      "timestamp_seconds": 182,
+      "speaker": "agent",
+      "text_snippet": "I'll have our benefits team verify your coverage",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 11,
+      "timestamp_seconds": 182,
       "speaker": "agent",
       "text_snippet": "That pattern \u2014 trying and returning \u2014 is really common and it's one of the things treatment specifically addresses.",
-      "relevance_rank": 2
+      "relevance_rank": 3
     }
   ],
   "compliance_flags": []

@@ -5,15 +5,15 @@
     "call_timestamp": "2026-04-01T00:00:00Z",
     "duration_seconds": 274,
     "scenario_type": null,
-    "rubric_version": "rubric-v1",
-    "prompt_version": "prompt-v1",
+    "rubric_version": "rubric-v2",
+    "prompt_version": "prompt-v2",
     "model_id": "claude-sonnet-4-5-20250929",
-    "overall_score": 97.14,
+    "overall_score": 84.29,
     "compliance_override_triggered": false,
-    "confidence_overall": 0.94,
-    "manager_summary": "Exemplary admissions call with a self-pay caller presenting daily opioid use and withdrawal symptoms. Agent built strong rapport, completed thorough clinical screening, acknowledged financial concerns with concrete alternatives, and set clear next steps (financial counselor and clinical intake within one hour). No coaching needed\u2014this is a training-worthy call.",
+    "confidence_overall": 0.92,
+    "manager_summary": "Monica called seeking opioid treatment after 18 months of daily prescription pill use starting post-surgery. She's experiencing withdrawal symptoms when attempting to stop and has no prior treatment. Agent built strong rapport, conducted thorough screening, appropriately triaged urgency, and addressed self-pay concerns with concrete alternatives and a financial counselor callback within the hour. Compliance concern: agent overstepped into clinical territory multiple times by characterizing medical risk and predicting treatment modality rather than deferring to clinical team.",
     "status": "scored",
-    "scored_at": "2026-05-15T10:56:06.352240+00:00"
+    "scored_at": "2026-05-17T06:37:33.056965+00:00"
   },
   "dimension_scores": [
     {
@@ -22,7 +22,7 @@
       "weighted_score": 7.5,
       "weight": 1.5,
       "confidence": 0.95,
-      "ai_rationale": "Agent acknowledged Monica by name immediately, normalized her experience without judgment ('That's a very common path and it doesn't make it your fault'), and acknowledged the courage required to reach out. Tone was warm and non-transactional throughout.",
+      "ai_rationale": "Agent acknowledged Monica by name immediately, validated her courage in reaching out within the first 15 seconds, normalized her experience ('very common path'), and explicitly removed blame ('doesn't make it your fault'). Tone was warm, unhurried, and matched the caller's emotional register throughout.",
       "coaching_note": null,
       "is_na": false
     },
@@ -31,29 +31,29 @@
       "raw_score": null,
       "weighted_score": null,
       "weight": 1.0,
-      "confidence": 0.9,
-      "ai_rationale": "Caller disclosed self-pay status immediately. Agent confirmed and pivoted appropriately to alternatives without treating coverage as a barrier. This is the N/A condition specified in the rubric.",
+      "confidence": 1.0,
+      "ai_rationale": "Caller explicitly stated self-pay and agent pivoted appropriately to financing options, sliding scale, and state programs. Per rubric, this should be scored under objection_handling instead.",
       "coaching_note": null,
       "is_na": true
     },
     {
       "dimension": "clinical_screening",
-      "raw_score": 5,
-      "weighted_score": 5.0,
-      "weight": 1.0,
-      "confidence": 0.95,
-      "ai_rationale": "Agent captured substance type (prescription opioids), duration (18 months), frequency (daily), severity indicators (withdrawal symptoms described), prior treatment (none), and co-occurring mental health (depression). Stayed clearly in intake role without crossing into diagnosis.",
-      "coaching_note": null,
-      "is_na": false
-    },
-    {
-      "dimension": "urgency_triage",
       "raw_score": 4,
       "weighted_score": 4.0,
       "weight": 1.0,
       "confidence": 0.88,
-      "ai_rationale": "Agent correctly identified urgency signals (daily use, withdrawal symptoms, physical dependence) and appropriately escalated to same-day financial counselor and clinical intake coordination within an hour. Minor note: could have been more explicit about medical urgency given withdrawal severity.",
-      "coaching_note": "Consider explicitly stating 'this level of withdrawal is something we want to address quickly for your safety' to reinforce medical urgency.",
+      "ai_rationale": "Agent captured substance type (opioids/prescription pills), duration (18 months), frequency (daily), withdrawal symptoms, last attempt to stop, and co-occurring depression. All questions stayed in intake territory. One coaching opportunity: prior treatment history was asked ('Have you had any prior treatment for this?') but response was brief and agent moved on rather than exploring what 'handling it on my own' meant.",
+      "coaching_note": "When caller says 'handling it on my own,' consider a brief follow-up to clarify whether that means no professional help at all or if they've tried other interventions (AA, therapy, primary care support).",
+      "is_na": false
+    },
+    {
+      "dimension": "urgency_triage",
+      "raw_score": 5,
+      "weighted_score": 5.0,
+      "weight": 1.0,
+      "confidence": 0.92,
+      "ai_rationale": "Agent correctly identified withdrawal indicators (daily use, physical dependence, failed self-taper) and triaged appropriately by flagging for clinical intake, mentioning medically-supervised detox as a possibility, and setting a callback within the hour. No manufactured urgency, but appropriate gravity conveyed ('opioid withdrawal...really does need professional support').",
+      "coaching_note": null,
       "is_na": false
     },
     {
@@ -62,7 +62,7 @@
       "weighted_score": null,
       "weight": 1.0,
       "confidence": 1.0,
-      "ai_rationale": "Caller identified herself as the patient (Monica calling about her own opioid use). This is the N/A condition specified in the rubric.",
+      "ai_rationale": "Caller is the patient herself, confirmed early in the call ('I'm calling about getting into a program. I've been dealing with opioid use').",
       "coaching_note": null,
       "is_na": true
     },
@@ -72,7 +72,7 @@
       "weighted_score": 5.0,
       "weight": 1.0,
       "confidence": 0.95,
-      "ai_rationale": "Agent acknowledged the financial concern before offering solutions ('That's completely fair'), provided three concrete alternatives (sliding scale, CareCredit, state programs), and offered immediate next step with financial counselor. No pressure tactics used.",
+      "ai_rationale": "Caller expressed cost concern as self-pay. Agent acknowledged immediately ('I don't want cost to be what stands between you and getting help'), offered three concrete alternatives (sliding scale, CareCredit financing, state programs), asked clarifying questions about financial situation to personalize recommendations, and set clear next step with financial counselor. No pressure, dismissiveness, or defensive language.",
       "coaching_note": null,
       "is_na": false
     },
@@ -82,18 +82,18 @@
       "weighted_score": 5.0,
       "weight": 1.0,
       "confidence": 0.95,
-      "ai_rationale": "Agent set two specific next steps (financial counselor call and clinical intake team prep), stated precise timing (within the hour), confirmed caller availability, and clearly stated ownership (financial counselor and clinical team would reach out).",
+      "ai_rationale": "Agent set two specific next steps: (1) financial counselor callback within the hour, and (2) clinical intake team readiness. Timing was explicit ('within the hour'), ownership was clear (counselor and clinical team), and caller confirmed availability. No ambiguity.",
       "coaching_note": null,
       "is_na": false
     },
     {
       "dimension": "compliance_language",
-      "raw_score": 5,
-      "weighted_score": 7.5,
+      "raw_score": 2,
+      "weighted_score": 3.0,
       "weight": 1.5,
-      "confidence": 0.95,
-      "ai_rationale": "Agent consistently used appropriate intake language, framed clinical recommendations as team determinations ('Our clinical team will likely recommend', 'That's something the assessment will determine'), made no diagnostic claims, and stayed clearly within intake boundaries throughout.",
-      "coaching_note": null,
+      "confidence": 0.9,
+      "ai_rationale": "Multiple scope overreach violations: (1) 'Opioid withdrawal can be medically serious' \u2014 clinical characterization of medical risk that belongs to a clinician, not intake; (2) 'Our clinical team will likely recommend starting with MAT' \u2014 pre-assessing treatment modality before clinical evaluation; (3) 'that's what dual diagnosis care looks like' \u2014 educational-clinical framing without deferral. Pattern of stepping into clinical territory rather than deferring consistently.",
+      "coaching_note": "Avoid clinical characterizations like 'medically serious' or predicting treatment recommendations ('will likely recommend MAT'). Instead, defer: 'Our clinical team will assess what level of support is safest for you' keeps you in the intake lane.",
       "is_na": false
     }
   ],
@@ -116,35 +116,11 @@
     },
     {
       "dimension": "empathy_rapport",
-      "turn_number": 12,
+      "turn_number": 14,
       "timestamp_seconds": 250,
       "speaker": "agent",
-      "text_snippet": "you don't have to white-knuckle this. We'll get you the right help.",
+      "text_snippet": "opioid withdrawal with the symptoms you're describing really does need professional support \u2014 you don't have to white-knuckle this.",
       "relevance_rank": 3
-    },
-    {
-      "dimension": "insurance_verification",
-      "turn_number": 7,
-      "timestamp_seconds": 96,
-      "speaker": "caller",
-      "text_snippet": "I lost my insurance when I left my job last month. I'm self-pay.",
-      "relevance_rank": 1
-    },
-    {
-      "dimension": "insurance_verification",
-      "turn_number": 8,
-      "timestamp_seconds": 104,
-      "speaker": "agent",
-      "text_snippet": "Self-pay is something we work with regularly and I don't want cost to be what stands between you and getting help.",
-      "relevance_rank": 2
-    },
-    {
-      "dimension": "clinical_screening",
-      "turn_number": 4,
-      "timestamp_seconds": 32,
-      "speaker": "agent",
-      "text_snippet": "Monica, are you still taking them daily?",
-      "relevance_rank": 1
     },
     {
       "dimension": "clinical_screening",
@@ -152,11 +128,19 @@
       "timestamp_seconds": 52,
       "speaker": "agent",
       "text_snippet": "When you say sick \u2014 are you talking about withdrawal symptoms? Sweating, muscle aches, nausea?",
-      "relevance_rank": 2
+      "relevance_rank": 1
     },
     {
       "dimension": "clinical_screening",
       "turn_number": 10,
+      "timestamp_seconds": 166,
+      "speaker": "agent",
+      "text_snippet": "Monica, you mentioned withdrawal symptoms when you try to cut down \u2014 how recently did you last try to stop?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 12,
       "timestamp_seconds": 190,
       "speaker": "agent",
       "text_snippet": "Are there any other health concerns, mental health or otherwise, that we should know about?",
@@ -172,7 +156,7 @@
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 11,
+      "turn_number": 13,
       "timestamp_seconds": 222,
       "speaker": "agent",
       "text_snippet": "I'm going to flag you for a call from our financial counsellor within the hour, and I'll also get our clinical intake team ready",
@@ -180,18 +164,18 @@
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 12,
+      "turn_number": 14,
       "timestamp_seconds": 250,
       "speaker": "agent",
       "text_snippet": "opioid withdrawal with the symptoms you're describing really does need professional support",
       "relevance_rank": 3
     },
     {
-      "dimension": "family_caller_handling",
-      "turn_number": 1,
-      "timestamp_seconds": 4,
-      "speaker": "caller",
-      "text_snippet": "Hi, I'm Monica. I'm calling about getting into a program. I've been dealing with opioid use",
+      "dimension": "objection_handling",
+      "turn_number": 8,
+      "timestamp_seconds": 104,
+      "speaker": "agent",
+      "text_snippet": "Self-pay is something we work with regularly and I don't want cost to be what stands between you and getting help.",
       "relevance_rank": 1
     },
     {
@@ -199,15 +183,7 @@
       "turn_number": 8,
       "timestamp_seconds": 104,
       "speaker": "agent",
-      "text_snippet": "I don't want cost to be what stands between you and getting help. Let me walk you through what that looks like.",
-      "relevance_rank": 1
-    },
-    {
-      "dimension": "objection_handling",
-      "turn_number": 9,
-      "timestamp_seconds": 144,
-      "speaker": "agent",
-      "text_snippet": "That's completely fair. Here's what I'd suggest: let me connect you with our financial counsellor who can walk through the actual numbers",
+      "text_snippet": "We have a sliding-scale fee structure based on income, and we also work with a financing partner \u2014 CareCredit \u2014 that offers low-interest payment plans.",
       "relevance_rank": 2
     },
     {
@@ -215,20 +191,20 @@
       "turn_number": 9,
       "timestamp_seconds": 144,
       "speaker": "agent",
-      "text_snippet": "You'll have a clear picture of what you'd actually owe before you commit to anything.",
+      "text_snippet": "let me connect you with our financial counsellor who can walk through the actual numbers with you...You'll have a clear picture of what you'd actually owe before you commit",
       "relevance_rank": 3
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 11,
+      "turn_number": 13,
       "timestamp_seconds": 222,
       "speaker": "agent",
-      "text_snippet": "I'm going to flag you for a call from our financial counsellor within the hour, and I'll also get our clinical intake team ready",
+      "text_snippet": "I'm going to flag you for a call from our financial counsellor within the hour, and I'll also get our clinical intake team ready with the information you've shared today.",
       "relevance_rank": 1
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 11,
+      "turn_number": 13,
       "timestamp_seconds": 222,
       "speaker": "agent",
       "text_snippet": "Can you take a call in the next sixty minutes?",
@@ -236,7 +212,7 @@
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 12,
+      "turn_number": 14,
       "timestamp_seconds": 250,
       "speaker": "agent",
       "text_snippet": "You'll hear from us within the hour.",
@@ -247,21 +223,21 @@
       "turn_number": 6,
       "timestamp_seconds": 66,
       "speaker": "agent",
-      "text_snippet": "our clinical team will want to assess whether medically-supervised detox is the right first step",
+      "text_snippet": "Opioid withdrawal can be medically serious and our clinical team will want to assess whether medically-supervised detox is the right first step",
       "relevance_rank": 1
     },
     {
       "dimension": "compliance_language",
-      "turn_number": 10,
+      "turn_number": 12,
       "timestamp_seconds": 190,
       "speaker": "agent",
-      "text_snippet": "Our clinical team will likely recommend starting with MAT... That's something the assessment will determine.",
+      "text_snippet": "Our clinical team will likely recommend starting with MAT \u2014 medication-assisted treatment \u2014 which uses medications like buprenorphine to manage withdrawal safely.",
       "relevance_rank": 2
     },
     {
       "dimension": "compliance_language",
-      "turn_number": 10,
-      "timestamp_seconds": 190,
+      "turn_number": 13,
+      "timestamp_seconds": 222,
       "speaker": "agent",
       "text_snippet": "It's likely both, and we treat them together \u2014 that's what dual diagnosis care looks like.",
       "relevance_rank": 3

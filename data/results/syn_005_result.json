@@ -5,25 +5,25 @@
     "call_timestamp": "2026-04-01T00:00:00Z",
     "duration_seconds": 138,
     "scenario_type": null,
-    "rubric_version": "rubric-v1",
-    "prompt_version": "prompt-v1",
+    "rubric_version": "rubric-v2",
+    "prompt_version": "prompt-v2",
     "model_id": "claude-sonnet-4-5-20250929",
-    "overall_score": 28.75,
+    "overall_score": 40.0,
     "compliance_override_triggered": true,
-    "confidence_overall": 0.93,
-    "manager_summary": "This intake call with Sophia, who disclosed daily cocaine use for two years, contains serious compliance violations including multiple treatment outcome guarantees and promises. The agent failed to build rapport, missed critical clinical screening questions (last use, withdrawal, safety), did not assess urgency appropriately for daily stimulant use, and provided vague next steps despite the caller requesting specificity. Immediate coaching required on compliance language and clinical triage protocols.",
+    "confidence_overall": 0.91,
+    "manager_summary": "This call captured basic intake information (insurance, substance type, treatment history) but contained critical compliance violations including explicit treatment outcome promises and success guarantees. The agent missed opportunities for empathy in the opening, did not screen for urgency or severity indicators, and provided vague next steps without specific timing or ownership. Immediate coaching needed on compliance language and intake fundamentals.",
     "status": "scored",
-    "scored_at": "2026-05-15T10:56:42.058708+00:00"
+    "scored_at": "2026-05-17T06:38:09.736330+00:00"
   },
   "dimension_scores": [
     {
       "dimension": "empathy_rapport",
-      "raw_score": 1,
-      "weighted_score": 1.5,
+      "raw_score": 2,
+      "weighted_score": 3.0,
       "weight": 1.5,
-      "confidence": 0.95,
-      "ai_rationale": "The agent failed to acknowledge Sophia's emotional state or the difficulty of her situation in the critical first 60 seconds. Instead of building rapport, the agent immediately moved to a transactional question ('How long has this been going on?') without any warmth, acknowledgment, or use of the caller's name.",
-      "coaching_note": "Start by acknowledging the caller's courage in reaching out and their expressed worry before jumping into intake questions\u2014use their name and match their emotional register.",
+      "confidence": 0.92,
+      "ai_rationale": "The agent provided minimal acknowledgment of the caller's distress. The response 'I understand. How long has this been going on?' at 18s was perfunctory and immediately transitioned to data collection without acknowledging the difficulty of the situation or the caller's stated worry.",
+      "coaching_note": "Slow down in the first 60 seconds. Acknowledge the courage it takes to call and validate the caller's concern before moving to questions.",
       "is_na": false
     },
     {
@@ -32,8 +32,8 @@
       "weighted_score": 3.0,
       "weight": 1.0,
       "confidence": 0.88,
-      "ai_rationale": "The agent captured carrier name, member ID, and group number correctly. However, the agent did not explain the verification process or frame it as a step toward help, and the follow-up on benefits was vague ('we'll verify your benefits and let you know').",
-      "coaching_note": "Frame insurance verification as part of the pathway to help, and explain when and how the caller will receive benefit details.",
+      "ai_rationale": "The agent collected carrier name, member ID, and group number correctly. However, verification was framed as a simple 'we'll verify and let you know' without hedging coverage statements or explaining the verification step as part of the process toward help.",
+      "coaching_note": "Frame verification as 'our benefits team will confirm what's covered' to avoid creating expectation before verification is complete.",
       "is_na": false
     },
     {
@@ -41,19 +41,19 @@
       "raw_score": 2,
       "weighted_score": 2.0,
       "weight": 1.0,
-      "confidence": 0.9,
-      "ai_rationale": "The agent captured substance type (cocaine), duration (two years), and frequency (daily), and asked about prior treatment. However, critical severity indicators were missing: no questions about last use, withdrawal symptoms, or co-occurring mental health concerns.",
-      "coaching_note": "Always ask about last use, withdrawal symptoms, and whether there are any mental health concerns to properly assess urgency and treatment needs.",
+      "confidence": 0.89,
+      "ai_rationale": "The agent captured substance type (cocaine), duration (two years), and frequency (daily), plus prior treatment history. However, critical severity indicators were missing: no questions about last use, withdrawal symptoms, or co-occurring mental health concerns.",
+      "coaching_note": "Add questions about last use, withdrawal symptoms, and any mental health concerns to better understand clinical urgency and treatment fit.",
       "is_na": false
     },
     {
       "dimension": "urgency_triage",
-      "raw_score": 2,
-      "weighted_score": 2.0,
+      "raw_score": 3,
+      "weighted_score": 3.0,
       "weight": 1.0,
-      "confidence": 0.87,
-      "ai_rationale": "Daily cocaine use for two years represents a significant urgency signal that the agent did not adequately explore. The agent failed to ask about withdrawal risk, last use, or current safety, and treated this as a routine intake rather than assessing for immediate medical needs.",
-      "coaching_note": "Daily stimulant use requires questions about last use, withdrawal concerns, and current safety to determine if same-day or this-week admission is needed.",
+      "confidence": 0.86,
+      "ai_rationale": "The agent did not actively probe for urgency signals despite daily use being disclosed. No questions about withdrawal, safety, living situation, or suicidal ideation. The caller expressed readiness, but urgency was not assessed or triaged appropriately.",
+      "coaching_note": "Ask about withdrawal symptoms, current living situation safety, and any immediate concerns to properly triage urgency level.",
       "is_na": false
     },
     {
@@ -62,28 +62,28 @@
       "weighted_score": null,
       "weight": 1.0,
       "confidence": 1.0,
-      "ai_rationale": "Not applicable\u2014the caller is the patient herself, as confirmed when she says 'I've been struggling with cocaine use' and 'I'm worried about me too.'",
+      "ai_rationale": "Caller is the patient themselves, confirmed by first-person disclosure of substance use.",
       "coaching_note": null,
       "is_na": true
     },
     {
       "dimension": "objection_handling",
-      "raw_score": 2,
-      "weighted_score": 2.0,
+      "raw_score": 3,
+      "weighted_score": 3.0,
       "weight": 1.0,
-      "confidence": 0.89,
-      "ai_rationale": "When the caller expressed concern about cost and insurance coverage, the agent offered only a vague reassurance ('we'll get you taken care of') without providing concrete alternatives, explaining the verification timeline, or offering financing/payment options.",
-      "coaching_note": "When cost concerns arise, acknowledge them specifically and offer concrete information about financing options, payment plans, or what the verification process will reveal.",
+      "confidence": 0.87,
+      "ai_rationale": "The caller raised a cost concern ('A little. I don't know what insurance covers'). The agent acknowledged it briefly and offered reassurance ('Don't worry, we'll get you taken care of'), but did not provide concrete alternatives or explain the benefits verification process clearly.",
+      "coaching_note": "When cost concerns arise, explain the benefits verification process and mention alternatives like payment plans or financial assistance if coverage is insufficient.",
       "is_na": false
     },
     {
       "dimension": "next_step_clarity",
-      "raw_score": 1,
-      "weighted_score": 1.0,
+      "raw_score": 2,
+      "weighted_score": 2.0,
       "weight": 1.0,
-      "confidence": 0.95,
-      "ai_rationale": "The next step was extremely vague ('someone from our admissions team will call you. Probably in the next day or so'). No specific timing, no clear ownership, and the agent deflected when the caller asked for specificity. The caller had to ask what happens next.",
-      "coaching_note": "Always provide a specific callback window (e.g., 'by 2pm tomorrow'), confirm who will call, and state what the caller should expect in that conversation.",
+      "confidence": 0.93,
+      "ai_rationale": "The next step (admissions team callback) was stated, but timing was vague ('probably in the next day or so'), and when the caller pressed for specificity, the agent deflected ('I'll put you on the list'). No specific timing or ownership was clarified.",
+      "coaching_note": "Provide a specific timeframe (e.g., 'within 24 hours') and confirm who will call and what the caller should expect in that conversation.",
       "is_na": false
     },
     {
@@ -92,8 +92,8 @@
       "weighted_score": 0.0,
       "weight": 1.5,
       "confidence": 0.98,
-      "ai_rationale": "The agent made multiple serious compliance violations: guaranteeing treatment outcomes ('our 30-day program gets people better,' 'You'll come out of here a completely different person,' 'this time will be different, I promise'), and claiming success rates without qualification. These constitute outcome guarantees and potentially unauthorized practice claims.",
-      "coaching_note": "Never guarantee treatment outcomes or promise results\u2014use language like 'our program is designed to support recovery' and avoid diagnostic or outcome-based promises entirely.",
+      "ai_rationale": "Multiple severe compliance violations: At 28s, the agent made an explicit outcome promise ('our 30-day program gets people better. You'll come out of here a completely different person'), and at 74s repeated it ('this time will be different, I promise. Our program has an excellent success rate'). These are direct treatment success guarantees that constitute unauthorized practice claims.",
+      "coaching_note": "Never promise treatment outcomes. Replace with process-focused language: 'Our clinical team will design a plan that fits your needs' and defer all outcome questions to licensed staff.",
       "is_na": false
     }
   ],
@@ -101,50 +101,58 @@
     {
       "dimension": "empathy_rapport",
       "turn_number": 2,
-      "timestamp_seconds": 18,
-      "speaker": "agent",
-      "text_snippet": "I understand. How long has this been going on?",
-      "relevance_rank": 1
-    },
-    {
-      "dimension": "empathy_rapport",
-      "turn_number": 1,
       "timestamp_seconds": 6,
       "speaker": "caller",
-      "text_snippet": "Hi. I'm Sophia. I'm calling because I've been struggling with cocaine use and my family is really worried about me. I'm worried about me too.",
-      "relevance_rank": 2
+      "text_snippet": "I'm calling because I've been struggling with cocaine use and my family is really worried about me. I'm worried about me too.",
+      "relevance_rank": 1
     },
     {
       "dimension": "empathy_rapport",
       "turn_number": 3,
-      "timestamp_seconds": 28,
+      "timestamp_seconds": 18,
       "speaker": "agent",
-      "text_snippet": "Okay. We have a really great program here and I can tell you \u2014 our 30-day program gets people better.",
-      "relevance_rank": 3
+      "text_snippet": "I understand. How long has this been going on?",
+      "relevance_rank": 2
     },
     {
-      "dimension": "insurance_verification",
-      "turn_number": 6,
-      "timestamp_seconds": 52,
+      "dimension": "empathy_rapport",
+      "turn_number": 4,
+      "timestamp_seconds": 28,
       "speaker": "agent",
-      "text_snippet": "Member ID and group number?",
-      "relevance_rank": 1
+      "text_snippet": "Okay. We have a really great program here and I can tell you \u2014 our 30-day program gets people better. You'll come out of here a completely different person.",
+      "relevance_rank": 3
     },
     {
       "dimension": "insurance_verification",
       "turn_number": 7,
-      "timestamp_seconds": 56,
+      "timestamp_seconds": 44,
+      "speaker": "agent",
+      "text_snippet": "Absolutely. Do you have insurance?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 8,
+      "timestamp_seconds": 48,
       "speaker": "caller",
-      "text_snippet": "Member ID BP61519698, group GRP-932514.",
+      "text_snippet": "Yes, CoreFirst Insurance.",
       "relevance_rank": 2
     },
     {
       "dimension": "insurance_verification",
-      "turn_number": 11,
-      "timestamp_seconds": 98,
-      "speaker": "agent",
-      "text_snippet": "We'll verify your benefits and let you know. Don't worry, we'll get you taken care of.",
+      "turn_number": 10,
+      "timestamp_seconds": 56,
+      "speaker": "caller",
+      "text_snippet": "Member ID BP61519698, group GRP-932514.",
       "relevance_rank": 3
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 2,
+      "timestamp_seconds": 6,
+      "speaker": "caller",
+      "text_snippet": "I've been struggling with cocaine use and my family is really worried about me.",
+      "relevance_rank": 1
     },
     {
       "dimension": "clinical_screening",
@@ -152,19 +160,11 @@
       "timestamp_seconds": 24,
       "speaker": "caller",
       "text_snippet": "About two years. It's daily now.",
-      "relevance_rank": 1
-    },
-    {
-      "dimension": "clinical_screening",
-      "turn_number": 8,
-      "timestamp_seconds": 66,
-      "speaker": "agent",
-      "text_snippet": "Great. And have you had any previous treatment?",
       "relevance_rank": 2
     },
     {
       "dimension": "clinical_screening",
-      "turn_number": 9,
+      "turn_number": 12,
       "timestamp_seconds": 70,
       "speaker": "caller",
       "text_snippet": "I did a 30-day residential about three years ago.",
@@ -180,23 +180,31 @@
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 14,
-      "timestamp_seconds": 110,
-      "speaker": "agent",
-      "text_snippet": "Someone from our admissions team will call you. Probably in the next day or so.",
+      "turn_number": 15,
+      "timestamp_seconds": 84,
+      "speaker": "caller",
+      "text_snippet": "I hope so. I'm ready to commit.",
       "relevance_rank": 2
     },
     {
+      "dimension": "urgency_triage",
+      "turn_number": 20,
+      "timestamp_seconds": 110,
+      "speaker": "agent",
+      "text_snippet": "Someone from our admissions team will call you. Probably in the next day or so.",
+      "relevance_rank": 3
+    },
+    {
       "dimension": "family_caller_handling",
-      "turn_number": 1,
+      "turn_number": 2,
       "timestamp_seconds": 6,
       "speaker": "caller",
-      "text_snippet": "Hi. I'm Sophia. I'm calling because I've been struggling with cocaine use and my family is really worried about me. I'm worried about me too.",
+      "text_snippet": "I'm Sophia. I'm calling because I've been struggling with cocaine use",
       "relevance_rank": 1
     },
     {
       "dimension": "objection_handling",
-      "turn_number": 12,
+      "turn_number": 18,
       "timestamp_seconds": 94,
       "speaker": "caller",
       "text_snippet": "A little. I don't know what insurance covers.",
@@ -204,7 +212,7 @@
     },
     {
       "dimension": "objection_handling",
-      "turn_number": 11,
+      "turn_number": 19,
       "timestamp_seconds": 98,
       "speaker": "agent",
       "text_snippet": "We'll verify your benefits and let you know. Don't worry, we'll get you taken care of.",
@@ -212,7 +220,7 @@
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 14,
+      "turn_number": 20,
       "timestamp_seconds": 110,
       "speaker": "agent",
       "text_snippet": "Someone from our admissions team will call you. Probably in the next day or so.",
@@ -220,7 +228,7 @@
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 15,
+      "turn_number": 21,
       "timestamp_seconds": 118,
       "speaker": "caller",
       "text_snippet": "Do you have a more specific time?",
@@ -228,7 +236,7 @@
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 16,
+      "turn_number": 22,
       "timestamp_seconds": 122,
       "speaker": "agent",
       "text_snippet": "I'll put you on the list. You'll hear from us.",
@@ -236,19 +244,27 @@
     },
     {
       "dimension": "compliance_language",
-      "turn_number": 3,
+      "turn_number": 5,
       "timestamp_seconds": 28,
       "speaker": "agent",
-      "text_snippet": "Okay. We have a really great program here and I can tell you \u2014 our 30-day program gets people better. You'll come out of here a completely different person.",
+      "text_snippet": "our 30-day program gets people better. You'll come out of here a completely different person.",
       "relevance_rank": 1
     },
     {
       "dimension": "compliance_language",
-      "turn_number": 10,
+      "turn_number": 13,
       "timestamp_seconds": 74,
       "speaker": "agent",
-      "text_snippet": "And you're back to using \u2014 okay. Well this time will be different, I promise. Our program has an excellent success rate.",
+      "text_snippet": "this time will be different, I promise. Our program has an excellent success rate.",
       "relevance_rank": 2
+    },
+    {
+      "dimension": "compliance_language",
+      "turn_number": 19,
+      "timestamp_seconds": 98,
+      "speaker": "agent",
+      "text_snippet": "Don't worry, we'll get you taken care of.",
+      "relevance_rank": 3
     }
   ],
   "compliance_flags": []

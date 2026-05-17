@@ -5,15 +5,15 @@
     "call_timestamp": "2026-04-01T00:00:00Z",
     "duration_seconds": 250,
     "scenario_type": null,
-    "rubric_version": "rubric-v1",
-    "prompt_version": "prompt-v1",
+    "rubric_version": "rubric-v2",
+    "prompt_version": "prompt-v2",
     "model_id": "claude-sonnet-4-5-20250929",
-    "overall_score": 97.5,
+    "overall_score": 91.25,
     "compliance_override_triggered": false,
-    "confidence_overall": 0.94,
-    "manager_summary": "Exemplary intake call where Sandra handled a spouse calling on behalf of the patient. She expertly navigated consent requirements, collected complete clinical and insurance information, correctly triaged high urgency (withdrawal seizure history), and set clear same-day follow-up. The agent demonstrated exceptional empathy by separately acknowledging the family member's own distress and maintaining warm, human connection throughout.",
+    "confidence_overall": 0.91,
+    "manager_summary": "Exemplary family caller handling on a high-urgency detox referral. Sandra navigated consent boundaries expertly, captured all critical clinical and insurance information, and appropriately triaged a withdrawal seizure case with a same-day escalation plan. Her empathy for both patient and spouse was genuine and sustained throughout, and next steps were crystal clear.",
     "status": "scored",
-    "scored_at": "2026-05-15T10:57:14.013417+00:00"
+    "scored_at": "2026-05-17T06:38:49.116063+00:00"
   },
   "dimension_scores": [
     {
@@ -22,7 +22,7 @@
       "weighted_score": 7.5,
       "weight": 1.5,
       "confidence": 0.95,
-      "ai_rationale": "Agent immediately slowed down, acknowledged the caller's difficulty, validated his distress, and used his name. The tone was warm and human throughout, particularly in acknowledging the spouse's emotional burden separately.",
+      "ai_rationale": "Agent immediately slowed down, acknowledged Jacob's difficulty, and matched his emotional state within the first 15 seconds. Throughout the call, Sandra repeatedly acknowledged both Jacob's and Jamie's distress, used names naturally, and addressed Jacob's own exhaustion with genuine care.",
       "coaching_note": null,
       "is_na": false
     },
@@ -32,18 +32,18 @@
       "weighted_score": 4.0,
       "weight": 1.0,
       "confidence": 0.88,
-      "ai_rationale": "Agent collected carrier name, member ID, and group number. Framed verification as next step toward help. Did not capture plan type explicitly, though this is a minor omission.",
-      "coaching_note": "Consider adding plan type (HMO/PPO) to the insurance collection sequence for complete verification.",
+      "ai_rationale": "Agent collected carrier name, member ID, and group number efficiently. The process was framed naturally within the flow. The only minor omission was not explicitly capturing plan type (PPO, HMO, etc.), though this may be determined during benefits verification.",
+      "coaching_note": "Consider asking plan type explicitly during the initial collection to ensure complete information for verification.",
       "is_na": false
     },
     {
       "dimension": "clinical_screening",
-      "raw_score": 5,
-      "weighted_score": 5.0,
+      "raw_score": 4,
+      "weighted_score": 4.0,
       "weight": 1.0,
-      "confidence": 0.92,
-      "ai_rationale": "Agent captured substance type (alcohol), severity (fifth a day), current use status (drinking to manage withdrawal), withdrawal history (seizure), and prior treatment history (none). Stayed clearly in intake role without diagnostic language.",
-      "coaching_note": null,
+      "confidence": 0.87,
+      "ai_rationale": "Agent captured key substance use information (fifth a day, frequency, current use pattern), prior treatment history (none), and severity indicators (seizure during withdrawal, ongoing use to manage symptoms). Did not explicitly probe for co-occurring mental health concerns, though none were volunteered.",
+      "coaching_note": "Consider a brief open-ended prompt for co-occurring concerns, such as 'Is Jamie experiencing any anxiety, depression, or other mental health challenges alongside the drinking?'",
       "is_na": false
     },
     {
@@ -51,8 +51,8 @@
       "raw_score": 5,
       "weighted_score": 5.0,
       "weight": 1.0,
-      "confidence": 0.93,
-      "ai_rationale": "Agent correctly identified high urgency (seizure during withdrawal, ongoing drinking to prevent further withdrawal) and scheduled same-day callback within two hours. Appropriately recognized need for medical detox.",
+      "confidence": 0.92,
+      "ai_rationale": "Agent correctly identified high urgency signals (withdrawal seizure, current drinking to manage withdrawal symptoms) and responded appropriately with a same-day escalation plan (callback within two hours to initiate medically supervised detox admission). No manufactured urgency, just appropriate clinical response.",
       "coaching_note": null,
       "is_na": false
     },
@@ -61,8 +61,8 @@
       "raw_score": 5,
       "weighted_score": 5.0,
       "weight": 1.0,
-      "confidence": 0.96,
-      "ai_rationale": "Agent handled consent and HIPAA framing expertly without being cold or legalistic, confirmed patient readiness, explained the need for direct consent, and separately acknowledged the family member's own distress and offered resources.",
+      "confidence": 0.95,
+      "ai_rationale": "Agent navigated consent boundaries expertly \u2014 explained HIPAA framing warmly without being legalistic, confirmed Jamie's awareness and consent, and acknowledged Jacob's own emotional distress. Offered family resources appropriately and set clear expectations about next steps involving direct patient contact.",
       "coaching_note": null,
       "is_na": false
     },
@@ -71,8 +71,8 @@
       "raw_score": null,
       "weighted_score": null,
       "weight": 1.0,
-      "confidence": 0.98,
-      "ai_rationale": "No objections were raised during this call. The caller was cooperative and motivated throughout.",
+      "confidence": 0.9,
+      "ai_rationale": "No objections, hesitations, or concerns were expressed by the caller. Jacob was cooperative throughout and immediately provided all requested information without resistance or ambivalence.",
       "coaching_note": null,
       "is_na": true
     },
@@ -81,19 +81,19 @@
       "raw_score": 5,
       "weighted_score": 5.0,
       "weight": 1.0,
-      "confidence": 0.94,
-      "ai_rationale": "Agent provided specific next step (callback from admissions team), clear timing (within two hours, by 2pm), clear ownership (admissions team), and confirmed both parties would be available for the callback.",
+      "confidence": 0.95,
+      "ai_rationale": "Agent provided crystal-clear next steps: benefits verification today, callback within two hours, both parties present for verbal consent, and intake process initiation. Timing was specific (by 2 PM), ownership was clear (admissions team), and caller confirmed understanding.",
       "coaching_note": null,
       "is_na": false
     },
     {
       "dimension": "compliance_language",
-      "raw_score": 5,
-      "weighted_score": 7.5,
+      "raw_score": 4,
+      "weighted_score": 6.0,
       "weight": 1.5,
-      "confidence": 0.95,
-      "ai_rationale": "Agent avoided all diagnostic language, made no outcome guarantees, and stayed strictly within intake scope. Used appropriate framing around medical necessity ('sign that he needs') without overstepping into clinical assessment.",
-      "coaching_note": null,
+      "confidence": 0.85,
+      "ai_rationale": "Agent maintained excellent boundaries overall, staying in intake role and deferring clinical assessment appropriately. One borderline moment: characterizing that 'he's currently using to manage withdrawal symptoms' and that this 'is actually a sign that he needs medically supervised detox' edges toward clinical interpretation, though it's immediately contextualized as a service-matching statement rather than diagnosis.",
+      "coaching_note": "When noting withdrawal patterns, consider framing as 'based on what you're describing, our clinical team will assess the need for medically supervised detox' to maintain clearer boundary between intake observation and clinical recommendation.",
       "is_na": false
     }
   ],
@@ -111,12 +111,12 @@
       "turn_number": 5,
       "timestamp_seconds": 96,
       "speaker": "agent",
-      "text_snippet": "Jacob, I want to acknowledge \u2014 this has clearly been frightening for you too. Spouses and families go through a lot when a loved one is struggling. How are you holding up?",
+      "text_snippet": "Jacob, I want to acknowledge \u2014 this has clearly been frightening for you too. Spouses and families go through a lot when a loved one is struggling.",
       "relevance_rank": 2
     },
     {
       "dimension": "empathy_rapport",
-      "turn_number": 10,
+      "turn_number": 11,
       "timestamp_seconds": 226,
       "speaker": "agent",
       "text_snippet": "And Jacob \u2014 what you're doing for your husband right now is an act of love. Please don't forget to take care of yourself too.",
@@ -126,56 +126,56 @@
       "dimension": "insurance_verification",
       "turn_number": 8,
       "timestamp_seconds": 174,
-      "speaker": "agent",
+      "speaker": "caller",
       "text_snippet": "His own, through his employer. It's CoreFirst Insurance.",
-      "relevance_rank": 2
+      "relevance_rank": 1
     },
     {
       "dimension": "insurance_verification",
-      "turn_number": 9,
+      "turn_number": 10,
       "timestamp_seconds": 186,
       "speaker": "caller",
       "text_snippet": "Yes, I have his card. Member ID BP31407894, group GRP-575659.",
-      "relevance_rank": 1
+      "relevance_rank": 2
     },
     {
       "dimension": "insurance_verification",
-      "turn_number": 9,
+      "turn_number": 11,
       "timestamp_seconds": 198,
       "speaker": "agent",
-      "text_snippet": "Perfect. I have that noted. Here's what I'd like to do: I'll verify Jamie's benefits today and have someone from our admissions team call both of you",
+      "text_snippet": "Perfect. I have that noted. Here's what I'd like to do: I'll verify Jamie's benefits today",
       "relevance_rank": 3
     },
     {
       "dimension": "clinical_screening",
-      "turn_number": 6,
+      "turn_number": 3,
+      "timestamp_seconds": 26,
+      "speaker": "caller",
+      "text_snippet": "He's been drinking heavily for over a year. It's gotten to the point where he can't stop. He's tried a few times. Last week he had a seizure",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 7,
       "timestamp_seconds": 138,
       "speaker": "caller",
       "text_snippet": "He was drinking a fifth a day at his worst. Since the ER he's cut back but he's still drinking to avoid withdrawal.",
-      "relevance_rank": 1
+      "relevance_rank": 2
     },
     {
       "dimension": "clinical_screening",
       "turn_number": 7,
       "timestamp_seconds": 152,
       "speaker": "agent",
-      "text_snippet": "Okay. So he's currently using to manage withdrawal symptoms \u2014 that's actually a sign that he needs medically supervised detox before any residential or outpatient program.",
-      "relevance_rank": 2
-    },
-    {
-      "dimension": "clinical_screening",
-      "turn_number": 8,
-      "timestamp_seconds": 162,
-      "speaker": "caller",
-      "text_snippet": "No. This is the first time we're looking at this.",
+      "text_snippet": "Does he have any history of prior treatment?",
       "relevance_rank": 3
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 2,
+      "turn_number": 3,
       "timestamp_seconds": 44,
       "speaker": "agent",
-      "text_snippet": "I'm so sorry you and Jamie have been through that. A seizure during withdrawal is serious and I want you to know you've called the right place. We have medically supervised detox.",
+      "text_snippet": "A seizure during withdrawal is serious and I want you to know you've called the right place. We have medically supervised detox.",
       "relevance_rank": 1
     },
     {
@@ -183,12 +183,12 @@
       "turn_number": 7,
       "timestamp_seconds": 152,
       "speaker": "agent",
-      "text_snippet": "So he's currently using to manage withdrawal symptoms \u2014 that's actually a sign that he needs medically supervised detox",
+      "text_snippet": "So he's currently using to manage withdrawal symptoms \u2014 that's actually a sign that he needs medically supervised detox before any residential or outpatient program.",
       "relevance_rank": 2
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 9,
+      "turn_number": 11,
       "timestamp_seconds": 198,
       "speaker": "agent",
       "text_snippet": "I'll verify Jamie's benefits today and have someone from our admissions team call both of you \u2014 ideally with him present \u2014 within two hours.",
@@ -220,7 +220,7 @@
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 9,
+      "turn_number": 11,
       "timestamp_seconds": 198,
       "speaker": "agent",
       "text_snippet": "I'll verify Jamie's benefits today and have someone from our admissions team call both of you \u2014 ideally with him present \u2014 within two hours.",
@@ -228,18 +228,18 @@
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 10,
+      "turn_number": 11,
       "timestamp_seconds": 220,
       "speaker": "agent",
-      "text_snippet": "Wonderful. You'll hear from us by two o'clock this afternoon.",
+      "text_snippet": "You'll hear from us by two o'clock this afternoon.",
       "relevance_rank": 2
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 9,
+      "turn_number": 10,
       "timestamp_seconds": 198,
       "speaker": "agent",
-      "text_snippet": "That way he can give verbal consent on the call and we can get the intake process started. Does he have a phone he can take a call on?",
+      "text_snippet": "That way he can give verbal consent on the call and we can get the intake process started.",
       "relevance_rank": 3
     },
     {
@@ -252,18 +252,18 @@
     },
     {
       "dimension": "compliance_language",
-      "turn_number": 2,
-      "timestamp_seconds": 44,
+      "turn_number": 11,
+      "timestamp_seconds": 198,
       "speaker": "agent",
-      "text_snippet": "A seizure during withdrawal is serious and I want you to know you've called the right place. We have medically supervised detox.",
+      "text_snippet": "I'll verify Jamie's benefits today",
       "relevance_rank": 2
     },
     {
       "dimension": "compliance_language",
-      "turn_number": 4,
-      "timestamp_seconds": 70,
+      "turn_number": 3,
+      "timestamp_seconds": 44,
       "speaker": "agent",
-      "text_snippet": "Because Jamie is an adult, anything we do in terms of treatment will require his consent",
+      "text_snippet": "A seizure during withdrawal is serious and I want you to know you've called the right place. We have medically supervised detox.",
       "relevance_rank": 3
     }
   ],

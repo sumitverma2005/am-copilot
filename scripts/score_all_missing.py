@@ -111,21 +111,29 @@ def score_one(call_id: str, label: str, *, write: bool = True) -> tuple[bool, ob
 
 def main() -> None:
     dry_run = "--dry-run" in sys.argv
+    force = "--force" in sys.argv
     provider = os.environ.get("MODEL_PROVIDER", "bedrock")
+    rubric_version = os.environ.get("RUBRIC_VERSION", "rubric-v1")
     manifest = json.loads(MANIFEST_PATH.read_text())
     all_ids = [c["call_id"] for c in manifest["calls"]]
 
-    new_ids = [c for c in all_ids if c not in _HAND_WRITTEN and not already_scored(c)]
+    if force:
+        new_ids = [c for c in all_ids if c not in _HAND_WRITTEN]
+    else:
+        new_ids = [c for c in all_ids if c not in _HAND_WRITTEN and not already_scored(c)]
     fixture_ids = sorted(_HAND_WRITTEN)
 
     print(f"\nAM Copilot — Score All Missing Calls")
-    print(f"Provider    : {provider}")
-    print(f"Total calls : {len(all_ids)}")
-    print(f"Already done: {sum(1 for c in all_ids if already_scored(c) and c not in _HAND_WRITTEN)}")
-    print(f"Phase 1     : {len(new_ids)} calls to score")
-    print(f"Phase 2     : {len(fixture_ids)} fixture calls to validate and replace")
+    print(f"Provider       : {provider}")
+    print(f"Rubric version : {rubric_version}")
+    print(f"Force overwrite: {'yes' if force else 'no'}")
+    print(f"Total calls    : {len(all_ids)}")
+    print(f"Already done   : {sum(1 for c in all_ids if already_scored(c) and c not in _HAND_WRITTEN)}")
+    print(f"Phase 1        : {len(new_ids)} calls to score")
+    print(f"Phase 2        : {len(fixture_ids)} fixture calls to validate and replace")
     if dry_run:
         print("\nDRY RUN — nothing will be scored.")
+        print("Add --force to overwrite all existing results.")
         print("Phase 1 queue:", new_ids)
         print("Phase 2 queue:", fixture_ids)
         return

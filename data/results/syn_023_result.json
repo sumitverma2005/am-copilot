@@ -5,15 +5,15 @@
     "call_timestamp": "2026-04-01T00:00:00Z",
     "duration_seconds": 160,
     "scenario_type": null,
-    "rubric_version": "rubric-v1",
-    "prompt_version": "prompt-v1",
+    "rubric_version": "rubric-v2",
+    "prompt_version": "prompt-v2",
     "model_id": "claude-sonnet-4-5-20250929",
-    "overall_score": 73.75,
+    "overall_score": 70.0,
     "compliance_override_triggered": false,
-    "confidence_overall": 0.89,
-    "manager_summary": "Michael called seeking information about treatment for his 64-year-old father Robert, who has been drinking heavily since his wife's death and has fallen twice requiring medical attention. The agent appropriately handled family consent boundaries, collected insurance information (NovaCare Health), and offered a phone consultation as a low-barrier next step. However, the agent missed an opportunity to build deeper rapport around the family's grief and loss, and did not establish any agent-owned follow-up to keep the caller engaged.",
+    "confidence_overall": 0.88,
+    "manager_summary": "Michael called on behalf of his 64-year-old father Robert, who has been drinking heavily since his wife passed away and has fallen twice, requiring stitches. The agent gathered insurance details (NovaCare Health), explained consent boundaries appropriately, and identified urgency around medical assessment. The call lacked warmth and rapport-building\u2014especially when the caller expressed worry about his family\u2014and closed without a concrete next-step commitment or follow-up plan.",
     "status": "scored",
-    "scored_at": "2026-05-15T11:05:25.796303+00:00"
+    "scored_at": "2026-05-17T06:47:25.169189+00:00"
   },
   "dimension_scores": [
     {
@@ -22,8 +22,8 @@
       "weighted_score": 3.0,
       "weight": 1.5,
       "confidence": 0.9,
-      "ai_rationale": "The agent opened with a brief expression of sympathy but immediately pivoted to a consent question without acknowledging the caller's emotional state or the difficulty of the situation. The caller's explicit distress at the end (\"I'm just worried about him. It's been a really hard year\") received only a cursory acknowledgment before closing.",
-      "coaching_note": "Pause to acknowledge the caller's concern and the family's loss in the first minute before moving to procedural questions; reflect back the caller's worry when it's explicitly stated.",
+      "ai_rationale": "The agent provided a brief acknowledgment ('I'm sorry to hear that') but immediately pivoted to a procedural question without building rapport or acknowledging the caller's emotional state or the difficulty of the situation. The caller's expressed worry at the end ('I'm just worried about him. It's been a really hard year for our whole family') received a flat, dismissive response.",
+      "coaching_note": "Slow down in the opening to acknowledge the emotional weight\u2014especially family loss and distress\u2014before moving to procedural questions. Mirror the caller's concern more explicitly throughout.",
       "is_na": false
     },
     {
@@ -32,18 +32,18 @@
       "weighted_score": 4.0,
       "weight": 1.0,
       "confidence": 0.88,
-      "ai_rationale": "The agent collected carrier name, member ID, and group number efficiently. The information was gathered without making it sound like gatekeeping, though the framing could have been slightly warmer or more explicitly tied to helping the father.",
+      "ai_rationale": "The agent captured carrier (NovaCare Health), member ID (BP73019691), and group number (GRP-879983) efficiently. The agent did not explicitly verify coverage or hedge the information, but the call ended before deeper verification steps were needed.",
       "coaching_note": null,
       "is_na": false
     },
     {
       "dimension": "clinical_screening",
-      "raw_score": 3,
-      "weighted_score": 3.0,
+      "raw_score": 4,
+      "weighted_score": 4.0,
       "weight": 1.0,
       "confidence": 0.85,
-      "ai_rationale": "The agent gathered substance type (wine, whiskey), frequency (every night), severity indicators (falls, stitches), and one attempt to quit. However, the agent did not ask about withdrawal symptoms, prior treatment history, or co-occurring mental health concerns (e.g., depression after spouse's death), which would have been appropriate given the context.",
-      "coaching_note": "Ask about withdrawal symptoms when stopping, any prior treatment attempts, and gently explore whether grief or depression is also a concern.",
+      "ai_rationale": "The agent gathered substance use type (alcohol\u2014wine and whiskey), frequency (every night), severity indicators (falls, stitches, prior quit attempt), and asked about medical consequences. The agent stayed in intake territory and did not diagnose. Slightly shallow on withdrawal symptoms or co-occurring issues, but appropriate for a family call where the patient wasn't present.",
+      "coaching_note": null,
       "is_na": false
     },
     {
@@ -52,17 +52,17 @@
       "weighted_score": 4.0,
       "weight": 1.0,
       "confidence": 0.87,
-      "ai_rationale": "The agent appropriately identified medical risk from falls and age, framing medical assessment as \"particularly important.\" The urgency was correctly triaged as this-week rather than same-day, given the patient hasn't yet consented. The agent appropriately did not manufacture false urgency.",
+      "ai_rationale": "The agent correctly identified the urgency signals (falls requiring stitches, age, heavy daily drinking) and emphasized that medical assessment is 'particularly important.' The agent did not manufacture pressure but appropriately acknowledged the need for medical involvement. The de-escalation to a phone consultation when the patient hadn't committed yet was appropriate.",
       "coaching_note": null,
       "is_na": false
     },
     {
       "dimension": "family_caller_handling",
-      "raw_score": 5,
-      "weighted_score": 5.0,
+      "raw_score": 4,
+      "weighted_score": 4.0,
       "weight": 1.0,
-      "confidence": 0.92,
-      "ai_rationale": "The agent handled consent framing clearly and warmly (\"since your father is an adult, any treatment would require his direct consent\"), confirmed the father's awareness, and appropriately gathered information without overstepping. The agent acknowledged the family member's role and offered a concrete path forward that respects the patient's autonomy.",
+      "confidence": 0.86,
+      "ai_rationale": "The agent appropriately framed consent upfront ('since your father is an adult, any treatment would require his direct consent') and navigated the boundary between informing the son and respecting patient autonomy. The family member's distress was acknowledged minimally but not robustly engaged.",
       "coaching_note": null,
       "is_na": false
     },
@@ -71,8 +71,8 @@
       "raw_score": null,
       "weighted_score": null,
       "weight": 1.0,
-      "confidence": 0.95,
-      "ai_rationale": "No objections were raised during this call. The caller was cooperative and information-gathering; the father's ambivalence was acknowledged but not actively objected to by the caller.",
+      "confidence": 0.92,
+      "ai_rationale": "No objections were raised. The caller was cooperative and gathering information for a third party. The patient's ambivalence was mentioned but not directly engaged by the agent since the patient was not on the call.",
       "coaching_note": null,
       "is_na": true
     },
@@ -82,17 +82,17 @@
       "weighted_score": 3.0,
       "weight": 1.0,
       "confidence": 0.88,
-      "ai_rationale": "The agent offered a clear next action (father to call or come in, or have a phone consultation), but did not establish timing, ownership, or follow-up commitment. The caller was left to execute entirely on their own without any agent-owned follow-up or specific timeframe.",
-      "coaching_note": "Offer to follow up after the caller has had a chance to talk with their father (e.g., 'May I call you back in 2-3 days to see if he's ready for that phone consultation?').",
+      "ai_rationale": "The agent offered options (patient calls directly, comes in, or does a phone consultation) and timing ('when he's ready') but did not set a specific follow-up commitment, confirm who owns the next step clearly, or capture a timeline. The close was vague and left the caller to initiate without a concrete anchor.",
+      "coaching_note": "Clarify ownership and timing\u2014e.g., 'I'll note this in our system and you can call back once you've spoken with him, or would you like me to follow up with you later this week?'",
       "is_na": false
     },
     {
       "dimension": "compliance_language",
-      "raw_score": 5,
-      "weighted_score": 7.5,
+      "raw_score": 4,
+      "weighted_score": 6.0,
       "weight": 1.5,
-      "confidence": 0.95,
-      "ai_rationale": "The agent avoided all diagnostic language, made no treatment guarantees, appropriately framed medical assessment without promising outcomes, and stayed clearly within intake boundaries. The consent framing was legally appropriate and the language about medical importance was appropriately cautious.",
+      "confidence": 0.87,
+      "ai_rationale": "The agent stayed in intake lane throughout and avoided diagnostic labeling or treatment outcome promises. One borderline moment: 'That's concerning from a medical standpoint' could be read as clinical characterization, but it was immediately paired with a procedural question and did not cross into explanation or diagnosis. No scope overreach or guarantees.",
       "coaching_note": null,
       "is_na": false
     }
@@ -108,7 +108,7 @@
     },
     {
       "dimension": "empathy_rapport",
-      "turn_number": 10,
+      "turn_number": 12,
       "timestamp_seconds": 144,
       "speaker": "agent",
       "text_snippet": "That's understandable. Have him give us a call when he's ready.",
@@ -116,7 +116,7 @@
     },
     {
       "dimension": "empathy_rapport",
-      "turn_number": 9,
+      "turn_number": 11,
       "timestamp_seconds": 136,
       "speaker": "caller",
       "text_snippet": "Not right now. I'm just worried about him. It's been a really hard year for our whole family.",
@@ -124,7 +124,7 @@
     },
     {
       "dimension": "insurance_verification",
-      "turn_number": 6,
+      "turn_number": 8,
       "timestamp_seconds": 84,
       "speaker": "caller",
       "text_snippet": "Yes, through his retirement plan. It's NovaCare Health. I have his ID \u2014 it's BP73019691, group GRP-879983.",
@@ -132,7 +132,7 @@
     },
     {
       "dimension": "insurance_verification",
-      "turn_number": 5,
+      "turn_number": 7,
       "timestamp_seconds": 78,
       "speaker": "agent",
       "text_snippet": "Does he have insurance?",
@@ -140,7 +140,7 @@
     },
     {
       "dimension": "clinical_screening",
-      "turn_number": 3,
+      "turn_number": 4,
       "timestamp_seconds": 44,
       "speaker": "caller",
       "text_snippet": "A lot. A bottle of wine at dinner, then usually whiskey after. Every night.",
@@ -148,39 +148,47 @@
     },
     {
       "dimension": "clinical_screening",
-      "turn_number": 4,
-      "timestamp_seconds": 58,
-      "speaker": "caller",
-      "text_snippet": "He fell twice last month. The second time he needed stitches.",
+      "turn_number": 5,
+      "timestamp_seconds": 52,
+      "speaker": "agent",
+      "text_snippet": "Has he had any falls or health issues related to it?",
       "relevance_rank": 2
     },
     {
       "dimension": "clinical_screening",
-      "turn_number": 5,
-      "timestamp_seconds": 72,
-      "speaker": "caller",
-      "text_snippet": "He tried after the first fall but it only lasted a few days.",
+      "turn_number": 6,
+      "timestamp_seconds": 66,
+      "speaker": "agent",
+      "text_snippet": "That's concerning from a medical standpoint. Has he ever tried to stop or cut down?",
       "relevance_rank": 3
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 6,
+      "turn_number": 9,
       "timestamp_seconds": 96,
       "speaker": "agent",
-      "text_snippet": "Given his age and the fall history, medical assessment is particularly important for him.",
+      "text_snippet": "Given his age and the fall history, medical assessment is particularly important for him. Has he agreed to at least speak to someone here?",
       "relevance_rank": 1
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 4,
-      "timestamp_seconds": 58,
-      "speaker": "caller",
-      "text_snippet": "He fell twice last month. The second time he needed stitches.",
+      "turn_number": 6,
+      "timestamp_seconds": 66,
+      "speaker": "agent",
+      "text_snippet": "That's concerning from a medical standpoint.",
       "relevance_rank": 2
     },
     {
+      "dimension": "urgency_triage",
+      "turn_number": 10,
+      "timestamp_seconds": 116,
+      "speaker": "agent",
+      "text_snippet": "When he's ready, he can call directly or you can bring him in. We'd be glad to do a brief phone consultation with him if that feels more approachable.",
+      "relevance_rank": 3
+    },
+    {
       "dimension": "family_caller_handling",
-      "turn_number": 2,
+      "turn_number": 3,
       "timestamp_seconds": 30,
       "speaker": "agent",
       "text_snippet": "Okay. I want to be upfront \u2014 since your father is an adult, any treatment would require his direct consent. But I'm happy to give you information you can share with him.",
@@ -188,23 +196,23 @@
     },
     {
       "dimension": "family_caller_handling",
-      "turn_number": 2,
+      "turn_number": 1,
       "timestamp_seconds": 16,
       "speaker": "agent",
-      "text_snippet": "Does your father know you're calling?",
+      "text_snippet": "I'm sorry to hear that. Does your father know you're calling?",
       "relevance_rank": 2
     },
     {
       "dimension": "family_caller_handling",
-      "turn_number": 7,
-      "timestamp_seconds": 116,
+      "turn_number": 12,
+      "timestamp_seconds": 144,
       "speaker": "agent",
-      "text_snippet": "When he's ready, he can call directly or you can bring him in. We'd be glad to do a brief phone consultation with him if that feels more approachable.",
+      "text_snippet": "That's understandable. Have him give us a call when he's ready.",
       "relevance_rank": 3
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 7,
+      "turn_number": 10,
       "timestamp_seconds": 116,
       "speaker": "agent",
       "text_snippet": "When he's ready, he can call directly or you can bring him in. We'd be glad to do a brief phone consultation with him if that feels more approachable.",
@@ -212,23 +220,23 @@
     },
     {
       "dimension": "next_step_clarity",
-      "turn_number": 10,
+      "turn_number": 12,
       "timestamp_seconds": 144,
       "speaker": "agent",
-      "text_snippet": "That's understandable. Have him give us a call when he's ready.",
+      "text_snippet": "Have him give us a call when he's ready.",
       "relevance_rank": 2
     },
     {
       "dimension": "compliance_language",
-      "turn_number": 2,
-      "timestamp_seconds": 30,
+      "turn_number": 6,
+      "timestamp_seconds": 66,
       "speaker": "agent",
-      "text_snippet": "Okay. I want to be upfront \u2014 since your father is an adult, any treatment would require his direct consent.",
+      "text_snippet": "That's concerning from a medical standpoint. Has he ever tried to stop or cut down?",
       "relevance_rank": 1
     },
     {
       "dimension": "compliance_language",
-      "turn_number": 6,
+      "turn_number": 9,
       "timestamp_seconds": 96,
       "speaker": "agent",
       "text_snippet": "Given his age and the fall history, medical assessment is particularly important for him.",

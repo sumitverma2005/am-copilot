@@ -5,15 +5,15 @@
     "call_timestamp": "2026-04-01T00:00:00Z",
     "duration_seconds": 190,
     "scenario_type": null,
-    "rubric_version": "rubric-v1",
-    "prompt_version": "prompt-v1",
+    "rubric_version": "rubric-v2",
+    "prompt_version": "prompt-v2",
     "model_id": "claude-sonnet-4-5-20250929",
-    "overall_score": 52.5,
+    "overall_score": 52.22,
     "compliance_override_triggered": false,
     "confidence_overall": 0.89,
-    "manager_summary": "Father called seeking help for his 24-year-old son struggling with daily heroin use. Agent correctly established consent boundaries but handled the call in a transactional manner, missing opportunities to support the distressed parent, assess urgency (weight loss, visible impairment), and provide concrete next steps or resources. Insurance information was partially collected (no group number), and clinical screening was incomplete.",
+    "manager_summary": "Nicholas called seeking help for his 24-year-old son Alex, who has been using heroin daily for two years. Agent correctly established consent boundaries and collected insurance information (CoreFirst, member ID provided), but missed key opportunities: did not acknowledge the father's fear or distress, provided no guidance on approaching the resistant son, and failed to assess urgency despite escalating use patterns. The call ended with a vague next step (\"have him call when he's ready\") rather than concrete support or follow-up plan.",
     "status": "scored",
-    "scored_at": "2026-05-15T10:57:50.799241+00:00"
+    "scored_at": "2026-05-17T06:39:31.802201+00:00"
   },
   "dimension_scores": [
     {
@@ -21,9 +21,9 @@
       "raw_score": 2,
       "weighted_score": 3.0,
       "weight": 1.5,
-      "confidence": 0.9,
-      "ai_rationale": "Agent acknowledged the caller was scared but failed to build rapport in the first 60 seconds or throughout the call. The tone was transactional and scripted, immediately jumping to procedural questions without acknowledging the difficulty of the situation or the parent's distress.",
-      "coaching_note": "Start by acknowledging how difficult it is to watch a child struggle with addiction before moving to procedural questions\u2014this builds trust and shows you're listening to the person, not just collecting data.",
+      "confidence": 0.92,
+      "ai_rationale": "Agent did not acknowledge the father's emotional state or distress in the first 60 seconds. The opening focused immediately on logistics (\"Does your son know you're calling?\") without any warmth or acknowledgment. While \"That's understandable\" appears late at [174s], it's too minimal and too late to establish rapport.",
+      "coaching_note": "Start by acknowledging how difficult it is to call on behalf of a loved one before moving to consent framing or logistics.",
       "is_na": false
     },
     {
@@ -31,19 +31,19 @@
       "raw_score": 3,
       "weighted_score": 3.0,
       "weight": 1.0,
-      "confidence": 0.85,
-      "ai_rationale": "Agent captured carrier and member ID, but did not obtain the group number (caller didn't have it). The agent pivoted to clinical questions without confirming whether verification would happen or exploring alternatives. Functional but minimal.",
+      "confidence": 0.88,
+      "ai_rationale": "Agent captured carrier (CoreFirst Insurance) and member ID (BP23737271). Group number was requested but not obtained, though agent moved forward without it. The verification process was transactional and felt somewhat premature given the father is not the patient, but core fields were attempted.",
       "coaching_note": null,
       "is_na": false
     },
     {
       "dimension": "clinical_screening",
-      "raw_score": 3,
-      "weighted_score": 3.0,
+      "raw_score": 2,
+      "weighted_score": 2.0,
       "weight": 1.0,
-      "confidence": 0.88,
-      "ai_rationale": "Agent captured substance type (heroin), frequency (daily use implied), and prior treatment history. However, no exploration of withdrawal symptoms, last use timing, or co-occurring mental health concerns. Stayed within intake boundaries but screening was incomplete.",
-      "coaching_note": null,
+      "confidence": 0.87,
+      "ai_rationale": "Agent asked about frequency (\"Is he using every day?\") and prior treatment, which are appropriate. However, key screening details are missing: no questions about withdrawal symptoms, last use timing, or severity indicators beyond the father's observations. The screening feels incomplete for heroin use.",
+      "coaching_note": "With opioid use, ask about last use, withdrawal symptoms, and any medical complications to better understand urgency and level of care needed.",
       "is_na": false
     },
     {
@@ -51,9 +51,9 @@
       "raw_score": 2,
       "weighted_score": 2.0,
       "weight": 1.0,
-      "confidence": 0.87,
-      "ai_rationale": "Agent missed signals that suggest escalating severity (losing weight, falling asleep at dinner, parent concerned enough to call). No assessment of immediacy or exploration of safety concerns. The father's fear was noted but not triaged for urgency.",
-      "coaching_note": "When a parent calls about heroin use with signs of escalation (weight loss, impairment), ask about withdrawal risk, safety, and timeframe\u2014this helps determine if we need same-week intervention.",
+      "confidence": 0.85,
+      "ai_rationale": "The father indicates escalating use (\"it's getting worse\", weight loss, nodding off), but agent did not probe urgency signals like withdrawal risk, overdose risk, or safety concerns. Given daily heroin use reported by a concerned parent, more urgency assessment was needed.",
+      "coaching_note": "When daily opioid use is reported, ask about withdrawal symptoms, recent overdoses, or safety concerns to determine if same-day or urgent intervention is needed.",
       "is_na": false
     },
     {
@@ -61,38 +61,38 @@
       "raw_score": 2,
       "weighted_score": 2.0,
       "weight": 1.0,
-      "confidence": 0.92,
-      "ai_rationale": "Agent correctly established consent boundaries early but did so in a legalistic, cold manner that felt like gatekeeping. The father's distress and request for help with the conversation were dismissed rather than addressed. No guidance provided on how to support or approach his son.",
-      "coaching_note": "After explaining consent requirements, offer practical support\u2014share tips for approaching a loved one about treatment or offer to send resources that help parents prepare for difficult conversations.",
+      "confidence": 0.89,
+      "ai_rationale": "Agent correctly framed consent requirements early (\"since he's an adult, we'd need to talk to him directly\"). However, the father's emotional distress (\"I'm just really scared for him\") was barely acknowledged, and the agent provided no guidance on how to approach the conversation with Alex or what resources the father could use.",
+      "coaching_note": "When a family member expresses fear or asks for guidance on approaching their loved one, provide concrete suggestions or resources rather than deflecting with \"that's going to depend on him.\"",
       "is_na": false
     },
     {
       "dimension": "objection_handling",
-      "raw_score": null,
-      "weighted_score": null,
+      "raw_score": 2,
+      "weighted_score": 2.0,
       "weight": 1.0,
-      "confidence": 0.95,
-      "ai_rationale": "No cost, fear, or ambivalence objections were raised by the caller. The caller's request for conversation guidance is better scored under family_caller_handling.",
-      "coaching_note": null,
-      "is_na": true
+      "confidence": 0.9,
+      "ai_rationale": "The father expressed an implicit objection around how to approach his son (\"He gets defensive when I bring it up\") and directly asked for help preparing for the conversation. Agent dismissed this with \"Not really \u2014 that's going to depend on him,\" offering no tools, strategies, or empathetic support.",
+      "coaching_note": "When a family member asks for help navigating a difficult conversation, offer concrete strategies (best times to talk, language to use, family resources) rather than deflecting.",
+      "is_na": false
     },
     {
       "dimension": "next_step_clarity",
       "raw_score": 2,
       "weighted_score": 2.0,
       "weight": 1.0,
-      "confidence": 0.88,
-      "ai_rationale": "Next step was stated (son needs to call), but no specific timing, no offer to schedule a callback window, and no follow-up plan. The father left without clear ownership or a concrete action plan beyond a vague 'have him call when ready.'",
-      "coaching_note": "Give the father something concrete\u2014offer to send information he can share, suggest a specific timeframe to follow up, or provide your direct line for when his son is ready to talk.",
+      "confidence": 0.91,
+      "ai_rationale": "The next step is vague: \"Have him give us a call when he's ready.\" No timeframe provided, no specifics about what the father should tell Alex about next steps, and no callback commitment from the center. The father is left without concrete guidance.",
+      "coaching_note": "Set a concrete next step: offer to send resources, schedule a callback after the father talks to Alex, or provide specific talking points and a direct line for Alex to call.",
       "is_na": false
     },
     {
       "dimension": "compliance_language",
-      "raw_score": 4,
-      "weighted_score": 6.0,
+      "raw_score": 5,
+      "weighted_score": 7.5,
       "weight": 1.5,
-      "confidence": 0.93,
-      "ai_rationale": "Agent appropriately stayed in intake role, avoided diagnostic language, and correctly deferred clinical assessment to the clinical team when discussing MAT. No guarantees or unauthorized clinical statements were made. Clean compliance overall.",
+      "confidence": 0.95,
+      "ai_rationale": "Agent stayed well within intake boundaries. MAT was mentioned as available with proper deferral to clinical team for assessment (\"Our clinical team will assess whether that's right for him\"). No diagnostic language, no outcome promises, no scope overreach. All clinical topics appropriately deferred.",
       "coaching_note": null,
       "is_na": false
     }
@@ -100,7 +100,7 @@
   "evidence_anchors": [
     {
       "dimension": "empathy_rapport",
-      "turn_number": 2,
+      "turn_number": 3,
       "timestamp_seconds": 12,
       "speaker": "agent",
       "text_snippet": "Okay. Does your son know you're calling?",
@@ -108,7 +108,7 @@
     },
     {
       "dimension": "empathy_rapport",
-      "turn_number": 4,
+      "turn_number": 5,
       "timestamp_seconds": 26,
       "speaker": "agent",
       "text_snippet": "I see. Well, since he's an adult, we'd need to talk to him directly before we can move forward with anything.",
@@ -116,7 +116,7 @@
     },
     {
       "dimension": "empathy_rapport",
-      "turn_number": 16,
+      "turn_number": 17,
       "timestamp_seconds": 174,
       "speaker": "agent",
       "text_snippet": "That's understandable. Have him give us a call when he's ready.",
@@ -125,49 +125,49 @@
     {
       "dimension": "insurance_verification",
       "turn_number": 8,
+      "timestamp_seconds": 60,
+      "speaker": "agent",
+      "text_snippet": "Does he have any health insurance through his job?",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "insurance_verification",
+      "turn_number": 10,
       "timestamp_seconds": 66,
       "speaker": "caller",
       "text_snippet": "Yes, through work. It's CoreFirst Insurance. I have his information here \u2014 member ID is BP23737271.",
-      "relevance_rank": 1
+      "relevance_rank": 2
     },
     {
       "dimension": "insurance_verification",
-      "turn_number": 9,
+      "turn_number": 11,
       "timestamp_seconds": 74,
       "speaker": "agent",
       "text_snippet": "Okay. Do you have a group number?",
-      "relevance_rank": 2
-    },
-    {
-      "dimension": "insurance_verification",
-      "turn_number": 11,
-      "timestamp_seconds": 84,
-      "speaker": "agent",
-      "text_snippet": "That's okay, we can try to pull it up. Is he using every day?",
       "relevance_rank": 3
     },
     {
       "dimension": "clinical_screening",
-      "turn_number": 6,
-      "timestamp_seconds": 48,
-      "speaker": "caller",
-      "text_snippet": "He started using about two years ago. It's been heroin. He's been doing well at his job but I can see it's getting worse.",
+      "turn_number": 12,
+      "timestamp_seconds": 84,
+      "speaker": "agent",
+      "text_snippet": "That's okay, we can try to pull it up. Is he using every day?",
       "relevance_rank": 1
     },
     {
       "dimension": "clinical_screening",
-      "turn_number": 11,
-      "timestamp_seconds": 84,
-      "speaker": "agent",
-      "text_snippet": "That's okay, we can try to pull it up. Is he using every day?",
-      "relevance_rank": 2
-    },
-    {
-      "dimension": "clinical_screening",
-      "turn_number": 13,
+      "turn_number": 14,
       "timestamp_seconds": 98,
       "speaker": "agent",
       "text_snippet": "Has he ever tried to stop or get treatment?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "clinical_screening",
+      "turn_number": 6,
+      "timestamp_seconds": 48,
+      "speaker": "caller",
+      "text_snippet": "He started using about two years ago. It's been heroin. He's been doing well at his job but I can see it's getting worse. He's losing weight. He fell asleep at dinner last week.",
       "relevance_rank": 3
     },
     {
@@ -175,15 +175,15 @@
       "turn_number": 6,
       "timestamp_seconds": 48,
       "speaker": "caller",
-      "text_snippet": "He's losing weight. He fell asleep at dinner last week.",
+      "text_snippet": "He started using about two years ago. It's been heroin... it's getting worse. He's losing weight. He fell asleep at dinner last week.",
       "relevance_rank": 1
     },
     {
       "dimension": "urgency_triage",
-      "turn_number": 17,
-      "timestamp_seconds": 168,
+      "turn_number": 13,
+      "timestamp_seconds": 90,
       "speaker": "caller",
-      "text_snippet": "That's good. I'm just really scared for him.",
+      "text_snippet": "I believe so. He won't talk to me about it directly but the signs are there.",
       "relevance_rank": 2
     },
     {
@@ -196,7 +196,7 @@
     },
     {
       "dimension": "family_caller_handling",
-      "turn_number": 4,
+      "turn_number": 5,
       "timestamp_seconds": 26,
       "speaker": "agent",
       "text_snippet": "I see. Well, since he's an adult, we'd need to talk to him directly before we can move forward with anything.",
@@ -219,12 +219,28 @@
       "relevance_rank": 3
     },
     {
-      "dimension": "next_step_clarity",
+      "dimension": "objection_handling",
+      "turn_number": 13,
+      "timestamp_seconds": 114,
+      "speaker": "caller",
+      "text_snippet": "I want to know how to get him into your program. What do I say to him? He gets defensive when I bring it up.",
+      "relevance_rank": 1
+    },
+    {
+      "dimension": "objection_handling",
+      "turn_number": 15,
+      "timestamp_seconds": 138,
+      "speaker": "caller",
+      "text_snippet": "I understand that. But is there anything you can do to help me prepare for that conversation?",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "objection_handling",
       "turn_number": 16,
       "timestamp_seconds": 144,
       "speaker": "agent",
       "text_snippet": "Not really \u2014 that's going to depend on him. But if he's willing to call, we can get things moving quickly.",
-      "relevance_rank": 1
+      "relevance_rank": 3
     },
     {
       "dimension": "next_step_clarity",
@@ -232,19 +248,27 @@
       "timestamp_seconds": 174,
       "speaker": "agent",
       "text_snippet": "That's understandable. Have him give us a call when he's ready.",
-      "relevance_rank": 2
+      "relevance_rank": 1
     },
     {
       "dimension": "next_step_clarity",
       "turn_number": 14,
       "timestamp_seconds": 124,
       "speaker": "agent",
-      "text_snippet": "He'll need to call himself or come in for an assessment. We can't hold a spot without him being involved.",
+      "text_snippet": "You can let him know that you've done the research and there's a place that can help. He'll need to call himself or come in for an assessment.",
+      "relevance_rank": 2
+    },
+    {
+      "dimension": "next_step_clarity",
+      "turn_number": 16,
+      "timestamp_seconds": 144,
+      "speaker": "agent",
+      "text_snippet": "Not really \u2014 that's going to depend on him. But if he's willing to call, we can get things moving quickly.",
       "relevance_rank": 3
     },
     {
       "dimension": "compliance_language",
-      "turn_number": 16,
+      "turn_number": 17,
       "timestamp_seconds": 160,
       "speaker": "agent",
       "text_snippet": "Yes, we offer medication-assisted treatment. Our clinical team will assess whether that's right for him.",
@@ -252,15 +276,15 @@
     },
     {
       "dimension": "compliance_language",
-      "turn_number": 13,
-      "timestamp_seconds": 98,
+      "turn_number": 16,
+      "timestamp_seconds": 144,
       "speaker": "agent",
-      "text_snippet": "Has he ever tried to stop or get treatment?",
+      "text_snippet": "Not really \u2014 that's going to depend on him. But if he's willing to call, we can get things moving quickly.",
       "relevance_rank": 2
     },
     {
       "dimension": "compliance_language",
-      "turn_number": 4,
+      "turn_number": 5,
       "timestamp_seconds": 26,
       "speaker": "agent",
       "text_snippet": "I see. Well, since he's an adult, we'd need to talk to him directly before we can move forward with anything.",

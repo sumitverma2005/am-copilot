@@ -1,0 +1,127 @@
+# D10 Calibration Analysis (rubric-v2 AI scores) — 2026-05-17
+
+| | |
+|---|---|
+| Calls graded (human) | 30 |
+| Calls with AI scores | 30 |
+| Comparable (both)    | 30 |
+
+## Overall Score Agreement (target: ≥80%)
+
+10/30 calls within ±10 points — **33%** — **✗ FAIL**
+
+## Per-Dimension Agreement (target: ≥70%, criterion: |delta| ≤ 1)
+
+| Dimension | Compared | Agreement | Avg \|delta\| | Bias | Status |
+|---|---|---|---|---|---|
+| Empathy & rapport | 30 | 80% | 0.8 | ≈equal | ✓ PASS |
+| Insurance verification | 28 | 86% | 0.9 | AI↑ | ✓ PASS |
+| Clinical screening | 28 | 82% | 0.9 | ≈equal | ✓ PASS |
+| Urgency triage | 30 | 70% | 1.1 | AI↑ | ✓ PASS |
+| Family caller handling | 7 | 86% | 0.7 | ≈equal | ✓ PASS |
+| Objection handling | 12 | 58% | 1.4 | AI↑ | ✗ FAIL |
+| Next-step clarity | 30 | 77% | 0.9 | AI↑ | ✓ PASS |
+| Compliance language | 30 | 60% | 1.5 | ≈equal | ✗ FAIL |
+
+## Dimensions Needing D9 Rubric Work
+
+### Objection handling
+- Agreement: 58% (target: ≥70%)
+- Avg |delta|: 1.4
+- Avg signed delta (human − AI): -1.42
+- AI consistently scores higher than human. Criteria may be too loose, or AI rewards the presence of keywords rather than execution quality.
+
+### Compliance language
+- Agreement: 60% (target: ≥70%)
+- Avg |delta|: 1.5
+- Avg signed delta (human − AI): -0.20
+- No consistent directional bias — disagreements are scattered. Anchor wording for this dimension is likely ambiguous at the boundary scores.
+
+## Outlier Calls (|delta| > 1 on any dimension)
+
+| Call | Dimension | Human | AI | Delta |
+|---|---|---|---|---|
+| syn_029 | Objection handling | 0 | 5 | -5 |
+| syn_029 | Empathy & rapport | 3 | 5 | -2 |
+| syn_029 | Insurance verification | 3 | 5 | -2 |
+| syn_029 | Clinical screening | 2 | 4 | -2 |
+| syn_009 | Compliance language | 1 | 5 | -4 |
+| syn_009 | Empathy & rapport | 3 | 0 | +3 |
+| syn_009 | Family caller handling | 3 | 0 | +3 |
+| syn_011 | Compliance language | 1 | 5 | -4 |
+| syn_014 | Compliance language | 1 | 5 | -4 |
+| syn_014 | Objection handling | 0 | 2 | -2 |
+| syn_028 | Next-step clarity | 1 | 5 | -4 |
+| syn_028 | Urgency triage | 1 | 4 | -3 |
+| syn_028 | Objection handling | 0 | 3 | -3 |
+| syn_028 | Empathy & rapport | 3 | 5 | -2 |
+| syn_030 | Objection handling | 1 | 5 | -4 |
+| syn_030 | Insurance verification | 2 | 5 | -3 |
+| syn_030 | Clinical screening | 2 | 4 | -2 |
+| syn_030 | Compliance language | 1 | 3 | -2 |
+| syn_004 | Insurance verification | 1 | 4 | -3 |
+| syn_004 | Urgency triage | 0 | 2 | -2 |
+| syn_004 | Next-step clarity | 0 | 2 | -2 |
+| syn_004 | Compliance language | 2 | 0 | +2 |
+| syn_005 | Urgency triage | 0 | 3 | -3 |
+| syn_005 | Objection handling | 1 | 3 | -2 |
+| syn_005 | Next-step clarity | 0 | 2 | -2 |
+| syn_006 | Urgency triage | 0 | 3 | -3 |
+| syn_006 | Next-step clarity | 0 | 2 | -2 |
+| syn_010 | Compliance language | 5 | 2 | +3 |
+| syn_013 | Clinical screening | 5 | 2 | +3 |
+| syn_013 | Compliance language | 5 | 3 | +2 |
+| syn_017 | Clinical screening | 2 | 5 | -3 |
+| syn_017 | Urgency triage | 2 | 4 | -2 |
+| syn_017 | Next-step clarity | 3 | 5 | -2 |
+| syn_017 | Compliance language | 3 | 5 | -2 |
+| syn_021 | Compliance language | 2 | 5 | -3 |
+| syn_021 | Urgency triage | 1 | 3 | -2 |
+| syn_023 | Empathy & rapport | 5 | 2 | +3 |
+| syn_025 | Compliance language | 5 | 2 | +3 |
+| syn_027 | Urgency triage | 1 | 4 | -3 |
+| syn_027 | Empathy & rapport | 3 | 1 | +2 |
+| syn_027 | Next-step clarity | 3 | 1 | +2 |
+| syn_008 | Urgency triage | 0 | 2 | -2 |
+| syn_015 | Empathy & rapport | 5 | 3 | +2 |
+| syn_015 | Next-step clarity | 3 | 1 | +2 |
+| syn_019 | Insurance verification | 1 | 3 | -2 |
+| syn_019 | Clinical screening | 1 | 3 | -2 |
+| syn_019 | Urgency triage | 1 | 3 | -2 |
+| syn_019 | Compliance language | 2 | 0 | +2 |
+| syn_020 | Compliance language | 2 | 0 | +2 |
+
+## Overall Score Outliers (|delta| > 10 points)
+
+| Call | Human Overall | AI Overall | Delta |
+|---|---|---|---|
+| syn_028 | 32 | 74 | -41 |
+| syn_029 | 42 | 81 | -39 |
+| syn_030 | 35 | 74 | -39 |
+| syn_014 | 15 | 46 | -31 |
+| syn_017 | 66 | 95 | -29 |
+| syn_021 | 27 | 52 | -25 |
+| syn_006 | 15 | 39 | -24 |
+| syn_004 | 12 | 33 | -20 |
+| syn_005 | 20 | 40 | -20 |
+| syn_013 | 97 | 78 | +20 |
+| syn_010 | 100 | 82 | +18 |
+| syn_011 | 24 | 42 | -18 |
+| syn_027 | 44 | 30 | +14 |
+| syn_009 | 40 | 28 | +12 |
+| syn_015 | 84 | 72 | +12 |
+| syn_019 | 22 | 34 | -11 |
+| syn_025 | 95 | 84 | +11 |
+| syn_023 | 81 | 70 | +11 |
+| syn_008 | 41 | 52 | -11 |
+| syn_012 | 82 | 93 | -10 |
+
+## Patterns and D9 Recommendations
+
+2 dimension(s) require rubric refinement on D9. Suggested focus per dimension:
+
+- **Objection handling**: Lower the AI's effective bar — clarify that quality of execution matters, not just presence of keywords. Add 'score against' examples for hollow language.
+- **Compliance language**: Disambiguate the 2/3 and 3/4 boundary anchors — the disagreements are scattered, suggesting the middle scores are ambiguous.
+
+---
+*Generated by analyze_disagreements.py · 2026-05-17*
